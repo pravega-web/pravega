@@ -1,0 +1,181 @@
+doctype html5
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Pravega Paradigms
+  body
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One link to rule them all.</title>
+
+  //- <!-- Materialize -->
+  //- <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share:wght@700&display=swap" rel="stylesheet">
+  //- <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  link(rel="stylesheet", href="/front_end/views/webinar/wrkshps.css")
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173559842-1"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'UA-173559842-1');
+  </script>
+
+</head>
+
+<body class="blue-grey lighten-2 fs" onscroll="scrolll()">
+
+  div(class="navbar-fixed" id="navfixed")
+    <nav class="nav-extended z-depth-1 black">
+      <div class="nav-wrapper">
+        a(href="" class="brand-logo center" style="margin-top:10px")
+          img(src="https://cdn.glitch.com/236c8e41-87b9-48da-80f1-519e5b0d7f4b%2Flogo_transparent.png?v=1596908743647",id="logo")
+        br
+        br
+      </div>
+
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent fs tabs-fixed-width">
+          <li class="tab"><a class="active" id="hometab" href="#test1">HOME</a></li>
+          <li class="tab"><a  href="#test4" id="schedtab" onclick="window.scrollTo(0,0)">Schedule</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  //- <!-- Ongoing Events -->
+  <div id="test1" class="col s12 white-text" onscroll="takeMeThere(e)" style="height:100%">
+    //- <!-- Tap Target Structure -->
+
+    div(id="aligner1")
+
+    
+    div(id="homeDisplay")
+      if live.live
+        p(class="red-text btn-flat pulse") LIVE NOW
+      else
+        p(class="") Upcoming event
+        p(style="font-size: 1em") You'll be automatically redirected to webinar from here when it goes live.
+        p(id="redirect" onclick="i = -1; this.style.visibility = 'hidden' " )
+        h3= live.wbnr.name
+        br
+        h5= live.wbnr.description.speaker
+        if live.live
+          h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
+        else
+          br
+          h5 Starts #{moment(live.wbnr.start, (new Date())).fromNow()}
+
+        br
+
+        if live.live
+          a(class="btn" href='https://'+live.wbnr.link target="_blank") Link here
+          script var i = 8; window.setInterval(function(){i--;if(i ==0){window.location.replace('https://'+'#{live.wbnr.link}')};document.getElementById('redirect').innerText = 'Redirecting you in '+ i +' seconds, click to cancel'},1000)
+  
+    <div class="fixed-action-btn center" style="position:static">
+      <a class="btn-floating btn-large black pulse" href="#desc" id="theFab">
+          <i class="large material-icons">arrow_downward</i>
+      </a>
+
+      div(style='height:100vh; padding:5px; position:sticky; top: 0px' class="container" )
+        div(id="aligner2")
+        div(id="desc")
+        br
+        br
+        br
+        br
+        br
+
+        br
+        br
+        br
+        
+        h3() About Paradigms
+        br
+        h5(style="text-align:center;" id="abText") Worried about the competition gaining an edge during the lockdown? Not sure where to get advice from? No more! Pravega presents PARADIGMS, a series of webinars where you get to hear from some of the greatest minds in Industry and Academia about their experiences and avail yourself of their expert advice. Prepare to hear about innovative ideas, cutting edge tactics and smart workplace and business solutions that will give you a definitive edge over the competition.
+        br
+        br
+        h5(style="line-height: inherit") Are you ready to witness a paradigm shift?
+        br
+        br
+        br
+
+        footer(id="myFoot")
+          p All rights reserved | Pravega 2021
+
+  </div>
+  
+  
+  </div>
+
+  //- <!-- start page -->
+  //- <div id="test2" class="col s12" style="height: auto; padding: 10px;">
+  //-   <br>
+  //-   <br>
+  //-   <br>
+  //-   <br>
+
+  //-   <div class="section white-text">
+  //-     <h4> Your one stop for all Pravega'21 Webinars
+  //-   </div>
+  //-   <div class="divider"></div>
+  //-   <div class="section"> sponsors go here</div>
+  //- </div>
+
+  //- <!-- Calendar goes here -->
+  <div id="test4" class="col s12 container">
+
+  div(id="aligner")
+
+  <ul class="collapsible expandable" style="border:none">
+    each val in future
+      <li onclick="if(this.querySelector('.material-icons').innerText == 'keyboard_arrow_up'){console.log('Hi there');this.querySelector('.material-icons').innerText = 'keyboard_arrow_down'}else{this.querySelector('.material-icons').innerText = 'keyboard_arrow_up'}" style="">
+        div(class="collapsible-header row rh white-text flow-text z-depth-2" style="margin-bottom:5px; background-color:#4f4f5f63; border:none")
+          div(class="col s5" style="word-break:break-word;")= val.name
+          div(class="col s6")= moment(val.start).format('MMMM Do YYYY')
+          div(class="col s1")
+            i(class="material-icons")= val.icon
+            //- img(src=val.description.info, alt="" cl)
+        <div class="collapsible-body" style="background-color:#4f4f5f63">
+          <span class="white-text" style="background-color:#4f4f5f63">
+            h5= val.name
+            hr
+            p Speaker : #{val.description.speaker}
+            if val.description.info != '...'
+              img(src=val.description.info alt="Invalid Image ?" class="responsive-img" onclick="window.open('"+val.description.info+"')" )
+            hr
+            p 
+              u About the Speaker
+            p #{val.description.speakerInfo}
+            hr
+            p 
+              u About the Talk
+            p #{val.description.talkInfo}
+            p Timings : #{moment(val.start).format('hh : mm a')} - #{moment(val.end).format('hh : mm a')}
+            p
+              unless val.link == '/'
+                a(href='https://'+val.link target="_blank") Webinar Link :  #{val.link}
+
+          </span>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+  
+
+  </div>
+  script(src="/front_end/views/webinar/wrkshps.js")
+</body>
+
+</html>

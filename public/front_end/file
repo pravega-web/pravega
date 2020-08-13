@@ -1,0 +1,26 @@
+SCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSC
+
+How to start this project ?
+
+We'll create the basic html for
+
+1) Signing up
+  a) Email conformation
+2) Logging in
+3) User home page and edit page
+  a) Displays current set of points etc
+4) Fast loading is a priority
+5) Performs lighthouse checks on the website every now and then
+
+Tech to use
+
+1) I'll use MEAN STACK ( Obvio )
+2) Outsource the individual homepage events to members of the team.
+
+Workflow
+
+1) Create above mentioned details and ping shekhar
+  a) Create all htmls 
+  b) Using cdns 
+  c) GOGOGO!
+2) Collaborate with design team and get a template in hand

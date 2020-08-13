@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Server Logs | Developer Access
+
+    
+
+  body(class="blue lighten-4")
+    <nav class="">
+    <div class="nav-wrapper blue" style="padding-left:10px">
+      <a href="#" class="brand-logo left ">Developer Access | P21</a>
+    </div>
+  </nav>
+  div(class="container")
+    div(class="section")
+      h4 System Logs
+      p= moment((new Date()).setTime((new Date()).getTime()+( (5.5)*(3600)*(1000)))).format('Do MMMM YYYY, h:mm:ss a')
+
+    div(class="divider black")
+  
+    div(class="section")
+      table
+        thead
+          tr
+            th(class="center") Time
+            th(class="center") Type
+            th(class="center") Body
+        tbody
+          each val in logs
+            tr
+              td(class="center")= moment(val.timeStamp.setTime(val.timeStamp.getTime()+( (5.5)*(3600)*(1000)))).format('MMMM Do YYYY, h:mm:ss a')
+              td(class="center")= val.log.head
+              td(class="center")= val.log.body
+          
+        
+      
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
