@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pravegaApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit that link!</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  .input-field label {
+    pointer-events: all;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body ng-controller="editthelink" class="container" style="font-family: Montserrat;">
+
+  <!-- Heading -->
+  <div class="section" style="height:100vh">
+    <div class="section">
+      <h1>
+        Edit that Webinar Page
+      </h1>
+    </div>
+    <div class="divider"></div>
+    <div class="section" onload="console.log(this)">
+
+
+      <summary>A message from Chin.</summary>
+      <p>Hi folks, this is a small module by your m8 from the web team. I just made your life simple. <br><br> Ciao</p>
+      <p>To use : Just type on the relevant box and hit save.</p>
+
+      <p>
+        <b>There are two pages below. The first for <a href="#new">creating new modules</a> and a second for<a
+            href="#exist"> editing existing modules</a>.</b>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Edits -->
+  <div class="section" style="min-height:100vh" id="exist">
+    <h4>Edit Exisiting Modules</h4>
+    <br>
+    <label for="">Click to edit</label>
+    <form ng-submit="editMods()">
+
+      <ul class="collapsible expandable">
+        <li ng-repeat="mod in mods">
+          <div class="collapsible-header"><i class="material-icons">edit</i>{{mod.name}}</div>
+          <div class="collapsible-body">
+            <span>
+              <div class="input-field">
+                <input type="text" ng-model="mod.name" required placeholder="Name of Webinar">
+              </div>
+              <div class="input-field">
+                <input type="text" class="validate" ng-model="mod.description.speaker" required placeholder="Speaker">
+              </div>
+              <div class="input-field">
+                <input type="text" class="validate" ng-model="mod.link" required placeholder="Link">
+              </div>
+
+              <div class="input-field">
+                <input type="text" class="validate" ng-model="mod.description.speakerInfo" required placeholder="Speaker Info.">
+              </div>
+              <div class="input-field">
+                <input type="text" class="validate" ng-model="mod.description.talkInfo" required  placeholder="Info talk">
+              </div>
+
+              <div class="input-field">
+                <textarea class="materialize-textarea" ng-model="mod.description.info" required
+                  placeholder="Summary"></textarea>
+
+              </div>
+              <label for="startdate">Start Date and Time</label>
+              <input type="datetime-local" ng-model="mod.start" required>
+
+              <label for="enddate">End Date and Time</label>
+              <input type="datetime-local" ng-model="mod.end" required>
+
+              <a class="waves-effect waves-light btn red" ng-click="deleteMod(mod)"><i class="material-icons left">delete</i>Delete</a>
+
+            </span>
+          </div>
+        </li>
+      </ul>
+      <br>
+      <p>{{}}</p>
+      <button class="pink btn waves-effect" id="saveEdits">Save Changes.</button>
+    </form>
+
+  </div>
+  <div class="divider"></div>
+
+  <!-- New -->
+  <div class="section" style="min-height: 100vh;" id="new">
+    <h5>
+      Create New Module
+    </h5>
+    <br>
+    <form ng-submit="makeNewModule()">
+      <label>All fields are required.</label>
+      <br>
+      <br>
+      <div class="input-field">
+        <input id="name" type="text" ng-model="webinar.name" required>
+        <label for="name">Name of Webinar</label>
+      </div>
+      <div class="input-field">
+        <input id="speaker" type="text" class="validate" ng-model="webinar.description.speaker" required>
+        <label for="speaker">Speaker</label>
+      </div>
+      <label>If you don't have the link yet, put / (forward slash only)</label>
+      <div class="input-field">
+
+        <input id="link" type="text" class="validate" ng-model="webinar.link">
+        <label for="link">Link</label>
+      </div>
+      <label>If you don't have the poster/image yet, put ... (3 dots only) </label>
+
+      <div class="input-field">
+        <textarea id="info" class="materialize-textarea" ng-model="webinar.description.info" required></textarea>
+        <label for="info">Image of the speaker</label>
+      </div>
+
+      <div class="input-field">
+        <input id="speakerInfo" type="text" class="validate" ng-model="webinar.description.speakerInfo">
+        <label for="speakerInfo">Info about the speaker</label>
+      </div>
+
+      <div class="input-field">
+        <input id="talkInfo" type="text" class="validate" ng-model="webinar.description.talkInfo">
+        <label for="talkInfo">Info about the topic/talk</label>
+      </div>
+
+      <label for="startdate">Start Date and Time</label>
+      <input type="datetime-local" ng-model="webinar.start" required>
+
+      <label for="enddate">End Date and Time</label>
+      <input type="datetime-local" ng-model="webinar.end" required>
+
+      <br>
+      <br>
+      <button type="submit" class="right btn waves-effect waves-light pink">Create </button>
+
+    </form>
+  </div>
+
+
+  <script>
+    angular.module('pravegaApp', []).controller('editthelink', function ($scope, $http) {
+      console.log('Controller fired up.')
+
+      // Initializing materialize
+      var date_elems = document.querySelectorAll('.datepicker');
+      var date_instances = M.Datepicker.init(date_elems, {});
+
+      var modal_elems = document.querySelectorAll('.modal');
+      var modal_instances = M.Modal.init(modal_elems, {});
+
+      var col_elems = document.querySelectorAll('.collapsible');
+      var col_instances = M.Collapsible.init(col_elems, {
+        accordian: false
+      });
+
+      $deleteStat = []
+
+      $scope.mods = [];
+      $scope.editor = {}
+
+      $http({
+        'method': 'GET',
+        'url': 'https://pravega.glitch.me/api/webinar'
+      }).then((r) => {
+        $scope.mods = r.data;
+        $scope.mods.forEach(element => {
+          element.start = new Date(element.start);
+          element.end = new Date(element.end);
+          $deleteStat.push(false);
+        });
+        console.log(r.data)
+      }, (e) => { console.error(e); })
+
+      $scope.mods = [1, 2, 3, 4]
+
+
+      $scope.makeNewModule = function () {
+        console.log($scope.webinar)
+
+        // Send to server
+        $http({
+          'method': 'POST',
+          'url': 'https://pravega.glitch.me/api/webinar',
+          'data': $scope.webinar
+        }).then((r) => { console.log(r.data); window.location.reload() }, (e) => { console.error(e); })
+
+      }
+
+      $scope.editMods = async function () {
+
+        alert('Wait for status call.')
+        er = false;
+        for (const eve in $scope.mods) {
+          await $http({
+            'method': 'POST',
+            'url': 'https://pravega.glitch.me/api/update/webinar',
+            'data': $scope.mods[eve]
+          }).then((r) => { console.log(r.data); }, (e) => { er = true; console.error(e); })
+        }
+
+        if (er) {
+          alert('Some error seems to have occured. Contact Chin ASAP.')
+        } else {
+          alert('Synced to server.')
+        }
+      }
+
+      $scope.deleteMod = function(mod){
+        if(confirm("Delete ? Action can't be undone")){
+          $http({
+            'url':'/api/webinar',
+            'method':'PUT',
+            'data':mod
+          }).then((r)=>{console.log(r.data);},(e)=>{console.log(e)})
+        }
+      }
+
+    })
+  </script>
+</body>
+
+</html>
