@@ -15,7 +15,7 @@ app.locals.moment = require("moment");
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -47,6 +47,7 @@ db.once("open", e => {
 });
 
 function server() {
+
   // Schema for user object
   var userSchema = new mongoose.Schema({
     edu: String,
@@ -89,8 +90,8 @@ function server() {
     description: {
       info: String,
       speaker: String,
-      speakerInfo:String,
-      talkInfo:String
+      speakerInfo: String,
+      talkInfo: String
     },
     link: String
   });
@@ -134,14 +135,16 @@ function server() {
     );
   }
 
-  logit("INFO", "Server loaded...");
+  // logit("INFO", "Server loaded...");
 
   // Routing
 
-  app.get("/", (req, res) => {
-    console.log("Homepage");
-    res.sendFile(__dirname + "/public/front_end/views/index.html");
-  });
+  // app.get("/", (req, res) => {
+  //   console.log("Homepage");
+  //   res.sendFile(__dirname + "/public/front_end/views/index.html");
+  // });
+
+  app.use('/web', express.static('public/old_front_end'))
 
   app.get("/template", (req, res) => {
     console.log("Template");
@@ -168,7 +171,7 @@ function server() {
     res.sendFile(__dirname + "/public/front_end/views/ca_register.html");
   });
 
-  app.get('/form',(req,res)=>{
+  app.get('/form', (req, res) => {
     res.sendFile(__dirname + "/public/front_end/views/form.html")
   })
 
@@ -198,7 +201,7 @@ function server() {
         }
       });
 
-      data.sort(function(a, b) {
+      data.sort(function (a, b) {
         var keyA = new Date(a.start),
           keyB = new Date(b.start);
         // Compare the 2 dates
@@ -219,13 +222,19 @@ function server() {
     });
   });
 
+
+
+
+
+  // Webinars 
+
   app.get("/api/edit/webinars", (req, res) => {
     res.sendFile(
       __dirname + "/public/front_end/views/webinar/edit-webinar.html"
     );
   });
 
-  // webinar stuff
+  // Webinar Creation
   app.post("/api/webinar", (req, res) => {
     webinar.create(req.body, (err, data) => {
       if (err) throw err;
@@ -233,6 +242,7 @@ function server() {
     });
   });
 
+  // Webinar Updation
   app.post("/api/update/webinar", (req, res) => {
     webinar.updateOne({ _id: req.body._id }, req.body, (e, d) => {
       if (e) throw e;
@@ -240,6 +250,7 @@ function server() {
     });
   });
 
+  // Webinar Retrieval
   app.get("/api/webinar", (req, res) => {
     webinar.find((err, data) => {
       if (err) throw err;
@@ -247,6 +258,7 @@ function server() {
     });
   });
 
+  // Webinar Deletion
   app.put("/api/webinar", (req, res) => {
     console.log(req.body);
     webinar.deleteOne({ _id: req.body._id }, (e, d) => {
@@ -254,6 +266,9 @@ function server() {
       res.send(d);
     });
   });
+
+
+  // General Purpouse 
 
   // Login
   app.post("/api/login", (req, res) => {
@@ -272,23 +287,17 @@ function server() {
     );
   });
 
+
+
+
   // User
+
 
   // Create user
   app.post("/api/create/user", (req, res) => {
     // Add all preprocessing to data here
     var newUser = req.body;
     genRefId(newUser, res);
-  });
-
-  // CF mediated user creation
-
-  // v1 - Accepting CA code only
-  app.post("/api/cf/register", cors(), (req, res) => {
-    // Call an async function so main thread can continue.
-    creditCa(req.body);
-    // Does it matter what you send them ?
-    res.send("OK");
   });
 
   // Find user
@@ -313,6 +322,21 @@ function server() {
 
   // pword update
   app.post("/api/update/user/pword", (req, res) => {
+    res.send("OK");
+  });
+
+
+
+
+  // CA System 
+
+
+
+  // v1 - Accepting CA code only
+  app.post("/api/cf/register", cors(), (req, res) => {
+    // Call an async function so main thread can continue.
+    creditCa(req.body);
+    // Does it matter what you send them ?
     res.send("OK");
   });
 
@@ -363,10 +387,15 @@ function server() {
     }
   });
 
+
+
   // Logs
   app.get("/logs", (req, res) => {
     sendLogs(res);
   });
+
+
+
 
   // Helper functions
   function genRefId(newUser, res) {
@@ -463,9 +492,9 @@ function server() {
               logit(
                 "ERROR - 2",
                 "CA :" +
-                  ticket.attendee.customTField0 +
-                  " NOT CREDITED : " +
-                  credit
+                ticket.attendee.customTField0 +
+                " NOT CREDITED : " +
+                credit
               );
             }
 
@@ -478,7 +507,7 @@ function server() {
             logit(
               "INFO",
               "CA Code Invalid (Referred and Wrong) :" +
-                ticket.attendee.customTField0
+              ticket.attendee.customTField0
             );
           }
         } else {
@@ -523,14 +552,9 @@ function server() {
     }, 10 * 60 * 2);
   });
 
-  console.log(new Date());
+  console.log('Server started at ', new Date());
 
-  // Stayin Alive - Bee Gees
-  function callHeroku() {
-    console.log("Hi herok00!");
-  }
-
-  const listener = app.listen(process.env.PORT, () => {
+  const listener = app.listen(process.env.PORT || 3000, () => {
     console.log("Your app is listening on port " + listener.address().port);
   });
 }
