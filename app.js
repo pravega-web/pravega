@@ -175,7 +175,7 @@ function server() {
     res.sendFile(__dirname + "/public/front_end/views/form.html")
   })
 
-  app.get("/webinars", (req, res) => {
+  app.get("/paradigms", (req, res) => {
     webinar.find((err, data) => {
       var live = {
         is: true,
