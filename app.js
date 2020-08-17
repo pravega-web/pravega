@@ -144,7 +144,7 @@ function server() {
   //   res.sendFile(__dirname + "/public/front_end/views/index.html");
   // });
 
-  app.use('/web', express.static('public/old_front_end'))
+  app.use('/', express.static('public/old_front_end'))
 
   app.get("/template", (req, res) => {
     console.log("Template");
