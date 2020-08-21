@@ -15,7 +15,8 @@
     "cowsay": "1.4.0",
     "pug": "3.0.0",
     "moment": "2.27.0",
-    "http": "0.0.1-security"
+    "http": "0.0.1-security",
+    "compression": "1.7.4"
   },
   "engines": {
     "node": "12.x"

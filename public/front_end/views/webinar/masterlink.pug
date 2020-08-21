@@ -4,13 +4,6 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Pravega Paradigms
-  body
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One link to rule them all.</title>
 
   //- <!-- Materialize -->
   //- <!-- Compiled and minified CSS -->
@@ -30,7 +23,7 @@ html(lang="en")
   <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'UA-173559842-1');
   </script>
 
-</head>
+
 
 <body class="blue-grey lighten-2 fs" onscroll="scrolll()">
 
@@ -62,10 +55,19 @@ html(lang="en")
     div(id="homeDisplay")
       if live.live
         p(class="red-text btn-flat pulse") LIVE NOW
+        p(id="redirect" onclick="i = -1; this.style.visibility = 'hidden' " )
+        br
+        h3= live.wbnr.name
+        br
+        h5= live.wbnr.description.speaker
+        
+        a(class="btn" href='https://'+live.wbnr.link target="_blank") Link here
+        script var i = 8; window.setInterval(function(){i--;if(i ==0){window.location.replace('https://'+'#{live.wbnr.link}')};document.getElementById('redirect').innerText = 'Redirecting you in '+ i +' seconds, click to cancel'},1000)
+        h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
       else
         p(class="") Upcoming event
         p(style="font-size: 1em") You'll be automatically redirected to webinar from here when it goes live.
-        p(id="redirect" onclick="i = -1; this.style.visibility = 'hidden' " )
+        
         h3= live.wbnr.name
         br
         h5= live.wbnr.description.speaker
@@ -78,8 +80,7 @@ html(lang="en")
         br
 
         if live.live
-          a(class="btn" href='https://'+live.wbnr.link target="_blank") Link here
-          script var i = 8; window.setInterval(function(){i--;if(i ==0){window.location.replace('https://'+'#{live.wbnr.link}')};document.getElementById('redirect').innerText = 'Redirecting you in '+ i +' seconds, click to cancel'},1000)
+          
   
     <div class="fixed-action-btn center" style="position:static">
       <a class="btn-floating btn-large black pulse" href="#desc" id="theFab">

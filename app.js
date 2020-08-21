@@ -11,9 +11,11 @@ var cors = require("cors");
 var cowsay = require("cowsay");
 const pug = require("pug");
 const http = require("http");
+var compression = require("compression")
 app.locals.moment = require("moment");
 
 app.use(express.static(__dirname + "/public"));
+app.use('/face',express.static(__dirname + "/public/face"))
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -21,8 +23,10 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
+  res.header('Accept-Encoding: gzip')
   next();
 });
+app.use(compression())
 
 // GLobal variables
 
