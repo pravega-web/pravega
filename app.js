@@ -189,13 +189,8 @@ function server() {
       if (err) throw err;
 
       data.forEach(wbnr => {
-        
-        // the below edits were required to be performed urgently
-        // wbnr.start = new Date(wbnr.start.getTime() + 5.5 * 3600 * 1000);
-        // wbnr.end = new Date(wbnr.end.getTime() + 5.5 * 3600 * 1000);
-        wbnr.start = new Date(wbnr.start.getTime());
-        wbnr.end = new Date(wbnr.end.getTime());
-
+        wbnr.start = new Date(wbnr.start.getTime() + 5.5 * 3600 * 1000);
+        wbnr.end = new Date(wbnr.end.getTime() + 5.5 * 3600 * 1000);
         // console.log(app.locals.moment(wbnr.start).format('DD / MM / YYYY hh : mm a'))
         idanim = new Date(new Date().getTime() + 5.5 * 3600 * 1000);
         // console.log(app.locals.moment(idanim).format('DD / MM / YYYY hh : mm a'))
