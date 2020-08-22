@@ -1,6 +1,8 @@
 //SCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSC
 //Pravega Central Server
 
+process.env.TZ = '+5:30'
+
 const express = require("express");
 const app = express();
 
@@ -16,6 +18,7 @@ app.locals.moment = require("moment");
 
 app.use(express.static(__dirname + "/public"));
 app.use('/face',express.static(__dirname + "/public/face"))
+// app.use(express.static(__dirname+'/node_modules'))
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -556,7 +559,13 @@ function server() {
     }, 10 * 60 * 2);
   });
 
-  console.log('Server started at ', new Date());
+  app.get('/ticktock',(req,res)=>{
+    res.send(app.locals.moment(new Date()).format('hh : mm : s'))
+  })
+
+  
+
+  console.log('Server started at ', app.locals.moment(new Date()).format('hh : mm : s'));
 
   const listener = app.listen(process.env.PORT || 3000, () => {
     console.log("Your app is listening on port " + listener.address().port);
