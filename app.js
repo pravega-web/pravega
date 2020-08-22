@@ -184,10 +184,20 @@ function server() {
 
   app.get("/paradigms", (req, res) => {
     webinar.find((err, data) => {
+
+      data.sort(function (a, b) {
+        var keyA = new Date(a.start),
+          keyB = new Date(b.start);
+        // Compare the 2 dates
+        if (keyA < keyB) return -1;
+        if (keyA > keyB) return 1;
+        return 0;
+      });
+
       var live = {
         is: true,
         live: false,
-        wbnr: data[0]
+        wbnr: data[1]
       };
       if (err) throw err;
 
@@ -212,14 +222,7 @@ function server() {
         }
       });
 
-      data.sort(function (a, b) {
-        var keyA = new Date(a.start),
-          keyB = new Date(b.start);
-        // Compare the 2 dates
-        if (keyA < keyB) return -1;
-        if (keyA > keyB) return 1;
-        return 0;
-      });
+      
 
       res.send(
         pug.compileFile(
