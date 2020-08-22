@@ -194,6 +194,10 @@ function server() {
         // console.log(app.locals.moment(wbnr.start).format('DD / MM / YYYY hh : mm a'))
         idanim = new Date(new Date().getTime() + 5.5 * 3600 * 1000);
         // console.log(app.locals.moment(idanim).format('DD / MM / YYYY hh : mm a'))
+
+        console.log(wbnr.start);
+        console.log(wbnr.end);
+
         wbnr.icon = "keyboard_arrow_down";
         if (idanim < wbnr.end && idanim > wbnr.start) {
           console.log("Live event");
