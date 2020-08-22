@@ -71,6 +71,8 @@ html(lang="en")
         h3= live.wbnr.name
         br
         h5= live.wbnr.description.speaker
+        br
+        a(href="http://bit.ly/Paradigms1attendee" target="_blank" class="btn") Link to live event
         if live.live
           h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
         else
