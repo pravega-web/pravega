@@ -73,11 +73,9 @@ html(lang="en")
         h5= live.wbnr.description.speaker
         br
         a(href="http://bit.ly/Paradigms1attendee" target="_blank" class="btn") Link to live event
-        if live.live
-          h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
-        else
-          br
-          h5 Starts #{moment(live.wbnr.start, (new Date())).fromNow()}
+      
+        br
+        h5 Starts #{moment(live.wbnr.start, (new Date())).fromNow()}
 
         br
 
@@ -116,7 +114,8 @@ html(lang="en")
           p All rights reserved | Pravega 2021
           div(class="divider")
           p Server time: #{time}
-          p Webinar Starts: #{new Date()}
+          p System time: #{new Date()}
+          p Webinar Start time : #{moment(live.wbnr.start).format('hh : mm : ss a')}
 
   </div>
   
