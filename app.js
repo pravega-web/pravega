@@ -225,6 +225,7 @@ function server() {
         pug.compileFile(
           __dirname + "/public/front_end/views/webinar/masterlink.pug"
         )({
+          time:idanim,
           moment: app.locals.moment,
           future: data,
           live: live
