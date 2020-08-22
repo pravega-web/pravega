@@ -2,7 +2,7 @@ doctype html5
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Pravega Paradigms
 
   //- <!-- Materialize -->
@@ -17,7 +17,7 @@ html(lang="en")
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
-  link(rel="stylesheet", href="/front_end/views/webinar/wrkshps.css")
+  link(rel="stylesheet" href="/front_end/views/webinar/wrkshps.css")
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173559842-1"></script>
   <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'UA-173559842-1');
@@ -31,7 +31,7 @@ html(lang="en")
     <nav class="nav-extended z-depth-1 black">
       <div class="nav-wrapper">
         a(href="" class="brand-logo center" style="margin-top:10px")
-          img(src="https://cdn.glitch.com/236c8e41-87b9-48da-80f1-519e5b0d7f4b%2Flogo_transparent.png?v=1596908743647",id="logo")
+          img(src="https://cdn.glitch.com/236c8e41-87b9-48da-80f1-519e5b0d7f4b%2Flogo_transparent.png?v=1596908743647" id="logo")
         br
         br
       </div>
@@ -51,7 +51,7 @@ html(lang="en")
 
     div(id="aligner1")
 
-    
+
     div(id="homeDisplay")
       if live.live
         p(class="red-text btn-flat pulse") LIVE NOW
@@ -60,33 +60,27 @@ html(lang="en")
         h3= live.wbnr.name
         br
         h5= live.wbnr.description.speaker
-        
+
         a(class="btn" href='https://'+live.wbnr.link target="_blank") Link here
         script var i = 8; window.setInterval(function(){i--;if(i ==0){window.location.replace('https://'+'#{live.wbnr.link}')};document.getElementById('redirect').innerText = 'Redirecting you in '+ i +' seconds, click to cancel'},1000)
         h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
       else
         p(class="") Upcoming event
         p(style="font-size: 1em") You'll be automatically redirected to webinar from here when it goes live.
-        
+
         h3= live.wbnr.name
         br
         h5= live.wbnr.description.speaker
         br
-        a(href="http://bit.ly/Paradigms1attendee" target="_blank" class="btn") Link to live event
-        if live.live
-          h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
-        else
-          br
-          h5 Starts #{moment(live.wbnr.start, (new Date())).fromNow()}
-
+        a(href='https://'+live.wbnr.link target="_blank" class="btn") Link to live event
         br
+        h5 Starts #{moment(live.wbnr.start, (new Date())).fromNow()}
 
-        if live.live
-          
-  
+
+
     <div class="fixed-action-btn center" style="position:static">
       <a class="btn-floating btn-large black pulse" href="#desc" id="theFab">
-          <i class="large material-icons">arrow_downward</i>
+        <i class="large material-icons">arrow_downward</i>
       </a>
 
       div(style='height:100vh; padding:5px; position:sticky; top: 0px' class="container" )
@@ -101,7 +95,7 @@ html(lang="en")
         br
         br
         br
-        
+
         h3() About Paradigms
         br
         h5(style="text-align:center;" id="abText") Worried about the competition gaining an edge during the lockdown? Not sure where to get advice from? No more! Pravega presents PARADIGMS, a series of webinars where you get to hear from some of the greatest minds in Industry and Academia about their experiences and avail yourself of their expert advice. Prepare to hear about innovative ideas, cutting edge tactics and smart workplace and business solutions that will give you a definitive edge over the competition.
@@ -114,10 +108,14 @@ html(lang="en")
 
         footer(id="myFoot")
           p All rights reserved | Pravega 2021
+          div(class="divider")
+          p Server time: #{time}
+          p System time: #{new Date()}
+          p Webinar Start time : #{moment(live.wbnr.start).format('hh : mm : ss a')}
 
   </div>
-  
-  
+
+
   </div>
 
   //- <!-- start page -->
@@ -175,7 +173,7 @@ html(lang="en")
 
   </div>
 
-  
+
 
   </div>
   script(src="/front_end/views/webinar/wrkshps.js")

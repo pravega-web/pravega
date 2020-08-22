@@ -1,6 +1,8 @@
 //SCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSC
 //Pravega Central Server
 
+process.env.TZ = '+5:30'
+
 const express = require("express");
 const app = express();
 
@@ -16,6 +18,7 @@ app.locals.moment = require("moment");
 
 app.use(express.static(__dirname + "/public"));
 app.use('/face',express.static(__dirname + "/public/face"))
+// app.use(express.static(__dirname+'/node_modules'))
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -181,10 +184,20 @@ function server() {
 
   app.get("/paradigms", (req, res) => {
     webinar.find((err, data) => {
+
+      data.sort(function (a, b) {
+        var keyA = new Date(a.start),
+          keyB = new Date(b.start);
+        // Compare the 2 dates
+        if (keyA < keyB) return -1;
+        if (keyA > keyB) return 1;
+        return 0;
+      });
+
       var live = {
         is: true,
         live: false,
-        wbnr: data[0]
+        wbnr: data[1]
       };
       if (err) throw err;
 
@@ -192,7 +205,7 @@ function server() {
         wbnr.start = new Date(wbnr.start.getTime());
         wbnr.end = new Date(wbnr.end.getTime());
         // console.log(app.locals.moment(wbnr.start).format('DD / MM / YYYY hh : mm a'))
-        idanim = new Date(new Date().getTime());
+        idanim = new Date(new Date().getTime() + (5.5*3600*1000));
         // console.log(app.locals.moment(idanim).format('DD / MM / YYYY hh : mm a'))
 
         console.log(wbnr.start);
@@ -209,19 +222,13 @@ function server() {
         }
       });
 
-      data.sort(function (a, b) {
-        var keyA = new Date(a.start),
-          keyB = new Date(b.start);
-        // Compare the 2 dates
-        if (keyA < keyB) return -1;
-        if (keyA > keyB) return 1;
-        return 0;
-      });
+      
 
       res.send(
         pug.compileFile(
           __dirname + "/public/front_end/views/webinar/masterlink.pug"
         )({
+          time:idanim,
           moment: app.locals.moment,
           future: data,
           live: live
@@ -560,7 +567,13 @@ function server() {
     }, 10 * 60 * 2);
   });
 
-  console.log('Server started at ', new Date());
+  app.get('/ticktock',(req,res)=>{
+    res.send(app.locals.moment(new Date()).format('hh : mm : s'))
+  })
+
+  
+
+  console.log('Server started at ', app.locals.moment(new Date()).format('hh : mm : s'));
 
   const listener = app.listen(process.env.PORT || 3000, () => {
     console.log("Your app is listening on port " + listener.address().port);
