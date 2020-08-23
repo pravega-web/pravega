@@ -64,6 +64,7 @@ html(lang="en")
         a(class="btn" href='https://'+live.wbnr.link target="_blank") Link here
         script var i = 8; window.setInterval(function(){i--;if(i ==0){window.location.replace('https://'+'#{live.wbnr.link}')};document.getElementById('redirect').innerText = 'Redirecting you in '+ i +' seconds, click to cancel'},1000)
         h5 #{moment(live.wbnr.start).format('hh:mm a')} - #{moment(live.wbnr.end).format('hh:mm a')}
+        
       else
         p(class="") Upcoming event
         p(style="font-size: 1em") You'll be automatically redirected to webinar from here when it goes live.
@@ -75,6 +76,8 @@ html(lang="en")
         a(href='https://'+live.wbnr.link target="_blank" class="btn") Link to live event
         br
         h5 Starts #{moment(live.wbnr.start, (new Date())).fromNow()}
+        script console.log('#{moment( live.wbnr.start + 5.5 * 3600 * 1000).format('hh:mm:ss a')}')
+        script console.log( '#{moment( new Date(live.wbnr.start).getTime() + 5.5*3600*1000 ).format('hh:mm:ss a')}')
 
 
 
@@ -161,7 +164,7 @@ html(lang="en")
             p 
               u About the Talk
             p #{val.description.talkInfo}
-            p Timings : #{moment(val.start).format('hh : mm a')} - #{moment(val.end).format('hh : mm a')}
+            p Timings : #{moment( new Date(val.start).getTime() + 5.5*3600*1000 ).format('hh:mm:ss a')} - #{moment( new Date(val.end).getTime() + 5.5*3600*1000 ).format('hh:mm:ss a')}
             p
               unless val.link == '/'
                 a(href='https://'+val.link target="_blank") Webinar Link :  #{val.link}
