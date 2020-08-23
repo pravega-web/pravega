@@ -197,7 +197,7 @@ function server() {
       var live = {
         is: true,
         live: false,
-        wbnr: data[1]
+        wbnr: data[2]
       };
       if (err) throw err;
 
@@ -208,8 +208,6 @@ function server() {
         idanim = new Date(new Date().getTime());
         // console.log(app.locals.moment(idanim).format('DD / MM / YYYY hh : mm a'))
 
-        console.log(wbnr.start);
-        console.log(wbnr.end);
 
         wbnr.icon = "keyboard_arrow_down";
         if (idanim < wbnr.end && idanim > wbnr.start) {
