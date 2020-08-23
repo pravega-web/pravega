@@ -205,7 +205,7 @@ function server() {
         wbnr.start = new Date(wbnr.start.getTime());
         wbnr.end = new Date(wbnr.end.getTime());
         // console.log(app.locals.moment(wbnr.start).format('DD / MM / YYYY hh : mm a'))
-        idanim = new Date(new Date().getTime() + (5.5*3600*1000));
+        idanim = new Date(new Date().getTime());
         // console.log(app.locals.moment(idanim).format('DD / MM / YYYY hh : mm a'))
 
         console.log(wbnr.start);
