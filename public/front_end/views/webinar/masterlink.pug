@@ -7,31 +7,33 @@ html(lang="en")
 
   //- <!-- Materialize -->
   //- <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" preload>
   <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Share:wght@700&display=swap" rel="stylesheet">
+  
   //- <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" ></script>
 
 
   link(rel="stylesheet" href="/front_end/views/webinar/wrkshps.css")
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173559842-1"></script>
-  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'UA-173559842-1');
+  <script  src="https://www.googletagmanager.com/gtag/js?id=UA-173559842-1" async></script>
+  <script async> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', 'UA-173559842-1');
   </script>
 
 
 
 <body class="blue-grey lighten-2 fs" onscroll="scrolll()">
 
+    
+
   div(class="navbar-fixed" id="navfixed")
     <nav class="nav-extended z-depth-1 black">
       <div class="nav-wrapper">
         a(href="" class="brand-logo center" style="margin-top:10px")
-          img(src="https://cdn.glitch.com/236c8e41-87b9-48da-80f1-519e5b0d7f4b%2Flogo_transparent.png?v=1596908743647" id="logo")
+          //- img(src="/front_end/views/webinar/small.png" id="logo")
+          h4 Pravega Talks
+          
         br
         br
       </div>
@@ -68,7 +70,7 @@ html(lang="en")
       else
         p(class="") Upcoming event
         p(style="font-size: 1em") You'll be automatically redirected to webinar from here when it goes live.
-
+        
         h3= live.wbnr.name
         br
         h5= live.wbnr.description.speaker
@@ -147,8 +149,9 @@ html(lang="en")
     each val in future
       <li onclick="if(this.querySelector('.material-icons').innerText == 'keyboard_arrow_up'){console.log('Hi there');this.querySelector('.material-icons').innerText = 'keyboard_arrow_down'}else{this.querySelector('.material-icons').innerText = 'keyboard_arrow_up'}" style="">
         div(class="collapsible-header row rh white-text flow-text z-depth-2" style="margin-bottom:5px; background-color:#4f4f5f63; border:none")
-          div(class="col s5" style="word-break:break-word;")= val.name
-          div(class="col s6")= moment(val.start).format('MMMM Do YYYY')
+          div(class="col s4" style="word-break:break-word;")= val.name
+          div(class="col s5")= moment(val.start).format('MMMM Do YYYY')
+          
           div(class="col s1")
             i(class="material-icons")= val.icon
             //- img(src=val.description.info, alt="" cl)
