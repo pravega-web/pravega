@@ -197,7 +197,7 @@ function server() {
       var live = {
         is: true,
         live: false,
-        wbnr: data[4]
+        wbnr: data[5]
       };
       if (err) throw err;
 
