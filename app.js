@@ -194,7 +194,7 @@ function server() {
         return 0;
       });
 
-      console.log(data);
+      // console.log(data);
       var upcoming_webinar_index = getUpcomingWebinar(data);
 
       var live = {
@@ -287,7 +287,7 @@ function server() {
       index++;
     }
 
-    console.log("Index of upcoming/live webinar: ", index);
+    // console.log("Index of upcoming/live webinar: ", index);
     return index;
   }
 
