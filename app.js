@@ -194,10 +194,13 @@ function server() {
         return 0;
       });
 
+      console.log(data);
+      var upcoming_webinar_index = getUpcomingWebinar(data);
+
       var live = {
         is: true,
         live: false,
-        wbnr: data[5]
+        wbnr: data[upcoming_webinar_index],
       };
       if (err) throw err;
 
@@ -234,10 +237,6 @@ function server() {
       );
     });
   });
-
-
-
-
 
   // Webinars 
 
@@ -279,6 +278,18 @@ function server() {
       res.send(d);
     });
   });
+
+  // Upcoming Webinar
+  function getUpcomingWebinar(data) {
+    let current_time = new Date(new Date().getTime()), index = 0;
+
+    while(index < data.length && data[index].end < current_time) {
+      index++;
+    }
+
+    console.log("Index of upcoming/live webinar: ", index);
+    return index;
+  }
 
 
   // General Purpouse 
