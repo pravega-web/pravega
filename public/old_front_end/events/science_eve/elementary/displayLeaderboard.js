@@ -66,7 +66,7 @@ data.push(
     {
         name: "Prithu",
         institute: "Dolna Day school",
-        studies: "12" + "th".sup() + " Std",
+        studies: "12" + "th".sup() + " Std (passed)",
         points: 17
     },
     {
