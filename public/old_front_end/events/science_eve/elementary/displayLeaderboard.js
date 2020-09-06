@@ -40,7 +40,7 @@ data.push(
         points: 31
     },
     {
-        name: "Sayan Goswani",
+        name: "Sayan Goswami",
         institute: "Visvabharati university",
         studies: "2" + "nd".sup() + " Year (UG)",
         points: 24
