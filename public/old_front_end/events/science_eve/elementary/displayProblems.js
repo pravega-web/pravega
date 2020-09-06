@@ -31,7 +31,7 @@ function displayDetails(problem) {
 
     if(problem.has_solution) {
         output += '<li><span>Solution</span> <a href="elementary/' + `solution_${problem.num}`
-        + '.pdf"> Click here</a> </li>';
+        + '.pdf"> View solution</a> </li>';
     }
     return output;
 }
