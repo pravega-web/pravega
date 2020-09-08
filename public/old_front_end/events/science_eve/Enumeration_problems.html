@@ -173,53 +173,112 @@
                             </div>
                         </div>
 
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="enumeration/Gaussian_Gamble_problems_2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h2 class="text-uppercase">Problem set #2</h2>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> 4<sup>th</sup> September at 5 PM IST</li>
-                                    <li><span>Deadline</span> 11<sup>th</sup> September at 11:59 PM IST</li>
-                                    <li><span>Maximum score</span> 25</li>
-                                    <li><span>Link</span> <a href="enumeration/Gaussian_Gamble_problems_2.pdf"> Download
-                                            problem set</a> </li>
-                                </ul>
-                            </div>
+                        <div id="problems-display">
                         </div>
-                        <hr>
 
-                        <div class="m-bot-100">
+                        <script>
+                            "use strict"
+
+                            function displayDate(date) {
+                                let output = `${date.day}`;
+
+                                if (date.day == 1 || date.day == 21 || date.day == 31) {
+                                    output += "st".sup();
+                                }
+                                else if (date.day == 2 || date.day == 22) {
+                                    output += "nd".sup();
+                                }
+                                else if (date.day == 3 || date.day == 23) {
+                                    output += "rd".sup();
+                                }
+                                else {
+                                    output += "th".sup();
+                                }
+                                output += ` ${date.month} at ` + date.time;
+
+                                return output;
+                            }
+
+                            function displayDetails(problem) {
+                                let output = "";
+
+                                output += "<li><span>Uploaded on</span> " + displayDate(problem.uploaded)
+                                    + "</li><li><span>Deadline</span> " + displayDate(problem.deadline)
+                                    + "</li><li><span>Points</span> " + `${problem.points}`
+                                    + '</li><li><span>Link</span> <a href="elementary/' + `problem_${problem.num}`
+                                    + '.pdf"> Download problem</a> </li>';
+
+                                if (problem.has_solution) {
+                                    output += '<li><span>Solution</span> <a href="elementary/' + `solution_${problem.num}`
+                                        + '.pdf"> View solution</a> </li>';
+                                }
+                                return output;
+                            }
+
+                            let problems = [];
+                            problems.push(
+                                {
+                                    num: 1,
+                                    uploaded: {
+                                        day: 21,
+                                        month: "August",
+                                        time: "5 PM",
+                                    },
+                                    deadline: {
+                                        day: 28,
+                                        month: "August",
+                                        time: "11:59 PM",
+                                    },
+                                    points: 25,
+                                },
+                                {
+                                    num: 2,
+                                    uploaded: {
+                                        day: 4,
+                                        month: "September",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 11,
+                                        month: "September",
+                                        time: "11:59 PM",
+                                    },
+                                    points: 25,
+                                },
+                            );
+
+                            problems = problems.sort((a, b) => b.num - a.num);
+
+                            let problems_display = document.getElementById("problems-display");
+
+                            for (let problem of problems) {
+                                problems_display.innerHTML += `<div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="enumeration/Gaussian_Gamble_problems_1.jpg" alt="">
+                                    <img src="enumeration/problems_${problem.num}.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="heading-title-side-border text-left">
-                                    <h2 class="text-uppercase">Problem set #1</h2>
+                                    <h2 class="text-uppercase">Problem set #${problem.num}</h2>
                                     <div class="title-border-container">
                                         <div class="title-border"></div>
                                     </div>
                                 </div>
                                 <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> 21<sup>st</sup> August at 5 PM IST</li>
-                                    <li><span>Deadline</span> 28<sup>th</sup> August at 11:59 PM IST</li>
-                                    <li><span>Maximum score</span> 25</li>
-                                    <li><span>Link</span> <a href="enumeration/Gaussian_Gamble_problems_1.pdf"> Download
-                                            problem set</a> </li>
+                                    <li><span>Uploaded on</span> ${displayDate(problem.uploaded)}</li>
+                                    <li><span>Deadline</span> ${displayDate(problem.deadline)}</li>
+                                    <li><span>Maximum score</span> ${problem.points}</li>
+                                    <li><span>Link</span> <a href="enumeration/problems_${problem.num}.pdf">Download problem</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <hr>
+                        <hr>`
+                            }
+                        </script>
+
+                    </div>
+                </div>
 
             </section>
             <!--body content end-->
