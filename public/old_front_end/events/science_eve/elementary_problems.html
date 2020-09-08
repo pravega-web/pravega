@@ -333,10 +333,7 @@
                                     </div>
                                 </div>
                                 <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> ${displayDate(problem.uploaded)}</li>
-                                    <li><span>Deadline</span> ${displayDate(problem.deadline)}</li>
-                                    <li><span>Maximum score</span> ${problem.points}</li>
-                                    <li><span>Link</span> <a href="elementary/problem_${problem.num}.pdf">Download problem</a></li>
+                                    ${displayDetails(problem)}
                                 </ul>
                             </div>
                         </div>
