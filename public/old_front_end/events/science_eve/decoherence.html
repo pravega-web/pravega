@@ -228,10 +228,10 @@
 
                                 if (links.ms_platform) {
                                     if (links.ms_link == false) {
-                                        output += '<li><span>Meeting link</span> <a href="#"> Will be updated soon </a></li>';
+                                        output += '<li><span>Meeting link</span> <a href="#" > Will be updated soon </a></li>';
                                     }
                                     else {
-                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '"> Click here </a></li>';
+                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '" style="pointer-events: auto"> Click here </a></li>';
                                     }
                                 }
                                 if (links.youtube_platform) {
@@ -239,7 +239,7 @@
                                         output += '<li><span>Youtube link</span> <a href="#"> Will be updated soon </a></li>';
                                     }
                                     else {
-                                        output += '<li><span>Youtube link</span> <a href="' + links.youtube_link + '"> Click here </a></li>';
+                                        output += '<li><span>Youtube link</span> <a href="' + links.youtube_link + '" style="pointer-events: auto"> Click here </a></li>';
                                     }
                                 }
                                 return output;
