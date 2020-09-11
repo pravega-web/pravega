@@ -136,7 +136,9 @@
                         <div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="../../img/events/decoherence.svg" alt="">
+                                    <center>
+                                        <img src="../../img/events/decoherence.svg" alt="">
+                                    </center>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -145,12 +147,9 @@
                                     <p>
                                         Decoherence '21 is here!
                                     </p>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
                                 </div>
 
-                                <h3>Coherence lecture series</h3>
+                                <h2>Coherence lecture series</h2>
                                 <p>
                                     Bored of quarantine? Want to explore interesting stuff about the universe and its
                                     fundamental principles? Want to know about the exciting advancements in physics?
@@ -193,10 +192,13 @@
                                 </p>
                             </div>
                         </div>
+                        <hr />
+                        <br>
 
                         <div id="lectures-display">
 
                         </div>
+                        <hr />
 
                         <script>
                             "use strict"
@@ -323,7 +325,45 @@
                                     },
                                     abstract: "Key points that'll be discussed:<li>Measurement problem in quantum mechanics</li><li>Quantum correlations: EPR paradox and Bell's theorem</li><li>Weak measurement - Introduction, impact on measurement problem in quantum mechanics and applications</li><li>Impact of quantum algorithms on complexity classes and whether it will solve NP complete problem.</li><li>Discussion of Quantum coherence, decoherence and its impact on quantum systems, measurement problem in quantum mechanics.</li><li>Grover search algorithm in unsorted database – in natural settings.</li><li>Quantum Moore’s law – Whether it’s possible or not.</li>",
                                     bio: "Prof Apoorva D. Patel is a Professor at the Centre for High Energy Physics, Indian Institute of Science, Bangalore. He is notable for his work on quantum algorithms, and the application of information theory concepts to understand the structure of genetic languages. His major field of work has been the theory of quantum chromodynamics, where he has used lattice gauge theory techniques to investigate spectral properties, phase transitions, and matrix elements.",
-                                }
+                                },
+                                {
+                                    image: "DrYeomans.png",
+                                    num: 5,
+                                    show: false,
+                                    title: "Nature’s Engines: Active Matter",
+                                    prof: "Julia M Yeomans ",
+                                    date: {
+                                        day: 26,
+                                        month: "September",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: "false",
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "Active materials, such as bacteria, molecular motors and self-propelled colloids, are Nature’s engines. They continuously transform chemical energy from their environment to mechanical work. Dense active matter shows mesoscale turbulence, the emergence of chaotic flow structures characterised by high vorticity and self-propelled topological defects.<br><br>The science underlying active matter may lead to new ideas for micro-machines and suggests possibilities for self-propelled microfluidics. Moreover it is increasingly being used to describe biological systems: recent results show that active topological defects help to regulate turnover in epithelial cell layers and contribute to controlling the structure of bacterial colonies.",
+                                    bio: "Prof Julia Mary Yeomans, FRS, FInstP is a British theoretical physicist and a Professor of Physics at the University of Oxford. She is active in the fields of Soft Condensed matter and Biological Physics. She was elected as Fellow of Royal Society in 2013. In 2012, Yeomans was awarded a European Research Council Advanced Research Grant for her research proposal 'Microflow in complex environments'.",
+                                },
+                                {
+                                    image: "DrBhalerao.jpeg",
+                                    num: 6,
+                                    show: false,
+                                    title: "Cosmic Fireworks: Shining Light on Gravitational Wave Sources",
+                                    prof: "Varun Bhalerao",
+                                    date: {
+                                        day: 28,
+                                        month: "September",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: false,
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "What happens when two neutron stars collide? Are these really the sources of most of the gold, platinum, and other heavy elements in the universe? After decades of theoretical speculation, we finally found the answer in August 2017. Advanced gravitational wave detectors - LIGO and Virgo - discovered the coalescence of two neutron stars 130 million light years away from Earth. At nearly the same time, Earth-orbiting satellites saw a flash of high energy radiation from the same direction. What followed was arguably the most frantic period of activity in modern astronomy: with over 3500 individuals from 950 institutes joining forces to pinpoint the source in the sky and uncover its secrets.Prof.Varun will talk about this first binary neutron star merger, how we found and understood it, and what it means for us in the days to come. He will then focus on the Indian context and the ground-based and space-based follow-up efforts for gravitational sources. Prof.Varun will conclude by giving updates on LIGO India and how you can get involved.",
+                                    bio: "Dr. Varun Bhalerao is an astrophysicist at IIT Bombay.He obtained a B. Tech. in Electrical Engineering at IIT Bombay, followed by a Ph.D. from Caltech in 2012. During his thesis, he worked on NuSTAR - the first focussing hard X-ray telescope - a Caltech / JPL / NASA mission. He also studied High Mass X-ray Binaries with optical and infrared telescopes to measure neutron star masses. As a Vaidya-Raychaudhuri Prize Postdoctoral Fellow at IUCAA, Pune, he led the ground calibration of the Cadmium Zinc Telluride Imager on AstroSat - the Indian multi-wavelength space telescope. At IIT Bombay, his group works on the development of GROWTH-India - India's first fully robotic telescope. The group leads the Indian effort in the study of elusive electromagnetic counterparts to gravitational wave sources.",
+                                },
                             )
 
                             lectures = lectures.sort((a, b) => (b.num - a.num));
@@ -348,7 +388,7 @@
 
                             function displayLectures() {
 
-                                lectures_display.innerHTML = "";
+                                lectures_display.innerHTML = '<center><h1 id="lectures">Lecture details</h1></center>';
 
                                 for (let lecture of lectures) {
 
@@ -409,12 +449,15 @@
                         <div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="../event_updates/spooky-quizzes-update.jpeg" alt="">
+                                    <center>
+                                        <img src="../event_updates/spooky-quizzes-update.jpeg" alt="">
+                                    </center>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <h3>Spooky quizzes</h3>
+                                <br>
+                                <h2>Spooky quizzes</h2>
                                 <p>
                                     Spooky quizzes is an online physics based competition, where an individual tests his
                                     analytical, thinking, mathematical, logical reasoning and deduction skills. Gear up
@@ -443,7 +486,7 @@
                                 </p>
                                 <div>
                                     <a href="spooky.html""
-                                                class=" btn btn-small btn-rounded btn-dark-solid "> Click here to visit the Spooky Quizzes website </a>
+                                                class=" btn btn-small btn-rounded btn-dark-solid ">Visit Spooky Quizzes Website</a>
                                         </div>
                                         <br>
                                         <br>
@@ -454,7 +497,7 @@
                                                 href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
                                         </li>
                                         </ul>
-        
+
                                 </div>
                             </div>
                         </div>
@@ -462,7 +505,7 @@
                         <br>
                         <br>
 
-                        
+
                     </div>
 
                 </div>
