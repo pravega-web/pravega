@@ -130,7 +130,9 @@
                         <div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="../../img/events/elementary.svg" alt="">
+                                    <center>
+                                        <img src="../../img/events/elementary.svg" alt="">
+                                    </center>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -153,31 +155,19 @@
                                         official Pravega handle. For regular updates via email, do subscribe to our
                                         newsletter using the form below.
                                     </p>
-                                    <h3>Awards</h3>
                                     <p>
-                                        The top three participants shall be awarded attractive cash prizes!
-                                    </p>
-                                    <h3>Date</h3>
-                                    <p>
-                                        17<sup>th</sup> August onwards
-                                    </p>
-                                    <h3>Eligibility</h3>
-                                    <p>
-                                        High school students and Undergraduate students upto 2<sup>nd</sup> year
-                                    </p>
-                                    <div>
+                                        This event started on 17<sup>th</sup> August and will continue till December.
+                                        <br>
                                         <a href="pdfs/Elementary_RulesAndRegulations.pdf"
                                             download="Elementary_RulesAndRegulations">Click here to download the rules
                                             and
                                             regulations for this event</a>
                                         <br>
-                                        <br>
                                         <a
                                             href="https://docs.google.com/forms/d/e/1FAIpQLSdWFfFFzann-yB4h9nA8ZigFvt503o11gCFPZVTWawz8tZcMg/viewform?usp=sf_link">Click
                                             here to subscribe to the event and receive regular updates</a>
                                         <br>
-                                        <br>
-                                    </div>
+                                    </p>
                                     <h3>Elementary Lecture Series</h3>
                                     <p>
                                         Do you want to explore the wide spectrum of Chemistry and learn about its
@@ -187,20 +177,207 @@
                                         around the world!
                                         So come on and watch the experts speak and leave with the motivation to dig
                                         deeper.
-                                    </p>
-                                    <p>
+                                        <br>
+                                        <br>
                                         Open to everyone!
                                     </p>
-                                    <a href="elementary_lecture_series.html"
-                                        class="btn btn-small btn-rounded btn-dark-solid">Click here to visit the Lecture
-                                        Series</a>
-                                    <br>
-                                    <br>
-                                    <br>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lectures-display">
+
+                        </div>
+
+                        <script>
+                            "use strict"
+
+                            // helper function
+                            function displayDate(date) {
+                                let output = `${date.day}`;
+
+                                if (date.day == 1 || date.day == 21 || date.day == 31) {
+                                    output += "st".sup();
+                                }
+                                else if (date.day == 2 || date.day == 22) {
+                                    output += "nd".sup();
+                                }
+                                else if (date.day == 3 || date.day == 23) {
+                                    output += "rd".sup();
+                                }
+                                else {
+                                    output += "th".sup();
+                                }
+                                output += ` ${date.month} at ` + date.time;
+
+                                return output;
+                            }
+
+                            // helper function
+                            function displayLink(links) {
+                                let output = "";
+
+                                if (links.ms_platform) {
+                                    if (links.ms_link == false) {
+                                        output += '<li><span>Meeting link</span> <a href="#" > Will be updated soon </a></li>';
+                                    }
+                                    else {
+                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '" style="pointer-events: auto"> Click here </a></li>';
+                                    }
+                                }
+                                if (links.youtube_platform) {
+                                    if (links.youtube_link == false) {
+                                        output += '<li><span>Youtube link</span> <a href="#"> Will be updated soon </a></li>';
+                                    }
+                                    else {
+                                        output += '<li><span>Youtube link</span> <a href="' + links.youtube_link + '" style="pointer-events: auto"> Click here </a></li>';
+                                    }
+                                }
+                                return output;
+                            }
+
+                            let lectures = [];
+
+                            lectures.push(
+                                {
+                                    image: "DrPSM.png",
+                                    num: 1,
+                                    title: "Chemistry in Molecular Vessel",
+                                    prof: "Partha Sarathi Mukherjee",
+                                    date: {
+                                        day: 29,
+                                        month: "August",
+                                        time: "6 PM",
+                                    },
+                                    links: {
+                                        ms_platform: false,
+                                        youtube_platform: true,
+                                        youtube_link: "https://www.youtube.com/watch?v=HWT78BciE0Q",
+                                    },
+                                    abstract: "Properties of chemical entities in confined nanospace are expected to be different from their bulk properties due to restricted rotational and vibrational motions. Such restricted motions along with other interaction(s) may allow to stabilize unusual conformations of compounds in confined space of molecular cavities. Moreover, reactivity and reaction pathways in confined space may become different from traditional bulk reactions leading to the formation of unusual product(s). In this regard, chemists have been trying to design artificial molecular vessels to perform chemical reactions in their confined nanospace. Design of 3D molecular architectures having hydrophobic confined space including their use for catalytic organic transformations will be discussed. The lecture will also focus on the interior decoration of nanocages with urea moieties for new generation discrete heterogeneous catalysts for Michael addition. It is also planned to focus on our recent work on the use of confined space of discrete organic cages for the nucleation of tiny palladium nanoparticles and their successful use in photocatalytic transformation of nitroaromatics to corresponding azo-compounds. Our recent work on the design of enantiopure coordination cages for enantioselective recognition will also be presented in brief. ",
+                                    bio: "Prof. Partha Sarathi Mukherjee is a Professor at the Inorganic and Physical Chemistry department of the Indian Institute of Science, Bangalore. He is a fellow of the Royal Society of Chemistry, a fellow of the Indian Academy of Sciences and has received the Shanti Swarup Bhatnagar Prize for science and technology awarded by the CSIR. He is renowned for his studies on organic nanostructures, molecular sensors and catalysis in nanocages. ",
+                                    show: false,
+                                },
+                                {
+                                    image: "DrJemmis.png",
+                                    num: 2,
+                                    title: "Elementary Questions",
+                                    prof: "E.D. Jemmis",
+                                    date: {
+                                        day: 2,
+                                        month: "September",
+                                        time: "5:30 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: "http://bit.ly/EleLec2",
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "No question is elementary; yet in some ways all questions are. Often general questions are asked in the early stages of one’s education, just as it happened in the beginning of human civilization before different disciplines evolved. A question asked in my UG days that took thirty years even to get a partial answer will be presented. This involved the search for an equivalent of structural and electronic structural relationships of compounds of carbon and its allotropes, in the chemistry of boron. This has led to development of interrelationships amongst polyhedral boranes, beta-rhombohedral boron, borophenes and borospherenes, in many ways related to fullerenes and graphene. ",
+                                    bio: "Prof. Eluvathingal D. Jemmis holds the Year of Science Chair Professorship (SERB) at the Department of Inorganic and Physical Chemistry Department of Indian Institute of Science, and studies structure and reactivity problems of chemistry computationally. He received the Shanti Swarup Bhatnagar Prize (CSIR), and Padma Shri from Govt of India, and was the founding Director of IISER Thiruvananthapuram. ",
+                                    show: false,
+                                },
+                            )
+
+                            lectures = lectures.sort((a, b) => (b.num - a.num));
+
+                            // display toggle function
+                            function toggleVisibility(num) {
+                                for (let lecture of lectures) {
+                                    if (lecture.num == num) {
+                                        if (lecture.show == false) {
+                                            lecture.show = true;
+                                        }
+                                        else {
+                                            lecture.show = false;
+                                        }
+                                    }
+                                }
+                                displayLectures();
+                            }
+
+                            let lectures_display = document.getElementById("lectures-display");
+                            displayLectures();
+
+                            function displayLectures() {
+
+                                lectures_display.innerHTML = "";
+
+                                for (let lecture of lectures) {
+
+                                    if (lecture.show) {
+                                        lectures_display.innerHTML += `
+                                                                <center>
+                                                                    <button onclick="toggleVisibility(${lecture.num})">Hide Talk ${lecture.num}</button>
+                                                                </center>
+                                                                <br>
+                                                                <button style="text-align: left; background: #FFFFFF; pointer-events: none">
+                                                                <br>
+                                                                <div class="m-bot-100">
+                                                                    <div class="col-md-6">
+                                                                        <div class="full-width">
+                                                                            <center>
+                                                                            <br>
+                                                                            <img src="elementary/${lecture.image}" alt="">
+                                                                            </center>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <br>
+                                                                        <h2 class="text-uppercase">Talk ${lecture.num}: ${lecture.title}</h2>
+                                                                        <h4>By Prof. ${lecture.prof}</h4>
+                                                                    <ul class="portfolio-meta m-bot-30">
+                                                                        <li><span>Date and time</span> ${displayDate(lecture.date)}</li>
+                                                                        ${displayLink(lecture.links)}
+                                                                    </ul>
+                                                                    <p>
+                                                                        <b>Abstract:</b> ${lecture.abstract}
+                                                                    </p>
+                                                                    <p>
+                                                                        <b>Bio:</b> ${lecture.bio}
+                                                                    </p>
+                                                                    </div>
+                                                                </div>
+                                                                </button>
+                                                                <br>
+                                                                <br>
+                                                            `;
+                                    }
+                                    else {
+                                        lectures_display.innerHTML += `
+                                                                <center>
+                                                                    <button style="width: 300px" onclick="toggleVisibility(${lecture.num})">${lecture.title}<br>${displayDate(lecture.date)}</button>
+                                                                <center>
+                                                                <br>
+                                                                `;
+                                    }
+                                }
+                            }
+
+                        </script>
+                        <br>
+                        <hr/>
+                        <br>
+                        
+                        <div class="m-bot-100">
+                            <div class="col-md-6">
+                                <div class="full-width">
+                                    <center>
+                                        <img src="../event_updates/elementary-update.jpeg" alt="">
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="heading-title-side-border text-left">
+
+
                                     <h3>Problems</h3>
                                     <br>
                                     <a href="elementary_problems.html"
-                                        class="btn btn-small btn-rounded btn-dark-solid">Click here to visit the
+                                        class="btn btn-small btn-rounded btn-dark-solid">Click
+                                        here
+                                        to visit the
                                         Elementary problem
                                         feed</a>
                                     <p>
@@ -208,9 +385,6 @@
                                         <a href="elementary/problem_7.pdf">Click here to download the latest
                                             problem (Problem #7)</a>
                                         <br>
-                                        Submit your solutions here:
-                                        <a target="blank" href="https://forms.gle/wG7psRuPf75MYsDq5"> Link to submission
-                                            form (Problem #7)</a>
                                     </p>
                                     <h3>Leaderboard</h3>
                                     <p>
@@ -220,10 +394,17 @@
                                         <colgroup>
                                             <col span="1" width="10%;">
                                             <col span="1" width="25%;">
-                                            <col span="1" width="35%;">
+                                            <col span="1" width="40%;">
                                             <col span="1" width="20%;">
                                             <col span="1" width="10%;">
                                         </colgroup>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Psuedonym</th>
+                                            <th>Institute</th>
+                                            <th>Year of study</th>
+                                            <th>Points</th>
+                                        </tr>
 
                                         <script>
                                             "use strict"
@@ -330,19 +511,18 @@
                                     <br>
                                     <br>
 
-                                    <ul class="portfolio-meta m-bot-30">
-                                        <li><span> Category </span>Science</li>
-                                        <li><span> Coordinators </span>Anwesha Guha and Anubhav Goswami</li>
-                                        <li><span> Contact Details </span><a
-                                                href="mailto: elementary.pravega@gmail.com? subject=subject text">elementary.pravega@gmail.com</a>
-                                        </li>
-                                    </ul>
+                                    <div>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Category</span> Science</li>
+                                            <li><span>Coordinators</span> Anwesha Guha and Anubhav Goswami</li>
+                                            <li><span>Contact</span><a
+                                                    href="mailto: elementary.pravega@gmail.com? subject=subject text">elementary.pravega@gmail.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr />
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <hr />
 
             </section>
             <!--body content end-->
