@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pravegaApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterlink</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    preload>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+</head>
+
+<style>
+  :root {
+    --col: #273239db !important
+  }
+
+  body {
+    font-family: Montserrat, sans-serif;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    word-break: break-word;
+  }
+
+  .carousel {
+    height: 100vh;
+  }
+
+  .input {
+    color: white !important;
+    width: 100%
+  }
+
+  .car {
+    display: inline-block;
+    scroll-snap-align: center;
+  }
+</style>
+
+<body ng-controller="talksController"
+  style="background-image: url('/front_end/views/webinar/connectwork.png');scroll-behavior:smooth">
+  <nav class="nav-extended black">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Pravega Talks</a>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a class="active" href="#test1"><i class="material-icons">home</i></a></li>
+        <li class="tab"><a href="#test2"><i class="material-icons">event_note</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="test1" class="white-text" style="overflow:scroll; scroll-behavior: smooth; scroll-snap-type: y mandatory;">
+    <br>
+    <br>
+    <div class="container row valign">
+
+      <div class="col s12 row center" id="head"
+        style="height:100vh; scroll-snap-align: start; scroll-padding-top: 180px;">
+        <div class="col s12 right-align">
+          <br>
+          <br>
+          <div class="col s12 right">
+            <i class="material-icons">swap_horiz</i>
+          </div>
+        </div>
+        <div class="col s12">
+          <h4 ng-show="live" class="red-text">LIVE NOW</h4>
+          <div class="chip black-text">
+            {{homeTalk.description.event}}
+          </div>
+        </div>
+        
+        <div class="col s12 center">
+          <h3 style="font-size:2.8rem">{{homeTalk.name}}</h3>
+        </div>
+        <div class="col s12 center">
+          <h4>{{homeTalk.description.speaker}}</h4>
+        </div>
+
+        <div class="col s12 center" ng-show="!live">
+          <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}}</h5>
+        </div>
+        <div class="col s12 center" ng-show="live">
+          <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a '}}</h5>
+
+        </div>
+        <div class="col s12 center">
+          <br>
+          <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
+        </div>
+        <div class="col s12 center">
+          <br>
+          <a href="#abt" class="btn-floating btn-large black pulse white-text center"><i
+              class="material-icons">arrow_downward</i>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="col s12 center" id="abt" style="height:100vh;scroll-snap-align: start; ">
+        <br>
+        <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
+          figures from different walks of life will bring to you their experience and wisdom. This journey to the
+          forefront of a wide range of topics will equip you with the tools needed to race ahead in today's world, as we
+          bring to you world renowned leaders and innovators.
+          <br> <br>
+          So.... Are you ready to witness a paradigm shift?
+          <br> <br>
+          To receive e-mail reminders about upcoming talks, <a href="https://forms.gle/c22pjxdikjXq5Qqy8"
+            target="_blank">sign up here</a></p>
+        <br>
+        <br>
+
+        <a href="#head" class="btn-floating btn-large black pulse white-text center"><i
+            class="material-icons">arrow_upward</i>
+        </a>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div id="test2" style="height:100vh; overflow-y:scroll">
+    <div class="container" style="height:fit-content; user-select: none;">
+      <div class="row">
+
+        <div class="col s12">
+          <br>
+        </div>
+
+        <div class="col s12">
+          <i class="material-icons right white-text" ng-click="showAll()">remove_red_eye</i>
+          <div class="chip grey black-text filter" ng-repeat="event in events" ng-click="filter(event)" id="{{event}}">
+            {{event}}
+          </div>
+
+          <i class="material-icons right white-text" id="clearAll" ng-click="clearFilters()">close</i>
+          <div ng-show="filters.length == events.length" class="white-text right"><label for=""> All selected</label>
+          </div>
+
+
+        </div>
+        <div class="col s12 center">
+          <h2 class="white-text" ng-show="!filters.length">No filter selected. Click on that eye icon for viewing all
+            talks and the close icon to clear all the filters.</h2>
+        </div>
+        <div class="col s12">
+          <ul class="collapsible" style="border-color: black;">
+            <li ng-repeat="webinar in webinars | orderBy : 'start' | filter: inArray : true ">
+              <div class="collapsible-header white-text row" style="background-color:var(--col)">
+
+                <div class="col s6">
+                  {{webinar.name}}
+                </div>
+                <div class="col s5">
+                  {{webinar.start | date : 'dd-MMM-yyyy'}} <br>
+                  <br>
+                  <div class="chip white black-text" ng-click="inBoxFilter(webinar.description.event)">
+                    {{webinar.description.event}}
+                  </div>
+
+                </div>
+                <div class="col s1">
+                  <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+              </div>
+
+              <div class="collapsible-body  white-text"
+                style="background-color:var(--col); margin-bottom: 20px;text-align:center" id="{{webinar.name}}">
+                <span>
+                  <h5>{{webinar.name}}</h5>
+                  <hr>
+                  <img class="responsive-img" alt="Invalid Image" src={{webinar.description.info}}>
+
+                  <hr>
+                  <p>{{webinar.description.speaker}}</p>
+                  <p>
+                    {{webinar.description.speakerInfo}}
+                  </p>
+                  <hr>
+                  <p>About the Talk</p>
+                  <p>{{webinar.description.talkInfo}}</p>
+                  <hr>
+                  <p>{{webinar.start | date : 'dd MMMM, hh:mm a '}} </p>
+                  <a href=http://{{webinar.link}} target="_blank">{{webinar.link}}</a>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+  // Materialize Initialization
+
+  // Tabs initialization
+  var el = document.getElementsByClassName('tabs');
+  var instance = M.Tabs.init(el[0], {
+    'swipeable': true
+  });
+
+  // Collapsible initialization 
+  var col_elems = document.querySelectorAll('.collapsible');
+  var col_instances = M.Collapsible.init(col_elems[0], {
+    onOpen: open,
+    onClose: close,
+    onOpenStart: open,
+    onCloseStart: close
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var sel_elems = document.querySelectorAll('select');
+    var sel_instances = M.FormSelect.init(sel_elems, {});
+  });
+
+  function open(e) {
+    console.log(e.childNodes[1].childNodes[5].childNodes[1])
+    e.childNodes[1].childNodes[5].childNodes[1].innerText = 'keyboard_arrow_up'
+
+  }
+
+  function close(e) {
+    console.log(e.childNodes[1].childNodes[5].childNodes[1])
+
+    e.childNodes[1].childNodes[5].childNodes[1].innerText = 'keyboard_arrow_down'
+  }
+
+
+  // Angular JS
+  var app = angular.module('pravegaApp', [])
+  app.controller('talksController', function ($scope, $http) {
+    console.log('Talks Controller loaded...');
+
+    $scope.events = [
+      'Coherence',
+      'BioCognizance',
+      'Chemistry',
+      "Paradigms"
+    ]
+    $scope.filters = $scope.events.slice()
+
+    $scope.topics = [
+      {
+        'name': 'Coherence',
+        'description': 'Bored of quarantine? Want to explore interesting stuff about the universe and its fundamental principles? Want to know about the exciting advancements in physics? Worry not…Decoherence presents to you ‘Coherence lecture series’ where you get to hear from world-renowned physicists, who are actively probing and working to understand the natural world and making advancements in the field. \n\n In these talks, they talk about some exciting topics, advancements in physics. They will be live on MS Teams and will be uploaded on Pravega YouTube channel (click here to visit) after the talk. Come, join us in exploring the exciting world of physics from experts themselves and take away enough motivation to probe deeper.'
+      }
+    ]
+
+    $scope.filter = function (filter) {
+      if ($scope.filters.indexOf(filter) == -1) {
+        console.log('Filtering ', filter)
+        document.getElementById(filter).classList.remove('white')
+        document.getElementById(filter).classList.add('grey')
+        $scope.filters.push(filter)
+      } else {
+        $scope.filters.splice($scope.filters.indexOf(filter), 1)
+        document.getElementById(filter).classList.remove('grey')
+        document.getElementById(filter).classList.add('white');
+      }
+      console.log($scope.filters)
+    }
+
+    $scope.inArray = function (value, index, array) {
+      if ($scope.filters.indexOf(value.description.event) == -1) {
+        return false;
+      }
+      return true;
+    }
+
+    $scope.clearFilters = function () {
+      console.log('Cleaing all filters')
+      $scope.events.forEach(e => {
+        console.log(e)
+        element = document.getElementById(e);
+        element.classList.remove('grey');
+        element.classList.add('white')
+      })
+      $scope.filters = []
+    }
+
+    $scope.showAll = function () {
+      $scope.filters = $scope.events.slice()
+      filterBtns = document.getElementsByClassName('filter');
+      for (let index = 0; index < filterBtns.length; index++) {
+        var element = filterBtns[index];
+
+        element.classList.remove('white');
+        element.classList.add('grey');
+
+      }
+      // filterBtns.forEach((btn)=>{ 
+      //   btn.classList.remove('white');
+      //   btn.classList.add('grey');
+      // })
+
+    }
+
+    $scope.inBoxFilter = function (id) {
+      document.getElementById(id).click();
+    }
+
+    $http({
+      'method': 'GET',
+      'url': '/api/webinar'
+    }).then((res) => {
+      console.log(res.data);
+      $scope.webinars = res.data.slice()
+      var got = false;
+      for (let index = 0; index < res.data.length; index++) {
+        var element = res.data[index];
+        var next = res.data[index + 1];
+        if (new Date(element.start) < new Date() && new Date(next.start) > new Date()) {
+          $scope.homeTalk = next;
+          if (element.end < new Date()) {
+            $scope.live = true;
+          }
+          break;
+        }
+      }
+
+      console.log(res.data);
+
+      var urlString = window.location.href;
+      var url = new URL(urlString);
+      var preexistingfilter = url.searchParams.get('filter')
+
+      if (preexistingfilter) {
+        console.log(document.getElementById(preexistingfilter))
+        document.getElementById('clearAll').click();
+        document.getElementById(preexistingfilter).click();
+      }
+    }, (err) => {
+      console.log(err.data);
+    })
+
+  });
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel();
+  });
+</script>
+
+</html>

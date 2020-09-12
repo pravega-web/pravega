@@ -76,24 +76,57 @@
               </div>
 
               <div class="input-field">
-                <input type="text" class="validate" ng-model="mod.description.speakerInfo" required placeholder="Speaker Info.">
+                <input type="text" class="validate" ng-model="mod.description.speakerInfo" required
+                  placeholder="Speaker Info.">
               </div>
+
               <div class="input-field">
-                <input type="text" class="validate" ng-model="mod.description.talkInfo" required  placeholder="Info talk">
+                <input type="text" class="validate" ng-model="mod.description.talkInfo" required
+                  placeholder="Info talk">
               </div>
+
+
+              <p>
+                <label>
+                  <input name="group1" type="radio" ng-model="mod.description.event" value="Coherence" />
+                  <span>Coherence</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1" type="radio" ng-model="mod.description.event" value="Chemistry" />
+                  <span>Chemistry</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="with-gap" name="group1" type="radio" ng-model="mod.description.event"
+                    value="Paradigms" />
+                  <span>Paradigms</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1" type="radio" ng-model="mod.description.event" value="BioCognizance" />
+                  <span>BioCognizance</span>
+                </label>
+              </p>
+
+              <p>{{mod.description.event}}</p>
 
               <div class="input-field">
                 <textarea class="materialize-textarea" ng-model="mod.description.info" required
                   placeholder="Summary"></textarea>
-
               </div>
+
               <label for="startdate">Start Date and Time</label>
               <input type="datetime-local" ng-model="mod.start" required>
 
               <label for="enddate">End Date and Time</label>
               <input type="datetime-local" ng-model="mod.end" required>
 
-              <a class="waves-effect waves-light btn red" ng-click="deleteMod(mod)"><i class="material-icons left">delete</i>Delete</a>
+              <a class="waves-effect waves-light btn red" ng-click="deleteMod(mod)"><i
+                  class="material-icons left">delete</i>Delete</a>
 
             </span>
           </div>
@@ -148,6 +181,32 @@
         <label for="talkInfo">Info about the topic/talk</label>
       </div>
 
+      <p>
+        <label>
+          <input name="group1" type="radio" ng-model="webinar.description.event" value="Coherence" />
+          <span>Coherence</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input name="group1" type="radio" ng-model="webinar.description.event" value="Chemistry" />
+          <span>Chemistry</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input name="group1" type="radio" ng-model="webinar.description.event" value="Paradigms" />
+          <span>Paradigms</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input name="group1" type="radio" ng-model="webinar.description.event" value="BioCognizance" />
+          <span>BioCognizance</span>
+        </label>
+      </p>
+
+
       <label for="startdate">Start Date and Time</label>
       <input type="datetime-local" ng-model="webinar.start" required>
 
@@ -178,6 +237,9 @@
         accordian: false
       });
 
+      // var sel_elems = document.querySelectorAll('select');
+      // var sel_instances = M.FormSelect.init(sel_elems[0], {});
+
       $deleteStat = []
 
       $scope.mods = [];
@@ -185,7 +247,7 @@
 
       $http({
         'method': 'GET',
-        'url': 'https://pravega.glitch.me/api/webinar'
+        'url': '/api/webinar'
       }).then((r) => {
         $scope.mods = r.data;
         $scope.mods.forEach(element => {
@@ -205,7 +267,7 @@
         // Send to server
         $http({
           'method': 'POST',
-          'url': 'https://pravega.glitch.me/api/webinar',
+          'url': '/api/webinar',
           'data': $scope.webinar
         }).then((r) => { console.log(r.data); window.location.reload() }, (e) => { console.error(e); })
 
@@ -218,7 +280,7 @@
         for (const eve in $scope.mods) {
           await $http({
             'method': 'POST',
-            'url': 'https://pravega.glitch.me/api/update/webinar',
+            'url': '/api/update/webinar',
             'data': $scope.mods[eve]
           }).then((r) => { console.log(r.data); }, (e) => { er = true; console.error(e); })
         }
@@ -230,13 +292,13 @@
         }
       }
 
-      $scope.deleteMod = function(mod){
-        if(confirm("Delete ? Action can't be undone")){
+      $scope.deleteMod = function (mod) {
+        if (confirm("Delete ? Action can't be undone")) {
           $http({
-            'url':'/api/webinar',
-            'method':'PUT',
-            'data':mod
-          }).then((r)=>{console.log(r.data);},(e)=>{console.log(e)})
+            'url': '/api/webinar',
+            'method': 'PUT',
+            'data': mod
+          }).then((r) => { console.log(r.data); }, (e) => { console.log(e) })
         }
       }
 
