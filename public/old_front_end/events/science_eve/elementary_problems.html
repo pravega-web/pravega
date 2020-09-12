@@ -155,8 +155,8 @@
                                 <p>
                                     The participants must upload their solution using the following link:
                                     <br>
-                                    <a href="https://forms.gle/HdNhW5uZnsjNEQUY9"> Link to submission form (Problem
-                                        #4)</a>
+                                    <a target="_blank" href="https://forms.gle/wG7psRuPf75MYsDq5"> Link to submission form (Problem
+                                        #7)</a>
                                 </p>
                                 <p>
                                     In case a participant is unable to access the form, they may send their solutions as
@@ -173,105 +173,190 @@
                             </div>
                         </div>
 
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="elementary/elementary_problem_4.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h2 class="text-uppercase">Problem 4: It's in Your Blood!</h2>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> 27<sup>th</sup> August at 1:30 PM IST</li>
-                                    <li><span>Deadline</span> 27<sup>th</sup> August at 8:30 PM IST</li>
-                                    <li><span>Points</span> 10</li>
-                                    <li><span>Link</span> <a href="elementary/elementary_problem_4.pdf"> Download
-                                            problem</a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <hr>
+                        <div id="problems-display"></div>
 
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="elementary/elementary_problem_3.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h2 class="text-uppercase">Problem 3: A Case of Catalysis</h2>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> 24<sup>th</sup> August at 1:30 PM IST</li>
-                                    <li><span>Deadline</span> 24<sup>th</sup> August at 8:30 PM IST</li>
-                                    <li><span>Points</span> 10</li>
-                                    <li><span>Link</span> <a href="elementary/elementary_problem_3.pdf"> Download
-                                            problem</a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <hr>
+                        <script>
+                            "use strict"
 
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="elementary/elementary_problem_2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h2 class="text-uppercase">Problem 2: Not a Bed of Roses</h2>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> 21<sup>st</sup> August at 1:30 PM IST</li>
-                                    <li><span>Deadline</span> 21<sup>st</sup> August at 8:30 PM IST</li>
-                                    <li><span>Points</span> 10</li>
-                                    <li><span>Link</span> <a href="elementary/elementary_problem_2.pdf"> Download
-                                            problem</a> </li>
-                                            <li><span>Solution</span> <a href="elementary/elementary_solution_2.pdf"> Click
-                                                here</a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <hr>
+                            function displayDate(date) {
+                                let output = `${date.day}`;
 
-                        <div class="m-bot-100">
+                                if (date.day == 1 || date.day == 21 || date.day == 31) {
+                                    output += "st".sup();
+                                }
+                                else if (date.day == 2 || date.day == 22) {
+                                    output += "nd".sup();
+                                }
+                                else if (date.day == 3 || date.day == 23) {
+                                    output += "rd".sup();
+                                }
+                                else {
+                                    output += "th".sup();
+                                }
+                                output += ` ${date.month} at ` + date.time;
+
+                                return output;
+                            }
+
+                            function displayDetails(problem) {
+                                let output = "";
+
+                                output += "<li><span>Uploaded on</span> " + displayDate(problem.uploaded)
+                                    + "</li><li><span>Deadline</span> " + displayDate(problem.deadline)
+                                    + "</li><li><span>Points</span> " + `${problem.points}`
+                                    + '</li><li><span>Link</span> <a href="elementary/' + `problem_${problem.num}`
+                                    + '.pdf"> Download problem</a> </li>';
+
+                                if (problem.has_solution) {
+                                    output += '<li><span>Solution</span> <a href="elementary/' + `solution_${problem.num}`
+                                        + '.pdf"> View solution</a> </li>';
+                                }
+                                return output;
+                            }
+
+                            let problems = [];
+                            problems.push(
+                                {
+                                    num: 1,
+                                    title: "How to be a good Host?",
+                                    uploaded: {
+                                        day: 17,
+                                        month: "August",
+                                        time: "9 PM",
+                                    },
+                                    deadline: {
+                                        day: 19,
+                                        month: "August",
+                                        time: "9 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: true,
+                                },
+                                {
+                                    num: 2,
+                                    title: "Not a Bed of Roses",
+                                    uploaded: {
+                                        day: 21,
+                                        month: "August",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 19,
+                                        month: "August",
+                                        time: "8:30 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: true,
+                                },
+                                {
+                                    num: 3,
+                                    title: "A Case of Catalysis",
+                                    uploaded: {
+                                        day: 24,
+                                        month: "August",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 24,
+                                        month: "August",
+                                        time: "8:30 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: true,
+                                },
+                                {
+                                    num: 4,
+                                    title: "It's in Your Blood!",
+                                    uploaded: {
+                                        day: 27,
+                                        month: "August",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 27,
+                                        month: "August",
+                                        time: "8:30 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: true,
+                                },
+                                {
+                                    num: 5,
+                                    title: "A Race to Racemize",
+                                    uploaded: {
+                                        day: 31,
+                                        month: "August",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 31,
+                                        month: "August",
+                                        time: "8:30 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: true,
+                                },
+                                {
+                                    num: 6,
+                                    title: "A Shiver down the Spine-l",
+                                    uploaded: {
+                                        day: 7,
+                                        month: "September",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 7,
+                                        month: "September",
+                                        time: "8:30 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: false,
+                                },
+                                {
+                                    num: 7,
+                                    title: "Almonds, Cinnamon, and everything in between",
+                                    uploaded: {
+                                        day: 10,
+                                        month: "September",
+                                        time: "1:30 PM",
+                                    },
+                                    deadline: {
+                                        day: 10,
+                                        month: "September",
+                                        time: "8:30 PM",
+                                    },
+                                    points: 10,
+                                    has_solution: false,
+                                }
+                            );
+
+                            problems = problems.sort((a, b) => b.num - a.num);
+
+                            let problems_display = document.getElementById("problems-display");
+
+                            for (let problem of problems) {
+                                problems_display.innerHTML += `<div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="elementary/elementary_problem_1.jpg" alt="">
+                                    <img src="elementary/problem_${problem.num}.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h2 class="text-uppercase">Problem 1: How to be a good Host?</h2>
+                                    <h2 class="text-uppercase">Problem #${problem.num}: ${problem.title}</h2>
                                     <div class="title-border-container">
                                         <div class="title-border"></div>
                                     </div>
-                                </div>
                                 <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Uploaded on</span> 17<sup>th</sup> August</li>
-                                    <li><span>Deadline</span> 19<sup>th</sup> August at 9 PM IST</li>
-                                    <li><span>Points</span> 10</li>
-                                    <li><span>Link</span> <a href="elementary/elementary_problem_1.pdf"> Download
-                                            problem</a> </li>
-                                    <li><span>Solution</span> <a href="elementary/elementary_solution_1.pdf"> Click
-                                            here</a> </li>
+                                    ${displayDetails(problem)}
                                 </ul>
                             </div>
                         </div>
-                        <hr>
+                        <hr>`
+                            }
+                        </script>
+
+                    </div>
+                </div>
 
             </section>
             <!--body content end-->
@@ -307,7 +392,6 @@
             <!--footer 1 end-->
 
     </div>
-
 
     <script src="../../js/jquery-1.10.2.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>

@@ -132,11 +132,12 @@
                             </div>
                         </div>
 
-
                         <div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="../../img/events/decoherence.svg" alt="">
+                                    <center>
+                                        <img src="../../img/events/decoherence.svg" alt="">
+                                    </center>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -145,12 +146,9 @@
                                     <p>
                                         Decoherence '21 is here!
                                     </p>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
                                 </div>
 
-                                <h3>Coherence lecture series</h3>
+                                <h2>Coherence lecture series</h2>
                                 <p>
                                     Bored of quarantine? Want to explore interesting stuff about the universe and its
                                     fundamental principles? Want to know about the exciting advancements in physics?
@@ -160,21 +158,312 @@
                                 </p>
                                 <p>
                                     In these talks, they talk about some exciting topics, advancements in physics. They
-                                    will be live-streamed on Pravega YouTube channel (<a
-                                        href="https://www.youtube.com/c/PravegaOrg">Click here to visit</a>). Come, join
+                                    will be live on MS Teams and will be uploaded on Pravega YouTube
+                                    channel (<a href="https://www.youtube.com/user/IIScPravega">click here</a> to visit)
+                                    after the talk. Come, join
                                     us in exploring the exciting world of physics from experts
                                     themselves and take away enough motivation to probe deeper.
                                 </p>
                                 <p>
                                     Open to all curious minds!
                                 </p>
-                                <div>
-                                    <a href="coherence.html" class=" btn btn-small btn-rounded btn-dark-solid "> Click
-                                        here to visit the Coherence website </a>
+                                <p>
+                                    If you want to receive updates about all the upcoming lectures, subscribe to our
+                                    newsletter through the following link:
+                                    <span><a
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLSfXuMKCRPMFb9h-2vdzVb4Qz_kiwudBP-MtqzmP9zPdAo4N9A/viewform">subscribe
+                                            to Coherence newsletter</a>
+                                    </span>
+                                    <br>
+                                    If you've registered, we will mail you the Meeting link.
+                                </p>
+                                <p>
+                                    They
+                                    will be live on MS Teams and will be uploaded on Pravega YouTube
+                                    channel (<a href="https://www.youtube.com/user/IIScPravega">click here</a> to visit)
+                                    after the talk.
+                                </p>
+                                <p><b>Note:</b>
+                                <ul>
+                                    <li>If the video crashes, don't worry. Try to leave and rejoin the meeting</li>
+                                    <li>For a more seamless experience, use a laptop with MS Teams app installed</li>
+                                </ul>
+                                </p>
+                                <ul class=" portfolio-meta m-bot-30">
+                                    <li><span>Category</span> Science</li>
+                                    <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
+                                    <li><span>Contact</span> <a
+                                            href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr />
+                        <br>
+
+                        <div id="lectures-display">
+
+                        </div>
+                        <hr />
+
+                        <script>
+                            "use strict"
+
+                            // helper function
+                            function displayDate(date) {
+                                let output = `${date.day}`;
+
+                                if (date.day == 1 || date.day == 21 || date.day == 31) {
+                                    output += "st".sup();
+                                }
+                                else if (date.day == 2 || date.day == 22) {
+                                    output += "nd".sup();
+                                }
+                                else if (date.day == 3 || date.day == 23) {
+                                    output += "rd".sup();
+                                }
+                                else {
+                                    output += "th".sup();
+                                }
+                                output += ` ${date.month} at ` + date.time;
+
+                                return output;
+                            }
+
+                            // helper function
+                            function displayLink(links) {
+                                let output = "";
+
+                                if (links.ms_platform) {
+                                    if (links.ms_link == false) {
+                                        output += '<li><span>Meeting link</span> <a href="#" > Will be updated soon </a></li>';
+                                    }
+                                    else {
+                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '" style="pointer-events: auto"> Click here </a></li>';
+                                    }
+                                }
+                                if (links.youtube_platform) {
+                                    if (links.youtube_link == false) {
+                                        output += '<li><span>Youtube link</span> <a href="#"> Will be updated soon </a></li>';
+                                    }
+                                    else {
+                                        output += '<li><span>Youtube link</span> <a href="' + links.youtube_link + '" style="pointer-events: auto"> Click here </a></li>';
+                                    }
+                                }
+                                return output;
+                            }
+
+                            let lectures = [];
+
+                            lectures.push(
+                                {
+                                    image: "DrGhosh.jpeg",
+                                    num: 1,
+                                    show: false,
+                                    title: "The Quantum Way",
+                                    prof: "Arindam Ghosh",
+                                    date: {
+                                        day: 22,
+                                        month: "August",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: false,
+                                        youtube_platform: true,
+                                        youtube_link: "https://www.youtube.com/watch?v=APM505E0RUY&feature=youtu.be",
+                                    },
+                                    abstract: "The speaker shall outline some of the excitements in technological impact of quantum physics, and give an outlook towards a new generation of computation, communications and sensing.",
+                                    bio: "Prof. Arindam Ghosh is an experimental condensed matter physicist and a Professor in the Department of Physics, Indian Institute of Science. His areas of expertise include low-dimensional systems and nanostructures. He obtained his PhD from IISc and did his post-doctoral research at Univ of Cambridge. During his tenure at IISc, he was also a Visiting Research Fellow in Nanotechnology at T J Watson Research Center of IBM, Yorktown Heights, New York, USA. He was awarded the Shanti Swarup Bhatnagar Prize for science and technology, the highest science award in India. He has given a TEDx talk on Quantum Technologies. ",
+                                },
+                                {
+                                    image: "DrKomaragiri.jpg",
+                                    num: 2,
+                                    show: false,
+                                    title: "Searching for the fundamental building blocks of the universe at the Large Hadron Collider",
+                                    prof: "Jyothsna Komaragiri ",
+                                    date: {
+                                        day: 23,
+                                        month: "August",
+                                        time: "4 PM",
+                                    },
+                                    links: {
+                                        ms_platform: false,
+                                        youtube_platform: true,
+                                        youtube_link: "https://www.youtube.com/watch?v=gTB3NNTj3HA&feature=youtu.be",
+                                    },
+                                    abstract: "IISc has started the Experimental High Energy Physics program in 2016 and since October 2016 IISc has been part of the Compact Muon Solenoid (CMS) experiment at the Large Hadron Collider (LHC), CERN. In this talk, Prof Jyothsna will cover the basics of Particle Physics and give an overview of how a typical search for particles is performed at the CMS experiment at LHC. ",
+                                    bio: "Prof. Jyothsna Komaragiri is currently an assistant professor in Center for High Energy Physics(CHEP) at Indian Institute of Science(IISc) Bangalore. She has an experience of working at three high energy physics world-wide collaborative experiments, namely Compact Muon Solenoid (CMS), A Toroidal LHC Apparatus (ATLAS) (both at CERN) & DZero(at Fermilab). ",
+                                },
+                                {
+                                    image: "DrShiraz.jpg",
+                                    num: 3,
+                                    show: false,
+                                    title: "The Search for Quantum Gravity",
+                                    prof: "Shiraz Naval Minwalla ",
+                                    date: {
+                                        day: 12,
+                                        month: "September",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: "http://bit.ly/CohLec3",
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "In this talk, Prof Shiraz Minwalla will review two of the basic frameworks of modern physics, quantum mechanics and general relativity, and discuss why we need a quantum theory of gravity. He will then describe how the AdS/CFT correspondence of string theory has accomplished the construction of one fully non perturbative `Spherical Cow' theory of quantum gravity. ",
+                                    bio: "Shiraz Naval Minwalla is an Indian theoretical physicist and string theorist. He is a faculty member in the Department of Theoretical Physics at Tata Institute of Fundamental Research, Mumbai. Prior to his present position, he was a Harvard Junior Fellow and subsequently an Assistant Professor at Harvard University. He was awarded ICTP prize in 2010, the Shanti Swarup Bhatnagar Prize for Science and Technology, the highest science award in India, in the physical sciences category in 2011, New Horizons in Physics Prize by the Fundamental Physics Prize in 2014 for his pioneering contributions to the study of string theory and quantum field theory; and in particular his work on the connection between the equations of fluid dynamics and Albert Einstein's equations of general relativity. "
+                                },
+                                {
+                                    image: "DrApoorva.jpg",
+                                    num: 4,
+                                    show: false,
+                                    title: "Interactive session with Apoorva D patel",
+                                    prof: "Apoorva D. Patel",
+                                    date: {
+                                        day: 13,
+                                        month: "September",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: "http://bit.ly/CohLec4",
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "Key points that'll be discussed:<li>Measurement problem in quantum mechanics</li><li>Quantum correlations: EPR paradox and Bell's theorem</li><li>Weak measurement - Introduction, impact on measurement problem in quantum mechanics and applications</li><li>Impact of quantum algorithms on complexity classes and whether it will solve NP complete problem.</li><li>Discussion of Quantum coherence, decoherence and its impact on quantum systems, measurement problem in quantum mechanics.</li><li>Grover search algorithm in unsorted database – in natural settings.</li><li>Quantum Moore’s law – Whether it’s possible or not.</li>",
+                                    bio: "Prof Apoorva D. Patel is a Professor at the Centre for High Energy Physics, Indian Institute of Science, Bangalore. He is notable for his work on quantum algorithms, and the application of information theory concepts to understand the structure of genetic languages. His major field of work has been the theory of quantum chromodynamics, where he has used lattice gauge theory techniques to investigate spectral properties, phase transitions, and matrix elements.",
+                                },
+                                {
+                                    image: "DrYeomans.png",
+                                    num: 5,
+                                    show: false,
+                                    title: "Nature’s Engines: Active Matter",
+                                    prof: "Julia M Yeomans ",
+                                    date: {
+                                        day: 26,
+                                        month: "September",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: "false",
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "Active materials, such as bacteria, molecular motors and self-propelled colloids, are Nature’s engines. They continuously transform chemical energy from their environment to mechanical work. Dense active matter shows mesoscale turbulence, the emergence of chaotic flow structures characterised by high vorticity and self-propelled topological defects.<br><br>The science underlying active matter may lead to new ideas for micro-machines and suggests possibilities for self-propelled microfluidics. Moreover it is increasingly being used to describe biological systems: recent results show that active topological defects help to regulate turnover in epithelial cell layers and contribute to controlling the structure of bacterial colonies.",
+                                    bio: "Prof Julia Mary Yeomans, FRS, FInstP is a British theoretical physicist and a Professor of Physics at the University of Oxford. She is active in the fields of Soft Condensed matter and Biological Physics. She was elected as Fellow of Royal Society in 2013. In 2012, Yeomans was awarded a European Research Council Advanced Research Grant for her research proposal 'Microflow in complex environments'.",
+                                },
+                                {
+                                    image: "DrBhalerao.jpeg",
+                                    num: 6,
+                                    show: false,
+                                    title: "Cosmic Fireworks: Shining Light on Gravitational Wave Sources",
+                                    prof: "Varun Bhalerao",
+                                    date: {
+                                        day: 28,
+                                        month: "September",
+                                        time: "5 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: false,
+                                        youtube_platform: false,
+                                    },
+                                    abstract: "What happens when two neutron stars collide? Are these really the sources of most of the gold, platinum, and other heavy elements in the universe? After decades of theoretical speculation, we finally found the answer in August 2017. Advanced gravitational wave detectors - LIGO and Virgo - discovered the coalescence of two neutron stars 130 million light years away from Earth. At nearly the same time, Earth-orbiting satellites saw a flash of high energy radiation from the same direction. What followed was arguably the most frantic period of activity in modern astronomy: with over 3500 individuals from 950 institutes joining forces to pinpoint the source in the sky and uncover its secrets.Prof.Varun will talk about this first binary neutron star merger, how we found and understood it, and what it means for us in the days to come. He will then focus on the Indian context and the ground-based and space-based follow-up efforts for gravitational sources. Prof.Varun will conclude by giving updates on LIGO India and how you can get involved.",
+                                    bio: "Dr. Varun Bhalerao is an astrophysicist at IIT Bombay.He obtained a B. Tech. in Electrical Engineering at IIT Bombay, followed by a Ph.D. from Caltech in 2012. During his thesis, he worked on NuSTAR - the first focussing hard X-ray telescope - a Caltech / JPL / NASA mission. He also studied High Mass X-ray Binaries with optical and infrared telescopes to measure neutron star masses. As a Vaidya-Raychaudhuri Prize Postdoctoral Fellow at IUCAA, Pune, he led the ground calibration of the Cadmium Zinc Telluride Imager on AstroSat - the Indian multi-wavelength space telescope. At IIT Bombay, his group works on the development of GROWTH-India - India's first fully robotic telescope. The group leads the Indian effort in the study of elusive electromagnetic counterparts to gravitational wave sources.",
+                                },
+                            )
+
+                            lectures = lectures.sort((a, b) => (b.num - a.num));
+
+                            // display toggle function
+                            function toggleVisibility(num) {
+                                for (let lecture of lectures) {
+                                    if (lecture.num == num) {
+                                        if (lecture.show == false) {
+                                            lecture.show = true;
+                                        }
+                                        else {
+                                            lecture.show = false;
+                                        }
+                                    }
+                                }
+                                displayLectures();
+                            }
+
+                            let lectures_display = document.getElementById("lectures-display");
+                            displayLectures();
+
+                            function displayLectures() {
+
+                                lectures_display.innerHTML = '<center><h1 id="lectures">Lecture details</h1></center>';
+
+                                for (let lecture of lectures) {
+
+                                    if (lecture.show) {
+                                        lectures_display.innerHTML += `
+                                                                <center>
+                                                                    <button onclick="toggleVisibility(${lecture.num})">Hide Talk ${lecture.num}</button>
+                                                                </center>
+                                                                <br>
+                                                                <button style="text-align: left; background: #FFFFFF; pointer-events: none">
+                                                                <br>
+                                                                <div class="m-bot-100">
+                                                                    <div class="col-md-6">
+                                                                        <div class="full-width">
+                                                                            <center>
+                                                                            <br>
+                                                                            <img src="coherence/${lecture.image}" alt="">
+                                                                            </center>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <br>
+                                                                        <h2 class="text-uppercase">Talk ${lecture.num}: ${lecture.title}</h2>
+                                                                        <h4>By Prof. ${lecture.prof}</h4>
+                                                                    <ul class="portfolio-meta m-bot-30">
+                                                                        <li><span>Date and time</span> ${displayDate(lecture.date)}</li>
+                                                                        ${displayLink(lecture.links)}
+                                                                    </ul>
+                                                                    <p>
+                                                                        <b>Abstract:</b> ${lecture.abstract}
+                                                                    </p>
+                                                                    <p>
+                                                                        <b>Bio:</b> ${lecture.bio}
+                                                                    </p>
+                                                                    </div>
+                                                                </div>
+                                                                </button>
+                                                                <br>
+                                                                <br>
+                                                            `;
+                                    }
+                                    else {
+                                        lectures_display.innerHTML += `
+                                                                <center>
+                                                                    <button style="width: 60%; height="max-content" onclick="toggleVisibility(${lecture.num})">${lecture.title}<br>${displayDate(lecture.date)}</button>
+                                                                <center>
+                                                                <br>
+                                                                `;
+                                    }
+                                }
+                            }
+
+                        </script>
+                        <br>
+                        <br>
+                        <hr>
+
+                        <div class="m-bot-100">
+                            <div class="col-md-6">
+                                <div class="full-width">
+                                    <center>
+                                        <img src="../../img/events/spooky.jpeg" alt="">
+                                    </center>
                                 </div>
+                            </div>
+
+                            <div class="col-md-6">
                                 <br>
-                                <br>
-                                <h3>Spooky quizzes</h3>
+                                <h2>Spooky quizzes</h2>
                                 <p>
                                     Spooky quizzes is an online physics based competition, where an individual tests his
                                     analytical, thinking, mathematical, logical reasoning and deduction skills. Gear up
@@ -201,91 +490,190 @@
                                     will get Rs 1000 and runner up will get Rs 500. All the top five participants
                                     appearing for subjective round will also receive e-certificates.
                                 </p>
-                                <div>
-                                    <a href="spooky.html""
-                                        class=" btn btn-small btn-rounded btn-dark-solid "> Click here to visit the Spooky Quizzes website </a>
-                                </div>
                                 <br>
                                 <br>
                                 <ul class=" portfolio-meta m-bot-30">
-                                        <li><span>Category</span> Science</li>
-                                        <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
-                                        <li><span>Contact</span> <a
-                                                href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
-                                        </li>
+                                    <li><span>Category</span> Science</li>
+                                    <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
+                                    <li><span>Contact</span> <a
+                                            href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="quizzes">
+                            <center>
+                                <hr />
+                                <h1>Quiz details</h1>
+                                <button id="button_2" onclick="toggle_2()">Show cycle 2</button>
+                            </center>
+                            <br>
+                            <div class="m-bot-100" id="quiz_2" style="display: none">
+                                <button style="background: #FFFFFF; pointer-events: none;">
+                                    <div class="col-md-6">
+                                        <div class="full-width">
+                                            <br>
+                                            <img src="spooky/spooky_2.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: left;">
+                                        <br>
+                                        <h3>Cycle 2</h3>
+                                        <p>
+                                            Registration link for cycle 2: <a style="pointer-events: auto;"
+                                                href="https://docs.google.com/forms/d/e/1FAIpQLScCRcHoR7sJ_C60MT9witm8FFNlUn_wafjnMUEOHRMtSuAFLg/viewform">click
+                                                here</a>
+                                        </p>
+                                        <h4>Theoretical Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 20<sup>th</sup> September</li>
+                                            <li><span>Time</span> Will be updated soon</li>
                                         </ul>
 
-                                        <!--<div>
-                                    <a href="" class="btn btn-small btn-rounded btn-dark-solid  "> Registerations Closed
-                                    </a>
-                                </div>
-                                <br>
-                                <h5>
-                                    Downloadable files (For Participants)
-                                </h5>
-                                <ul class="icon-list">
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="decoherence_rules.pdf"
-                                            style="color: #e09900;"> Rules and Regulations </a></li>
-                                </ul>
-                                <br>
-                                <h5>
-                                    Files MCQ Prelims on 23/11/2019
-                                </h5>
-                                <ul class="icon-list">
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="DecoherenceMCQ23112019.pdf"
-                                            style="color: #e09900;"> Question Paper (Password is
-                                            HarmonicOscillator@SmallPerturbation ) </a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="AnswersMCQ23112019.pdf"
-                                            style="color: #e09900;"> Answer Key of MCQ Round on 23/11/2019 </a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="ResultsMCQ23112019.pdf"
-                                            style="color: #e09900;"> Results of MCQ Round on 23/11/2019 </a></li>
-                                </ul>
-                                <br>
-                                <h5>
-                                    Files for MCQ Prelims on 07/12/2019
-                                </h5>
-                                <ul class="icon-list">
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="DecoherenceMCQ07122019_Corrected.pdf"
-                                            style="color: #e09900;"> Question Paper (Password is
-                                            TheExplanationIsAlwaysQuantumMechanics!) </a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="AnswerMCQ07122019.pdf"
-                                            style="color: #e09900;"> Answer Key of MCQ Round on 07/12/2019 </a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="ResultsMCQ07122019.pdf"
-                                            style="color: #e09900;"> Results of MCQ Round on 07/12/2019 </a></li>
-                                </ul>
-                                <br>
-                                <h5> Files for the Subjective Round </h5>
-                                <ul class="icon-list">
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="SubjectiveList.pdf"
-                                            style="color: #e09900;">List of Teams Eligible for the Subjective Round</a>
-                                    </li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="RollNumbers.pdf"
-                                            style="color: #e09900;">List of Roll Numbers of Teams Eligible for the
-                                            Subjective Round</a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="Instructions.pdf"
-                                            style="color: #e09900;">Instructions for the Subjective Round</a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="DecoherenceSubjective.pdf"
-                                            style="color: #e09900;">Question Paper</a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="DataForQ5.xlsx"
-                                            style="color: #e09900;">Data for Question No. 5</a></li>
-                                    <li><i class="fa fa-file-pdf-o"></i> <a
-                                            href="Decoherence_SubjectiveWithSolutions.pdf"
-                                            style="color: #e09900;">Solutions for Subjective Round</a></li>
-                                </ul>
-                                <br>
-                                <h5>Results for Prelims</h5>
-                                <ul class="icon-list">
-                                    <li><i class="fa fa-file-pdf-o"></i> <a href="FinalsList.pdf"
-                                            style="color: #e09900;">List of Teams Selected for Finals</a></li>
-                                </ul>-->
-                                </div>
+                                        <h4>Experimental Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 25<sup>th</sup> September</li>
+                                            <li><span>Time</span> Will be updated soon</li>
+                                        </ul>
+
+                                        <h4>Subjective Round</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 27<sup>th</sup> September</li>
+                                            <li><span>Time</span> Will be updated soon</li>
+                                        </ul>
+                                        <p>
+                                            <b>Note:</b> More details about quizzes (like timings) will be updated soon
+                                            and
+                                            mailed to you if you register
+                                        </p>
+                                    </div>
+                                </button>
                             </div>
 
+                            <center>
+                                <button id="button_1" onclick="toggle_1()">Show cycle 1</button>
+                            </center>
+                            <br>
+                            <div class="m-bot-100" id="quiz_1" style="display: none">
+                                <button style="background: #FFFFFF; pointer-events: none;">
+                                    <div class="col-md-6">
+                                        <div class="full-width">
+                                            <br>
+                                            <img src="spooky/spooky_1.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: left;">
+                                        <br>
+                                        <h3>Cycle 1</h3>
+                                        <p>
+                                            Registration for Cycle 1 is closed
+                                        </p>
+
+                                        <h4>Theoretical Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 30<sup>th</sup> August</li>
+                                            <li><span>Time</span> 10 AM to 12 PM IST</li>
+                                        </ul>
+                                        <p>
+                                            Links:
+                                        <ul>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Theoretical_objective_1.pdf">Questions</a></li>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Theoretical_key_1.pdf">Solutions</a></li>
+                                        </ul>
+                                        </p>
+
+                                        <h4>Experimental Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 5<sup>th</sup> September</li>
+                                            <li><span>Time</span> 9 to 9:45 PM IST</li>
+                                        </ul>
+                                        <p>
+                                            Links:
+                                        <ul>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="https://drive.google.com/drive/folders/17H-Cs_iF3FSMZDnywuXiVo_a5zD4F0KW?usp=sharing">Prerequisite
+                                                    video</a></li>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Experimental_1.pdf">Questions</a></li>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Experimental_key_1.pdf">Solutions</a></li>
+                                        </ul>
+                                        </p>
+
+                                        <h4>Subjective Round</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 6<sup>th</sup> September</li>
+                                            <li><span>Time</span> 12 PM to 10 PM IST</li>
+                                        </ul>
+                                        <p>
+                                            Links:
+                                        <ul>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Instructions_Subjective.pdf">Instructions</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Theory_1.pdf">Questions
+                                                    set 1</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Theory_2.pdf">Questions
+                                                    set 2</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_Analysis.pdf">Data
+                                                    Analysis</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_1.pdf">Data set 1</a>
+                                            </li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_2.pdf">Data set 2</a>
+                                            </li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_3.pdf">Data set 3</a>
+                                            </li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
+                        <br>
+                        <hr/>
+
+                        <div class="col-md-12">
+                            <div class="portfolio-nav-row">
+                                <div class="portfolio-nav left">
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
 
-                    <hr />
+                <script>
+                    let quiz_1 = document.getElementById("quiz_1");
+                    let button_1 = document.getElementById("button_1");
 
+                    let quiz_2 = document.getElementById("quiz_2");
+                    let button_2 = document.getElementById("button_2");
+
+                    function toggle_2() {
+                        if (quiz_2.style.display == "none") {
+                            quiz_2.style.display = "block";
+                            button_2.innerHTML = "Hide cycle 2";
+                        }
+                        else {
+                            quiz_2.style.display = "none";
+                            button_2.innerHTML = "Show cycle 2";
+                        }
+                    }
+
+                    function toggle_1() {
+                        if (quiz_1.style.display == "none") {
+                            quiz_1.style.display = "block";
+                            button_1.innerHTML = "Hide cycle 1";
+                        }
+                        else {
+                            quiz_1.style.display = "none";
+                            button_1.innerHTML = "Show cycle 1";
+                        }
+                    }
+                </script>
 
             </section>
             <!--body content end-->
