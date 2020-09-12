@@ -132,7 +132,6 @@
                             </div>
                         </div>
 
-
                         <div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
@@ -190,6 +189,13 @@
                                     <li>For a more seamless experience, use a laptop with MS Teams app installed</li>
                                 </ul>
                                 </p>
+                                <ul class=" portfolio-meta m-bot-30">
+                                    <li><span>Category</span> Science</li>
+                                    <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
+                                    <li><span>Contact</span> <a
+                                            href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <hr />
@@ -433,7 +439,7 @@
                                     else {
                                         lectures_display.innerHTML += `
                                                                 <center>
-                                                                    <button style="width: 60%; height="fit-content" onclick="toggleVisibility(${lecture.num})">${lecture.title}<br>${displayDate(lecture.date)}</button>
+                                                                    <button style="width: 60%; height="max-content" onclick="toggleVisibility(${lecture.num})">${lecture.title}<br>${displayDate(lecture.date)}</button>
                                                                 <center>
                                                                 <br>
                                                                 `;
@@ -450,7 +456,7 @@
                             <div class="col-md-6">
                                 <div class="full-width">
                                     <center>
-                                        <img src="../event_updates/spooky-quizzes-update.jpeg" alt="">
+                                        <img src="../../img/events/spooky.jpeg" alt="">
                                     </center>
                                 </div>
                             </div>
@@ -484,67 +490,223 @@
                                     will get Rs 1000 and runner up will get Rs 500. All the top five participants
                                     appearing for subjective round will also receive e-certificates.
                                 </p>
-                                <div>
-                                    <a href="spooky.html""
-                                                class=" btn btn-small btn-rounded btn-dark-solid ">Visit Spooky Quizzes Website</a>
+                                <br>
+                                <br>
+                                <ul class=" portfolio-meta m-bot-30">
+                                    <li><span>Category</span> Science</li>
+                                    <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
+                                    <li><span>Contact</span> <a
+                                            href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <center>
+                                <hr />
+                                <h1>Quiz details</h1>
+                                <button id="button_2" onclick="toggle_2()">Show cycle 2</button>
+                            </center>
+                            <br>
+                            <div class="m-bot-100" id="quiz_2" style="display: none">
+                                <button style="background: #FFFFFF; pointer-events: none;">
+                                    <div class="col-md-6">
+                                        <div class="full-width">
+                                            <br>
+                                            <img src="spooky/spooky_2.jpeg">
                                         </div>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: left;">
                                         <br>
-                                        <br>
-                                        <ul class=" portfolio-meta m-bot-30">
-                                        <li><span>Category</span> Science</li>
-                                        <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
-                                        <li><span>Contact</span> <a
-                                                href="mailto:decoherence.pravega@gmail.com ?subject= subject text">decoherence.pravega@gmail.com</a>
-                                        </li>
+                                        <h3>Cycle 2</h3>
+                                        <p>
+                                            Registration link for cycle 2: <a style="pointer-events: auto;"
+                                                href="https://docs.google.com/forms/d/e/1FAIpQLScCRcHoR7sJ_C60MT9witm8FFNlUn_wafjnMUEOHRMtSuAFLg/viewform">click
+                                                here</a>
+                                        </p>
+                                        <h4>Theoretical Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 20<sup>th</sup> September</li>
+                                            <li><span>Time</span> Will be updated soon</li>
                                         </ul>
+
+                                        <h4>Experimental Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 25<sup>th</sup> September</li>
+                                            <li><span>Time</span> Will be updated soon</li>
+                                        </ul>
+
+                                        <h4>Subjective Round</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 27<sup>th</sup> September</li>
+                                            <li><span>Time</span> Will be updated soon</li>
+                                        </ul>
+                                        <p>
+                                            <b>Note:</b> More details about quizzes (like timings) will be updated soon
+                                            and
+                                            mailed to you if you register
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <center>
+                                <button id="button_1" onclick="toggle_1()">Show cycle 1</button>
+                            </center>
+                            <br>
+                            <div class="m-bot-100" id="quiz_1" style="display: none">
+                                <button style="background: #FFFFFF; pointer-events: none;">
+                                    <div class="col-md-6">
+                                        <div class="full-width">
+                                            <br>
+                                            <img src="spooky/spooky_1.jpeg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="text-align: left;">
+                                        <br>
+                                        <h3>Cycle 1</h3>
+                                        <p>
+                                            Registration for Cycle 1 is closed
+                                        </p>
+
+                                        <h4>Theoretical Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 30<sup>th</sup> August</li>
+                                            <li><span>Time</span> 10 AM to 12 PM IST</li>
+                                        </ul>
+                                        <p>
+                                            Links:
+                                        <ul>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Theoretical_objective_1.pdf">Questions</a></li>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Theoretical_key_1.pdf">Solutions</a></li>
+                                        </ul>
+                                        </p>
+
+                                        <h4>Experimental Quiz</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 5<sup>th</sup> September</li>
+                                            <li><span>Time</span> 9 to 9:45 PM IST</li>
+                                        </ul>
+                                        <p>
+                                            Links:
+                                        <ul>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="https://drive.google.com/drive/folders/17H-Cs_iF3FSMZDnywuXiVo_a5zD4F0KW?usp=sharing">Prerequisite
+                                                    video</a></li>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Experimental_1.pdf">Questions</a></li>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Experimental_key_1.pdf">Solutions</a></li>
+                                        </ul>
+                                        </p>
+
+                                        <h4>Subjective Round</h4>
+                                        <ul class="portfolio-meta m-bot-30">
+                                            <li><span>Date</span> 6<sup>th</sup> September</li>
+                                            <li><span>Time</span> 12 PM to 10 PM IST</li>
+                                        </ul>
+                                        <p>
+                                            Links:
+                                        <ul>
+                                            <li><a style="pointer-events: auto;"
+                                                    href="spooky/Instructions_Subjective.pdf">Instructions</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Theory_1.pdf">Questions
+                                                    set 1</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Theory_2.pdf">Questions
+                                                    set 2</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_Analysis.pdf">Data
+                                                    Analysis</a></li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_1.pdf">Data set 1</a>
+                                            </li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_2.pdf">Data set 2</a>
+                                            </li>
+                                            <li><a style="pointer-events: auto;" href="spooky/Data_3.pdf">Data set 3</a>
+                                            </li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <br>
+                        <hr/>
+
+                        <div class="col-md-12">
+                            <div class="portfolio-nav-row">
+                                <div class="portfolio-nav left">
 
                                 </div>
                             </div>
                         </div>
 
-                        <br>
-                        <br>
+                    </div>
+                </div>
 
+                <script>
+                    let quiz_1 = document.getElementById("quiz_1");
+                    let button_1 = document.getElementById("button_1");
 
+                    let quiz_2 = document.getElementById("quiz_2");
+                    let button_2 = document.getElementById("button_2");
+
+                    function toggle_2() {
+                        if (quiz_2.style.display == "none") {
+                            quiz_2.style.display = "block";
+                            button_2.innerHTML = "Hide cycle 2";
+                        }
+                        else {
+                            quiz_2.style.display = "none";
+                            button_2.innerHTML = "Show cycle 2";
+                        }
+                    }
+
+                    function toggle_1() {
+                        if (quiz_1.style.display == "none") {
+                            quiz_1.style.display = "block";
+                            button_1.innerHTML = "Hide cycle 1";
+                        }
+                        else {
+                            quiz_1.style.display = "none";
+                            button_1.innerHTML = "Show cycle 1";
+                        }
+                    }
+                </script>
+
+            </section>
+            <!--body content end-->
+
+            <!--footer start 1-->
+            <footer id="footer" class="dark text-center short-pad footer-6">
+                <div class="container">
+                    <a href="../../index.html" class="footer-logo">
+                        <img src="../../img/footer_pravega21.png" alt="" height="120px" width="250px" />
+                    </a>
+
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            &copy; Pravega 2021.
+                        </div>
+                        <div class="copyright-sub-title text-uppercase">
+                            The Biggest Science Fest is back!!
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-link pull-right circle ">
+                            <a href="https://www.facebook.com/PravegaIISc/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/PravegaIISc"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/pravega.iisc/?hl=en"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"><i
+                                    class="fa fa-youtube"></i></a>
+                        </div>
                     </div>
 
+
                 </div>
-    </div>
-
-    <hr />
-
-
-    </section>
-    <!--body content end-->
-
-    <!--footer start 1-->
-    <footer id="footer" class="dark text-center short-pad footer-6">
-        <div class="container">
-            <a href="../../index.html" class="footer-logo">
-                <img src="../../img/footer_pravega21.png" alt="" height="120px" width="250px" />
-            </a>
-
-            <div class="col-md-6">
-                <div class="copyright">
-                    &copy; Pravega 2021.
-                </div>
-                <div class="copyright-sub-title text-uppercase">
-                    The Biggest Science Fest is back!!
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="social-link pull-right circle ">
-                    <a href="https://www.facebook.com/PravegaIISc/"><i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/PravegaIISc"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/pravega.iisc/?hl=en"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"><i class="fa fa-youtube"></i></a>
-                </div>
-            </div>
-
-
-        </div>
-    </footer>
-    <!--footer 1 end-->
+            </footer>
+            <!--footer 1 end-->
 
     </div>
 
