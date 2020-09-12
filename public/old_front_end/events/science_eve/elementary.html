@@ -184,6 +184,10 @@
                                         <br>
                                         <br>
                                         Open to everyone!
+                                        <br>
+                                        <a
+                                            href="http://bit.ly/EleWebinarsReg">Click
+                                            here to subscribe to the event and receive regular updates</a>
                                     </p>
 
                                 </div>
@@ -192,7 +196,7 @@
                         <hr />
                         <br>
 
-                        <div id="lectures">
+                        <div id="lectures-display">
 
                         </div>
 
@@ -303,12 +307,12 @@
                                 displayLectures();
                             }
 
-                            let lectures_display = document.getElementById("lectures");
+                            let lectures_display = document.getElementById("lectures-display");
                             displayLectures();
 
                             function displayLectures() {
 
-                                lectures_display.innerHTML = "<center><h1>Lecture details</h1></center><br>";
+                                lectures_display.innerHTML = '<center><h1 id="lectures">Lecture details</h1></center><br>';
 
                                 for (let lecture of lectures) {
 
@@ -381,9 +385,9 @@
                                     <br>
                                     <h2>Problems</h2>
                                     <br>
-                                        <a href="elementary_problems.html"
-                                            class="btn btn-small btn-rounded btn-dark-solid">View Elementary
-                                            problems</a>
+                                    <a href="elementary_problems.html"
+                                        class="btn btn-small btn-rounded btn-dark-solid">View Elementary
+                                        problems</a>
                                     <p>
                                         <br>
                                         <a href="elementary/problem_7.pdf">Click here to download the latest
