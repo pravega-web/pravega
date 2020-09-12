@@ -10,7 +10,7 @@ html(lang="en")
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" preload>
   <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
-  
+
   //- <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" ></script>
 
@@ -25,7 +25,7 @@ html(lang="en")
 
 <body class="blue-grey lighten-2 fs" onscroll="scrolll()">
 
-    
+
 
   div(class="navbar-fixed" id="navfixed")
     <nav class="nav-extended z-depth-1 black">
@@ -33,7 +33,7 @@ html(lang="en")
         a(href="" class="brand-logo center" style="margin-top:10px")
           //- img(src="/front_end/views/webinar/small.png" id="logo")
           h4 Pravega Talks
-          
+
         br
         br
       </div>
@@ -66,11 +66,11 @@ html(lang="en")
         a(class="btn" href='https://'+live.wbnr.link target="_blank") Link here
         script var i = 8; window.setInterval(function(){i--;if(i ==0){window.location.replace('https://'+'#{live.wbnr.link}')};document.getElementById('redirect').innerText = 'Redirecting you in '+ i +' seconds, click to cancel'},1000)
         h5 #{moment( new Date(live.wbnr.start).getTime() + 5.5*3600*1000 ).format('hh:mm a')} - #{moment( new Date(live.wbnr.end).getTime() + 5.5*3600*1000 ).format('hh:mm a')}
-        
+
       else
         p(class="") Upcoming event
         p(style="font-size: 1em") You'll be automatically redirected to webinar from here when it goes live.
-        
+        div(class="col s2 chip blue-grey darken-2 white-text")= live.wbnr.description.event
         h3= live.wbnr.name
         br
         h5= live.wbnr.description.speaker
@@ -151,11 +151,11 @@ html(lang="en")
         div(class="collapsible-header row rh white-text flow-text z-depth-2" style="margin-bottom:5px; background-color:#4f4f5f63; border:none")
           div(class="col s4" style="word-break:break-word;")= val.name
           div(class="col s5")= moment(val.start).format('MMMM Do YYYY')
-          
+          div(class="col s2 chip blue-grey darken-2 white-text")= val.description.event
           div(class="col s1")
             i(class="material-icons")= val.icon
-            //- img(src=val.description.info, alt="" cl)
-        <div class="collapsible-body" style="background-color:#4f4f5f63">
+          //- img(src=val.description.info, alt="" cl)
+      <div class="collapsible-body" style="background-color:#4f4f5f63">
           <span class="white-text" style="background-color:#4f4f5f63">
             h5= val.name
             hr
@@ -176,7 +176,7 @@ html(lang="en")
                 a(href='https://'+val.link target="_blank") Webinar Link :  #{val.link}
 
           </span>
-        </div>
+      </div>
       </li>
   </ul>
 
