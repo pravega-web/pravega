@@ -198,7 +198,7 @@
                                         output += '<li><span>Meeting link</span> <a href="#"> Will be updated soon </a></li>';
                                     }
                                     else {
-                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '"> Will be updated soon </a></li>';
+                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '"> Click here </a></li>';
                                     }
                                 }
                                 if (links.youtube_platform) {
@@ -230,6 +230,7 @@
                                         youtube_platform: true,
                                         youtube_link: "https://www.youtube.com/watch?v=TGi5VCVXx7E",
                                     },
+                                    pre_abstract: "",
                                     abstract: "In this webinar, Dr. Vidya will be talking about the social organisation in female Asian elephants. All are welcome! Do join us in knowing more about the deepest mysteries of the large big-eared mammals!",
                                     bio: "Dr. TNC Vidya, whose Alma mater is the Centre for Ecological Sciences, IISc Bangalore, and Stellenbosch University, South Africa, heads the EIBU, JNCASR and is a member of the IUCN SSC. Her research work elucidates the behavioral ecology and biogeography of Asian elephants, large mammals and mynas in the southern regions of India, the Western Ghats and Cambodia. We will be enlightened about some never- known- before facts about the social organisation in Asian Elephants by her in this webinar. ",
                                 },
@@ -248,6 +249,7 @@
                                         ms_link: "https://tinyurl.com/BioTalk2",
                                         youtube_platform: false,
                                     },
+                                    pre_abstract: 'To add the event to your Google Calendar, <a href="https://tinyurl.com/y3ws4dtr">click here</a> and then click on the save button (Ensure that notifications for Calendar events are turned on for your Google Account in order to be notified in advance for this event).<br><br>',
                                     abstract: "T cells are critical for cell-mediated immunity and these cells are generated in the thymus. The thymus is a primary lymphoid organ in which T cells rearrange their T cell receptors, undergo selection, differentiate and mature. Post stringent selection, only mature T cells egress into the periphery and are responsible for cellular immunity. This talk will discuss the different types of cells within a thymus and processes that occur that lead to the development of mature T cells. Thymic atrophy, i.e. the loss in the number of thymocytes, occurs during aging, stress and infections. I will present the work done in our laboratory in trying to decipher the processes that occur during infection-induced atrophy. Better understanding of the processes involved in thymic atrophy may lead to the development strategies that may boost the cellular response during stress, infections, treatments with anti-cancer drugs etc. ",
                                     bio: "Dipankar Nandi was born in Kolkata and did his schooling in Mumbai. He was awarded the PhD degree from the University of California, Berkeley in 1991 after completing his B.Sc. (Microbiology) from the University of Bombay and M.Sc. (Microbiology) from the M. S. University of Baroda. His doctoral study was on tissue associated T cells and his postdoctoral research at the University of Cincinnati, Ohio was on characterization of proteasomes. His diverse training led him to investigate two broad areas as an independent faculty member since 1997 in the Department of Biochemistry, IISc, Bangalore: host encoded immune responses and microbial stress responses. He enjoys pursuing esoteric research leads, teaching and working closely with motivated students.",
                                 },
@@ -272,6 +274,7 @@
                                                                             ${displayLink(lecture.links)}
                                                                         </ul>
                                                                         <p>
+                                                                            ${lecture.pre_abstract}
                                                                             <b>Abstract:</b> ${lecture.abstract}
                                                                        </p>
                                                                         <p>
