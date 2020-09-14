@@ -135,11 +135,15 @@
                         <div class="m-bot-100">
                             <div class="col-md-6">
                                 <div class="full-width">
-                                    <img src="../../img/events/bioblitz.svg" alt="">
+                                    <center>
+                                        <br>
+                                        <img src="../../img/events/bioblitz.svg" alt="">
+                                    </center>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="heading-title-side-border text-left">
+                                    <br>
                                     <h1 class="text-uppercase">BioBlitz</h1>
                                     <br>
                                     <p>
@@ -155,6 +159,7 @@
                                     </p>
                                     <br>
                                     <h3>Awards</h3>
+                                    <br>
                                     <p>
                                         The winners of the monthly quizzes and the biweekly problem sets shall be given
                                         Instagram shoutouts from the official Instagram handle of Pravega! Apart from
@@ -165,41 +170,39 @@
                                         be held in IISc! The top three candidates shall be awarded e-certificates as
                                         well!
                                     </p>
-
+                                    <br>
                                     <h3>Date</h3>
+                                    <br>
                                     <p>15<sup>th</sup> August onwards</p>
-
+                                    <br>
                                     <h3>Eligibility</h3>
+                                    <br>
                                     <p>
                                         Open to all. The only criteria to participate in the event is to possess active
                                         interest in biology!
-                                    </p>
-
-                                    <div>
                                         <br>
-                                        <p>
-                                            The tentative rules and regulations are laid down in the PDF document below.
-                                            Any further modifications shall be notified on this website.
-                                        </p>
+                                        The tentative rules and regulations are laid down in the PDF document below.
+                                        Any further modifications shall be notified on this website.
+                                        <br>
                                         <a href="pdfs/BioBlitz'21_RulesAndRegulations_Updated.pdf"
                                             download="BioBlitz rules and regulations">Click here to view the rules and
                                             regulations</a>
-                                    </div>
+                                    </p>
                                     <br>
-                                    <br>
-
                                     <h3>Subscribe</h3>
+                                    <br>
                                     <p>
                                         Do join us in this fun-ride for the next few months, and encourage your peers to
                                         join! After all, biology is all about fun. Celebrating biology ( the “life
                                         sciences”) is celebrating Life itself !!!
+                                        <br>
+                                        <a href="https://forms.gle/xBKvvRsSJKYv9qG27">Click here to subscribe to the
+                                            event
+                                            and receive regular updates</a>
                                     </p>
-                                    <a href="https://forms.gle/xBKvvRsSJKYv9qG27">Click here to subscribe to the event
-                                        and receive regular updates</a>
                                     <br>
-                                    <br>
-
                                     <h3>Registration and Login</h3>
+                                    <br>
                                     <p>
                                         Follow the following instructons for registration:<br>
                                         <a href="pdfs/BioBlitz_Registration.pdf">Instructions to Register</a>
@@ -211,7 +214,6 @@
                                             here</a>
                                         <br>
                                         <br>
-
                                         Use the following link to sign in:
                                         <br>
                                         <a href="https://pravega.glitch.me/login">Sign in</a>
@@ -223,8 +225,16 @@
                                         <br>
                                         <b>Sign in using the link above to access the second monthly mixed bag</b>
                                     </p>
-
+                                    <ul class=" portfolio-meta m-bot-30">
+                                        <li><span> Category </span> Science</li>
+                                        <li><span> Coordinators </span>Sukriyo Chakraborty and Aditya Basu</li>
+                                        <li><span> Contact Details </span> <a
+                                                href="mailto:bioblitz.pravega@gmail.com ?subject=subject text">
+                                                bioblitz.pravega@gmail.com</a></li>
+                                    </ul>
+                                    <br>
                                     <h3>BioCognizance</h3>
+                                    <br>
                                     <p>
                                         Apart from these quizzes and problem sets, there shall be monthly webinars,
                                         named BioCognizance,
@@ -237,31 +247,189 @@
                                         sets or the webinars, subscribe to our newsletter using the form given at the
                                         end of this page.
                                     </p>
-                                    <div>
-                                        <a href="bioblitz_webinars.html""
-                                            class=" btn btn-small btn-rounded btn-dark-solid "> Visit BioCognizance Website </a>
-                                    </div>
-                                    <br>
-                                    <br>
-
-                                    <ul class=" portfolio-meta m-bot-30">
-                                            <li><span> Category </span> Science</li>
-                                            <li><span> Coordinators </span>Sukriyo Chakraborty and Aditya Basu</li>
-                                            <li><span> Contact Details </span> <a
-                                                    href="mailto:bioblitz.pravega@gmail.com ?subject=subject text">
-                                                    bioblitz.pravega@gmail.com</a></li>
-                                            </ul>
-
-
-                                    </div>
                                 </div>
-
                             </div>
                         </div>
 
                         <hr />
+                        <div id=" lectures-display">
 
+                        </div>
 
+                        <script>
+                            "use strict"
+
+                            // helper function
+                            function displayDate(date) {
+                                let output = `${date.day}`;
+
+                                if (date.day == 1 || date.day == 21 || date.day == 31) {
+                                    output += "st"
+                                }
+                                else if (date.day == 2 || date.day == 22) {
+                                    output += "nd"
+                                }
+                                else if (date.day == 3 || date.day == 23) {
+                                    output += "rd"
+                                }
+                                else {
+                                    output += "th"
+                                }
+                                output += ` ${date.month} at ` + date.time;
+
+                                return output;
+                            }
+
+                            // helper function
+                            function displayLink(links) {
+                                let output = "";
+
+                                if (links.ms_platform) {
+                                    if (links.ms_link == false) {
+                                        output += '<li><span>Meeting link</span> <a href="#" > Will be updated soon </a></li>';
+                                    }
+                                    else {
+                                        output += '<li><span>Meeting link</span> <a href="' + links.ms_link + '" style="pointer-events: auto"> Click here </a></li>';
+                                    }
+                                }
+                                if (links.youtube_platform) {
+                                    if (links.youtube_link == false) {
+                                        output += '<li><span>Youtube link</span> <a href="#"> Will be updated soon </a></li>';
+                                    }
+                                    else {
+                                        output += '<li><span>Youtube link</span> <a href="' + links.youtube_link + '" style="pointer-events: auto"> Click here </a></li>';
+                                    }
+                                }
+                                return output;
+                            }
+
+                            let lectures = [];
+
+                            lectures.push(
+                                {
+                                    image: "DrVidya.jpeg",
+                                    num: 1,
+                                    title: "How is the female Asian elephant society organised?",
+                                    prof: "T.N.C. Vidya",
+                                    date: {
+                                        day: 20,
+                                        month: "August",
+                                        time: "5:30 PM",
+                                    },
+                                    links: {
+                                        ms_platform: false,
+                                        youtube_platform: true,
+                                        youtube_link: "https://www.youtube.com/watch?v=TGi5VCVXx7E",
+                                    },
+                                    pre_abstract: "",
+                                    abstract: "In this webinar, Dr. Vidya will be talking about the social organisation in female Asian elephants. All are welcome! Do join us in knowing more about the deepest mysteries of the large big-eared mammals!",
+                                    bio: "Dr. TNC Vidya, whose Alma mater is the Centre for Ecological Sciences, IISc Bangalore, and Stellenbosch University, South Africa, heads the EIBU, JNCASR and is a member of the IUCN SSC. Her research work elucidates the behavioral ecology and biogeography of Asian elephants, large mammals and mynas in the southern regions of India, the Western Ghats and Cambodia. We will be enlightened about some never- known- before facts about the social organisation in Asian Elephants by her in this webinar. ",
+                                    show: false,
+                                },
+                                {
+                                    image: "DrNandi.jpeg",
+                                    num: 2,
+                                    title: "Living and Dying in the Thymus: an organ essential for immunity",
+                                    prof: "Dipankar Nandi",
+                                    date: {
+                                        day: 18,
+                                        month: "September",
+                                        time: "5:30 PM",
+                                    },
+                                    links: {
+                                        ms_platform: true,
+                                        ms_link: "https://tinyurl.com/BioTalk2",
+                                        youtube_platform: false,
+                                    },
+                                    pre_abstract: 'To add the event to your Google Calendar, <a href="https://tinyurl.com/y3ws4dtr">click here</a> and then click on the save button (Ensure that notifications for Calendar events are turned on for your Google Account in order to be notified in advance for this event).<br><br>',
+                                    abstract: "T cells are critical for cell-mediated immunity and these cells are generated in the thymus. The thymus is a primary lymphoid organ in which T cells rearrange their T cell receptors, undergo selection, differentiate and mature. Post stringent selection, only mature T cells egress into the periphery and are responsible for cellular immunity. This talk will discuss the different types of cells within a thymus and processes that occur that lead to the development of mature T cells. Thymic atrophy, i.e. the loss in the number of thymocytes, occurs during aging, stress and infections. I will present the work done in our laboratory in trying to decipher the processes that occur during infection-induced atrophy. Better understanding of the processes involved in thymic atrophy may lead to the development strategies that may boost the cellular response during stress, infections, treatments with anti-cancer drugs etc. ",
+                                    bio: "Dipankar Nandi was born in Kolkata and did his schooling in Mumbai. He was awarded the PhD degree from the University of California, Berkeley in 1991 after completing his B.Sc. (Microbiology) from the University of Bombay and M.Sc. (Microbiology) from the M. S. University of Baroda. His doctoral study was on tissue associated T cells and his postdoctoral research at the University of Cincinnati, Ohio was on characterization of proteasomes. His diverse training led him to investigate two broad areas as an independent faculty member since 1997 in the Department of Biochemistry, IISc, Bangalore: host encoded immune responses and microbial stress responses. He enjoys pursuing esoteric research leads, teaching and working closely with motivated students.",
+                                    show: true,
+                                },
+                            )
+
+                            lectures = lectures.sort((a, b) => (b.num - a.num));
+
+                            // display toggle function
+                            function toggleVisibility(num) {
+                                for (let lecture of lectures) {
+                                    if (lecture.num == num) {
+                                        if (lecture.show == false) {
+                                            lecture.show = true;
+                                        }
+                                        else {
+                                            lecture.show = false;
+                                        }
+                                    }
+                                }
+                                displayLectures();
+                            }
+
+                            let lectures_display = document.getElementById(" lectures-display");
+                            displayLectures();
+
+                            function displayLectures() {
+
+                                lectures_display.innerHTML = '<center><h1 id="lectures">Lecture details</h1></center><br>';
+
+                                for (let lecture of lectures) {
+
+                                    if (lecture.show) {
+                                        lectures_display.innerHTML += `
+                                                                <center>
+                                                                    <button onclick="toggleVisibility(${lecture.num})">Hide Talk ${lecture.num}</button>
+                                                                </center>
+                                                                <br>
+                                                                <button style="text-align: left; background: #FFFFFF; pointer-events: none">
+                                                                <br>
+                                                                <div class="m-bot-100">
+                                                                    <div class="col-md-6">
+                                                                        <div class="full-width">
+                                                                            <center>
+                                                                            <br>
+                                                                            <img src="bioblitz/${lecture.image}" alt="">
+                                                                            </center>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <br>
+                                                                        <h2 class="text-uppercase">Talk ${lecture.num}: ${lecture.title}</h2>
+                                                                        <h4>By Prof. ${lecture.prof}</h4>
+                                                                    <ul class="portfolio-meta m-bot-30">
+                                                                        <li><span>Date and time</span> ${displayDate(lecture.date)}</li>
+                                                                        ${displayLink(lecture.links)}
+                                                                    </ul>
+                                                                    <p>
+                                                                        ${lecture.pre_abstract}
+                                                                        <b>Abstract:</b> ${lecture.abstract}
+                                                                    </p>
+                                                                    <p>
+                                                                        <b>Bio:</b> ${lecture.bio}
+                                                                    </p>
+                                                                    </div>
+                                                                </div>
+                                                                </button>
+                                                                <br>
+                                                                <br>
+                                                            `;
+                                    }
+                                    else {
+                                        lectures_display.innerHTML += `
+                                                                <center>
+                                                                    <button style="width: 60%" onclick="toggleVisibility(${lecture.num})">${lecture.title}<br>${displayDate(lecture.date)}</button>
+                                                                <center>
+                                                                <br>
+                                                                `;
+                                    }
+                                }
+                            }
+
+                        </script>
+                    </div>
+                </div>
+                <br>
+                <hr />
+                <br>
             </section>
             <!--body content end-->
 
