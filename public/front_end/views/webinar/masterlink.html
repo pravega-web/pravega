@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masterlink</title>
+  <title>Talks</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     preload>
@@ -27,7 +27,7 @@
   body {
     font-family: Montserrat, sans-serif;
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     word-break: break-word;
   }
@@ -47,8 +47,7 @@
   }
 </style>
 
-<body ng-controller="talksController"
-  style="background-image: url('/front_end/views/webinar/connectwork.png');scroll-behavior:smooth">
+<body ng-controller="talksController" style="background-image: url('/front_end/views/webinar/connectwork.png');">
   <nav class="nav-extended black">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Pravega Talks</a>
@@ -61,75 +60,79 @@
     </div>
   </nav>
 
-  <div id="test1" class="white-text" style="overflow:scroll; scroll-behavior: smooth; scroll-snap-type: y mandatory;">
+  <div id="test1" class="white-text" style="overflow-y: scroll;">
     <br>
     <br>
     <div class="container row valign">
 
-      <div class="col s12 row center" id="head"
-        style="height:100vh; scroll-snap-align: start; scroll-padding-top: 180px;">
-        <div class="col s12 right-align">
-          <br>
-          <br>
-          <div class="col s12 right">
-            <i class="material-icons">swap_horiz</i>
-          </div>
+      <div class="col s12 row center" id="head" style="height:100vh;">
+        <div class="col s12 center">
+          <h4 ng-show="!live" class="red-text">LIVE NOW</h4>
         </div>
-        <div class="col s12">
-          <h4 ng-show="live" class="red-text">LIVE NOW</h4>
-          <div class="chip black-text">
+        <div class="col s12 row">
+          <div class="col s4">
+            <!-- <div class="btn-floating pulse black" style='background-color:transparent'>
+              <i class="material-icons">swap_vert</i>
+            </div> -->
+          </div>
+          <div class="chip black-text col s4">
             {{homeTalk.description.event}}
           </div>
+          <div class="col s3">
+            <!-- <div class="btn-floating pulse black" style='background-color:transparent'> -->
+            <i class="material-icons">swap_horiz</i>
+          <!-- </div> -->
         </div>
-        
-        <div class="col s12 center">
-          <h3 style="font-size:2.8rem">{{homeTalk.name}}</h3>
-        </div>
-        <div class="col s12 center">
-          <h4>{{homeTalk.description.speaker}}</h4>
-        </div>
-
-        <div class="col s12 center" ng-show="!live">
-          <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}}</h5>
-        </div>
-        <div class="col s12 center" ng-show="live">
-          <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a '}}</h5>
-
-        </div>
-        <div class="col s12 center">
-          <br>
-          <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
-        </div>
-        <div class="col s12 center">
-          <br>
-          <a href="#abt" class="btn-floating btn-large black pulse white-text center"><i
-              class="material-icons">arrow_downward</i>
-          </a>
-        </div>
-
       </div>
 
+      <div class="col s12 center">
+        <h3 style="font-size:2.8rem">{{homeTalk.name}}</h3>
+      </div>
+      <div class="col s12 center">
+        <h4>{{homeTalk.description.speaker}}</h4>
+      </div>
 
-      <div class="col s12 center" id="abt" style="height:100vh;scroll-snap-align: start; ">
-        <br>
-        <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
-          figures from different walks of life will bring to you their experience and wisdom. This journey to the
-          forefront of a wide range of topics will equip you with the tools needed to race ahead in today's world, as we
-          bring to you world renowned leaders and innovators.
-          <br> <br>
-          So.... Are you ready to witness a paradigm shift?
-          <br> <br>
-          To receive e-mail reminders about upcoming talks, <a href="https://forms.gle/c22pjxdikjXq5Qqy8"
-            target="_blank">sign up here</a></p>
-        <br>
-        <br>
+      <div class="col s12 center" ng-show="!live">
+        <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}}</h5>
+      </div>
+      <div class="col s12 center" ng-show="live">
+        <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a '}}</h5>
 
-        <a href="#head" class="btn-floating btn-large black pulse white-text center"><i
-            class="material-icons">arrow_upward</i>
-        </a>
+      </div>
+      <div class="col s12 center">
+        <br>
+        <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
+      </div>
+      <div class="col s12 center">
+        <br>
+        <!-- <a href="#abt" class="btn-floating btn-large black pulse white-text center"><i
+              class="material-icons">arrow_downward</i>
+          </a> -->
       </div>
 
     </div>
+
+
+    <div class="col s12 center" id="abt" style="height:100vh;">
+      <br>
+      <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
+        figures from different walks of life will bring to you their experience and wisdom. This journey to the
+        forefront of a wide range of topics will equip you with the tools needed to race ahead in today's world, as we
+        bring to you world renowned leaders and innovators.
+        <br> <br>
+        So.... Are you ready to witness a paradigm shift?
+        <br> <br>
+        To receive e-mail reminders about upcoming talks, <a href="https://forms.gle/c22pjxdikjXq5Qqy8"
+          target="_blank">sign up here</a></p>
+      <br>
+      <br>
+
+      <a href="#head" class="btn-floating btn-large black pulse white-text center"><i
+          class="material-icons">arrow_upward</i>
+      </a>
+    </div>
+
+  </div>
 
 
   </div>
@@ -250,6 +253,8 @@
   var app = angular.module('pravegaApp', [])
   app.controller('talksController', function ($scope, $http) {
     console.log('Talks Controller loaded...');
+
+    M.toast({html: 'TIP: Scroll both axes !'})
 
     $scope.events = [
       'Coherence',
