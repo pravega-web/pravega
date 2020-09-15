@@ -81,58 +81,75 @@
           <div class="col s3">
             <!-- <div class="btn-floating pulse black" style='background-color:transparent'> -->
             <i class="material-icons">swap_horiz</i>
-          <!-- </div> -->
+            <!-- </div> -->
+          </div>
         </div>
-      </div>
 
-      <div class="col s12 center">
-        <h3 style="font-size:2.8rem">{{homeTalk.name}}</h3>
-      </div>
-      <div class="col s12 center">
-        <h4>{{homeTalk.description.speaker}}</h4>
-      </div>
+        <div class="col s12 center">
+          <h3 style="font-size:2.8rem">{{homeTalk.name}}</h3>
+        </div>
+        <div class="col s12 center">
+          <h4>{{homeTalk.description.speaker}}</h4>
+        </div>
 
-      <div class="col s12 center" ng-show="!live">
-        <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}}</h5>
-      </div>
-      <div class="col s12 center" ng-show="live">
-        <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a '}}</h5>
+        <div class="col s12 center" ng-show="!live">
+          <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}}</h5>
+        </div>
+        <div class="col s12 center" ng-show="live">
+          <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a '}}</h5>
 
-      </div>
-      <div class="col s12 center">
-        <br>
-        <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
-      </div>
-      <div class="col s12 center">
-        <br>
-        <!-- <a href="#abt" class="btn-floating btn-large black pulse white-text center"><i
+        </div>
+        <div class="col s12 center">
+          <br>
+          <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
+        </div>
+        <div class="col s12 center">
+          <br>
+          <!-- <a href="#abt" class="btn-floating btn-large black pulse white-text center"><i
               class="material-icons">arrow_downward</i>
           </a> -->
+        </div>
+
+      </div>
+
+
+      <div class="col s12 center" id="abt" style="height:100vh;">
+        <br>
+        <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
+          figures from different walks of life will bring to you their experience and wisdom. This journey to the
+          forefront of a wide range of topics will equip you with the tools needed to race ahead in today's world, as we
+          bring to you world renowned leaders and innovators.
+          <br> <br>
+          So.... Are you ready to witness a paradigm shift?
+          <br> <br>
+          To receive e-mail reminders about upcoming talks, <a href="https://forms.gle/c22pjxdikjXq5Qqy8"
+            target="_blank">sign up here</a></p>
+        <br>
+        <br>
+
+        <ul class="collapsible black-text">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body  white-text" style="background-color:var(--col); margin-bottom: 20px;">
+              <span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+        </ul>
+
+
+        <a href="#head" class="btn-floating btn-large black pulse white-text center"><i
+            class="material-icons">arrow_upward</i>
+        </a>
       </div>
 
     </div>
-
-
-    <div class="col s12 center" id="abt" style="height:100vh;">
-      <br>
-      <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
-        figures from different walks of life will bring to you their experience and wisdom. This journey to the
-        forefront of a wide range of topics will equip you with the tools needed to race ahead in today's world, as we
-        bring to you world renowned leaders and innovators.
-        <br> <br>
-        So.... Are you ready to witness a paradigm shift?
-        <br> <br>
-        To receive e-mail reminders about upcoming talks, <a href="https://forms.gle/c22pjxdikjXq5Qqy8"
-          target="_blank">sign up here</a></p>
-      <br>
-      <br>
-
-      <a href="#head" class="btn-floating btn-large black pulse white-text center"><i
-          class="material-icons">arrow_upward</i>
-      </a>
-    </div>
-
-  </div>
 
 
   </div>
@@ -223,12 +240,15 @@
 
   // Collapsible initialization 
   var col_elems = document.querySelectorAll('.collapsible');
-  var col_instances = M.Collapsible.init(col_elems[0], {
+  var col_instances = M.Collapsible.init(col_elems, {
     onOpen: open,
     onClose: close,
     onOpenStart: open,
     onCloseStart: close
   });
+
+  var col_elems_2 = document.querySelectorAll('.collapsible');
+  var col_instances_2 = M.Collapsible.init(col_elems_2[0], {});
 
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -254,7 +274,7 @@
   app.controller('talksController', function ($scope, $http) {
     console.log('Talks Controller loaded...');
 
-    M.toast({html: 'TIP: Scroll both axes !'})
+    M.toast({ html: 'TIP: Scroll both axes !' })
 
     $scope.events = [
       'Coherence',

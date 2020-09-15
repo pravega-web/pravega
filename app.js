@@ -37,6 +37,9 @@ require(__dirname + '/file_routes.js')(app);
 // Webinar routes
 require(__dirname + '/webinar.js')(app);
 
+// DB handling
+require(__dirname+'/admin.js')(app);
+
 // Helper Functions here
 var helper = require(__dirname + '/helper.js')(); 
 var logit = helper.logit; // Need to pull this out just in case...
