@@ -171,6 +171,71 @@
                                         well!
                                     </p>
                                     <br>
+                                    <h3>Leaderboard</h3>
+                                    <br>
+                                    <p>The standings as of Monthly Mixed Bag - I</p>
+                                    <center>
+                                        <table id='leaderboard' border=2 style="text-align: center;">
+                                            <colgroup>
+                                                <col span="1" width="15%">
+                                                <col span="1" width="60%">
+                                                <col span="1" width="25%">
+                                            </colgroup>
+                                            <tr>
+                                                <th style="text-align: center;">No.</th>
+                                                <th style="text-align: center;">Name</th>
+                                                <th style="text-align: center;">Score</th>
+                                            </tr>
+                                            <script>
+                                                "use strict"
+
+                                                function addData(rank, name, score) {
+                                                    let output = "";
+
+                                                    output += `<td> ${rank} </td>`;
+                                                    output += `<td> ${name} </td>`;
+                                                    output += `<td> ${score} </td>`;
+
+                                                    return output;
+                                                };
+
+                                                let data = [];
+
+                                                data.push(
+                                                    {
+                                                        name: "Mayukh Nandi",
+                                                        score: 41,
+                                                    },
+                                                    {
+                                                        name: "Malavika Rajesh",
+                                                        score: 37,
+                                                    },
+                                                    {
+                                                        name: "Mohnish Singh",
+                                                        score: 37,
+                                                    },
+                                                    {
+                                                        name: "K. Sai Pratiksha",
+                                                        score: 36,
+                                                    },
+                                                    {
+                                                        name: "Nandini Singha",
+                                                        score: 34,
+                                                    },
+                                                )
+
+                                                data = data.sort((a, b) => b.score - a.score);
+
+                                                let leaderboard = document.getElementById("leaderboard");
+                                                let num_display = 5;
+
+                                                for (let rank = 0; rank < num_display; rank++) {
+                                                    leaderboard.innerHTML += "<tr>" + addData(rank + 1, data[rank].name, data[rank].score) + "</tr>";
+                                                }
+                                            </script>
+                                        </table>
+                                    </center>
+                                    <br>
                                     <h3>Date</h3>
                                     <br>
                                     <p>15<sup>th</sup> August onwards</p>
