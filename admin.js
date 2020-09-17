@@ -276,42 +276,41 @@ module.exports = (app) => {
      * 3) Party
      */
 
-     var test1_responses = []
+    var test1_responses = []
 
     // Put the script here
     for (let index = 0; index < entries.length; index++) {
       var response = entries[index];
-      if(response.response){
-        if (!('test' in response.response)){
-          console.log(response._id);
+      if (response.response) {
+        if (!('test' in response.response)) {
+          //console.log(response._id);
           test1_responses.push(response);
         }
-      }      
+      }
     }
 
-    console.log(test1_responses.length);
+    //console.log(test1_responses.length);
 
 
     // evaluation loop
-    for (let entry of entries) {
+    for (let entry of test1_responses) {
 
       let result = {
-        user_id: entry.user,
+        user_name: "",
         score: 0,
-        validity: true,
         duration: 0, // in hours
       }
 
       // checks validity of response; if valid, then evaluates the score.
       if (entry.response === undefined) {
-        result.validity = false;
+        
       }
       else {
         for (let question of questions) {
           if (question in entry.response) {
-            if(question == "aeight") {
+            if (question == "aeight") {
               // the evaluation of this question is different
-              if(entry.response["aeight"].includes("HIV")) {
+              if (entry.response["aeight"].includes("HIV")) {
                 result.score += 1;
               }
             }
@@ -331,19 +330,23 @@ module.exports = (app) => {
         result.duration = duration / (3600 * 1000);
       }
 
+      user.find({_id:mongoose.Types.ObjectId(entry.user)},(e,d)=>{
+        if (e) throw e;
+        // console.log(d[0].name);
+      })
+
       results.push(result);
     }
     // end of evaluation loop
 
-    results = results.sort((a, b) => b.score - a.score);
+    //results = results.sort((a, b) => b.score - a.score);
 
     console.log("USER ID | Score | Validity of responses | Duration (in hours)");
     for (let result of results) {
       // OUTPUT given to BioBlitz coords in form of a spreadsheet
-      // console.log(result.user_id, result.score, result.validity, result.duration.toFixed(2));
+      // console.log(result.user_name, result.score, result.duration.toFixed(2));
     }
 
-    // I'll put this part in when you're done.
   });
 
 }
