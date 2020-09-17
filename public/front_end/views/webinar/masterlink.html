@@ -294,13 +294,13 @@
     $scope.filter = function (filter) {
       if ($scope.filters.indexOf(filter) == -1) {
         console.log('Filtering ', filter)
-        document.getElementById(filter).classList.remove('white')
-        document.getElementById(filter).classList.add('grey')
+        document.getElementById(filter).classList.remove('grey')
+        document.getElementById(filter).classList.add('white')
         $scope.filters.push(filter)
       } else {
         $scope.filters.splice($scope.filters.indexOf(filter), 1)
-        document.getElementById(filter).classList.remove('grey')
-        document.getElementById(filter).classList.add('white');
+        document.getElementById(filter).classList.remove('white')
+        document.getElementById(filter).classList.add('grey');
       }
       console.log($scope.filters)
     }
@@ -313,12 +313,12 @@
     }
 
     $scope.clearFilters = function () {
-      console.log('Cleaing all filters')
+      console.log('Clearing all filters')
       $scope.events.forEach(e => {
         console.log(e)
         element = document.getElementById(e);
-        element.classList.remove('grey');
-        element.classList.add('white')
+        element.classList.remove('white');
+        element.classList.add('grey')
       })
       $scope.filters = []
     }
@@ -329,8 +329,8 @@
       for (let index = 0; index < filterBtns.length; index++) {
         var element = filterBtns[index];
 
-        element.classList.remove('white');
-        element.classList.add('grey');
+        element.classList.remove('grey');
+        element.classList.add('white');
 
       }
       // filterBtns.forEach((btn)=>{ 
@@ -390,6 +390,14 @@
 <script>
   $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
+    filterBtns = document.getElementsByClassName('filter');
+      for (let index = 0; index < filterBtns.length; index++) {
+        var element = filterBtns[index];
+
+        element.classList.remove('grey');
+        element.classList.add('white');
+
+      }
   });
 </script>
 
