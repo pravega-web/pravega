@@ -269,8 +269,22 @@ module.exports = (app) => {
      * 3) Party
      */
 
+     var test1_responses = []
+
     // Put the script here
-    console.log(responses);
+    for (let index = 0; index < responses.length; index++) {
+      var response = responses[index];
+      if(response.response){
+        if (!('test' in response.response)){
+          console.log(response._id);
+          test1_responses.push(response);
+        }
+      }      
+    }
+
+    console.log(test1_responses.length);
+
+
 
   // Update script goes here.
 
