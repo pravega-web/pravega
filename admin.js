@@ -227,12 +227,19 @@ module.exports = (app) => {
         "cnine_6"
       ]
     }
+  };
+
+  // array of questions
+  let questions = [];
+  for (let [key, value] of Object.entries(answers)) {
+    questions.push(key);
   }
 
+  // contains score, validity of responses and 
+  let results = [];
 
   // Getting users responses
 
-  
   var qresSchema = new mongoose.Schema({
     'user': { type: mongoose.Schema.Types.ObjectId },
     'start': { type: Date, default: new Date() },
@@ -242,7 +249,7 @@ module.exports = (app) => {
 
   var bbres = mongoose.model("BioBlitz Responses", qresSchema);
 
-  bbres.find((e, responses) => {
+  bbres.find((e, entries) => {
     if (e) throw e;
 
     // Users responses
@@ -269,12 +276,58 @@ module.exports = (app) => {
      * 3) Party
      */
 
-    // Put the script here
-    console.log(responses);
+    // evaluation loop
+    for (let entry of entries) {
 
-  // Update script goes here.
+      let result = {
+        user_id: entry.user,
+        score: 0,
+        validity: true,
+        duration: 0, // in hours
+      }
 
-  // I'll put this part in when you're done.
+      // checks validity of response; if valid, then evaluates the score.
+      if (entry.response === undefined) {
+        result.validity = false;
+      }
+      else {
+        for (let question of questions) {
+          if (question in entry.response) {
+            if(question == "aeight") {
+              // the evaluation of this question is different
+              if(entry.response["aeight"].includes("HIV")) {
+                result.score += 1;
+              }
+            }
+            else if (answers[question].correct.includes(entry.response[question])) {
+              result.score += answers[question].marks;
+            }
+          }
+        }
+      }
+
+      // checks duration
+      let duration = entry.end - entry.start;
+      if (Number.isNaN(duration)) {
+        result.duration = -1;
+      }
+      else {
+        result.duration = duration / (3600 * 1000);
+      }
+
+      results.push(result);
+    }
+    // end of evaluation loop
+
+    results = results.sort((a, b) => b.score - a.score);
+
+    console.log("USER ID | Score | Validity of responses | Duration (in hours)");
+    for (let result of results) {
+      // OUTPUT given to BioBlitz coords in form of a spreadsheet
+      // console.log(result.user_id, result.score, result.validity, result.duration.toFixed(2));
+    }
+
+    // I'll put this part in when you're done.
   });
 
 }
