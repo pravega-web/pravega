@@ -34,7 +34,9 @@ module.exports = function (app) {
   app.get("/api/webinar", (req, res) => {
     webinar.find((err, data) => {
       if (err) throw err;
-      res.send(data);
+      res.send(data.sort(function(a, b){
+        return (new Date(a.start) - new Date(b.start))
+      }));
     });
   });
 

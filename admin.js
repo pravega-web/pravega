@@ -249,9 +249,18 @@ module.exports = (app) => {
 
   var bbres = mongoose.model("BioBlitz Responses", qresSchema);
 
+  var user = require(__dirname + '/models/user.js')
+  console.log(user);
+
+
+
+
+
   bbres.find((e, entries) => {
     if (e) throw e;
 
+    // console.log(mongoose.Schema.Types.ObjectId(entries[0]._id));
+    
     // Users responses
 
     // Hey, Chandan!
@@ -269,27 +278,28 @@ module.exports = (app) => {
      * 
      * Ciao and thanks.
      * 
-     * So t summarise.
+     * So to summarise.
      * 
      * 1) Ensure your data has end and answers.
      * 2) Evaluate
      * 3) Party
      */
 
-     var test1_responses = []
+    var test1_responses = []
 
     // Put the script here
     for (let index = 0; index < entries.length; index++) {
       var response = entries[index];
-      if(response.response){
-        if (!('test' in response.response)){
-          console.log(response._id);
+      if (response.response) {
+        if (!('test' in response.response)) {
           test1_responses.push(response);
+          // console.log(response._id)
+
         }
-      }      
+      }
     }
 
-    console.log(test1_responses.length);
+    // console.log(test1_responses.length);
 
 
     // evaluation loop
@@ -309,9 +319,9 @@ module.exports = (app) => {
       else {
         for (let question of questions) {
           if (question in entry.response) {
-            if(question == "aeight") {
+            if (question == "aeight") {
               // the evaluation of this question is different
-              if(entry.response["aeight"].includes("HIV")) {
+              if (entry.response["aeight"].includes("HIV")) {
                 result.score += 1;
               }
             }
@@ -346,4 +356,16 @@ module.exports = (app) => {
     // I'll put this part in when you're done.
   });
 
+
+  
+
+}
+
+
+async function namakarana(results = Array){
+  for (const key in results) {
+    var entry = results[key];
+    var person = await user.findOne({_id:entry.user_id}); 
+    console.log(person.name);
+  }
 }

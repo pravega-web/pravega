@@ -93,10 +93,10 @@
         </div>
 
         <div class="col s12 center" ng-show="!live">
-          <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}}</h5>
+          <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}} IST</h5>
         </div>
         <div class="col s12 center" ng-show="live">
-          <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a '}}</h5>
+          <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a ' : tz}} IST</h5>
 
         </div>
         <div class="col s12 center">
@@ -234,9 +234,7 @@
 
   // Tabs initialization
   var el = document.getElementsByClassName('tabs');
-  var instance = M.Tabs.init(el[0], {
-    'swipeable': true
-  });
+  var instance = M.Tabs.init(el[0], {});
 
   // Collapsible initialization 
   var col_elems = document.querySelectorAll('.collapsible');
@@ -348,22 +346,38 @@
       'method': 'GET',
       'url': '/api/webinar'
     }).then((res) => {
-      console.log(res.data);
-      $scope.webinars = res.data.slice()
-      var got = false;
-      for (let index = 0; index < res.data.length; index++) {
+      $scope.webinars = [];
+      var webs = []
+      webs = res.data.splice();
+      webs.sort(function (a, b) {
+        return (new Date(a.start) - new Date(b.start))
+      });
+      $scope.webinars = res.data.slice();
+      // console.log(typeof($scope.webinars));
+      // $scope.webinars.sort((a, b) =>{return (a.start - b.start)})
+
+      webs.forEach(element => {
+        console.log(element.name);
+      });
+
+      for (var index = 0; index < $scope.webinars.length - 1; index++) {
+        // console.log(res.data);
+
         var element = res.data[index];
         var next = res.data[index + 1];
-        if (new Date(element.start) < new Date() && new Date(next.start) > new Date()) {
+
+        var now = new Date();
+        if (now > new Date(element.start) && now < new Date(next.start)) {
           $scope.homeTalk = next;
-          if (element.end < new Date()) {
+          if (now < new Date(element.end)) {
+            $scope.homeTalk = element;
             $scope.live = true;
           }
           break;
         }
+
       }
 
-      console.log(res.data);
 
       var urlString = window.location.href;
       var url = new URL(urlString);
@@ -387,18 +401,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
   integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
   crossorigin="anonymous"></script>
-<script>
-  $(document).ready(function () {
-    $(".owl-carousel").owlCarousel();
-    filterBtns = document.getElementsByClassName('filter');
-      for (let index = 0; index < filterBtns.length; index++) {
-        var element = filterBtns[index];
-
-        element.classList.remove('grey');
-        element.classList.add('white');
-
-      }
-  });
-</script>
 
 </html>
