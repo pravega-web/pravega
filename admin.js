@@ -1,5 +1,13 @@
 const mongoose = require('mongoose');
 
+async function displayUsernames(results) {
+  for (const key in results) {
+    var entry = results[key];
+    var person = await user.findOne({ _id: entry.user });
+    console.log(person.name);
+  }
+}
+
 module.exports = (app) => {
 
   console.log('Started admin service...');
@@ -174,45 +182,45 @@ module.exports = (app) => {
       ]
     },
     "cone": {
-      "marks": 4,
+      "marks": 2,
       "correct": [
         "cone_2"
       ]
     },
     "ctwo": {
-      "marks": 4,
+      "marks": 2,
       "correct": [
         "ctwo_1"
       ]
     },
     "cthree": {
-      "marks": 4,
+      "marks": 2,
       "correct": [
         "cthree_2"
       ]
     },
     "cfour": {
-      "marks": 6,
+      "marks": 2,
       "correct": [
-        "cfour_1"
+        "cfour_2"
       ]
     },
     "cfive": {
       "marks": 2,
       "correct": [
-        "cfive_2"
+        "cfive_1"
       ]
     },
     "csix": {
-      "marks": 2,
+      "marks": 4,
       "correct": [
-        "csix_1"
+        "csix_2"
       ]
     },
     "cseven": {
-      "marks": 2,
+      "marks": 6,
       "correct": [
-        "cseven_2"
+        "cseven_1"
       ]
     },
     "ceight": {
@@ -292,43 +300,58 @@ module.exports = (app) => {
       var response = entries[index];
       if (response.response) {
         if (!('test' in response.response)) {
+          //console.log(response._id);
           test1_responses.push(response);
           // console.log(response._id)
 
         }
       }
     }
-
-    // console.log(test1_responses.length);
-
+    // displayUsernames(test1_responses);
 
     // evaluation loop
-    for (let entry of entries) {
+    for (let entry of test1_responses) {
+
+      let display_response = "";
 
       let result = {
-        user_id: entry.user,
+        user_name: entry.user,
         score: 0,
-        validity: true,
         duration: 0, // in hours
       }
 
       // checks validity of response; if valid, then evaluates the score.
-      if (entry.response === undefined) {
-        result.validity = false;
-      }
-      else {
-        for (let question of questions) {
-          if (question in entry.response) {
-            if (question == "aeight") {
-              // the evaluation of this question is different
-              if (entry.response["aeight"].includes("HIV")) {
-                result.score += 1;
-              }
-            }
-            else if (answers[question].correct.includes(entry.response[question])) {
+      for (let question of questions) {
+        if (question in entry.response) {
+
+          if (question == "athree") {
+            if ((entry.response[question].toUpperCase().includes("SODIUM") && entry.response[question].toUpperCase().includes("POTASSIUM") && entry.response[question].toUpperCase().includes("ATPASE")) || (entry.response[question].toUpperCase().includes("NA") && entry.response[question].toUpperCase().includes("K") && entry.response[question].toUpperCase().includes("ATPASE"))) {
               result.score += answers[question].marks;
             }
           }
+          else if (question == "aeight") {
+            if (entry.response[question].includes("HIV")) {
+              result.score += answers[question].marks;
+            }
+          }
+          else if (answers[question].correct.includes(entry.response[question])) {
+            result.score += answers[question].marks;
+          }
+
+          if (question == "athree" || question == "aeight") {
+            display_response += "custom";
+          }
+          else {
+            display_response += entry.response[question];
+          }
+        }
+        else {
+          display_response += "No Ans";
+        }
+        display_response += '^';
+
+        if (question == "aten" || question == "bfifteen" || question == "cnine") {
+          display_response += (result.score + '^');
         }
       }
 
@@ -341,19 +364,19 @@ module.exports = (app) => {
         result.duration = duration / (3600 * 1000);
       }
 
+      console.log(display_response);
       results.push(result);
     }
-    // end of evaluation loop
+    // end of evaluation loop 
 
-    results = results.sort((a, b) => b.score - a.score);
+    //results = results.sort((a, b) => b.score - a.score);
 
-    console.log("USER ID | Score | Validity of responses | Duration (in hours)");
+    // console.log("USER ID | Score | Validity of responses | Duration (in hours)");
     for (let result of results) {
       // OUTPUT given to BioBlitz coords in form of a spreadsheet
-      // console.log(result.user_id, result.score, result.validity, result.duration.toFixed(2));
+      // console.log(result.user_name, result.score, result.duration.toFixed(2));
     }
 
-    // I'll put this part in when you're done.
   });
 
 
