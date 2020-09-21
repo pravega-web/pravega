@@ -386,4 +386,15 @@
   integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
   crossorigin="anonymous"></script>
 
+<script>
+  $(document).ready(function () {
+    filterBtns = document.getElementsByClassName('filter');
+    for (let index = 0; index < filterBtns.length; index++) {
+      var element = filterBtns[index];
+      element.classList.remove('grey');
+      element.classList.add('white');
+    }
+  }); 
+</script>
+
 </html>
