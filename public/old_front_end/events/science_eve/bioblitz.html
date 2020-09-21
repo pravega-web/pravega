@@ -171,30 +171,30 @@
                                         well!
                                     </p>
                                     <br>
-                                    <!--<h3>Leaderboard</h3>
+                                    <h3>Leaderboard</h3>
                                     <br>
-                                    <p>The standings as of Monthly Mixed Bag - I</p>
+                                    <p>The standings as of MMB1 and HOTS1</p>
                                     <center>
                                         <table id='leaderboard' border=2 style="text-align: center;">
                                             <colgroup>
-                                                <col span="1" width="15%">
-                                                <col span="1" width="60%">
+                                                <col span="1" width="8%">
                                                 <col span="1" width="25%">
+                                                <col span="1" width="60%">
                                             </colgroup>
                                             <tr>
-                                                <th style="text-align: center;">No.</th>
+                                                <th style="text-align: center;">Rank</th>
                                                 <th style="text-align: center;">Name</th>
-                                                <th style="text-align: center;">Score</th>
+                                                <th style="text-align: center;">Institute</th>
                                             </tr>
                                             <script>
                                                 "use strict"
 
-                                                function addData(rank, name, score) {
+                                                function addData(rank, name, institute) {
                                                     let output = "";
 
                                                     output += `<td> ${rank} </td>`;
                                                     output += `<td> ${name} </td>`;
-                                                    output += `<td> ${score} </td>`;
+                                                    output += `<td> ${institute} </td>`;
 
                                                     return output;
                                                 };
@@ -203,39 +203,54 @@
 
                                                 data.push(
                                                     {
-                                                        name: "Mayukh Nandi",
-                                                        score: 41,
+                                                        rank: 1,
+                                                        name: "Padmanava Dasgupta",
+                                                        institute: "Ramakrishna Mission Vivekananda Centenary College, Rahara"
                                                     },
                                                     {
-                                                        name: "Malavika Rajesh",
-                                                        score: 37,
+                                                        rank: 2,
+                                                        name: "Anurag Chittawar",
+                                                        institute: "NA",
                                                     },
                                                     {
-                                                        name: "Mohnish Singh",
-                                                        score: 37,
+                                                        rank: 3,
+                                                        name: "Manali Banerjee",
+                                                        institute: "NISER Bhubaneshwar",
                                                     },
                                                     {
-                                                        name: "K. Sai Pratiksha",
-                                                        score: 36,
+                                                        rank: 4,
+                                                        name: "Aryaman Bhutani",
+                                                        institute: "NA",
                                                     },
                                                     {
-                                                        name: "Nandini Singha",
-                                                        score: 34,
+                                                        rank: 4,
+                                                        name: "Adithya Krishnan P",
+                                                        institute: "IACS Kolkata",
+                                                    },
+                                                    {
+                                                        rank: 4,
+                                                        name: "Sudipta Adhya",
+                                                        institute: "IISER Kolkata",
+                                                    },
+                                                    {
+                                                        rank: 5,
+                                                        name: "Aakriti Hariprakash",
+                                                        institute: "VIT",
                                                     },
                                                 )
 
-                                                data = data.sort((a, b) => b.score - a.score);
+                                                data = data.sort((a, b) => a.rank - b.rank);
 
                                                 let leaderboard = document.getElementById("leaderboard");
                                                 let num_display = 5;
 
-                                                for (let rank = 0; rank < num_display; rank++) {
-                                                    leaderboard.innerHTML += "<tr>" + addData(rank + 1, data[rank].name, data[rank].score) + "</tr>";
+                                                for(let entry of data) {
+                                                    leaderboard.innerHTML += "<tr>" + addData(entry.rank, entry.name, entry.institute) + "</tr>";
                                                 }
                                             </script>
                                         </table>
                                     </center>
-                                    <br>-->
+                                    <br>
                                     <h3>Date</h3>
                                     <br>
                                     <p>15<sup>th</sup> August onwards</p>
