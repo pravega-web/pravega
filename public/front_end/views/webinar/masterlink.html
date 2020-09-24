@@ -91,7 +91,7 @@
           <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
         </div>
       </div>
-      <hr/>
+      <hr />
 
       <div class="col s12 center">
         <h3>Our Talks and Webinar Series</h3>
@@ -101,7 +101,8 @@
         <ul class="collapsible">
           <li ng-repeat="topic in topics | orderBy : '-name'">
             <div class="collapsible-header black">
-                <p style="text-align: center;">{{topic.name}}</p>
+              <p>{{topic.name}}</p>
+              <span class="badge"><i class="large material-icons" style="padding-top: 15px;">arrow_drop_down_circle</i></span>
             </div>
             <div class="collapsible-body">
               <p>{{topic.description}}</p>
