@@ -99,7 +99,7 @@
 
       <div class="col s12 center">
         <ul class="collapsible">
-          <li ng-repeat="topic in topics">
+          <li ng-repeat="topic in topics | orderBy : '-name'">
             <div class="collapsible-header black">
                 <p style="text-align: center;">{{topic.name}}</p>
             </div>
