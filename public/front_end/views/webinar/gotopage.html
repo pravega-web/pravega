@@ -2,57 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We've moved!</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    preload>
-  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" rel="stylesheet">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>window.location.replace('/talks')</script>
 </head>
 
-<body style="font-family: Montserrat, sans-serif;">
-  <div class="container row" style="background-image: url(/pravega21_logo_trans.png)">
-    <div class="col s12 center">
-      <h1 class="center">Paradigms</h1>
-    </div>
-    <div class="col s12 center">
-      <h2>is</h2>
-    </div>
-    <div class="col s12 center">
-      <h1 style="background-image:linear-gradient(45deg, red, orange, yellow) ; background-clip: text;">Reborn</h1>
-    </div>
-    <div class="col s12">
-      <br>
-    </div>
-    <div class="col s12 center">
-      <h5>Experience a new revised <a href="/talks">Pravega Talks</a>. Now all Pravega'21 talks have one destination.
-      </h5>
-    </div>
-    <div class="col s12">
-      <br>
-    </div>
-    <div class="col s12 center">
-
-      <p id="remTime"></p>
-
-    </div>
-  </div>
-</body>
-<script>
-  var i = 7
-  window.setInterval(function () {
-    i--;
-    document.getElementById('remTime').innerText = 'Redirecting you automatically in ' + i + ' seconds'
-  }
-    , 1000)
-  window.setTimeout(function () {
-    window.location.replace('/talks')
-  }, i * 1000)
-</script>
-
+<body></body>
 </html>
