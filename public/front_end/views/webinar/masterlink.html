@@ -31,7 +31,7 @@
   body {
     font-family: Montserrat, sans-serif;
     height: 100vh;
-    overflow-y: hidden;
+    
     scroll-behavior: smooth;
     word-break: break-word;
   }
@@ -65,29 +65,19 @@
     </div>
   </nav>
 
-  <div id="test1" class="white-text" style="overflow-y: scroll;">
+  <div id="test1" class="white-text" style="height: 100vh; overflow-y: scroll;">
     <br>
     <br>
     <div class="container row valign">
 
-      <div class="col s12 row center" id="head" style="height:100vh;">
+      <div class="col s12 row center" id="head">
         <div class="col s12 center">
           <h4 ng-show="live" class="red-text">LIVE NOW</h4>
         </div>
-        <div class="col s12 row">
-          <div class="col s4">
-            <!-- <div class="btn-floating pulse black" style='background-color:transparent'>
-              <i class="material-icons">swap_vert</i>
-            </div> -->
-          </div>
-          <div class="chip black-text col s4">
-            {{homeTalk.description.event}}
-          </div>
-          <div class="col s3">
-            <!-- <div class="btn-floating pulse black" style='background-color:transparent'> -->
-            <i class="material-icons">swap_horiz</i>
-            <!-- </div> -->
-          </div>
+        <div class="col s4">
+        </div>
+        <div class="chip black-text col s4">
+          {{homeTalk.description.event}}
         </div>
 
         <div class="col s12 center">
@@ -110,17 +100,10 @@
           <br>
           <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
         </div>
-        <div class="col s12 center">
-          <br>
-          <!-- <a href="#abt" class="btn-floating btn-large black pulse white-text center"><i
-              class="material-icons">arrow_downward</i>
-          </a> -->
-        </div>
-
       </div>
 
+      <div class="col s12 center" id="abt">
 
-      <div class="col s12 center" id="abt" style="height:100vh;">
         <br>
         <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
           figures from different walks of life will bring to you their experience and wisdom. This journey to the
@@ -144,7 +127,7 @@
 
   </div>
 
-  <div id="test2" style="height:100vh; overflow-y:scroll">
+  <div id="test2" style="height: 100vh; overflow-y:scroll">
     <div class="container" style="height:fit-content; user-select: none;">
       <div class="row">
 
@@ -274,9 +257,25 @@
 
     $scope.topics = [
       {
+        'name': 'BioCognizance',
+        'description': "BioCognizance is a series of webinars addressed by eminent biologists from all over the globe, so that the audience can get to hear ‘straight from the horse’s mouth’ - the doyennes of the respective fields, who are actively probing into natural systems, unravelling the mystery of life and creating knowledge. It just can’t get any better! Do visit this site and the social media handles of Pravega for more updates on the webinars. In case you want to receive regular email updates about the problem sets or the webinars, subscribe to our newsletter using the given link",
+        'link': 'https://forms.gle/xBKvvRsSJKYv9qG27',
+      },
+      {
         'name': 'Coherence',
-        'description': 'Bored of quarantine? Want to explore interesting stuff about the universe and its fundamental principles? Want to know about the exciting advancements in physics? Worry not…Decoherence presents to you ‘Coherence lecture series’ where you get to hear from world-renowned physicists, who are actively probing and working to understand the natural world and making advancements in the field. \n\n In these talks, they talk about some exciting topics, advancements in physics. They will be live on MS Teams and will be uploaded on Pravega YouTube channel (click here to visit) after the talk. Come, join us in exploring the exciting world of physics from experts themselves and take away enough motivation to probe deeper.'
-      }
+        'description': 'Bored of quarantine? Want to explore interesting stuff about the universe and its fundamental principles? Want to know about the exciting advancements in physics? Worry not…Decoherence presents to you ‘Coherence lecture series’ where you get to hear from world-renowned physicists, who are actively probing and working to understand the natural world and making advancements in the field. \n In these talks, they talk about some exciting topics, advancements in physics. They will be live on MS Teams and will be uploaded on Pravega YouTube channel (link: https://www.youtube.com/user/IIScPravega) after the talk. Come, join us in exploring the exciting world of physics from experts themselves and take away enough motivation to probe deeper.',
+        'link': 'https://docs.google.com/forms/d/e/1FAIpQLSfXuMKCRPMFb9h-2vdzVb4Qz_kiwudBP-MtqzmP9zPdAo4N9A/viewform',
+      },
+      {
+        'name': 'Elementary',
+        'description:': "Do you want to explore the wide spectrum of Chemistry and learn about its different fields and witness their grandeur? We've got your back! Elementary brings to you a series of webinars where participants get to learn about new and upcoming fields of research in Chemistry from eminent chemists around the world! So come on and watch the experts speak and leave with the motivation to dig deeper.",
+        'link': 'http://bit.ly/EleWebinarsReg'
+      },
+      {
+        'name': 'Paradigms',
+        'description': "Pravega presents PARADIGMS, a series of webinars where some of the greatest figures from different walks of life will bring to you their experience and wisdom. This journey to the forefront of a wide range of topics with world renowned leaders and innovators will equip you with the tools needed to race ahead in today's world. \n So....Are you ready to witness a paradigm shift? To receive e-mail reminders about upcoming talks, sign up on the given link",
+        'link': 'https://forms.gle/c22pjxdikjXq5Qqy8',
+      },
     ]
 
     $scope.filter = function (filter) {
@@ -371,8 +370,8 @@
       var url = new URL(urlString);
       var preexistingfilter = url.searchParams.get('filter');
 
-      for(var index = 0; index < $scope.webinars.length; index++) {
-        if($scope.webinars[index].name == "Testing") {
+      for (var index = 0; index < $scope.webinars.length; index++) {
+        if ($scope.webinars[index].name == "Testing") {
           delete $scope.webinars[index];
           break;
         }
