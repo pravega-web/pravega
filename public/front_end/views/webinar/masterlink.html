@@ -91,22 +91,28 @@
           <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
         </div>
       </div>
+      <hr/>
 
-      <div class="col s12 center" id="abt">
+      <div class="col s12 center">
+        <h3>Our Talks and Webinar Series</h3>
+      </div>
 
-        <br>
-        <p style="font-size: 1.224rem;">Pravega presents PARADIGMS, a series of webinars where some of the greatest
-          figures from different walks of life will bring to you their experience and wisdom. This journey to the
-          forefront of a wide range of topics will equip you with the tools needed to race ahead in today's world, as we
-          bring to you world renowned leaders and innovators.
-          <br> <br>
-          So.... Are you ready to witness a paradigm shift?
-          <br> <br>
-          To receive e-mail reminders about upcoming talks, <a href="https://forms.gle/c22pjxdikjXq5Qqy8"
-            target="_blank">sign up here</a></p>
-        <br>
-        <br>
+      <div class="col s12 center">
+        <ul class="collapsible">
+          <li ng-repeat="topic in topics">
+            <div class="collapsible-header black">
+                <p style="text-align: center;">{{topic.name}}</p>
+            </div>
+            <div class="collapsible-body">
+              <p>{{topic.description}}</p>
+              <br>
+              <a href="{{topic.link}}" target="_blank">Click here to subscribe and receive regular updates</a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
+      <div class="col s12 center">
         <a href="#head" class="btn-floating btn-large black pulse white-text center"><i
             class="material-icons">arrow_upward</i>
         </a>
@@ -258,7 +264,7 @@
       },
       {
         'name': 'Elementary',
-        'description:': "Do you want to explore the wide spectrum of Chemistry and learn about its different fields and witness their grandeur? We've got your back! Elementary brings to you a series of webinars where participants get to learn about new and upcoming fields of research in Chemistry from eminent chemists around the world! So come on and watch the experts speak and leave with the motivation to dig deeper.",
+        'description': "Do you want to explore the wide spectrum of Chemistry and learn about its different fields and witness their grandeur? We've got your back! Elementary brings to you a series of webinars where participants get to learn about new and upcoming fields of research in Chemistry from eminent chemists around the world! So come on and watch the experts speak and leave with the motivation to dig deeper.",
         'link': 'http://bit.ly/EleWebinarsReg'
       },
       {
