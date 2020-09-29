@@ -411,18 +411,18 @@
                                                 },
                                                 {
                                                     rank: 2,
-                                                    name: "Anurag Chittawar",
-                                                    institute: "Yogiraj Public School",
+                                                    name: "Aakriti Hariprakash",
+                                                    institute: "VIT",
+                                                },
+                                                {
+                                                    rank: 2,
+                                                    name: "Parth Chandak",
+                                                    institute: "IISER Kolkata",
                                                 },
                                                 {
                                                     rank: 3,
-                                                    name: "Manali Banerjee",
-                                                    institute: "NISER Bhubaneshwar",
-                                                },
-                                                {
-                                                    rank: 4,
-                                                    name: "Aryaman Bhutani",
-                                                    institute: "NA",
+                                                    name: "Anurag Chittawar",
+                                                    institute: "Yogiraj Public School",
                                                 },
                                                 {
                                                     rank: 4,
@@ -430,24 +430,36 @@
                                                     institute: "IACS Kolkata",
                                                 },
                                                 {
-                                                    rank: 4,
+                                                    rank: 5,
+                                                    name: "Sampurna Dutta",
+                                                    institute: "IACS Kolkata",
+                                                },
+                                                {
+                                                    rank: 6,
+                                                    name: "Manali Banerjee",
+                                                    institute: "NISER Bhubaneshwar",
+                                                },
+                                                {
+                                                    rank: 7,
                                                     name: "Sudipta Adhya",
                                                     institute: "IISER Kolkata",
                                                 },
                                                 {
-                                                    rank: 5,
-                                                    name: "Aakriti Hariprakash",
-                                                    institute: "VIT",
-                                                },
+                                                    rank: 9,
+                                                    name: "Aryaman Bhutani",
+                                                    institute: "NA",
+                                                },  
                                             )
 
                                             data = data.sort((a, b) => a.rank - b.rank);
 
                                             let leaderboard = document.getElementById("leaderboard");
-                                            let num_display = 5;
+                                            let num_ranks = 5;
 
                                             for (let entry of data) {
-                                                leaderboard.innerHTML += "<tr>" + addData(entry.rank, entry.name, entry.institute) + "</tr>";
+                                                if(entry.rank <= num_ranks) {
+                                                    leaderboard.innerHTML += "<tr>" + addData(entry.rank, entry.name, entry.institute) + "</tr>";
+                                                }
                                             }
                                         </script>
                                     </table>
