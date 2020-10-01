@@ -140,6 +140,7 @@
                         <option value="all" selected>All</option>
                         <option value="august">August</option>
                         <option value="september">September</option>
+                        <option value="october">October</option>
                     </select>
                     <br>
                     <br>
@@ -148,6 +149,7 @@
                         <option value="all" selected>All</option>
                         <option value="science">Science</option>
                         <option value="cultural">Cultural</option>
+                        <option value="recreational">Recreational</option>
                     </select>
                 </center>
 
@@ -174,6 +176,9 @@
                                 }
                                 else if (update.category == "Cultural") {
                                     return "../cultural_eve/" + update.link;
+                                }
+                                else if (update.category == "Recreational") {
+                                    return "../rec_eve/" + update.link;
                                 }
                             }
 
@@ -335,6 +340,16 @@
                                     permanent: true,
                                     show: true,
                                 },
+                                {
+                                    name: "Memecraft",
+                                    image: "memecraft-update.jpeg",
+                                    date: new Date(2020, 9, 2),
+                                    date_custom: "2" + "nd".sup() + " October to Dussehra",
+                                    category: "Recreational",
+                                    link: "memecraft.html",
+                                    permanent: true,
+                                    show: true,
+                                },
                             );
                             updates = updates.sort((a, b) => (b.date - a.date));
 
@@ -355,9 +370,13 @@
                                         update.show = false;
                                     if (month_selected == "september" && update.date.getMonth() != 8)
                                         update.show = false;
+                                    if(month_selected == "october" && update.date.getMonth() != 9)
+                                        update.show = false;
                                     if (category_selected == "science" && update.category != "Science")
                                         update.show = false;
                                     if (category_selected == "cultural" && update.category != "Cultural")
+                                        update.show = false;
+                                    if(category_selected == "recreational" && update.category != "Recreational")
                                         update.show = false;
                                 }
 
@@ -394,250 +413,6 @@
                                 }
                             }
                         </script>
-
-                        <!--<div class="m-bot-100" style="padding-top: 25px;">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="astral-update.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Astronomy Workshops</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span>Last week of September</li>
-                                    <li><span> Category </span>Science</li>
-                                    <li><span> Website link</span> <a href="../science_eve/astral_felony.html">Astral
-                                            Felony
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100" style="padding-top: 25px;">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="naturally-creative.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Naturally Creative</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span>19<sup>th</sup> and 20<sup>th</sup> September</li>
-                                    <li><span> Category </span>Cultural</li>
-                                    <li><span> Website link</span> <a
-                                            href="../cultural_eve/naturally_creative.html">Naturally Creative
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100" style="padding-top: 25px;">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="cosplay-update.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Cosplay</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span>Ends on 16<sup>th</sup> September, 2020</li>
-                                    <li><span> Category </span>Cultural</li>
-                                    <li><span> Website link</span> <a href="../cultural_eve/cosplay.html">Cosplay
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100" style="padding-top: 25px;">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="alekhya-update.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Alekhya</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span>Starts from 1<sup>st</sup> September, 2020</li>
-                                    <li><span> Category </span>Cultural</li>
-                                    <li><span> Website link</span> <a href="../cultural_eve/alekhya.html">Alekhya
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100" style="padding-top: 25px;">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="spooky-quizzes-update.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Spooky Quizzes</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span> Starts from 30<sup>th</sup> August</li>
-                                    <li><span> Category </span> Science</li>
-                                    <li><span> Website link</span> <a href="../science_eve/spooky.html">Spooky Quizzes
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="workshops-update-1.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Workshops</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span> 29<sup>th</sup> and 30<sup>th</sup> August</li>
-                                    <li><span> Category </span>Workshops</li>
-                                    <li><span> Registration link</span> <a href="https://www.bit.ly/PravegaEi">Register
-                                            for workshops</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="workshops-update-2.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Workshops</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span> 26<sup>th</sup> to 30<sup>th</sup> August</li>
-                                    <li><span> Category </span>Workshops</li>
-                                    <li><span> Registration link</span> <a href="https://www.bit.ly/PravegaEi">Register
-                                            for workshops</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="triviathon-update.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Triviathon</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span>23<sup>rd</sup> August</li>
-                                    <li><span> Category </span>Cultural</li>
-                                    <li><span> Website link</span> <a href="../cultural_eve/triviathon.html">Triviathon
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="elementary-update.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Elementary</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Date</span> 17<sup>th</sup> August onwards</li>
-                                    <li><span> Category </span> Science</li>
-                                    <li><span> Website link</span> <a href="../science_eve/elementary.html">Elementary
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="shutters-update.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">Shutters</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span> Date </span> Starts from 16<sup>th</sup> August</li>
-                                    <li><span> Category </span>Cultural</li>
-                                    <li><span> Website link</span> <a href="../cultural_eve/shutters.html">Shutters
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="m-bot-100">
-                            <div class="col-md-6">
-                                <div class="full-width">
-                                    <img src="bioblitz-update.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="heading-title-side-border text-left">
-                                    <h1 class="text-uppercase">BioBlitz</h1>
-                                    <div class="title-border-container">
-                                        <div class="title-border"></div>
-                                    </div>
-                                </div>
-                                <ul class="portfolio-meta m-bot-30">
-                                    <li><span>Date</span> 15<sup>th</sup> August onwards</li>
-                                    <li><span> Category </span> Science</li>
-                                    <li><span> Website link</span> <a href="../science_eve/bioblitz.html">BioBlitz
-                                            website</a></li>
-                                </ul>
-                            </div>
-                        </div>-->
 
                     </div>
                 </div>

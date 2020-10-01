@@ -71,10 +71,10 @@ ul {
 .project__bg-item:nth-child(3) {
   background: url("../img/technical_background-min.jpg") center/cover;
 }
-.project__bg-item:nth-child(5) {
+.project__bg-item:nth-child(4) {
   background: url("../img/gaming_background-min.jpg") center/cover;
 }
-.project__bg-item:nth-child(4) {
+.project__bg-item:nth-child(5) {
   background: url("../img/workshop_background-min.jpg") center/cover;
 }
 
