@@ -60,14 +60,13 @@
     <br>
     <br>
     <div class="container row valign">
-
       <div class="col s12 row center" id="head">
         <div class="col s12 center">
           <h4 ng-show="live" class="red-text">LIVE NOW</h4>
         </div>
         <div class="col s4">
         </div>
-        <div class="chip black-text col s4">
+        <div class="chip black-text col s4" ng-show="homeTalk !== undefined">
           {{homeTalk.description.event}}
         </div>
 
@@ -79,7 +78,12 @@
         </div>
 
         <div class="col s12 center" ng-show="!live">
-          <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}} IST</h5>
+          <div ng-show="homeTalk !== undefined">
+            <h5>Starts - {{homeTalk.start | date : ' dd MMMM, hh:mm a '}} IST</h5>
+          </div>
+          <div ng-show="homeTalk === undefined">
+            <h5>No upcoming talks as of now<br>Stay tuned for updates and subscribe for the newsletter using the links given below</h5>
+          </div>
         </div>
         <div class="col s12 center" ng-show="live">
           <h5>{{homeTalk.start | date : 'hh:mm a '}} to {{homeTalk.end | date : 'hh-mm a ' : tz}} IST</h5>
@@ -87,7 +91,7 @@
         <div class="col s12 center">
           <p>{{homeTalk.description.talkInfo}}</p>
         </div>
-        <div class="col s12 center">
+        <div class="col s12 center" ng-show="homeTalk !== undefined">
           <br>
           <a href='https://{{homeTalk.link}}' target="_blank" class="btn">Link to talk</a>
         </div>
@@ -362,6 +366,7 @@
           }
           break;
         }
+        console.log($scope.homeTalk);
       }
 
       var urlString = window.location.href;
