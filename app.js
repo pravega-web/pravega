@@ -1,23 +1,26 @@
 //SCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSC
-//Pravega Central Server
-
+// Pravega Central Server
 
 const express = require("express");
 const app = express();
 
 // Libraries which we need
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 var cors = require("cors");
 var compression = require("compression")
 app.locals.moment = require("moment");
 
+// AWS for mailing
+var AWS = require('aws-sdk');
+// 
+AWS.config.update({region: 'INDIA '});
+
 // Static folders to serve
-app.use(express.static(__dirname + "/public"));
-app.use('/face', express.static(__dirname + "/public/face"))
+app.use(express.static(__dirname + "/public/"));
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -41,7 +44,7 @@ require(__dirname + '/webinar.js')(app);
 // require(__dirname+'/admin.js')(app);
 
 // Helper Functions here
-var helper = require(__dirname + '/helper.js')(); 
+var helper = require(__dirname + '/helper.js')();
 var logit = helper.logit; // Need to pull this out just in case...
 
 
@@ -55,7 +58,7 @@ const max_val = 50;
 var uri = "mongodb+srv://pravega_developer:123qwerty@pravega-qebux.mongodb.net/test?retryWrites=true&w=majority";
 
 // Mongoose connection
-mongoose.connect(uri, { useNewUrlParser: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 
 // Run the rest of the program only if db connection is succesful
@@ -91,8 +94,10 @@ function server() {
   require(__dirname + '/credit.js')(app);
 
   // Front end viewing data
-  require(__dirname+'/view.js')(app); 
+  require(__dirname + '/view.js')(app);
 
+  // Razorpay Integration
+  require(__dirname + '/rpay.js')(app, AWS);
 
 
   // Check if connection was successful
