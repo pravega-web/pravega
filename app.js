@@ -10,6 +10,11 @@ var cors = require("cors");
 var compression = require("compression")
 app.locals.moment = require("moment");
 
+// AWS for mailing
+var AWS = require('aws-sdk');
+// 
+AWS.config.update({region: 'INDIA '});
+
 // Static folders to serve
 app.use(express.static(__dirname + "/public/"));
 
@@ -92,7 +97,7 @@ function server() {
   require(__dirname + '/view.js')(app);
 
   // Razorpay Integration
-  require(__dirname + '/rpay.js')(app);
+  require(__dirname + '/rpay.js')(app, AWS);
 
 
   // Check if connection was successful

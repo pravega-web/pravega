@@ -16,7 +16,8 @@
     "moment": "2.27.0",
     "mongoose": "^5.12.9",
     "pug": "^3.0.2",
-    "razorpay": "2.0.6"
+    "razorpay": "2.0.6",
+    "aws-sdk": "2.907.0"
   },
   "engines": {
     "node": "12.x"

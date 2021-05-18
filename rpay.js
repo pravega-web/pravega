@@ -8,7 +8,7 @@ var instance = new Razorpay({
 });
 
 
-module.exports = (app) => {
+module.exports = (app, AWS) => {
 
     // Generate new key
     app.get('/rpay/new', (req, res) => {
@@ -35,8 +35,8 @@ module.exports = (app) => {
 
 
     // Handling the success
-    app.post('/rpay/handle',(req,res)=>{
-        console.log('POST',req.body, req.query);
+    app.post('/rpay/handle', (req, res) => {
+        console.log('POST', req.body, req.query);
 
         rpay_oid = req.body.oid;
         // rpay_pid = req.body.razorpay_payment_id;
@@ -44,7 +44,7 @@ module.exports = (app) => {
         rpay_pid = req.body.pid;
         rpay_sign = req.body.sign;
 
-        const text = rpay_oid+'|'+rpay_pid
+        const text = rpay_oid + '|' + rpay_pid
         const key = 'e1iBCFvXvYtF31lNpcb5CKbM'
 
         rpay_gen_sign = crypto.createHmac('sha256', key)
@@ -53,15 +53,60 @@ module.exports = (app) => {
 
         console.log(rpay_gen_sign, rpay_sign);
 
-        if(rpay_gen_sign == rpay_sign){
+        if (rpay_gen_sign == rpay_sign) {
             res.send('OK');
         } else {
             res.send('Payment Invalid: If you were charged, please contact the Pravega Team. Details on the website.');
-        }    
+        }
     })
 
-    app.post('/api/event/registration',(req,res)=>{
+    app.post('/api/event/registration', (req, res) => {
         console.log(req.body);
         res.send('Registered on Server!')
     })
+}
+
+function sendMail(AWS, deets) {
+    // Create sendEmail params 
+    var params = {
+        Destination: { /* required */
+            CcAddresses: [],
+            ToAddresses: [deets.email]
+        },
+        Message: { /* required */
+            Body: { /* required */
+                Html: {
+                    Charset: "UTF-8",
+                    Data: "HTML_FORMAT_BODY"
+                },
+                Text: {
+                    Charset: "UTF-8",
+                    Data: "TEXT_FORMAT_BODY"
+                }
+            },
+            Subject: {
+                Charset: 'UTF-8',
+                Data: 'Test email'
+            }
+        },
+        // TODO: Add our email
+        Source: 'SENDER_EMAIL_ADDRESS', /* required */
+        // TODO: Check with Shaker
+        ReplyToAddresses: [
+            'EMAIL_ADDRESS',
+            /* more items */
+        ],
+    };
+
+    // Create the promise and SES service object
+    var sendPromise = new AWS.SES({ apiVersion: '2010-12-01' }).sendEmail(params).promise();
+
+    // Handle promise's fulfilled/rejected states
+    sendPromise.then(
+        function (data) {
+            console.log(data.MessageId);
+        }).catch(
+            function (err) {
+                console.error(err, err.stack);
+            });
 }
