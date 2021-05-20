@@ -12,15 +12,15 @@ app.locals.moment = require("moment");
 
 // AWS for mailing
 var AWS = require('aws-sdk');
-// 
-AWS.config.update({region: 'INDIA '});
+// Configuration
+AWS.config.loadFromPath('./config.json');
 
 // Static folders to serve
 app.use(express.static(__dirname + "/public/"));
 
 // Middleware
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -74,6 +74,7 @@ function server() {
   var logs = require(__dirname + '/models/logs.js');
   var user = require(__dirname + '/models/user.js');
   var cfreg = require(__dirname + '/models/cfreg.js');
+  var regs = require(__dirname + '/models/regs.js');
 
   /**
    * NOTE: For adding any new data base event create a new file under models and import it here...

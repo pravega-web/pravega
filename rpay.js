@@ -1,5 +1,7 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
+const { send } = require('process');
+const { ResourceGroups } = require('aws-sdk');
 
 // Create new instance
 var instance = new Razorpay({
@@ -61,8 +63,51 @@ module.exports = (app, AWS) => {
     })
 
     app.post('/api/event/registration', (req, res) => {
-        console.log(req.body);
-        res.send('Registered on Server!')
+        // Registering
+        deets = req.body;
+        regs.create(deets, (err, data) => {
+            if (err) {
+                res.send('Transcated, but not on server! Please verify!')
+                console.error(err)
+            } else {
+                let textMail = `Hi ${deets.name}! You have successfully registered for ${deets.event}. Your registration ID is ${data._id}. Looking forward to your attendence.`
+                let htmlMail = `<h2>Hi ${deets.name}!</h2> <p> You have successfully registered for ${deets.event}. Your registration ID is ${data._id}. Looking forward to your attendence. </p>`
+                sendMail(AWS,
+                    {
+                        'email': deets.email,
+                        'subject': "[Pravega'21] Event Registration",
+                        'html': htmlMail,
+                        'text': textMail
+                    }
+                )
+                res.send('Registered on Server!')
+            }
+        })
+    })
+
+    app.get('/dev/email', (req, res) => {
+        let deets = {
+            'name': 'Chinmay',
+            'email': 'chinmayharitas@gmail.com',
+            'event': 'Demo Event'
+        }
+        regs.create(deets, (err, data) => {
+            if (err) {
+                console.error(err)
+            }
+            let textMail = `Hi! ${deets.name}, \r\n You have successfully registered for ${deets.event}. Your registration ID is ${data._id}. Looking forward to your attendence.`
+            let htmlMail = `<h2>Hi! ${deets.name},</h2> <p> You have successfully registered for ${deets.event}. Your registration ID is ${data._id}. Looking forward to your attendence. </p>`
+            sendMail(AWS,
+                {
+                    'email': 'chinmayharitas@gmail.com',
+                    'subject': "[Pravega'21] Event Registration",
+                    'html': htmlMail,
+                    'text': textMail
+                }
+            )
+            res.send('Done')
+        })
+
     })
 }
 
@@ -77,24 +122,21 @@ function sendMail(AWS, deets) {
             Body: { /* required */
                 Html: {
                     Charset: "UTF-8",
-                    Data: "HTML_FORMAT_BODY"
+                    Data: deets.html
                 },
                 Text: {
                     Charset: "UTF-8",
-                    Data: "TEXT_FORMAT_BODY"
+                    Data: deets.text
                 }
             },
             Subject: {
                 Charset: 'UTF-8',
-                Data: 'Test email'
+                Data: deets.subject
             }
         },
-        // TODO: Add our email
-        Source: 'SENDER_EMAIL_ADDRESS', /* required */
-        // TODO: Check with Shaker
+        Source: '"Pravega Info" <info.pravega@gmail.com>',
         ReplyToAddresses: [
-            'EMAIL_ADDRESS',
-            /* more items */
+            'chinmayharitas@gmail.com',
         ],
     };
 

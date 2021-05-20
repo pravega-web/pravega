@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='pravega'>
 
 
 <!-- Title Page-->
@@ -13,17 +13,11 @@
 
         gtag('config', 'UA-151194721-1');
     </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-151194721-1');
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description"
-        content="Pravega is the biggest science fest in India hosted by the U.G community of IISc Bangalore. Click to know more... ">
+        content="Pravega is the biggest science fest in India hosted by the undergrad community of IISc Bangalore. Click to know more... ">
     <meta name="Pravega" content="Pravega">
 
     <!--favicon icon-->
@@ -37,9 +31,12 @@
         rel='stylesheet' type='text/css'>
     <link href="../../css/all.css" rel="stylesheet">
 
+    <!-- RPAY Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 </head>
 
-<body>
+<body ng-controller='quadSparkController'>
 
     <!--  preloader start -->
     <div id="tb-preloader">
@@ -222,7 +219,8 @@
                                         selected for Finals. Details of finals will be updated in due course of time.
                                     </li>
                                     <br>
-                                    More details on the mode of conduction for the three levels is given in the rules and regulations document.
+                                    More details on the mode of conduction for the three levels is given in the rules
+                                    and regulations document.
                                 </ol>
                                 </p>
 
@@ -310,7 +308,7 @@
                                 </center>
                                 <center>
                                     <br>
-                                    <img src="../event_updates/quadspark-update.png", width="100%" height="100%">
+                                    <img src="../event_updates/quadspark-update.png" , width="100%" height="100%">
                                 </center>
 
                                 <br>
@@ -319,52 +317,130 @@
 
                                 <ul class=" portfolio-meta m-bot-30">
                                     <li><span> Category </span> Science</li>
-                                    <li><span> Date</span> 20<sup>th</sup> June (Prelims), 1<sup>st</sup> week of July (Interview)
+                                    <li><span> Date</span> 20<sup>th</sup> June (Prelims), 1<sup>st</sup> week of July
+                                        (Interview)
                                     </li>
                                     <li><span> Coordinators </span>Anand Santhosh and Debojjal Bagchi</li>
                                     <li><span> Contact Details </span> <a
                                             href="mailto:quadspark@iisc.ac.in ?subject=subject text">
                                             quadspark@iisc.ac.in</a></li>
                                 </ul>
+                                <hr>
+                                <br>
+                                <div class="card row"
+                                    style="border-radius: 10px; border-style: solid; padding: 10px; border-width: 1px;">
+                                    <form ng-submit='pay();'>
+                                        <div class="form-group">
+                                            <h1>Register now!</h1>
+                                        </div>
+                                        <!-- Email -->
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Enter email" ng-model='email'
+                                                required>
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your
+                                                email with anyone else.</small>
+                                        </div>
+                                        <!-- Names -->
+                                        <div class="form-group">
+                                            <label for="names">Names of Participants</label>
+                                            <input type="text" class="form-control" id="names"
+                                                aria-describedby="nameHelp" placeholder="Enter names" ng-model='name'
+                                                required>
+                                            <small id="namesHelp" class="form-text text-muted">Separate with commas.
+                                                (Name Surname, Name Surname...)</small>
+                                        </div>
 
+                                        <!-- Grades -->
+                                        <div class="form-group">
+                                            <label for="grades">Grades of Participants</label>
+                                            <input type="text" class="form-control" id="grades"
+                                                aria-describedby="gradesHelp" placeholder="Enter grades"
+                                                ng-model='grades' required>
+                                            <small id="gradesHelp" class="form-text text-muted">Separate with commas.
+                                                (Grade, Grade...)</small>
+                                        </div>
+
+                                        <!-- phones -->
+                                        <div class="form-group">
+                                            <label for="phones">Contact Number</label>
+                                            <input type="number" class="form-control" id="phones"
+                                                aria-describedby="phoneHelp" placeholder="Enter phone number"
+                                                ng-model="phone" required>
+                                            <small id="phonesHelp" class="form-text text-muted">Secondary mode of
+                                                contact.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Registration Fee</label>
+                                            <input class="form-control" type="text" placeholder="Readonly input here…"
+                                                value="Rs. 200" readonly>
+                                            <small class='form-text text-muted'>The awards are cash prizes :)</small>
+                                        </div>
+                                        <div class="form-group mx-auto">
+                                            <button class='btn btn-block bg-info mx-auto text-dark'>
+                                                <h5>Proceed to Checkout</h5>
+                                                <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Razorpay_logo.svg"
+                                                    style="width:30%" alt="Responsive image">
+
+                                            </button>
+                                        </div>
+                                        <div class="form-group ">
+                                            <p style="text-align: center;">Payments are made through a secure gateway powered by Razorpay. All erroneous transaction will be refunded in full.</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="alert alert-success" ng-show="success" role="alert">
+                                                {{success}}
+                                            </div>
+                                            <div class="alert alert-danger" ng-show="failure" role="alert">
+                                                {{failure}}
+                                            </div>
+                                        </div>
+                                </div>
                             </div>
+                            </form>
+
                         </div>
+
+
                     </div>
-                    <hr />
-
-
-            </section>
-            <!--body content end-->
-
-            <!--footer start 1-->
-            <footer id="footer" class="dark text-center short-pad footer-6">
-                <div class="container">
-                    <a href="../../index.html" class="footer-logo">
-                        <img src="../../img/footer_pravega21.png" alt="" height="120px" width="250px" />
-                    </a>
-
-                    <div class="col-md-6">
-                        <div class="copyright">
-                            &copy; Pravega 2021.
-                        </div>
-                        <div class="copyright-sub-title text-uppercase">
-                            The Biggest Science Fest is back!!
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="social-link pull-right circle ">
-                            <a href="https://www.facebook.com/PravegaIISc/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/PravegaIISc"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/pravega.iisc/?hl=en"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"><i
-                                    class="fa fa-youtube"></i></a>
-                        </div>
-                    </div>
-
 
                 </div>
-            </footer>
-            <!--footer 1 end-->
+    </div>
+    <hr>
+
+
+    </section>
+    <!--body content end-->
+
+    <!--footer start 1-->
+    <footer id="footer" class="dark text-center short-pad footer-6">
+        <div class="container">
+            <a href="../../index.html" class="footer-logo">
+                <img src="../../img/footer_pravega21.png" alt="" height="120px" width="250px" />
+            </a>
+
+            <div class="col-md-6">
+                <div class="copyright">
+                    &copy; Pravega 2021.
+                </div>
+                <div class="copyright-sub-title text-uppercase">
+                    The Biggest Science Fest is back!!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="social-link pull-right circle ">
+                    <a href="https://www.facebook.com/PravegaIISc/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/PravegaIISc"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pravega.iisc/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+    <!--footer 1 end-->
 
     </div>
 
@@ -381,6 +457,12 @@
     <script src="../../js/imagesloaded.js"></script>
     <!--common scripts-->
     <script src="../../js/scripts.js?6"></script>
+
+
+    <!-- Superpowered by AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="../../superpower/forms.js"></script>
+
     <script>
         jQuery(document).ready(function ($) {
             var isLateralNavAnimating = false;
