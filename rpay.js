@@ -1,16 +1,18 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
-const { send } = require('process');
-const { ResourceGroups } = require('aws-sdk');
 
 // Create new instance
 var instance = new Razorpay({
-    key_id: 'rzp_test_EvTHllcABdpWnr',
-    key_secret: 'e1iBCFvXvYtF31lNpcb5CKbM',
+    key_id: process.env.rzp_key,
+    key_secret: process.env.rzp_secret,
 });
 
 
 module.exports = (app, AWS) => {
+
+    app.get('/rpay/key',(req,res)=>{
+        res.send(process.env.rzp_key)
+    })
 
     // Generate new key
     app.get('/rpay/new', (req, res) => {
@@ -46,8 +48,8 @@ module.exports = (app, AWS) => {
         rpay_pid = req.body.pid;
         rpay_sign = req.body.sign;
 
-        const text = rpay_oid + '|' + rpay_pid
-        const key = 'e1iBCFvXvYtF31lNpcb5CKbM'
+        const text = rpay_oid + '|' + rpay_pid;
+        const key = instance.key_secret;
 
         rpay_gen_sign = crypto.createHmac('sha256', key)
             .update(text)

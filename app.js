@@ -10,10 +10,11 @@ var cors = require("cors");
 var compression = require("compression")
 app.locals.moment = require("moment");
 
+// Load ENV variables
+require('dotenv').config();
+
 // AWS for mailing
 var AWS = require('aws-sdk');
-// Configuration
-AWS.config.loadFromPath('./config.json');
 
 // Static folders to serve
 app.use(express.static(__dirname + "/public/"));

@@ -28,38 +28,44 @@ app.controller('quadSparkController', ($scope, $http) => {
             // Order ID
             $scope.o_id = res.data.id;
 
-            // Options
-            var options = {
-                "key": "rzp_test_EvTHllcABdpWnr", // Enter the Key ID generated from the Dashboard
-                "amount": ($scope.amt * 100) + '', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-                "currency": "INR",
-                "name": "Pravega'21",
-                "description": $scope.event,
-                "image": "/old_front_end/img/pravega21_logo.svg",
-                "order_id": $scope.o_id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-                // "callback_url": "/rpay/handle?oid="+$scope.o_id,
-                "handler": function (response) {
-                    console.log('Recieved confirmation, now validating...');
-                    $scope.handle(response)
-                },
-                "theme": {
-                    "color": "#3399cc"
-                }
-            };
+            // Get the key from server
+            $http({
+                'method': 'GET',
+                'url': '/rpay/key'
+            }).then((res_key) => {
+                console.log('Key recieved', res_key.data);
+                // Options
+                var options = {
+                    "key": res_key.data, // Enter the Key ID generated from the Dashboard
+                    "amount": ($scope.amt * 100) + '', // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                    "currency": "INR",
+                    "name": "Pravega'21",
+                    "description": $scope.event,
+                    "image": "/old_front_end/img/pravega21_logo.svg",
+                    "order_id": $scope.o_id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                    // "callback_url": "/rpay/handle?oid="+$scope.o_id,
+                    "handler": function (response) {
+                        console.log('Recieved confirmation, now validating...');
+                        $scope.handle(response)
+                    },
+                    "theme": {
+                        "color": "#3399cc"
+                    }
+                };
 
+                // Create the instance of Razorpay
+                var rzp1 = new Razorpay(options);
 
-            var rzp1 = new Razorpay(options);
-            rzp1.on('payment.failed', function (response) {
-                alert(response.error.code);
-                alert(response.error.description);
-                alert(response.error.source);
-                alert(response.error.step);
-                alert(response.error.reason);
-                alert(response.error.metadata.order_id);
-                alert(response.error.metadata.payment_id);
-            });
+                // Handle failure independently
+                rzp1.on('payment.failed', function (response) {
+                    $scope.failure = 'An error has ocurred, please try again. Contact Pravega if problem persists.'
+                });
 
-            rzp1.open();
+                // Initiate
+                rzp1.open();
+
+            }, (err) => { $scope.failure = 'Failed to initiate payment.' })
+
 
         }, (res) => {
             alert(res)
@@ -84,7 +90,7 @@ app.controller('quadSparkController', ($scope, $http) => {
         }).then((res) => {
             $scope.ressss = res.data
             $scope.register()
-        }, (res) => { alert(JSON.stringify(res)) })
+        }, (res) => { $scope.failure = 'An error has ocurred, please try again. Contact Pravega if problem persists.' })
     }
 
     $scope.register = function () {
@@ -107,6 +113,6 @@ app.controller('quadSparkController', ($scope, $http) => {
                 "grades": $scope.grades,
                 "phone": $scope.phone
             }
-        }).then((res)=>{$scope.success='Successful registration. Please check your inbox for the confirmation email.'},(res)=>{$scope.failure = "Transaction successful but the registartion on the Pravega Server was unsuccessful. Please contact Pravega Web Team with the following id - "+$scope.o_id})
+        }).then((res) => { $scope.failure = ''; $scope.success = 'Successful registration. Please check your inbox for the confirmation email.' }, (res) => { $scope.failure = "Transaction successful but the registration on the Pravega Server was unsuccessful. Please contact Pravega Web Team with the following id - " + $scope.o_id; $scope.success = '' })
     }
 })

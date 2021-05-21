@@ -1,2 +1,5 @@
 node_modules/
 public/face
+rzp.csv
+ses.csv
+.env
