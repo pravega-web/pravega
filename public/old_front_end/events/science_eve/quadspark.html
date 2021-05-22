@@ -355,12 +355,12 @@
 
                                         <!-- Grades -->
                                         <div class="form-group">
-                                            <label for="grades">Grades of Participants</label>
+                                            <label for="grades">Classes of Participants</label>
                                             <input type="text" class="form-control" id="grades"
                                                 aria-describedby="gradesHelp" placeholder="Enter grades"
                                                 ng-model='grades' required>
                                             <small id="gradesHelp" class="form-text text-muted">Separate with commas.
-                                                (Grade, Grade...)</small>
+                                                (8, 9...) for (Class 8, Class 9)</small>
                                         </div>
 
                                         <!-- phones -->
@@ -378,16 +378,16 @@
                                                 value="Rs. 200" readonly>
                                             <small class='form-text text-muted'>The awards are cash prizes :)</small>
                                         </div>
-                                        <div class="form-group mx-auto">
-                                            <button class='btn btn-block bg-info mx-auto text-dark'>
-                                                <h5>Proceed to Checkout</h5>
-                                                <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Razorpay_logo.svg"
-                                                    style="width:30%" alt="Responsive image">
+                                        <div class="form-group mx-auto" style="text-align: center;">
+                                            <button class='btn' style="background-color: black; color:white">
+                                                Pay Now 
+                                                <br>
+                                                <br>
 
+                                                <hr>
+                                                <br>
+                                                powered by <img src="../../rp logos/white.svg" alt="Razorpay logo" style="width:100px;">
                                             </button>
-                                        </div>
-                                        <div class="form-group ">
-                                            <p style="text-align: center;">Payments are made through a secure gateway powered by Razorpay. All erroneous transaction will be refunded in full.</p>
                                         </div>
                                         <div class="form-group">
                                             <div class="alert alert-success" ng-show="success" role="alert">
