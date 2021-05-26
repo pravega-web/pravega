@@ -136,9 +136,8 @@
                                     science? Pull your socks, put on your hats and get ready to face the heat!
                                 </p>
 
-                                <!--<b><a href="#register">Click here to register</a></b>-->
-                                <b><a href="#">Registrations will open soon. Please return in a few hours.</a></b>
-
+                                <a href="https://rzp.io/l/QuadsparkRegs" class="btn btn-lg btn-block"
+                                    style="background-color: black; color:white">Register now!</a>
                                 <br>
                                 <br>
                                 <a href="pdfs/Quadspark_RulesAndRegulations.pdf">Click here to download the detailed
@@ -330,87 +329,12 @@
                                             quadspark@iisc.ac.in</a></li>
                                 </ul>
                                 <hr>
+
                                 <br>
-
-                                <b style="font-size: 24px; color: red">Registrations will open soon. Please return in a
-                                    few hours</b>
-                                    <br>
-                                    <br>
-                                    <hr>
-                                    <br>
-                                <div class="card row"
-                                    style="border-radius: 10px; border-style: solid; padding: 10px; border-width: 1px;">
-                                    <form id="register" ng-submit='pay();'>
-                                        <div class="form-group">
-                                            <h1>Register now!</h1>
-                                        </div>
-                                        <!-- Email -->
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="Enter email" ng-model='email'
-                                                required>
-                                            <small id="emailHelp" class="form-text text-muted">We'll never share your
-                                                email with anyone else.</small>
-                                        </div>
-                                        <!-- Names -->
-                                        <div class="form-group">
-                                            <label for="names">Names of Participants</label>
-                                            <input type="text" class="form-control" id="names"
-                                                aria-describedby="nameHelp" placeholder="Enter names" ng-model='name'
-                                                required>
-                                            <small id="namesHelp" class="form-text text-muted">Separate with commas.
-                                                (Name Surname, Name Surname...)</small>
-                                        </div>
-
-                                        <!-- Grades -->
-                                        <div class="form-group">
-                                            <label for="grades">Classes of Participants</label>
-                                            <input type="text" class="form-control" id="grades"
-                                                aria-describedby="gradesHelp" placeholder="Enter grades"
-                                                ng-model='grades' required>
-                                            <small id="gradesHelp" class="form-text text-muted">Separate with commas.
-                                                (8, 9...) for (Class 8, Class 9)</small>
-                                        </div>
-
-                                        <!-- phones -->
-                                        <div class="form-group">
-                                            <label for="phones">Contact Number</label>
-                                            <input type="number" class="form-control" id="phones"
-                                                aria-describedby="phoneHelp" placeholder="Enter phone number"
-                                                ng-model="phone" required>
-                                            <small id="phonesHelp" class="form-text text-muted">Secondary mode of
-                                                contact.</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Registration Fee</label>
-                                            <input class="form-control" type="text" placeholder="Readonly input here…"
-                                                value="Rs. 200" readonly>
-                                            <small class='form-text text-muted'>The awards are cash prizes :)</small>
-                                        </div>
-                                        <div class="form-group mx-auto" style="text-align: center; cursor:not-allowed;">
-                                            <button class='btn' style="background-color: black; color:white; " disabled>
-                                                Pay Now
-                                                <br>
-                                                <br>
-
-                                                <hr>
-                                                <br>
-                                                powered by <img src="../../rp logos/white.svg" alt="Razorpay logo"
-                                                    style="width:100px;">
-                                            </button>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="alert alert-success" ng-show="success" role="alert">
-                                                {{success}}
-                                            </div>
-                                            <div class="alert alert-danger" ng-show="failure" role="alert">
-                                                {{failure}}
-                                            </div>
-                                        </div>
-                                </div>
+                                <a href="https://rzp.io/l/QuadsparkRegs" target="_blank" id="rgbutton" class="btn btn-lg btn-block"
+                                    style="background-color: black; color:white">Proceed to registration</a>
+                                
                             </div>
-                            </form>
 
                         </div>
 
@@ -420,6 +344,82 @@
                 </div>
     </div>
     <hr>
+
+
+    <!-- <div class="card row"
+    style="border-radius: 10px; border-style: solid; padding: 10px; border-width: 1px;">
+    <form id="register" ng-submit='pay();'>
+        <div class="form-group">
+            <h1>Register now!</h1>
+        </div>
+        Email
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter email" ng-model='email'
+                required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your
+                email with anyone else.</small>
+        </div>
+        Names
+        <div class="form-group">
+            <label for="names">Names of Participants</label>
+            <input type="text" class="form-control" id="names"
+                aria-describedby="nameHelp" placeholder="Enter names" ng-model='name'
+                required>
+            <small id="namesHelp" class="form-text text-muted">Separate with commas.
+                (Name Surname, Name Surname...)</small>
+        </div>
+
+        Grades
+        <div class="form-group">
+            <label for="grades">Classes of Participants</label>
+            <input type="text" class="form-control" id="grades"
+                aria-describedby="gradesHelp" placeholder="Enter grades"
+                ng-model='grades' required>
+            <small id="gradesHelp" class="form-text text-muted">Separate with commas.
+                (8, 9...) for (Class 8, Class 9)</small>
+        </div>
+
+        phones
+        <div class="form-group">
+            <label for="phones">Contact Number</label>
+            <input type="number" class="form-control" id="phones"
+                aria-describedby="phoneHelp" placeholder="Enter phone number"
+                ng-model="phone" required>
+            <small id="phonesHelp" class="form-text text-muted">Secondary mode of
+                contact.</small>
+        </div>
+        <div class="form-group">
+            <label>Registration Fee</label>
+            <input class="form-control" type="text" placeholder="Readonly input here…"
+                value="Rs. 200" readonly>
+            <small class='form-text text-muted'>The awards are cash prizes :)</small>
+        </div>
+        <div class="form-group mx-auto" style="text-align: center; cursor:not-allowed;">
+            <button class='btn' style="background-color: black; color:white; " disabled>
+                Pay Now
+                <br>
+                <br>
+
+                <hr>
+                <br>
+                powered by <img src="../../rp logos/white.svg" alt="Razorpay logo"
+                    style="width:100px;">
+            </button>
+        </div>
+        <div class="form-group">
+            <div class="alert alert-success" ng-show="success" role="alert">
+                {{success}}
+            </div>
+            <div class="alert alert-danger" ng-show="failure" role="alert">
+                {{failure}}
+            </div>
+        </div>
+    </form>
+
+</div> -->
+
 
 
     </section>
