@@ -16,15 +16,15 @@ var changeBg = function() {
   thisProjectBg.addClass('project__bg-item--active');
 };
 
-var showFirst = function() {
-  // when the page loads reveal the first project
-  pLink.css('opacity', '0.4');
-  pLink.parent().first().children().css('opacity', '1');
-  pBg.first().addClass('project__bg-item--active');
-}
+// var showFirst = function() {
+//   // when the page loads reveal the first project
+//   pLink.css('opacity', '0.4');
+//   pLink.parent().first().children().css('opacity', '1');
+//   pBg.first().addClass('project__bg-item--active');
+// }
 
 var init = function() {
-  $(document).on('ready', showFirst);
+  // $(document).on('ready', showFirst);
   pLink.on('mouseenter', changeBg);
 };
 
