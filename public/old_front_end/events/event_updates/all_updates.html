@@ -180,6 +180,9 @@
                                 else if (update.category == "Recreational") {
                                     return "../rec_eve/" + update.link;
                                 }
+                                else if(update.category == "Tech") {
+                                    return "../tech_eve/" + update.link;
+                                }
                             }
 
                             function displayDate(update) {
@@ -212,6 +215,16 @@
 
                             let updates = [];
                             updates.push(
+                                {
+                                    name: "Hackathon",
+                                    image: "hackathon-update.jpeg",
+                                    date: new Date(2021, 6, 30),
+                                    date_meta: "Deadline on",
+                                    category: "Tech",
+                                    link: "hackathon.html",
+                                    permanent: true,
+                                    show: true,
+                                },
                                 {
                                     name: "Decoherence",
                                     image: "decoherence-update.png",
