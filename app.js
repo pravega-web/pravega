@@ -85,6 +85,8 @@ function server() {
 
   app.use('/', express.static('public/old_front_end'))
 
+  // Testing new Website
+  // app.use('/', express.static('GameFace'))
 
   // General Purpouse 
 
