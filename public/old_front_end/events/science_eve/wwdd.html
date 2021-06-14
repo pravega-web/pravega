@@ -107,7 +107,21 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+
+                                <div id="prelims-banner" style="display:none;">
+                                    <center>
+                                        <b>The WWDD Prelims is in session and will close at 11:59:59 PM today (June 15th).
+                                            <br>
+                                            Scroll down to the Prelims - Live! section to access it
+                                        </b>
+                                        <br>
+                                        <a href="#prelims-live-section">or click here</a>
+                                    </center>
+                                    <br>
+                                </div>
+
                                 <h1>What Would Darwin Do?</h1>
+                                <br>
                                 <p>
                                     Charles Darwin was only 22 years young when he grabbed the golden opportunity to
                                     aboard the HMS Beagle as a naturalist. Fast forward to 2021, the numerous species
@@ -181,26 +195,76 @@
                                         Both the sections will contain a mix of both objective and subjective questions.
                                     </li>
                                     <li>
-                                        The prelims will be open-resource, i.e, participants are allowed to use any resource at their disposal.
+                                        The prelims will be open-resource, i.e, participants are allowed to use any
+                                        resource at their disposal.
                                     </li>
                                     <li>
-                                        Only 1 response will be allowed from each participant/team. 
+                                        Only 1 response will be allowed from each participant/team.
                                     </li>
-                                    <li>There is a slight change in the rule we previously mentioned to deal with multiple responses from the same team/participant.
-                                        If there are more than one response from any participant/team, <b>then the one submitted earliest will be considered</b>.</li>
+                                    <li>There is a slight change in the rule we previously mentioned to deal with
+                                        multiple responses from the same team/participant.
+                                        If there are more than one response from any participant/team, <b>then the one
+                                            submitted earliest will be considered</b>.</li>
                                     <li>
-                                        <b>Note: - For teams, the person who will fill the form and submit it will have to open the form first.</b>
+                                        <b>Note: - For teams, the person who will fill the form and submit it will have
+                                            to open the form first.</b>
                                     </li>
                                     <li>
-                                        All participants/teams need to fill in their Email address that they filled during their registration.
+                                        All participants/teams need to fill in their Email address that they filled
+                                        during their registration.
                                     </li>
                                     <li>
-                                        Ignore the "ExtendedFormsID" in the form. That is for technical purposes and should <b>NOT</b> be filled.
+                                        Ignore the "ExtendedFormsID" in the form. That is for technical purposes and
+                                        should <b>NOT</b> be filled.
                                     </li>
                                 </ul>
                                 <br>
                                 <hr>
                                 <br>
+
+                                <div id="prelims-info" style="display:none;">
+                                    <h3 id="prelims-live-section">Prelims - Live!</h3>
+                                    <p>
+                                        Following are the links for the 2 parts of the prelims:
+                                        <br>
+                                        <br>
+                                        Part A: <a
+                                            href="https://extendedforms.io/form/93a74274-e1b1-4896-9ee9-313024909b81/login">Click
+                                            here</a>
+                                        <br>
+                                        Part B: <a
+                                            href="https://extendedforms.io/form/93a74c8d-7441-43d6-9849-e2f5b9bff4aa/login">Click
+                                            here</a>
+                                        <br>
+                                        <br>
+                                        When you click on the link, you will get a page asking for your Email-ID. Enter
+                                        your Email-ID there.
+                                        In case of teams, each member has to enter their own Email-ID that they entered
+                                        during registration.
+                                        <br>
+                                        <b>If you use an unregistered Email-ID, the responses will not be accepted.</b>
+                                        <br>
+                                        <br>
+                                        After entering the Email address, each person will get a personalised forms
+                                        link in their Email.
+                                        <br>
+                                        <b>
+                                            Now, this is very important: Once you open the personalised link, a page
+                                            with the "Get Started" button will open. Once you click this button, the
+                                            timer will start. And once you click this, the personalised link cannot be
+                                            used again. So, once you start any part, you have to finish it in the
+                                            required time.
+                                        </b>
+                                        <br>
+                                        <b>
+                                            Also remember that in the team, the member who will fill and submit the form
+                                            will have to open their personalised link first.
+                                        </b>
+                                    </p>
+                                    <br>
+                                    <hr>
+                                    <br>
+                                </div>
 
                                 <h3>Eligibility</h3>
                                 <p>Students in class 9<sup>th</sup> to 12<sup>th</sup></p>
@@ -237,6 +301,21 @@
 
                     </div>
             </section>
+
+            <script>
+                let prelims_banner = document.getElementById("prelims-banner");
+                let prelims_info = document.getElementById("prelims-info");
+
+                let release_time = new Date(2021, 05, 14, 23, 59, 00);
+                let close_time = new Date(2021, 05, 15, 23, 59, 59);
+                let current_time = new Date();
+
+                if(release_time < current_time && current_time < close_time)
+                {
+                    prelims_banner.style.display = "block";
+                    prelims_info.style.display = "block";
+                }
+            </script>
 
             <footer id="footer" class="dark text-center short-pad footer-6">
                 <div class="container">
