@@ -37,6 +37,31 @@
         rel='stylesheet' type='text/css'>
     <link href="../../css/all.css" rel="stylesheet">
 
+    <style>
+        .form_container {
+            width: 100%;
+            clear: both;
+        }
+
+        .form_container label {
+            width: 90%;
+            clear: both;
+            margin-left: 5%;
+        }
+
+        .form_container input {
+            width: 90%;
+            clear: both;
+            margin-left: 5%;
+        }
+
+        #password_button,
+        #view_button {
+            background: black;
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -118,7 +143,7 @@
 
 
             <!--body content start-->
-            <section class="body-content">
+            <section class="body-content" oncontextmenu="return false">
 
 
                 <div class="container">
@@ -227,13 +252,6 @@
                                         <li>For more details (regarding submission procedure, handling of ties, network
                                             and other issues etc), refer to rules and regulations document.</li>
                                     </ul>
-
-                                    <a href="decoherence/Decoherence_Prelims__Objective_.pdf">Objective prelims question
-                                        paper</a>
-                                    <br>
-                                    <a href="decoherence/Decoherence_Prelims_Objective_Key.pdf">Objective prelims answer
-                                        key</a>
-                                    <br>
                                     <br>
 
                                     <b>Subjective prelims:</b>
@@ -262,6 +280,47 @@
                                     <hr>
                                     <br>
 
+                                    <h3>Objective Prelims</h3>
+                                    <br>
+                                    <a href="decoherence/Decoherence_Prelims__Objective_.pdf">Objective prelims question
+                                        paper</a>
+                                    <br>
+                                    <a href="decoherence/Decoherence_Prelims_Objective_Key.pdf">Objective prelims answer
+                                        key</a>
+                                    <br>
+                                    <a href="decoherence/Prelims_results.pdf">Click here to view list of teams qualified for next level</a>
+                                    <br>
+                                    <br>
+                                    <div style="background: #00ffff;" class="form_container">
+                                        <center>
+                                            <h4 style="padding:10px">Obtain your prelims score (Not functional yet)</h4>
+                                        </center>
+                                        <br>
+                                        <form>
+                                            <label for="register_no">Register Number:</label>
+                                            <input type="text" id="register_no">
+                                            <br>
+                                            <label for="password">Password:</label>
+                                            <input type="password" id="password">
+                                            <br>
+                                            <br>
+                                            <center>
+                                                <b style="padding: 5%;">The registered Email Address serves as your password</b>
+                                            </center>
+                                            <br>
+                                            <center>
+                                                <button type="button" id="password_button" style="margin-right:5px"
+                                                    onclick="togglePasswordVisibility()">Show Password</button><button
+                                                    type="button" id="view_button" onclick="checkPassword()">View
+                                                    Results</button>
+                                            </center>
+
+                                            <br>
+
+                                        </form>
+                                    </div>
+
+
                                     <ul class=" portfolio-meta m-bot-30">
                                         <li><span>Category</span> Science</li>
                                         <li><span>Coordinators</span> Soumyadeep Bhattacharjee and Rishik Perugu</li>
@@ -271,9 +330,52 @@
                                     </ul>
 
                                 </div>
-                                <button class="btn btn-dark-solid btn-small btn-rounded"><a style="color:white;" href="decoherence_archives.html">Details of concluded events</a></button>
+                                <button class="btn btn-dark-solid btn-small btn-rounded"><a style="color:white;"
+                                        href="decoherence_archives.html">Details of concluded events</a></button>
             </section>
             <!--body content end-->
+
+            <script>
+                let password_visible = false;
+                let password_button = document.getElementById("password_button");
+
+                let number_field = document.getElementById("register_no")
+                let password_field = document.getElementById("password");
+
+                function togglePasswordVisibility() {
+                    if (!password_visible) {
+                        password_button.textContent = "Hide Password";
+                        password_field.type = "text";
+                        password_visible = true;
+                    }
+                    else {
+                        password_button.textContent = "Show Password";
+                        password_field.type = "password";
+                        password_visible = false;
+                    }
+                }
+            </script>
+
+            <script>
+                document.onkeydown = function (e) {
+                    if (e.keyCode == 123) {
+                        return false;
+                    }
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                        return false;
+                    }
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                        return false;
+                    }
+                    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                        return false;
+                    }
+
+                    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                        return false;
+                    }
+                }
+            </script>
 
             <!--footer start 1-->
             <footer id="footer" class="dark text-center short-pad footer-6">
