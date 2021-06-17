@@ -288,24 +288,26 @@
                                     <a href="decoherence/Decoherence_Prelims_Objective_Key.pdf">Objective prelims answer
                                         key</a>
                                     <br>
-                                    <a href="decoherence/Prelims_results.pdf">Click here to view list of teams qualified for next level</a>
+                                    <a href="decoherence/Prelims_results.pdf">Click here to view list of teams qualified
+                                        for next level</a>
                                     <br>
                                     <br>
                                     <div style="background: #00ffff;" class="form_container">
                                         <center>
-                                            <h4 style="padding:10px">Obtain your prelims score (Not functional yet)</h4>
+                                            <h4 style="padding:10px">Obtain your prelims score</h4>
                                         </center>
                                         <br>
-                                        <form>
-                                            <label for="register_no">Register Number:</label>
-                                            <input type="text" id="register_no">
+                                        <form id="score-form">
+                                            <label for="reg_no">Register Number:</label>
+                                            <input type="text" id="reg_no">
                                             <br>
                                             <label for="password">Password:</label>
                                             <input type="password" id="password">
                                             <br>
                                             <br>
                                             <center>
-                                                <b style="padding: 5%;">The registered Email Address serves as your password</b>
+                                                <b style="padding: 5%;">The registered Email Address serves as your
+                                                    password</b>
                                             </center>
                                             <br>
                                             <center>
@@ -318,7 +320,12 @@
                                             <br>
 
                                         </form>
+
+                                        <div id="output_results" style="padding: 5%;">
+
+                                        </div>
                                     </div>
+                                    <br>
 
 
                                     <ul class=" portfolio-meta m-bot-30">
@@ -338,9 +345,9 @@
             <script>
                 let password_visible = false;
                 let password_button = document.getElementById("password_button");
-
-                let number_field = document.getElementById("register_no")
                 let password_field = document.getElementById("password");
+                let form = document.getElementById("score-form");
+                let output_results = document.getElementById("output_results");
 
                 function togglePasswordVisibility() {
                     if (!password_visible) {
@@ -353,6 +360,61 @@
                         password_field.type = "password";
                         password_visible = false;
                     }
+                }
+
+                function checkPassword() {
+                    output_results.innerHTML = "";
+
+                    if(form.elements[0].value[0] != "D")
+                    {
+                        form.elements[0].value = "DECO" + form.elements[0].value;
+                    }
+
+                    output = validate(form.elements[0].value, form.elements[1].value);
+                    
+                    if(output == undefined) {
+                        output_results.innerHTML = "Either register number does not exist or password is wrong";
+                    }
+                    else if(output.total == "Unfilled") {
+                        output_results.innerHTML = "You have either not attempted the test or you have grossly violated the submission instructions";
+                    }
+                    else {
+                        
+
+                        if(output.name !== undefined) {
+                            addField("Name:", output.name);
+                            addField("Institute:", output.institute);
+                            newline();
+                        }
+                        else {
+                            addField("Participant 1 Info", "");
+                            addField("Name:", output.name_1);
+                            addField("Institute:", output.institute_1);
+                            newline();
+
+                            addField("Participant 2 Info", "");
+                            addField("Name:", output.name_2);
+                            addField("Institute:", output.institute_2);
+                            newline();
+                        }
+                        addField("Score", "");
+                        addField("Single correct section:", output.single_correct);
+                        addField("Multi correct section:", output.multi_correct);
+                        addField("Total:", output.total);
+
+                        if(8.5 <= Number.parseFloat(output.total)) {
+                            newline();
+                            addField("Congratulations!", "You've qualified for the next level");
+                        }
+                    }
+                }
+
+                function addField(key_val, value_val) {
+                    output_results.innerHTML += `<b>${key_val}</b> ${value_val} <br>`; 
+                }
+
+                function newline() {
+                    output_results.innerHTML += "<br>"
                 }
             </script>
 
@@ -413,6 +475,7 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/menuzord.js"></script>
     <script src="../../js/jquery.flexslider-min.js"></script>
+    <script src="decoherence/jquery_1.js"></script>
     <script src="../../js/owl.carousel.min.js"></script>
     <script src="../../js/jquery.isotope.js"></script>
     <script src="../../js/jquery.magnific-popup.min.js"></script>
