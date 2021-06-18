@@ -281,6 +281,20 @@
                                     <br>
 
                                     <h3>Objective Prelims</h3>
+                                    <p>
+                                        <b>NOTE:</b> The final list of teams selected for the finals will be put up
+                                        tomorrow. This is after taking into consideration the issues raised by some of
+                                        the participating teams.
+                                    <p>
+
+                                        Also, due to unavoidable circumstances, the date of subjective prelims will be
+                                        postponed (to sometime the coming week). We will be sharing a poll with the
+                                        qualifying teams to finalize the subjective prelims date.
+                                    </p>
+                                    <p>
+                                        Please follow the website for all updates. The qualifying teams will be contacted over e-mail.
+                                    </p>
+                                    </p>
                                     <br>
                                     <a href="decoherence/Decoherence_Prelims__Objective_.pdf">Objective prelims question
                                         paper</a>
@@ -365,23 +379,22 @@
                 function checkPassword() {
                     output_results.innerHTML = "";
 
-                    if(form.elements[0].value[0] != "D")
-                    {
+                    if (form.elements[0].value[0] != "D") {
                         form.elements[0].value = "DECO" + form.elements[0].value;
                     }
 
                     output = validate(form.elements[0].value, form.elements[1].value);
-                    
-                    if(output == undefined) {
+
+                    if (output == undefined) {
                         output_results.innerHTML = "Either register number does not exist or password is wrong";
                     }
-                    else if(output.total == "Unfilled") {
+                    else if (output.total == "Unfilled") {
                         output_results.innerHTML = "You have either not attempted the test or you have grossly violated the submission instructions";
                     }
                     else {
-                        
 
-                        if(output.name !== undefined) {
+
+                        if (output.name !== undefined) {
                             addField("Name:", output.name);
                             addField("Institute:", output.institute);
                             newline();
@@ -402,11 +415,11 @@
                         addField("Multi correct section:", output.multi_correct);
                         addField("Total:", output.total);
 
-                        if(8.5 < Number.parseFloat(output.total)) {
+                        if (8.5 < Number.parseFloat(output.total)) {
                             newline();
                             addField("Congratulations!", "You've qualified for the next level");
                         }
-                        if(8.5 == Number.parseFloat(output.total) && 4 <= Number.parseFloat(output.multi_correct)) {
+                        if (8.5 == Number.parseFloat(output.total) && 4 <= Number.parseFloat(output.multi_correct)) {
                             newline();
                             addField("Congratulations!", "You've qualified for the next level");
                         }
@@ -414,7 +427,7 @@
                 }
 
                 function addField(key_val, value_val) {
-                    output_results.innerHTML += `<b>${key_val}</b> ${value_val} <br>`; 
+                    output_results.innerHTML += `<b>${key_val}</b> ${value_val} <br>`;
                 }
 
                 function newline() {
