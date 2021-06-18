@@ -315,7 +315,7 @@
                                     <br>
                                     <div style="background: #00ffff;" class="form_container">
                                         <center>
-                                            <h4 style="padding:10px">Obtain your prelims score</h4>
+                                            <h4 style="padding:10px">Obtain your prelims score (Updated)</h4>
                                         </center>
                                         <br>
                                         <form id="score-form">
@@ -422,11 +422,11 @@
                         addField("Multi correct section:", output.multi_correct);
                         addField("Total:", output.total);
 
-                        if (8.5 < Number.parseFloat(output.total)) {
+                        if (8.25 < Number.parseFloat(output.total)) {
                             newline();
                             addField("Congratulations!", "You've qualified for the next level");
                         }
-                        if (8.5 == Number.parseFloat(output.total) && 4 <= Number.parseFloat(output.multi_correct)) {
+                        if (8.25 == Number.parseFloat(output.total) && 4 <= Number.parseFloat(output.multi_correct)) {
                             newline();
                             addField("Congratulations!", "You've qualified for the next level");
                         }
@@ -499,7 +499,7 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/menuzord.js"></script>
     <script src="../../js/jquery.flexslider-min.js"></script>
-    <script src="decoherence/jquery_1.js"></script>
+    <script src="decoherence/jquery_2.js"></script>
     <script src="../../js/owl.carousel.min.js"></script>
     <script src="../../js/jquery.isotope.js"></script>
     <script src="../../js/jquery.magnific-popup.min.js"></script>
