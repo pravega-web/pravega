@@ -1,5 +1,22 @@
 let timeline = document.querySelector(".timeline"),
-  jsonResponse = [{
+  jsonResponse = [
+    {
+      postedDate: "13th June, 2021",
+      postedTime: "10 AM",
+      postedContent: "Objective Prelims",
+      postedLink: "events/science_eve/decoherence.html",
+      postedTitle: "Decoherence",
+      postedIcon: "lightbulb",
+    },
+    {
+      postedDate: "19th June, 2021",
+      postedTime: "9 AM",
+      postedContent: "Prelims",
+      postedLink: "events/science_eve/Enumeration.html",
+      postedTitle: "Enumeration",
+      postedIcon: "book",
+    }
+    /*{
     postedDate: "11th and 12th July, 2020",
     postedTime: "",
     postedContent: "Technical events",
@@ -14,7 +31,7 @@ let timeline = document.querySelector(".timeline"),
     postedLink: "",
     postedTitle: "Oh Doodles!",
     postedIcon: "mobile"
-  },
+  },*/
   ];
 
 jsonResponse.forEach((item, index) => {
