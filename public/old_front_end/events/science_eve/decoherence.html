@@ -169,6 +169,14 @@
                             <div class="col-md-6">
                                 <div class="heading-title-side-border text-left">
                                     <br>
+                                    <div id="banner" style="display: none;">
+                                        <center>
+                                            <b>Subject Prelims is in session and will conclude at 9 AM IST on 27th June.<br>
+                                                Click
+                                                <a href="#subjective-prelims">here</a> to access it</b>
+                                        </center>
+                                    </div>
+                                    <br>
                                     <h1 class="text-uppercase">Decoherence</h1>
 
                                     <br>
@@ -281,6 +289,26 @@
                                     <hr>
                                     <br>
 
+                                    <div id="subjective-prelims">
+                                        <h3>Subjective Prelims</h3>
+                                        <br>
+                                        <div id="qp-link" style="display: none;">
+                                            <a href="decoherence/Decoherence_Subjective_prelims.pdf"><b>Click here to
+                                                    download the question paper</b></a>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <div id="form-link" style="display: none;">
+                                        <a target="_blank"
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLSfGfvgr8u1UrMVa5mpRexZ0ewFy59SFzumBVLeQ2e3mOFoiYQ/viewform"><b>Form
+                                                link for submission of responses</b></a>
+                                    </div>
+
+                                    <br>
+                                    <hr>
+                                    <br>
+
                                     <h3>Objective Prelims</h3>
                                     <br>
                                     <b>Note:</b>
@@ -362,6 +390,26 @@
                                 </div>
                                 <button class="btn btn-dark-solid btn-small btn-rounded"><a style="color:white;"
                                         href="decoherence_archives.html">Details of concluded events</a></button>
+
+                                <script>
+
+                                    let qp_link = document.getElementById("qp-link");
+                                    let form_link = document.getElementById("form-link");
+                                    let banner = document.getElementById("banner");
+
+                                    let now = Date.now();
+
+                                    if(new Date(2021, 05, 26, 08, 59, 00) < now && now < new Date(2021, 05, 27, 9, 00, 00)) {
+                                        banner.style.display = "block";
+                                    }
+                                    if(new Date(2021, 05, 26, 08, 59, 00) < now) {
+                                        qp_link.style.display = "block";
+                                    }
+                                    if(new Date(2021, 05, 26, 08, 59, 00) < now && now < new Date(2021, 05, 27, 12, 00, 00)) {
+                                        form_link.style.display = "block";
+                                    }
+
+                                </script>
             </section>
             <!--body content end-->
 
