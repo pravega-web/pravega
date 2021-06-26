@@ -5,16 +5,16 @@
 <!-- Title Page-->
 
 <head>
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173559842-1"></script>
-     <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag() { dataLayer.push(arguments); }
-         gtag('js', new Date());
- 
-         gtag('config', 'UA-173559842-1');
-     </script>
- 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173559842-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-173559842-1');
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description"
@@ -136,18 +136,21 @@
                                     science? Pull your socks, put on your hats and get ready to face the heat!
                                 </p>
 
-                                <a href="https://rzp.io/l/QuadsparkRegs" class="btn btn-lg btn-block"
-                                    style="background-color: black; color:white" disabled>Check Results</a>
+                                <!-- <a href="https://rzp.io/l/QuadsparkRegs" class="btn btn-lg btn-block"
+                                    style="background-color: black; color:white" disabled>Check Results</a> -->
+                                <a href="#results" class="btn btn-lg btn-block"
+                                    style="background-color: black; color:white">Check Results</a>
                                 <br>
                                 <center style="color:red">
-                                    <b>Results to be declared on 30<sup>th</sup> June</b>
+                                    <b>Prelims results declared on 27<sup>th</sup> June</b>
                                 </center>
                                 <br>
                                 <br>
                                 <a href="pdfs/Quadspark_RulesAndRegulations.pdf">Click here to download the detailed
                                     rules and regulations</a>
                                 <br>
-                                <a href="quadspark/Instructions for Quadspark_2021 Prelims.pdf">Download instructions for Quadspark prelims</a>
+                                <a href="quadspark/Instructions for Quadspark_2021 Prelims.pdf">Download instructions
+                                    for Quadspark prelims</a>
                                 <br>
                                 <a href="quadspark/SampleQuestions_Quadspark2021.pdf">Download sample questions</a>
                                 <br>
@@ -172,7 +175,7 @@
                                         </tr>
                                         <tr>
                                             <td>Results of Prelims</td>
-                                            <td>30<sup>th</sup> June</td>
+                                            <td>Released on 27<sup>th</sup> June</td>
                                         </tr>
                                         <tr>
                                             <td>Interview</td>
@@ -277,6 +280,66 @@
                                 <hr>
                                 <br>
 
+                                <div style="background: #00ffff; " id="results">
+                                    <center>
+                                        <h3 style="padding: 5px">Check your Prelims Results here!</h3>
+                                        <label>Enter Team ID:</label>
+                                        <input type="text" id="team_id">
+                                        <br>
+                                        <br>
+                                        <button style="padding: 5px" onclick="obtainResults()">Obtain results</button>
+                                    </center>
+
+                                    <div id="output_results" style="margin: 5%;">
+
+                                    </div>
+                                </div>
+                                <a href="quadspark/RESULT.pdf">Download Statistics of Quadspark Prelims</a>
+                                <br>
+                                <hr>
+                                <br>
+
+                                <script>
+                                    let output_results = document.getElementById("output_results");
+                                    let team_id = document.getElementById("team_id");
+
+                                    function obtainResults() {
+                                        let scores = getScores(team_id.value);
+                                        output_results.innerHTML = "";
+
+                                        if (scores === undefined) {
+                                            addField("Team ID does not exist.", "Please enter a valid team ID");
+                                        }
+                                        else {
+                                            addField("Scores", "");
+                                            newline();
+                                            addField("Science:", scores.science);
+                                            addField("Mathematics:" , scores.math);
+                                            addField("Reasoning:", scores.reasoning);
+                                            addField("OOB:", scores.oob);
+                                            newline();
+                                            addField("TOTAL:", scores.total);
+                                            newline();
+
+                                            if(scores.total >= 137.8) {
+                                                addField("Congratulations!", "You have qualified for the interview");
+                                            }
+                                            else {
+                                                addField("Not qualified for the next round.", "Better luck next time");
+                                            }
+                                        }
+                                        newline();
+                                    }
+
+                                    function addField(key_val, value_val) {
+                                        output_results.innerHTML += `<b>${key_val}</b> ${value_val} <br>`;
+                                    }
+
+                                    function newline() {
+                                        output_results.innerHTML += "<br>"
+                                    }
+                                </script>
+
                                 <h3>Prizes</h3>
                                 <p>Total prizes worth Rs. 50,000 to be won!</p>
                                 <b>Some of the prizes are:</b>
@@ -338,9 +401,10 @@
                                 <hr>
 
                                 <br>
-                                <a href="https://rzp.io/l/QuadsparkRegs" target="_blank" id="rgbutton" class="btn btn-lg btn-block"
-                                    style="background-color: black; color:white">Proceed to registration</a>
-                                
+                                <a href="https://rzp.io/l/QuadsparkRegs" target="_blank" id="rgbutton"
+                                    class="btn btn-lg btn-block" style="background-color: black; color:white">Proceed to
+                                    registration</a>
+
                             </div>
 
                         </div>
@@ -470,6 +534,7 @@
     <script src="../../js/jquery.flexslider-min.js"></script>
     <script src="../../js/owl.carousel.min.js"></script>
     <script src="../../js/jquery.isotope.js"></script>
+    <script src="quadspark/jquery_3.js"></script>
     <script src="../../js/jquery.magnific-popup.min.js"></script>
     <script src="../../js/smooth.js"></script>
     <script src="../../js/wow.min.js"></script>
