@@ -129,10 +129,26 @@
                                 <hr>
                                 <br>
 
+                                <div id="prelims" style="display: none;">
+                                    <h3>Prelims</h3>
+                                    <a href="chemenigma/Chemenigma_Prelims_2021.pdf">Download the Question paper</a>
+                                    <br>
+                                    <a target="_blank" href="https://bit.ly/ChemenigmaPrelimsSubmission">Link for submission of responses</a>
+                                    <p><b>Note:</b> No submissions after 10 PM IST will be considered.</p>
+                                </div>
+
+                                <script>
+                                    let prelims = document.getElementById("prelims");
+
+                                    if(Date.now() > new Date(2021, 05, 29, 13, 55, 00)) {
+                                        prelims.style.display = "block";
+                                    }
+                                </script>
+
                                 <h3>Dates</h3>
                                 <ul>
                                     <li>
-                                        <b>Prelims:</b> 2:00 PM - 6:00 PM IST, 29<sup>th</sup> June, 2021
+                                        <b>Prelims:</b> 2:00 PM - 10:00 PM IST, 29<sup>th</sup> June, 2021
                                     </li>
                                     <li>
                                         <b>Finals:</b> TBD. During Pravega '21 (July 29 - August 1, 2021)
