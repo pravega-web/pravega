@@ -139,8 +139,29 @@
                                 <hr>
                                 <br>
 
+                                <div id="prelims-live" style="display: none">
+                                    <h3>Prelims</h3>
+                                    <a href="bioblitz/BioBlitz_Prelims_2021.pdf"><b>Download the Question Paper</b></a>
+                                    <br>
+                                    <a target="_blank" href="https://bit.ly/BioBlitzPrelimsSubmission"><b>Form link for submission of responses</b></a>
+                                    <br>
+                                    <hr>
+                                    <br>
+                                </div>
+
+                                <script>
+                                    let prelims_live = document.getElementById("prelims-live");
+                                    let open_time = new Date(2021, 05, 30, 13, 45, 00);
+                                    let close_time = new Date(2021, 05, 30, 23, 59, 59);
+                                    let current_time = Date.now();
+
+                                    if(open_time < current_time && current_time < close_time) {
+                                        prelims_live.style.display = "block";
+                                    }
+                                </script>
+
                                 <h3>Dates</h3>
-                                <p>Prelims between 2:30 to 8:30 PM IST on 30<sup>th</sup> June, 2021</p>
+                                <p>Prelims between 2:30 PM to 11:59 PM IST on 30<sup>th</sup> June, 2021</p>
                                 <br>
                                 <hr>
                                 <br>
@@ -181,9 +202,7 @@
                                     determination of their education level and identity. The organizing team reserves
                                     the right to disbar participants found forging identities.
                                 </p>
-                                <b>Registration for BioBlitz '21 closes on 28th June</b>
-                                <br>
-                                <a href="https://forms.gle/JymfjDgdaDuZooJH9" target="_blank">Click here to register</a>
+                                <b>Note:</b> Registrations have closed.
                                 <br>
                                 <hr>
                                 <br>
