@@ -1,26 +1,35 @@
 // This is for routing all the front end  folders and the data required to bind them.
 
-module.exports = (app)=>{
-
-  app.get('/api/event',(req, res)=>{
-    console.log(req.query.name)
-    event.findOne({name:req.query.name},(e,d)=>{
-      if(e) throw e;
-      if(!d){
-        res.send('204')
+module.exports = (app) => {
+  app.get("/api/event", (req, res) => {
+    console.log(req.query.name);
+    event.findOne({ name: req.query.name }, (e, d) => {
+      if (e) throw e;
+      if (!d) {
+        res.status(404).send("No event like that bois");
       } else {
         res.send(d);
       }
-    })
-  })
+    });
+  });
 
-  app.post('/api/event',(req, res)=>{
+  app.post("/api/event", (req, res) => {
     console.log(req.body);
-    event.updateOne({ _id: req.body._id},req.body,(err,data)=>{
-      if(err)throw err;
+    event.updateOne({ _id: req.body._id }, req.body, (err, data) => {
+      if (err) throw err;
       console.log(data.nModified);
-      res.send(data)
-    })
-  })
+      res.send(data);
+    });
+  });
 
-}
+  // Gameface Front End Serving System
+  app.get("/events/science/:event", (req, res) => {
+    res.sendFile(__dirname+'/GameFace/event_template.html')
+  });
+
+  // Data for gameface
+  app.get('/api/event/data', (req, res)=>{
+    console.log(req.query);
+    res.sendFile(__dirname + '/event data/' + req.query.name + '.json')
+  })
+};

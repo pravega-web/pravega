@@ -6,25 +6,41 @@
       type:String,
       default:'eventName'
     },
-    'coordinators':{
+    'orgs':{
       type : Array,
       default:[]
-    },
-    'password':{
-      type: String
     },
     'genre':{
       type:String
     },
-    'content':{
-      'intoduction':String,
-      'events':[
-        { 
-          'heading':String,
-          'description':String
+    'tagline':{
+      type: String,
+      default: "This event's tagline."
+    },
+    'description':{
+      type: String,
+      default: "This event's description."
+    },
+    'updates':{
+      type:Array,
+      default: [
+        {
+          'date':"",
+          'updates':[]
         }
-      ],
-      'tagline':String
+      ]
+    },
+    'subevents':{
+      type:Array,
+      default:[]
+    },
+    'phone':{
+      type: String,
+      default:""
+    },
+    'email':{
+      type: String,
+      default:""
     },
     'meta':mongoose.Schema.Types.Mixed
   })

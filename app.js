@@ -83,7 +83,7 @@ function server() {
    */
 
 
-  app.use('/', express.static('public/old_front_end'))
+  app.use('/', express.static('GameFace'))
 
   // Testing new Website
   // app.use('/', express.static('GameFace'))
@@ -101,7 +101,7 @@ function server() {
   require(__dirname + '/view.js')(app);
 
   // Razorpay Integration
-  require(__dirname + '/rpay.js')(app, AWS);
+  // require(__dirname + '/rpay.js')(app, AWS);
 
 
   // Check if connection was successful

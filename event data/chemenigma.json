@@ -1,0 +1,45 @@
+{
+    "name": "Chemenigma",
+    "tagline": "A chemistry frothing.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tortor odio, cursus maximus orci ut, gravida tincidunt felis. In hac habitasse platea dictumst. Vivamus in tincidunt urna. Integer imperdiet dolor scelerisque scelerisque facilisis. Cras sed purus sodales, cursus eros aliquet, pellentesque purus. Nulla imperdiet rhoncus porttitor. Etiam auctor libero a facilisis iaculis. Pellentesque nisi sapien, rhoncus aliquam molestie condimentum, laoreet ut arcu. Etiam condimentum pellentesque risus sit amet condimentum. Nullam tincidunt tempus viverra. Nunc vestibulum massa sed enim volutpat tempor. Ut non diam bibendum, fringilla nisi ut, maximus enim. Vestibulum in mi sollicitudin.",
+    "subevents": [
+        {
+            "name": "name",
+            "startDate": "2021-07-07",
+            "endDate": "2021-07-07",
+            "description": "Description of the first event"
+        }
+    ],
+    "updates": [
+        {
+            "date": "2021-07-07T23:22",
+            "updates": "Chin has created this page."
+        },
+        {
+            "date": "2021-07-07T23:22",
+            "updates": "Oooh, this is an update."
+        },
+        {
+            "date": "2021-07-07T23:22",
+            "updates": "Oooh, this is an update."
+        },
+        {
+            "date": "2021-07-07T23:22",
+            "updates": "Oooh, this is an update."
+        },
+        {
+            "date": "2021-07-07T23:22",
+            "updates": "Oooh, this is an update."
+        },
+        {
+            "date": "2021-07-07T23:22",
+            "updates": "Oooh, this is an update."
+        }
+    ],
+    "orgs": [
+        "Chinmay",
+        "Haritas"
+    ],
+    "email": "info.pravega@gmail.com",
+    "phone": "8073441473"
+}
