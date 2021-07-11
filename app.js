@@ -83,7 +83,7 @@ function server() {
    */
 
 
-  app.use('/', express.static('GameFace'))
+  // app.use('/', express.static('GameFace'))
 
   // Testing new Website
   // app.use('/', express.static('GameFace'))
