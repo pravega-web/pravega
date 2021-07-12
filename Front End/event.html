@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pravega">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template - Pravega'21</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<style>
+    p {
+        text-align: justify;
+    }
+</style>
+
+<body ng-controller="eventPage">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="row">
+            <div class="nav-wrapper col s12 pri">
+                <a href="#" class="brand-logo">
+                    <img style="height: 50px" class="responsive-img" src="/img/pravega/pravega21_logo_trans.png"
+                        alt="Logo Image" />
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Title Image Section -->
+    <div class="shiny">
+        <div class="container" style="padding: 10px;">
+            <h2 class="center uppercase shiny-lr hide-on-small-only" data-aos="fade-left" data-aos-duration="900">
+                {{event.name}}
+            </h2>
+            <h3 class="center uppercase shiny-lr hide-on-med-and-up" data-aos="fade-left">
+                {{event.name}}
+            </h3>
+
+            <h5 class="center subheading frosted shiny-rl lowercase font-monty" data-aos="fade-right"
+                data-aos-delay="300">
+                {{event.tagline}}
+            </h5>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="event_content row container">
+
+        <div class="col l9 row">
+
+            <!-- Welcome -->
+            <div class="col l12 s12 body" data-aos="fade-right" data-aos-delay="500">
+                <h3>Welcome</h3>
+                <p style="text-align: justify;">{{event.description}}</p>
+                <p>We have ane exciting array of {{event.subevents.length}} events.</p>
+                <ol>
+                    <li ng-repeat="sub in event.subevents">
+                        <a ng-href="#{{sub.name}}">{{sub.name}}</a>
+                    </li>
+                </ol>
+            </div>
+
+
+
+            <!-- Description -->
+            <div class="col l12 s12 card-panel sl-round" ng-repeat="subevent in event.subevents track by $index"
+                data-aos="fade-up" data-aos-delay="600">
+                <p class="font-monty" style="font-weight: 900;">Event {{$index + 1}}</p>
+                <h4 id="{{subevent.name}}" class="nomargin-top">
+                    {{subevent.name}}
+                    <a class="right" ng-href="#{{subevent.name}}">#</a>
+                    <a class="right" ng-href="#{{subevent.name}}"><i class="material-icons">share</i>&nbsp;
+                    </a>
+                </h4>
+                <p>
+                <div class="chip shiny poppins" style="font-weight: bolder;">
+                    <i class="close material-icons">event</i>
+                    {{subevent.startDate | date: 'dd MMM'}} - {{subevent.endDate | date: 'dd MMM'}}
+                </div>
+                </p>
+                <p>{{subevent.description}}</p>
+                <a href="#" class="shiny rounded btn right black-text poppins" style="font-weight: bold;">Register</a>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <!-- Divider -->
+            <div class="col l12">
+                <br>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col l12 row" data-aos="fade-up">
+                <h4 class="col s12">About</h4>
+                <div class="col l3 s6">
+                    <h6>
+                        Organizers
+                    </h6>
+                </div>
+                <div class="col l3 left s6">
+                    <h6>
+                        <li ng-repeat="n in event.orgs">{{n}} <br><br></li>
+                    </h6>
+                </div>
+                <div class="col l3 s6">
+                    <h6>
+                        Reach out!
+                    </h6>
+                </div>
+                <div class="col l3 s6 left">
+                    <h6>
+                        <a ng-href="mailto:{{event.email}}" class="" type="mail">{{event.email}}</a>
+                        <br>
+                        <br>
+                        <a ng-href="tel:+91{{event.phone}}">+91{{event.phone}}</a>
+                    </h6>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col l3">
+            <!-- Updates and Timeline-->
+            <div class="col l12 m3 center hide-on-med-and-down scrollspy">
+                <h4 class="valign-wrapper" data-aos="fade-left" data-aos-delay="300">
+                    Timeline <span class="new badge pulse"></span>
+                </h4>
+
+                <div class="divider"></div>
+                <ul class="timeline">
+                    <li class="timeline" ng-repeat="upd in event.updates track by $index" data-aos="flip-left"
+                        data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
+                        <h6>{{upd.date | date: 'dd MMMM - HH:mm'}}</h6>
+                        {{upd.updates}}
+                        <br>
+                        <br>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+    <!-- Animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        var app = angular.module("pravega", []);
+
+        // Controller
+        app.controller("eventPage", function ($scope, $http, $location) {
+            console.log("Hompage controlled started....");
+
+            // Event Details
+            $scope.event = {
+            };
+
+            // Materialize
+            var scrollspyelems = document.querySelectorAll(".scrollspy");
+            var scrollspy_instances = M.ScrollSpy.init(scrollspyelems, {});
+
+            // Collapsible
+            var col_elems = document.querySelectorAll('.collapsible');
+            var col_instances = M.Collapsible.init(col_elems, {});
+
+            // AOS
+            AOS.init();
+
+            // Production level event flow
+
+            // Get URL parameters to decide page
+            eventName = window.location.pathname.split('/').pop();
+
+            // Call server and get page object
+            $http({
+                method: 'GET',
+                url: '/api/event/data',
+                params: {
+                    "name": eventName
+                }
+            }).then((res) => {
+                console.log(res.data);
+                $scope.event = res.data;
+            }, (res) => {
+                alert(res.data)
+            })
+
+            // Populate the details
+        });
+    </script>
+</body>
+
+</html>
