@@ -216,6 +216,11 @@ a:hover {
   width: 40%;
 }
 
+.category-card:hover {
+  background-color: #44d580;
+  opacity: 0.7;
+}
+
 /* ol.timeline {
   list-style-type: none;
 }
