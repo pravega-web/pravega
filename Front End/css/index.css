@@ -211,6 +211,11 @@ a:hover {
   opacity: 0.7;
 }
 
+.category-image {
+  height: 40%;
+  width: 40%;
+}
+
 /* ol.timeline {
   list-style-type: none;
 }
