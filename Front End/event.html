@@ -64,7 +64,7 @@
             <!-- Welcome -->
             <div class="col l12 s12 body" data-aos="fade-right" data-aos-delay="500">
                 <h3>Welcome</h3>
-                <p style="text-align: justify;">{{event.description}}</p>
+                <div style="text-align: justify;" ng-bind-html="htmlize(event.description);"></div>
                 <p>We have ane exciting array of {{event.subevents.length}} events.</p>
                 <ol>
                     <li ng-repeat="sub in event.subevents">
@@ -91,7 +91,7 @@
                     {{subevent.startDate | date: 'dd MMM'}} - {{subevent.endDate | date: 'dd MMM'}}
                 </div>
                 </p>
-                <p>{{subevent.description}}</p>
+                <div ng-bind-html="htmlize(subevent.description)"></div>
                 <a href="#" class="shiny rounded btn right black-text poppins" style="font-weight: bold;">Register</a>
                 <br>
                 <br>
@@ -172,12 +172,14 @@
         var app = angular.module("pravega", []);
 
         // Controller
-        app.controller("eventPage", function ($scope, $http, $location) {
+        app.controller("eventPage", function ($scope, $http, $location, $sce) {
             console.log("Hompage controlled started....");
 
             // Event Details
             $scope.event = {
             };
+
+            $scope.$sce = $sce;
 
             // Materialize
             var scrollspyelems = document.querySelectorAll(".scrollspy");
@@ -205,10 +207,16 @@
             }).then((res) => {
                 console.log(res.data);
                 $scope.event = res.data;
+                console.log("Hello");
             }, (res) => {
                 alert(res.data)
             })
 
+            $scope.htmlize  = (htmlstring)=>{
+                return $sce.trustAsHtml(htmlstring);
+            }
+
+         
             // Populate the details
         });
     </script>

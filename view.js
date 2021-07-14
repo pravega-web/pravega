@@ -24,7 +24,7 @@ module.exports = (app) => {
 
   // Gameface Front End Serving System
   app.get("/events/science/:event", (req, res) => {
-    res.sendFile(__dirname+'/GameFace/event_template.html')
+    res.sendFile(__dirname+'/Front End/event.html')
   });
 
   // Data for gameface
