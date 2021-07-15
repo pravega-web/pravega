@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pravega">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,59 +11,88 @@
     <link rel="stylesheet" href="/css/index.css">
 
 </head>
-<body style="background: linear-gradient(to top right, #ffc371 0%,#ff5f6d 100%); min-height: 100vh;">
+
+<body class="cult_menu_body" ng-controller="menuController">
     <div class="container">
         <div class="row" style="margin: 10%;">
             <div class="col l12 center">
-                <h1 class="center">Cultural Events</h1>
+                <h1 class="center">{{category}} Events</h1>
+            </div>
+
+            <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
+                <a ng-href="/event/{{evt}}" class="center" style="padding: 10px;">
+                    <img class="responsive-img" src='https://picsum.photos/200' alt="Event Icon Logo" style="padding: 10px;">
+                    <h4 class="black-text">
+                        {{evt}}
+                    </h4>
+                </a>
+                <!-- <a href="/science/decoherence" class="event-title"></a> -->
+            </div>
+            <!-- <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/bioblitz.svg"></a>
+                <br>
+                <a href="" class="event-title">Bioblitz</a>
             </div>
             <div class="col l6 s12 center">
-                <a href=""><img class="event-image" style="padding-top: 85px" src="/img/cultural/triviathon.svg"></a>
+                <a href=""><img class="event-image" src="/img/science/enumeration.svg"></a>
                 <br>
-                <a href="" class="event-title" style="padding-top: 85px">Triviathon</a>
+                <a href="" class="event-title">Enumeration</a>
             </div>
             <div class="col l6 s12 center">
-                <a href=""><img class="event-image" src="/img/cultural/relay_reels.svg"></a>
+                <a href="/science/chemenigma"><img class="event-image" src="/img/science/chemenigma.svg"></a>
                 <br>
-                <a href="" class="event-title">Relay Reels</a>
+                <a href="/science/chemenigma" class="event-title">Chemenigma</a>
             </div>
             <div class="col l6 s12 center">
-                <a href=""><img class="event-image" src="/img/cultural/shutters.svg"></a>
+                <a href=""><img class="event-image" src="/img/science/quadspark.svg"></a>
                 <br>
-                <a href="" class="event-title">Shutters</a>
+                <a href="" class="event-title">Quadspark</a>
             </div>
             <div class="col l6 s12 center">
-                <a href=""><img class="event-image" style="padding-top: 72px" src="/img/cultural/animathon.svg"></a>
+                <a href=""><img class="event-image" src="/img/science/wwdd.svg"></a>
                 <br>
-                <a href="" class="event-title" style="padding-top: 72px">Animathon</a>
+                <a href="" class="event-title">What Would Darwin Do?</a>
             </div>
             <div class="col l6 s12 center">
-                <a href=""><img class="event-image" style="margin-top: 100px" src="/img/cultural/alekhya.svg"></a>
+                <a href=""><img class="event-image" src="/img/science/pis.svg"></a>
                 <br>
-                <a href="" class="event-title" style="margin-top: 130px">Alekhya</a>
+                <a href="" class="event-title">Pravega Innovation Summit</a>
             </div>
             <div class="col l6 s12 center">
-                <a href=""><img class="event-image" src="/img/cultural/naturally_creative.svg"></a>
+                <a href=""><img class="event-image" src="/img/science/whodunnit.svg"></a>
                 <br>
-                <a href="" class="event-title">Naturally Creative</a>
-            </div>
-            <div class="col l6 s12 center">
-                <a href=""><img class="event-image" src="/img/cultural/conflict_confronts.svg"></a>
-                <br>
-                <a href="" class="event-title">Conflict Confronts</a>
-            </div>
-            <div class="col l6 s12 center">
-                <a href=""><img class="event-image" style="padding-top: 115px" src="/img/cultural/hatches_and_hues.svg"></a>
-                <br>
-                <a href="" class="event-title" style="padding-top: 115px">Hatches and Hues</a>
-            </div>
-            <div class="col l6 s12 center">
-                <a href=""><img class="event-image" src="/img/cultural/lasya.svg"></a>
-                <br>
-                <a href="" class="event-title">Lasya</a>
-            </div>
-            <!-- TODO: Align these cards properly -->
+                <a href="" class="event-title">Whodunnit</a>
+            </div> -->
+            <!-- Removed Astral events altogher because it's logo was very long and caused disalignment -->
         </div>
     </div>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('pravega', []);
+
+        app.controller('menuController', function($scope, $http, $location) {
+            console.log('Menu Controller loaded...');
+
+            $scope.category = 'Cultural'
+
+            document.title = $scope.category + ' Events | P21'
+
+            $scope.events = [
+                'Triviathon',
+                'Relay Reels',
+                'Shutters',
+                'Animathon',
+                'Alekhya',
+                'Naturally Creative',
+                'Conflict Confronts',
+                'Hatches and Hues',
+                'Lasya'
+            ]
+        })
+    </script>
 </body>
+
 </html>
