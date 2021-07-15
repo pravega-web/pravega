@@ -189,7 +189,7 @@ a {
 }
 
 a:hover {
-  color: blue;
+  color: var(--a);
 }
 
 .event-title {
@@ -208,12 +208,14 @@ a:hover {
 
 .event-image:hover {
   background-color: rgb(246, 203, 105);
+  padding: 1em;
   opacity: 0.7;
 }
 
 .category-image {
   height: 40%;
   width: 40%;
+  padding: 1em;
 }
 
 .category-card:hover {

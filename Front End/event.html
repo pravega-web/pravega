@@ -48,9 +48,7 @@
             <h3 class="center uppercase shiny-lr hide-on-med-and-up" data-aos="fade-left">
                 {{event.name}}
             </h3>
-
-            <h5 class="center subheading frosted shiny-rl font-monty" data-aos="fade-right"
-                data-aos-delay="300">
+            <h5 class="center subheading frosted shiny-rl font-monty" data-aos="fade-right" data-aos-delay="300">
                 {{event.tagline}}
             </h5>
         </div>
@@ -69,33 +67,31 @@
                     <br>
                 </div>
                 <div np-show="{{event.subevents.length > 0}}">
-                <ol>
-                    <li ng-repeat="sub in event.subevents">
-                        <a ng-href="#{{sub.name}}">{{sub.name}}</a>
-                    </li>
-                </ol>
+                    <ol>
+                        <li ng-repeat="sub in event.subevents">
+                            <a ng-href="#{{sub.name}}">{{sub.name}}</a>
+                        </li>
+                    </ol>
                 </div>
             </div>
 
             <!-- Timeline on mobile -->
-            <div class="col s12">
-                <div class="col l12 m3 center hide-on-small-and-up scrollspy">
-                    <h4 class="valign-wrapper" data-aos="fade-left" data-aos-delay="300">
-                        Timeline <span class="new badge pulse"></span>
-                    </h4>
-    
-                    <div class="divider"></div>
-    
-                    <ul class="timeline">
-                        <li class="timeline" ng-repeat="event in event.events track by $index" data-aos="flip-left"
-                            data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
-                            <h6>{{event.name}}</h6>
-                            {{event.date}}
-                            <br>
-                            <br>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col s12 center hide-on-large-only scrollspy">
+                <h4 class="valign-wrapper" data-aos="fade-left" data-aos-delay="300">
+                    Timeline <span class="new badge pulse"></span>
+                </h4>
+
+                <div class="divider"></div>
+
+                <ul class="timeline">
+                    <li class="timeline" ng-repeat="event in event.events track by $index" data-aos="flip-left"
+                        data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
+                        <h6>{{event.name}}</h6>
+                        {{event.date}}
+                        <br>
+                        <br>
+                    </li>
+                </ul>
             </div>
 
             <!-- Modules -->
@@ -126,7 +122,7 @@
                                 <a href="{{path + link.file}}">{{link.text}}</a>
                             </div>
                             <div ng-show="{{link.url !== undefined}}"">
-                                <a href="{{link.url}}" target="_blank">{{link.text}}</a>
+                                <a href=" {{link.url}}" target="_blank">{{link.text}}</a>
                             </div>
                         </div>
                     </div>
@@ -251,8 +247,8 @@
             var eventName = '';
             var url_params = window.location.pathname.split('/');
             var category = url_params[0];
-            
-            while(eventName == '' && url_params.length > 0) {
+
+            while (eventName == '' && url_params.length > 0) {
                 eventName = url_params.pop();
             }
             var path = `${category}/${eventName}/`;
@@ -270,7 +266,7 @@
                 alert(res.data)
             })
 
-            $scope.htmlize  = (htmlstring)=>{
+            $scope.htmlize = (htmlstring) => {
                 return $sce.trustAsHtml(htmlstring);
             }
 
