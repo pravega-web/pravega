@@ -1,45 +1,117 @@
 {
     "name": "Decoherence",
-    "tagline": "A physics excitation.",
-    "description": "<u>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tortor odio, cursus maximus orci ut, gravida tincidunt felis. In hac habitasse platea dictumst. Vivamus in tincidunt urna. Integer imperdiet dolor scelerisque scelerisque facilisis. Cras sed purus sodales, cursus eros aliquet, pellentesque purus. Nulla imperdiet rhoncus porttitor. Etiam auctor libero a facilisis iaculis. Pellentesque nisi sapien, rhoncus aliquam molestie condimentum, laoreet ut arcu. Etiam condimentum pellentesque risus sit amet condimentum. Nullam tincidunt tempus viverra. Nunc vestibulum massa sed enim volutpat tempor. Ut non diam bibendum, fringilla nisi ut, maximus enim. Vestibulum in mi sollicitudin.</u>",
+    "tagline": "A physics excitation",
+    "description": [
+        "Come forward and show your prowess in Physics by competing with students across the country to solve problems through deliberation and critical thinking. Prepare for a battle to the end. ",
+        "This is gonna be intense. This. Is. Decoherence. ",
+        "This is an unique opportunity for any physics enthusiast to showcase their problem solving ability and insight in the subject. The prelims is knocking at the door and this will serve as a gateway to the main Decoherence event! ",
+        "The preliminary round is divided into two rounds - one objective and one subjective. The objective round will serve as a screening round to select teams for the subjective round. We promise that these two rounds themselves will put your abilities to test! ",
+        "Unleash your skills in the Prelims to secure your way into the main event! The event will be full of fun for those who love teasing their minds with new Physics problems, with participants getting the opportunity to present their solutions to leading Physicists in the panel of judges! ",
+        "Sounds interesting? Then don't miss the prelims. ",
+        "<b> Note: Registrations have closed. <br> All the registered participants were mailed with necessary details. Please make sure to check spam folder </b>"
+    ],
     "subevents": [
+        
+    ],
+    "modules": [
         {
-            "name": "name",
-            "startDate": "2021-07-07",
-            "endDate": "2021-07-07",
-            "description": "Description of the first event"
+            "heading": "Eligibility",
+            "content": "High school students to 3rd year UG. Contestants can participate in teams of upto 2 members. <br> Prizes worth 40k, including prizes to winners and few best solution awards. All finalists and award winners will also recieve certificates."
+        },
+        {
+            "heading": "Rules and Regulations",
+            "lists": [
+                {
+                    "header": "Objective Prelims",
+                    "points": [
+                        "30 questions (20 single option correct type and 10 multiple option correct type)",
+                        "Duration: 90 minutes including submission time",
+                        "No late submission allowed. ",
+                        "25 teams will be selected for subjective prelims.",
+                        "For more details (regarding submission procedure, handling of ties, network and other issues etc), refer to rules and regulations document."
+                    ]
+                },
+                {
+                    "header": "Subjective Prelims",
+                    "points": [
+                        "8 questions - 6 theoretical and 2 data analysis type",
+                        "Duration: 18-24 hours. Will be informed well before the round.",
+                        "10 teams will be selected for finals.",
+                        "For more details (regarding submission procesure, rules regarding extension of time etc) refer to rules and regulations document."
+                    ]
+                },
+                {
+                    "header": "Finals",
+                    "points": [
+                        "2 day event. Final plan will be uploaded later. Tentative plan has been presented here",
+                        "Day 1 - Question followed by presentation by the teams in front of judges.",
+                        "Day 2 - Theoretical, computational, experimental design related analysis of one or few questions.",
+                        "For more details, refer to the rules and regulations document."
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Download rules and regulations",
+                    "file": "rules.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Subjective Prelims",
+            "links": [
+                {
+                    "text": "Download subjective prelims question paper",
+                    "file": "subjective_prelims.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Objective Prelims",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "The final list of teams qualifying for the finals is uploaded now. Considering all the issues raised by some of the teams, we have decided to increase number of selections to 30 teams.",
+                        "Based on the poll results, date of the subjective prelims has been fixed on 26th of June (9AM) to 27th of June (9AM). Timings are in IST.",
+                        "There has been several disqualification of grounds of violation of submission protocol. No requests in this regard will be considered. ","10 teams will be selected for finals.",
+                        "No more requests/challenges/queries regarding the objective prelims and the results will be entertained. "
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Objective prelims question paper",
+                    "file": "objective_prelims.pdf"
+                },
+                {
+                    "text": "(Updated) Objective prelims answer key",
+                    "file": "objective_prelims_key.pdf"
+                },
+                {
+                    "text": "(Updated) List of teams qualified for next level",
+                    "file": "prelims_results.pdf"
+                }
+            ]
         }
     ],
-    "updates": [
+    "events": [
         {
-            "date": "2021-07-07T23:22",
-            "updates": "Chin has created this page."
+            "name": "Objective Prelims",
+            "date": "10:00 to 11:30 AM IST on 13th June"
         },
         {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
+            "name": "Subjective Prelims",
+            "date": "9 AM to 9 AM IST the next day (26th to 27th June)"
         },
         {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
+            "name": "Finals",
+            "date": "TBD. During Pravega '21 (July 29 to August 1)"
         }
     ],
-    "orgs": [
-        "Chinmay",
-        "Haritas"
+    "coords": [
+        "Rishik Perugu",
+        "Soumyadeep Bhattacharya"
     ],
-    "email": "info.pravega@gmail.com",
-    "phone": "8073441473"
+    "email": "decoherence.pravega@gmail.com"
 }

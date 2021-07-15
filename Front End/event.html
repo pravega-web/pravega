@@ -26,7 +26,7 @@
     <div class="navbar-fixed">
         <nav class="row">
             <div class="nav-wrapper col s12 pri">
-                <a href="#" class="brand-logo">
+                <a href="/" class="brand-logo">
                     <img style="height: 50px" class="responsive-img" src="/img/pravega/pravega21_logo_trans.png"
                         alt="Logo Image" />
                 </a>
@@ -48,9 +48,7 @@
             <h3 class="center uppercase shiny-lr hide-on-med-and-up" data-aos="fade-left">
                 {{event.name}}
             </h3>
-
-            <h5 class="center subheading frosted shiny-rl lowercase font-monty" data-aos="fade-right"
-                data-aos-delay="300">
+            <h5 class="center subheading frosted shiny-rl font-monty" data-aos="fade-right" data-aos-delay="300">
                 {{event.tagline}}
             </h5>
         </div>
@@ -64,18 +62,75 @@
             <!-- Welcome -->
             <div class="col l12 s12 body" data-aos="fade-right" data-aos-delay="500">
                 <h3>Welcome</h3>
-                <div style="text-align: justify;" ng-bind-html="htmlize(event.description);"></div>
-                <p>We have ane exciting array of {{event.subevents.length}} events.</p>
-                <ol>
-                    <li ng-repeat="sub in event.subevents">
-                        <a ng-href="#{{sub.name}}">{{sub.name}}</a>
-                    </li>
-                </ol>
+                <div ng-repeat="line in event.description">
+                    <div style="text-align: justify" ng-bind-html="htmlize(line);"></div>
+                    <br>
+                </div>
+                <div np-show="{{event.subevents.length > 0}}">
+                    <ol>
+                        <li ng-repeat="sub in event.subevents">
+                            <a ng-href="#{{sub.name}}">{{sub.name}}</a>
+                        </li>
+                    </ol>
+                </div>
             </div>
 
+            <!-- Timeline on mobile -->
+            <div class="col s12 center hide-on-large-only scrollspy">
+                <h4 class="valign-wrapper" data-aos="fade-left" data-aos-delay="300">
+                    Timeline <span class="new badge pulse"></span>
+                </h4>
 
+                <div class="divider"></div>
 
-            <!-- Description -->
+                <ul class="timeline">
+                    <li class="timeline" ng-repeat="event in event.events track by $index" data-aos="flip-left"
+                        data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
+                        <h6>{{event.name}}</h6>
+                        {{event.date}}
+                        <br>
+                        <br>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Modules -->
+            <div class="col l12 s12 body">
+                <div ng-repeat="module in event.modules">
+                    <!-- Heading -->
+                    <h5>{{module.heading}}</h5>
+
+                    <!-- Content -->
+                    <div ng-show="{{module.content !== undefined}}">
+                        <div style="text-align: justify" ng-bind-html="htmlize(module.content)"></div>
+                    </div>
+
+                    <!-- Lists -->
+                    <div ng-show="{{module.lists !== undefined}}">
+                        <div ng-repeat="list in module.lists">
+                            <br>
+                            <b>{{list.header}}</b>
+                            <li ng-repeat="point in list.points">{{point}}</li>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div ng-show="{{module.links !== undefined}}">
+                        <br>
+                        <div ng-repeat="link in module.links">
+                            <div ng-show="{{link.file !== undefined}}">
+                                <a href="{{path + link.file}}">{{link.text}}</a>
+                            </div>
+                            <div ng-show="{{link.url !== undefined}}"">
+                                <a href=" {{link.url}}" target="_blank">{{link.text}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            <!-- Subevents -->
             <div class="col l12 s12 card-panel sl-round" ng-repeat="subevent in event.subevents track by $index"
                 data-aos="fade-up" data-aos-delay="600">
                 <p class="font-monty" style="font-weight: 900;">Event {{$index + 1}}</p>
@@ -105,29 +160,24 @@
             </div>
 
             <!-- Contact -->
-            <div class="col l12 row" data-aos="fade-up">
+            <div class="col l12 s12 row" data-aos="fade-up">
                 <h4 class="col s12">About</h4>
                 <div class="col l3 s6">
                     <h6>
-                        Organizers
+                        Coordinators
                     </h6>
                 </div>
                 <div class="col l3 left s6">
                     <h6>
-                        <li ng-repeat="n in event.orgs">{{n}} <br><br></li>
+                        <li ng-repeat="coord in event.coords">{{coord}} <br><br></li>
                     </h6>
                 </div>
-                <div class="col l3 s6">
+                <div class="col l6 s12">
                     <h6>
-                        Reach out!
+                        Contact
                     </h6>
-                </div>
-                <div class="col l3 s6 left">
                     <h6>
                         <a ng-href="mailto:{{event.email}}" class="" type="mail">{{event.email}}</a>
-                        <br>
-                        <br>
-                        <a ng-href="tel:+91{{event.phone}}">+91{{event.phone}}</a>
                     </h6>
                 </div>
             </div>
@@ -135,27 +185,26 @@
 
         </div>
 
+        <!-- Timeline on Desktop -->
         <div class="col l3">
-            <!-- Updates and Timeline-->
             <div class="col l12 m3 center hide-on-med-and-down scrollspy">
                 <h4 class="valign-wrapper" data-aos="fade-left" data-aos-delay="300">
                     Timeline <span class="new badge pulse"></span>
                 </h4>
 
                 <div class="divider"></div>
+
                 <ul class="timeline">
-                    <li class="timeline" ng-repeat="upd in event.updates track by $index" data-aos="flip-left"
+                    <li class="timeline" ng-repeat="event in event.events track by $index" data-aos="flip-left"
                         data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
-                        <h6>{{upd.date | date: 'dd MMMM - HH:mm'}}</h6>
-                        {{upd.updates}}
+                        <h6>{{event.name}}</h6>
+                        {{event.date}}
                         <br>
                         <br>
                     </li>
                 </ul>
-
             </div>
         </div>
-
     </div>
 
 
@@ -195,7 +244,14 @@
             // Production level event flow
 
             // Get URL parameters to decide page
-            eventName = window.location.pathname.split('/').pop();
+            var eventName = '';
+            var url_params = window.location.pathname.split('/');
+            var category = url_params[0];
+
+            while (eventName == '' && url_params.length > 0) {
+                eventName = url_params.pop();
+            }
+            var path = `${category}/${eventName}/`;
 
             // Call server and get page object
             $http({
@@ -205,20 +261,18 @@
                     "name": eventName
                 }
             }).then((res) => {
-                console.log(res.data);
                 $scope.event = res.data;
-                console.log("Hello");
             }, (res) => {
                 alert(res.data)
             })
 
-            $scope.htmlize  = (htmlstring)=>{
+            $scope.htmlize = (htmlstring) => {
                 return $sce.trustAsHtml(htmlstring);
             }
 
-         
-            // Populate the details
+            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1) + " | Pravega 2021, IISc Bangalore";
         });
+
     </script>
 </body>
 
