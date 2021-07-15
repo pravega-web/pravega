@@ -184,13 +184,6 @@ body {
   }
 }
 
-a {
-  color: black;
-}
-
-a:hover {
-  color: blue;
-}
 
 .event-title {
   font-weight: bold;
