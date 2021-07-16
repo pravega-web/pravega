@@ -11,11 +11,6 @@
         "<b> Note: Registrations have closed. <br> All the registered participants were mailed with necessary details. Please make sure to check spam folder </b>"
     ],
     "subevents": [
-        {
-            "name":"Quiz 1",
-            "startDate":"20210731T2233",
-            "description":"This is the description."
-        }
         
     ],
     "modules": [
