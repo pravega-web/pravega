@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pravega">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,24 +11,81 @@
     <link rel="stylesheet" href="/css/index.css">
 
 </head>
-<body style="background: linear-gradient(to right, #FC5C7D,#6A82FB); min-height: 100vh;">
+
+<body class="cult_menu_body" ng-controller="menuController">
     <div class="container">
         <div class="row" style="margin: 10%;">
             <div class="col l12 center">
-                <h1 class="center">Technical Events</h1>
+                <h1 class="center">{{category}} Events</h1>
             </div>
-            <!-- TODO: align event cards -->
-            <div class="col l6 s12 center responsive-img">
-                <a href=""><img class="event-image" src="/img/technical/hackathon.svg"></a>
+
+            <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
+                <a ng-href="/events/technical/{{evt}}" class="center" style="padding: 10px;">
+                    <img class="responsive-img" src='https://picsum.photos/200' alt="Event Icon Logo" style="padding: 10px;">
+                    <h4 class="black-text">
+                        {{evt}}
+                    </h4>
+                </a>
+                <!-- <a href="/science/decoherence" class="event-title"></a> -->
+            </div>
+            <!-- <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/bioblitz.svg"></a>
                 <br>
-                <a href="" class="event-title">Hackathon</a>
+                <a href="" class="event-title">Bioblitz</a>
             </div>
-            <div class="col l6 s12 center responsive-img">
-                <a href=""><img class="event-image" src="/img/technical/gde.svg"></a>
+            <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/enumeration.svg"></a>
                 <br>
-                <a href="" class="event-title">Gamen'gain</a>
+                <a href="" class="event-title">Enumeration</a>
             </div>
+            <div class="col l6 s12 center">
+                <a href="/science/chemenigma"><img class="event-image" src="/img/science/chemenigma.svg"></a>
+                <br>
+                <a href="/science/chemenigma" class="event-title">Chemenigma</a>
+            </div>
+            <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/quadspark.svg"></a>
+                <br>
+                <a href="" class="event-title">Quadspark</a>
+            </div>
+            <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/wwdd.svg"></a>
+                <br>
+                <a href="" class="event-title">What Would Darwin Do?</a>
+            </div>
+            <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/pis.svg"></a>
+                <br>
+                <a href="" class="event-title">Pravega Innovation Summit</a>
+            </div>
+            <div class="col l6 s12 center">
+                <a href=""><img class="event-image" src="/img/science/whodunnit.svg"></a>
+                <br>
+                <a href="" class="event-title">Whodunnit</a>
+            </div> -->
+            <!-- Removed Astral events altogher because it's logo was very long and caused disalignment -->
         </div>
     </div>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('pravega', []);
+
+        app.controller('menuController', function($scope, $http, $location) {
+            console.log('Menu Controller loaded...');
+
+            $scope.category = 'Technical'
+
+            document.title = $scope.category + ' Events | P21'
+
+            $scope.events = [
+                'Hackathon',
+                "Gamen'gain",
+            ]
+        })
+    </script>
 </body>
+
 </html>
