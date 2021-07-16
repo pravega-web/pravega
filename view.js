@@ -23,7 +23,7 @@ module.exports = (app) => {
   });
 
   // Gameface Front End Serving System
-  app.get("/event/*/:event", (req, res) => {
+  app.get("/events/*/:event", (req, res) => {
     res.sendFile(__dirname+'/Front End/event.html')
   });
 
