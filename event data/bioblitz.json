@@ -1,0 +1,55 @@
+{
+    "name": "BioBlitz",
+    "tagline": "A Dance of Biological Frenzy",
+    "description": [
+        "BioBlitz: a competition curated to cause intellectual shock and intense engrossment in the participants through the use of superior questioning designed to probe both core and frontier areas of Biology.",
+        "Whether you are a biology veteran, a biology enthusiast, a jack-of-all-trades or just curious to explore the interdisciplinary nature of biology, this competition will present challenges and learning opportunities for all. It is a competition that will challenge not only your knowledge but also your perspective of Biology. In short, it is a competition like no other.",
+        "The game is simple: solve questions and prove your calibre. Those who shall pass the prelims shall face a more enigmatic trial: working through challenging problems and defending their analysis not only in front of a panel of subject experts but also other participants.",
+        "Do you dare to step into the Blitz?"
+    ],
+    "subevents": [],
+    "modules": [
+        {
+            "heading" : "Dates",
+            "lists" : [
+                {
+                    "points" : ["Prelims between 2:30 PM to 11:59 PM IST on 30<sup>th</sup> June, 2021",
+                        "Finals: TBD. During Pravega '21 (July 29 - August 1, 2021)"]
+                }
+            ],
+            "links" : [
+                {
+
+                }
+            ]
+        },
+        {
+            "heading": "Eligibility",
+            "lists" : [
+                {
+                    "points" : [
+                        "Students in class 11 and above, till 3<sup>rd</sup> year undergraduates who have not started their 4<sup>th</sup> year yet are eligible.",
+                        "The top five contestants in the Pre-Pravega segment of BioBlitz will be allowed direct lateral entry to the Finals 2021. However, there is a twist here - they will have to participate <b>as individuals, and not as teams.</b>"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Rules and Regulations",
+            "links" : [
+                {
+                    "text" : "Click here to download the detailed rules and regulations",
+                    "file" : "rules.pdf"
+                }
+            ]
+        },
+        {
+            "content" : "Violation of any of the rules mentioned herein or communicated to you later shall lead to penalty, not excluding disqualification."
+        }
+    ],
+    "coords": [
+        "Sukriyo Chakraborty",
+        "Aditya Basu"
+    ],
+    "email": "bioblitz.pravega@gmail.com"
+}
