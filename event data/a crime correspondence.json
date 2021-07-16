@@ -2,44 +2,45 @@
     "name": "A Crime Correspondence",
     "tagline": "A biological mystery",
     "description": [
-        "Whodunnit is an online mystery-solving game organized by Pravega'21. Groups of students would be given to solve a crime with the help of online clues in the form of pdfs, text files, voice and video recordings, online interrogation etc. This game promises to challenge your deductive reasoning, interrogation and observation skills. We look forward to bringing together teams of budding investigators and to give them a taste of crime-solving in a digital age. "
+        "Gruesome murders, foolproof schemes, perplexing clues, multiple suspects and more awaits you and your team at the Farleigh House in Cheltenham. A crime correspondence is much more than a murder mystery event. To all the fans of crime, mystery books and genius detective stories, ACC provides you the unique opportunity to solve a crime by interrogating all the various suspects in real time. Asking the right questions, avoiding the clever lies and deceit, and keeping your wits' about you as you delve deeper into the devious crime will help you in figuring out the chronology and concreteness of what actually happened on the fateful day."    
     ],
     "subevents": [
 
     ],
     "modules": [
         {
-            "heading": "Date and Time",
-            "content": "30<sup>th</sup> July 9:00 AM to 1<sup>st</sup> August 9:00 AM"
-        },
-        {
-            "heading": "Limit on number of teams",
-            "content": "There is an upper limit of 30 groups that will be participating in the game. The groups will be allowed to register and will be allocated a unique group number on a first come , first serve basis. "
-        },
-        {
             "heading": "Eligibility",
-            "content": "Any student from any university/school below the age of 27 is welcome to participate."
+            "content": "Anyone and everyone can participate. It is a team event. Teams can contain between 2 to 4 members."
         },
         {
-            "heading": "Rules and Regulations",
-            "content": "General rules, and rules concerning formation of teams are given in the following document:",
+            "heading": "Registration",
+            "content": "Due to logistic considerations, we can only accept a <b>limited number of teams on a first come, first serve basis.</b> The registration will close as soon as the required number is reached, so kindly register at the earliest.",
             "links": [
                 {
-                    "text": "Click here to download",
-                    "file": "rules.pdf"
+                    "text":"Click here to register",
+                    "url": "https://forms.office.com/pages/responsepage.aspx?id=l80Vb6f240Gyxa1Bk5dkdpeEq5W3AltIj-sDeC4hEcNUNTU1S043MlVaMFhVOFM3QUZRV1gzVVo3UC4u"
+                },
+                {
+                    "text": "Click here to download terms and conditions",
+                    "file": "ACC TnC.pdf"
                 }
             ]
+        },
+        {
+            "heading": "Prizes",
+            "content": "The total prize pool is worth 10k INR. Prizes will be awarded to the first 3 teams."
         }
     ],
     "events": [
         {
             "name": "Main Event",
-            "date": "30th July 9:00 AM to 1st August 9:00 AM IST"
+            "date": "July 30 & 31"
         }
     ],
     "coords": [
-        "Rishik Perugu",
-        "Soumyadeep Bhattacharya"
+        "Daksh Sisodia",
+        "Aranya Chakraborty"
     ],
-    "email": "decoherence.pravega@gmail.com"
+    "email": "",
+    "phone": "9993545458"
 }
