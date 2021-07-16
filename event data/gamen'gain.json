@@ -1,0 +1,97 @@
+{
+    "name": "Gamen'gain",
+    "tagline": "The Game Dev Fest",
+    "description": [
+        "We are really happy to announce that this event is our newest addition to the pool of events, starting from this year. If you have ever participated in an online game-jam, the principles are exactly the same. This is a 48-hour game making marathon, focused on design, mechanics, and clever ideas. ",
+        "Like in every game-jam, there will be a particular theme (which will be announced at the time of the event) and a specific span of time. You have to make a game based upon that theme. Simple, right? ",
+        "After building the game, submit it through the appropriate portal, and they will be played, evaluated, and the winners will be decided by the judges. ",
+        "You are required to create your own itch.io account and join the game jam through the link provided below. This is where the jam is being hosted and joining it is mandatory for participation.",
+        "<a target='_blank' href='https://forms.gle/W7HXbLC4jprRioYE8'><b>Click here to register!</b></a> <br> <br> <a target='_blank' href='https://itch.io/jam/gamengain'><b>Link to join Game Jam</b></a>"
+    ],
+    "subevents": [
+
+    ],
+    "modules": [
+        {
+            "heading": "Rules and Regulations",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "It is going to be a team event. Maximum FOUR participants are to be on each team.",
+                        "TWO days will be given to each team for creating and submitting the game. This is a hard deadline. No request for extension will be entertained.",
+                        "The event is starting on 30th July at 10:00 AM IST and will be over on 1st August at 10:00 AM",
+                        "This is an online event. So, every instruction and results will be given online on the website of the event. For any query, please feel free to mail to the official email address of game development event",
+                        "The judgement of the judges are absolute, but you can ask to reconsider only if the game was submitted incomplete. "
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Prizes",
+            "content": "<p>There are 3 prizes with a chance to win up to <b>15,000/- per team</b>.</p> <ul style='list-style-type: none;''>     <li><b>1st prize:</b> 15000 INR</li>     <li><b>2nd prize:</b> 10000 INR</li>     <li><b>3rd prize:</b> 5000 INR</li> </ul> <p>     The prizes will be awarded based on these Key Performance Indicators of the     games: </p> <ol>     <li>Aesthetics (Color, Audio)</li>     <li>Gameplay</li>     <li>How well the theme was utilized</li> </ol> <p>     The winners will also be given a certificate of winning in the game development     event in “Pravega”, the annual cultural fest of IISc Bangalore. All the participants     will also be provided a certificate of participation. </p>"
+        },
+        {
+            "heading": "Execution of the Event",
+            "lists": [
+                {
+                    "header": "The event will be hosted on itch.io website:",
+                    "points": [
+                        "All participant team have to apply online on the event page of Pravega providing the names of the individuals, email-id, and the itch.io account name. Online application portal is here, (Registration is free) ",
+                        "It is compulsory to give their email ID for their identification. After that, their entry passes will be provided. Registration on itch.io will start from 1st July, 12:00 PM.",
+                        "At 9.00 AM on the day of the event i.e. on 30th July, the participants will be notified of the theme, and they can start building the game after that",
+                        "Participants can use any game engine as of their choices. *Recommended: Godot (as it is free and open source). Although, the judgement will not be based upon the engine used.",
+                        "After the time is over, additional 30 minutes will be provided to submit the game to proper space in proper format (WebGL). For reference, see this video",
+                        "The judge will evaluate each game and give credit for each portion. Then the winners will be announced.",
+                        "The winners will be announced on the official Pravega website (here) as well as on itch.io website."
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Words of advise",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "The only “real” rule is that your game must not include any content that is NSFW, or offensive/discriminatory to others. We want games to be playable by everyone, after all!",
+                        "Other than that, feel free to use any game engine or framework that you like! You can also use assets that were not made by you, but make sure that you have the rights to use them. You can, of course, make everything yourself and be extra proud at the end!",
+                        "The games will be rated in the categories of Aesthetics, Gameplay, innovation and well use of theme. This is a wide variety of game development aspects, so don't worry if you can't hit all of them perfectly! Try to be creative and stick to the theme, though!"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "FAQ",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "<b>Who can enter?</b> <br> Anyone who is a student under 26 years old . You can work alone or in teams. ",
+                        "<b>When does the jam begin?</b> <br> The jam starts on July 30th, at 10:00 AM. And it ends on August 1st, at 10:00 AM. ",
+                        "<b>What is the theme?</b> <br> The theme will be announced 1-hour before the game jam. ",
+                        "<b>What can I make my game in?</b> <br> Anything, provided you can upload a file that runs on Windows or browsers. ",
+                        "<b>What assets can I use?</b> <br> The game should be developed during the jam, but you may use some pre-existing code and can use whatever art and audio assets you have the legal right to use. ",
+                        "<b>Who will judge the games?</b> <br> Games will be judged by us, the students of IISc. All the results will be revealed when this process is over. ",
+                        "<b>What will the games be judged on?</b> <br> Games will be ranked against the following criteria: Aesthetics, Gameplay, and well use of the theme. "
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Contacts",
+            "content": "Always stay updated through the official website of Pravega (this). You can always reach us by the email gde.pravega@gmail.com. So, if you have any questions about the event, mail us at the earliest. Peace! "
+        }
+    ],
+    "events": [
+        {
+            "name": "Main Event",
+            "date": "30th July at 10:00 AM IST to 1st August at 10:00 AM"
+        }
+    ],
+    "coords": [
+        "Sayan Roy",
+        "Sourajyoti Biswas"
+    ],
+    "email": "gde.pravega@gmail.com"
+}
