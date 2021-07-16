@@ -110,7 +110,9 @@
                         <div ng-repeat="list in module.lists">
                             <br>
                             <b>{{list.header}}</b>
-                            <li ng-repeat="point in list.points">{{point}}</li>
+                            <li ng-repeat="point in list.points">
+                                <div style="text-align: justify" ng-bind-html="htmlize(point)"></div>
+                            </li>
                         </div>
                     </div>
 
@@ -198,7 +200,7 @@
                     <li class="timeline" ng-repeat="event in event.events track by $index" data-aos="flip-left"
                         data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
                         <h6>{{event.name}}</h6>
-                        {{event.date}}
+                        <div ng-bind-html="htmlize(event.date)">{{event.date}}</div>
                         <br>
                         <br>
                     </li>
