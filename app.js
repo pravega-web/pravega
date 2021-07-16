@@ -17,7 +17,7 @@ require('dotenv').config();
 var AWS = require('aws-sdk');
 
 // Static folders to serve
-app.use(express.static(__dirname + "/public/"));
+app.use(express.static(__dirname + "/public/old_front_end"));
 
 // Middleware
 app.use(express.json());
@@ -83,7 +83,7 @@ function server() {
    */
 
 
-  app.use('/', express.static('GameFace'))
+  // app.use('/', express.static('GameFace'))
 
   // Testing new Website
   // app.use('/', express.static('GameFace'))

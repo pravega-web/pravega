@@ -122,9 +122,9 @@
         <section class="body-content">
 
             <section class="page-title dark">
-                <img src="../../img/pravega21_logo_trans.png"
-                    style='position:absolute!important; top:15px !important; left:15px !important; z-index: 1000 !important;'
-                    width='8%' height='' alt='' />
+                <a href="../../index.html"><img src="../../img/pravega21_logo.svg"
+                        style='position:absolute!important; top:15px !important; left:15px !important; z-index: 1000 !important;'
+                        width='8%' height='' alt='pravega-logo' /></a>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -171,7 +171,8 @@
                                     <br>
                                     <div id="banner" style="display: none;">
                                         <center>
-                                            <b>Subject Prelims is in session and will conclude at 9 AM IST on 27th June.<br>
+                                            <b>Subject Prelims is in session and will conclude at 9 AM IST on 27th
+                                                June.<br>
                                                 Click
                                                 <a href="#subjective-prelims">here</a> to access it</b>
                                         </center>
@@ -289,15 +290,6 @@
                                     <hr>
                                     <br>
 
-                                    <div id="subjective-prelims">
-                                        <h3>Subjective Prelims</h3>
-                                        <br>
-                                        <div id="qp-link" style="display: none;">
-                                            <a href="decoherence/Decoherence_Subjective_prelims.pdf"><b>Click here to
-                                                    download the question paper</b></a>
-                                        </div>
-                                    </div>
-
                                     <br>
                                     <div id="form-link" style="display: none;">
                                         <a target="_blank"
@@ -377,7 +369,43 @@
                                         </div>
                                     </div>
                                     <br>
+                                    <hr>
+                                    <br>
 
+                                    <h3>Subjective Prelims</h3>
+                                    <br>
+                                    <a href="decoherence/Decoherence_Subjective_prelims.pdf">Click here to
+                                            download the question paper</a> <br>
+                                    <a href="decoherence/Prelims_Subjective_results.pdf"><b>(New)</b> View results of subjective prelims</a>
+                                    <br>
+                                    <hr>
+                                    <br>
+
+                                    <h3>Finals</h3>
+                                    <ol style="list-style-type: decimal;">
+                                        <li> The tentative schedule for the Decoherence Finals is as follows:
+                                            <ol style="list-style-type: lower-latin;">
+                                                <li>29th July 2021 - A Subjective question paper will be given to all
+                                                    the finalists which contains questions involving theoretical,
+                                                    computational, experimental design related analysis of one or few
+                                                    questions. Duration of this round is 24 hours.
+                                                </li>
+                                                <li>
+                                                    1st August 2021 - Top 5 teams will be selected for this round.
+                                                    Selected teams are expected to present their solutions to a panel of
+                                                    judges.
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            Please note that the older plan of 2 day event for finals is replaced by the
+                                            above plan.
+                                        </li>
+                                        <li>
+                                            Exact timings and details of the presentation round on 1st August, Panel of
+                                            judges shall be informed to all the finalists in due time.
+                                        </li>
+                                    </ol>
 
                                     <ul class=" portfolio-meta m-bot-30">
                                         <li><span>Category</span> Science</li>
@@ -399,13 +427,13 @@
 
                                     let now = Date.now();
 
-                                    if(new Date(2021, 05, 26, 08, 59, 00) < now && now < new Date(2021, 05, 27, 9, 00, 00)) {
+                                    if (new Date(2021, 05, 26, 08, 59, 00) < now && now < new Date(2021, 05, 27, 9, 00, 00)) {
                                         banner.style.display = "block";
                                     }
-                                    if(new Date(2021, 05, 26, 08, 59, 00) < now) {
+                                    if (new Date(2021, 05, 26, 08, 59, 00) < now) {
                                         qp_link.style.display = "block";
                                     }
-                                    if(new Date(2021, 05, 26, 08, 59, 00) < now && now < new Date(2021, 05, 27, 12, 00, 00)) {
+                                    if (new Date(2021, 05, 26, 08, 59, 00) < now && now < new Date(2021, 05, 27, 12, 00, 00)) {
                                         form_link.style.display = "block";
                                     }
 
