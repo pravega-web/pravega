@@ -23,14 +23,14 @@ module.exports = (app) => {
   });
 
   // Gameface Front End Serving System
-  app.get("/event/:event", (req, res) => {
+  app.get("/event/*/:event", (req, res) => {
     res.sendFile(__dirname+'/Front End/event.html')
   });
 
   // Data for gameface
   app.get('/api/event/data', (req, res)=>{
     console.log(req.query);
-    res.sendFile(__dirname + '/event data/' + req.query.name + '.json');
+    res.sendFile(__dirname + '/event data/' + decodeURI(req.query.name) + '.json');
   })
 
   // About Us and Contact (Plus Legal)

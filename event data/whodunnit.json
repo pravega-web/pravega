@@ -1,0 +1,45 @@
+{
+    "name": "Whodunnit",
+    "tagline": "A biological mystery",
+    "description": [
+        "Whodunnit is an online mystery-solving game organized by Pravega'21. Groups of students would be given to solve a crime with the help of online clues in the form of pdfs, text files, voice and video recordings, online interrogation etc. This game promises to challenge your deductive reasoning, interrogation and observation skills. We look forward to bringing together teams of budding investigators and to give them a taste of crime-solving in a digital age. "
+    ],
+    "subevents": [
+
+    ],
+    "modules": [
+        {
+            "heading": "Date and Time",
+            "content": "30<sup>th</sup> July 9:00 AM to 1<sup>st</sup> August 9:00 AM"
+        },
+        {
+            "heading": "Limit on number of teams",
+            "content": "There is an upper limit of 30 groups that will be participating in the game. The groups will be allowed to register and will be allocated a unique group number on a first come , first serve basis. "
+        },
+        {
+            "heading": "Eligibility",
+            "content": "Any student from any university/school below the age of 27 is welcome to participate."
+        },
+        {
+            "heading": "Rules and Regulations",
+            "content": "General rules, and rules concerning formation of teams are given in the following document:",
+            "links": [
+                {
+                    "text": "Click here to download",
+                    "file": "rules.pdf"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Main Event",
+            "date": "30th July 9:00 AM to 1st August 9:00 AM IST"
+        }
+    ],
+    "coords": [
+        "Navin Vincent",
+        "Ashfakh Ali"
+    ],
+    "email": "whodunnit.pravega2021@gmail.com"
+}
