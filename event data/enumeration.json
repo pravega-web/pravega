@@ -1,0 +1,47 @@
+{
+    "name": "Enumeration",
+    "tagline": "",
+    "description": [
+        "An event for all the math-heads out there! Enumeration is a competition to test a set of abilities including but not limited to mathematical and logical reasoning, deduction and analysis etc. In addition to problem solving, this event requires you to constitute claims and support them with convincing arguments. As an overall test of your skills as a reliable mathematician, Enumeration is a platform to put your abilities under examination. Don't miss this unique event that is sure to kindle an excitement towards math while simultaneously allowing you to develop a different approach towards the field!"
+    ],
+    "subevents": [
+    ],
+    "modules": [
+        {
+            "links":[
+                {
+                    "text": "View the solutions to the enumeration prelims contest",
+                    "file": "Enumeration_Prelim_Solutions.pdf"
+                },
+                {
+                    "text": "Click here to view the rules and regulations",
+                    "file": "EnumerationRules.pdf"
+                }
+            ]
+            
+        },
+        {
+            "heading":"Eligibility",
+            "content":"High school students to 4th year UG. Contestants can participate in teams of upto 2 members."
+        },
+        {
+            "heading": "Prizes",
+            "content": "Top 3 finalists will get cash prizes worth 15k in total. All finalists will also receive a certificate of appreciation."
+        }
+    ],
+    "events": [
+        {
+            "name": "Prelims",
+            "date": "June 19"
+        },
+        {
+            "name": "Finals",
+            "date": "TBD. During Pravega 2021(July 29 - August 1)"
+        }
+    ],
+    "coords": [
+        "Sai Sanjeev Balakrishnan",
+        "Anish Shripad Hebbar"
+    ],
+    "email": "enumeration.pravega@gmail.com"
+}
