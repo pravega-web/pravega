@@ -1,45 +1,62 @@
 {
     "name": "Chemenigma",
     "tagline": "A chemistry frothing.",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tortor odio, cursus maximus orci ut, gravida tincidunt felis. In hac habitasse platea dictumst. Vivamus in tincidunt urna. Integer imperdiet dolor scelerisque scelerisque facilisis. Cras sed purus sodales, cursus eros aliquet, pellentesque purus. Nulla imperdiet rhoncus porttitor. Etiam auctor libero a facilisis iaculis. Pellentesque nisi sapien, rhoncus aliquam molestie condimentum, laoreet ut arcu. Etiam condimentum pellentesque risus sit amet condimentum. Nullam tincidunt tempus viverra. Nunc vestibulum massa sed enim volutpat tempor. Ut non diam bibendum, fringilla nisi ut, maximus enim. Vestibulum in mi sollicitudin.",
-    "subevents": [
+    "description": [
+        "A competition that tests your calibre in Chemistry through thought-provoking questions that demand knowledge coupled with creativity. Enjoy yourselves and compete with students across the country while displaying your skills and ingenuity in solving problems.",
+        "Prove that you are among the best in the Prelims to qualify for the Finals!",
+        "The Final event will truly bring out the Enigma of Chemenigma. The finalists would have to work their way through challenging problems that may or may not have known solutions with the exciting opportunity to present and defend their work in front of leading Chemists in the panel of judges!"
+    ],
+    "subevents": [],
+    "modules": [
         {
-            "name": "name",
-            "startDate": "2021-07-07",
-            "endDate": "2021-07-07",
-            "description": "Description of the first event"
+            "heading" : "Dates",
+            "lists" : [
+                {
+                    "points" : ["Prelims: 2:00 PM - 10:00 PM IST, 29th June, 2021",
+                        "Finals: TBD. During Pravega '21 (July 29 - August 1, 2021)"]
+                }
+            ],
+            "links" : [
+                {
+                    "text" : "Download the Prelims Question paper",
+                    "file" : "Chemenigma_Prelims_2021.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Eligibility",
+            "content": "Students in class 11 or above (till 2nd year UG) and have not started their 3rd year of UG are eligible. Teams may have at most two participants. Individual participation is allowed."
+        },
+        {
+            "heading" : "Prizes",
+            "content" : "Cash Prizes over 30K for winners and certificates for all finalists."
+        },
+        {
+            "heading": "Rules and Regulations",
+            "lists": [
+                {
+                    "header": "Prelims:",
+                    "points" : ["8 - 10 Objective questions and 5 - 6 subjective questions",
+                                "Duration: 4 hours including submission time",
+                                "No late submission will be entertained",
+                                "6 best teams will be selected for the Finals."]
+                },
+                {
+                    "header" : "Finals:",
+                    "points" : ["Details will be updated soon."]
+                }
+            ],
+            "links" : [
+                {
+                    "text" : "Click here to download the detailed rules and regulations",
+                    "file" : "rules.pdf"
+                }
+            ]
         }
     ],
-    "updates": [
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Chin has created this page."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        },
-        {
-            "date": "2021-07-07T23:22",
-            "updates": "Oooh, this is an update."
-        }
+    "coords": [
+        "Anubhav Goswani",
+        "Anwesha Guha"
     ],
-    "orgs": [
-        "Chinmay",
-        "Haritas"
-    ],
-    "email": "info.pravega@gmail.com",
-    "phone": "8073441473"
+    "email": "chemenigma.pravega@gmail.com"
 }
