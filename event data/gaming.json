@@ -1,0 +1,34 @@
+{
+    "name": "Gaming",
+    "tagline": "The Game is On!",
+    "description": [
+        "Are you the kind of gamer who makes fast decisions on their feet? Or are you the calculating kind who peers into the future before each move? Either way, we've got your backs covered at Pravega: Recreation with a truck load of rewards- filled-fun in the form of two events: ",
+        "<ul> <li><b>Bishops Before Knights:</b> an exciting chess tournament. <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLScFrUw7YZmRpjM1Zdu7OB-nTUjPDC-gEFAEnnwE4Ip9Tds-Cw/viewform?vc=0&c=0&w=1&flr=0'>click here to register</a> </li> <li><b>Battlegrounds Mobile India:</b> a thrilling BGMI competition. <a href='https://forms.gle/dB9Zoi6fcPrCZEpM7' target='_blank'>click here to register</a> </li> </ul>"
+    ],
+    "subevents": [
+
+    ],
+    "modules": [
+        {
+            "heading": "Bishops Before Knights",
+            "content": "",
+            "links": [
+                {
+                    "text": "Download rules and regulations",
+                    "file": "rules BBK.pdf"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Main Event",
+            "date": "30th July 9:00 AM to 1st August 9:00 AM IST"
+        }
+    ],
+    "coords": [
+        "Navin Vincent",
+        "Ashfakh Ali"
+    ],
+    "email": "whodunnit.pravega2021@gmail.com"
+}

@@ -119,10 +119,10 @@
                         <br>
                         <div ng-repeat="link in module.links">
                             <div ng-show="{{link.file !== undefined}}">
-                                <a href="{{path + link.file}}">{{link.text}}</a>
+                                <a ng-href="{{path}}{{link.file}}">{{link.text}}</a>
                             </div>
                             <div ng-show="{{link.url !== undefined}}"">
-                                <a href=" {{link.url}}" target="_blank">{{link.text}}</a>
+                                <a ng-href=" {{link.url}}" target="_blank">{{link.text}}</a>
                             </div>
                         </div>
                     </div>
@@ -246,12 +246,16 @@
             // Get URL parameters to decide page
             var eventName = '';
             var url_params = window.location.pathname.split('/');
-            var category = url_params[0];
+            console.log(url_params);
+
+            var category = url_params[2];
 
             while (eventName == '' && url_params.length > 0) {
                 eventName = url_params.pop();
             }
-            var path = `${category}/${eventName}/`;
+            $scope.path = `/${category}/${eventName}/`;
+
+            console.log($scope.path);
 
             // Call server and get page object
             $http({
