@@ -22,7 +22,7 @@
             <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
                 <a ng-href="/events/science/{{evt}}" class="center" style="padding: 10px;">
                     <img class="responsive-img" ng-src="/img/science/{{evt}}.svg" alt="Event Icon Logo" style="padding: 10px;">
-                    <h4>
+                    <h4 class="black-text">
                         {{evt}}
                     </h4>
                 </a>
@@ -75,6 +75,10 @@
 
         app.controller('menuController', function($scope, $http, $location) {
             console.log('Menu Controller loaded...');
+
+            $scope.category = 'Science'
+
+            document.title = $scope.category + ' Events | Pravega 2021'
 
             $scope.events = [
                 'Decoherence',

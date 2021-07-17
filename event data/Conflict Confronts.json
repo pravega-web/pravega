@@ -6,9 +6,7 @@
         "Honoring those whose imagination runs along with a dogged perseverance has paved the way to build the world that we know today. Pravega presents to you ‘Conflict Confronts’, a stage for you to take a stand on topics that are set to change the course of human civilization and to showcase your critical thinking; a stage for scientific debate like never before in the largest science fest in India.",
         "Are you ready to hold your ground, put into use your scientific aptitude to tackle problems and race against the ticking clock?"
     ],
-    "subevents": [
-        
-    ],
+    "subevents": [],
     "modules": [
         {
             "heading": "Eligibility Criteria",
@@ -16,9 +14,7 @@
         },
         {
             "heading": "Prelims",
-            "content": ["The participants are free to choose a topic of their choice as long as it abides by requirements( mentioned in the next para ), record a video of themselves speaking about the side they choose to stand for at most 2 minutes and 15 seconds, and upload it in the registration form.",
-                         "The topics chosen must be science-based and can be arguable. Some examples are:"
-            ],
+            "content": "The participants are free to choose a topic of their choice as long as it abides by requirements( mentioned in the next para ), record a video of themselves speaking about the side they choose to stand for at most 2 minutes and 15 seconds, and upload it in the registration form. <br> The topics chosen must be science-based and can be arguable. Some examples are:",
             "lists": [
                 {
                     "header": "",
@@ -69,13 +65,16 @@
     "events": [
         {
             "name": "Prelims",
-            "date": "1 July, 2021, End on 16 July 2021"
+            "date": "1<sup>st</sup> July to 16<sup>th</sup> July, 2021"
         },
         {
             "name": "Finals",
             "date": "End of July (tentatively)"
         }
     ],
-    "coords": ["Lakshmi MS"],
+    "coords": [
+        "Lakshmi MS",
+        "Suryansh Srivastav"
+    ],
     "email": "conflictconfronts.pravega@gmail.com"
 }

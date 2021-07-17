@@ -275,7 +275,7 @@
                 return $sce.trustAsHtml(htmlstring);
             }
 
-            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1) + " | Pravega 2021, IISc Bangalore";
+            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1).replace("%20", " ") + " | Pravega 2021, IISc Bangalore";
         });
 
     </script>

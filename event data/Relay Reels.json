@@ -1,5 +1,5 @@
 {
-    "name": "---(small)---Proscenium anf Footprints presents, (BIG) Relay Reels",
+    "name": "Relay Reels",
     "tagline": "SOMETHING EVEN MORE GOOFY AND COOL",
     "description": [
         "Yes, we’re serious. This is indeed a Play competition, under the COVID-19 restrictions. Do not fret, we are not forcing you to break any social distancing guideline, nor are we preventing you from having the best Pravega experience that you had hoped for. We, actually, have something far better in the box.",
@@ -11,10 +11,10 @@
     ],
     "modules": [
         {
-            "heading": "",
+            "heading": "Rules and Eligibility",
             "lists": [
                 {
-                    "header": "Rules and Eligibility",
+                    "header": "",
                     "points": [
                         "Participants are supposed to enact a skit/play corresponding to any chosen theme of their own in 8-10 min.",
                         "Participants must form a group of 5 – 8 members",
@@ -23,12 +23,35 @@
                     ]
                 }
             ]
+        },
+        {
+            "heading": "Awards",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "Winners will be chosen on the basis of number of likes and views on our YouTube channel as well as by the panel of judges of Pravega. YouTube likes will constitute 30% weightage and the rest of the weightage lies on the decision of the judging panel. ",
+                        "Three winners will be declared: The prize money distribution would be as follows: First – 15000 INR + Pravega E-Certificates + Shout-outs Second – 10000 INR + Pravega E-Certificates + Shout-outs Third – 5000 INR + Pravega E-Certificates + Shout-outs ",
+                        "The winners in above three categories will be chosen solely by the panel of judges of Pravega. The winners will receive shoutouts and E-certificates. "
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Click here to register",
+                    "url": "https://docs.google.com/forms/d/e/1FAIpQLSd2YzOrbmBV9-e8U_zDfyfL03yZVf5I7GmF8I9MqWd8-Icriw/viewform"
+                },
+                {
+                    "text": "View Terms and Conditions",
+                    "file": "Relay_Reels_T&C.pdf"
+                }
+            ]
         }
     ],
     "events": [
         {
-            "name": "Submissions open till",
-            "date": "27 July"
+            "name": "Deadline for submission",
+            "date": "27<sup>th</sup> July"
         }
     ],
     "coords": [
