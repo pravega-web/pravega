@@ -11,17 +11,7 @@
     "modules": [
         {
             "heading": "Bishops Before Knights",
-            "content": "The rules given below, and any that will be communicated later on, are to be followed strictly, violation of which shall lead to a penalty, that may result in disqualification. <br> <br> <b>No registration fees</b> <br> <b>Eligibility:</b> Open to all <br> <b>Date:</b> 26<sup>th</sup> to 31<sup>st</sup> July, 2021 ",
-            "lists": [
-                {
-                    "header": "Timeline",
-                    "points": [
-                        "Round 1: 26th July at 4 PM IST",
-                        "Round 2: 28th and 29th July",
-                        "Finals: 31st July"
-                    ]
-                }
-            ],
+            "content": " <b>No registration fees</b> <br> <b>Eligibility:</b> Open to all <br> <br> The rules given below, and any that will be communicated later on, are to be followed strictly, violation of which shall lead to a penalty, that may result in disqualification.",
             "links": [
                 {
                     "text": "Download rules and regulations",
@@ -31,7 +21,7 @@
         },
         {
             "heading": "Battlegrounds Mobile India",
-            "content": "<b>No registration fees</b> <br> <b>Eligiblity:</b> Open to all <br> <b>Prelims:</b> 26<sup>th</sup> and 27<sup>th</sup> July <br> <b>Finals:</b> 31<sup>st</sup> July <br> <b>Last date to register:</b> 22<sup>nd</sup> July, 2021 <br> <br> The rules mentioned here, and any that will be communicated later on, are to be followed strictly, violation of which shall lead to a penalty, that may result in disqualification. ",
+            "content": "<b>No registration fees</b> <br> <b>Eligiblity:</b> Open to all <br> <br> The rules mentioned here, and any that will be communicated later on, are to be followed strictly, violation of which shall lead to a penalty, that may result in disqualification. ",
             "links": [
                 {
                     "text": "Download rules and regulations",
@@ -47,11 +37,11 @@
     "events": [
         {
             "name": "Bishops before Knights",
-            "date": "26th to 31st July, 2021"
+            "date": "Round 1: 26<sup>th</sup> July at 4 PM IST <br> Round 2: 28<sup>th</sup> and 29<sup>th</sup> July <br> Finals: 31<sup>st</sup> July "
         },
         {
             "name": "Battlegrounds Mobile India",
-            "date": "26th to 31st July, 2021"
+            "date": "Last date to register: 22<sup>nd</sup> July <br> Prelims: 26<sup>th</sup> and 27<sup>th</sup> July <br> Finals: 31<sup>st</sup> July"
         }
     ],
     "coords": [

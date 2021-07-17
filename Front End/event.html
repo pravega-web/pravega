@@ -31,9 +31,8 @@
                         alt="Logo Image" />
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                    <li><a ng-href="/../../{{category}}/menu.html">{{category.charAt(0).toUpperCase() + category.slice(1)}} Events</a></li>
+                    <li><a href="/../../#launchpad">Launchpad</a></li>
                 </ul>
             </div>
         </nav>
@@ -261,16 +260,13 @@
             // Get URL parameters to decide page
             var eventName = '';
             var url_params = window.location.pathname.split('/');
-            console.log(url_params);
 
-            var category = url_params[2];
+            $scope.category = url_params[2];
 
             while (eventName == '' && url_params.length > 0) {
                 eventName = url_params.pop();
             }
-            $scope.path = `/${category}/${eventName}/`;
-
-            console.log($scope.path);
+            $scope.path = `/${$scope.category}/${eventName}/`;
 
             // Call server and get page object
             $http({

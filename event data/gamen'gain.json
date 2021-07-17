@@ -21,7 +21,7 @@
                         "It is going to be a team event. Maximum FOUR participants are to be on each team.",
                         "TWO days will be given to each team for creating and submitting the game. This is a hard deadline. No request for extension will be entertained.",
                         "The event is starting on 30th July at 10:00 AM IST and will be over on 1st August at 10:00 AM",
-                        "This is an online event. So, every instruction and results will be given online on the website of the event. For any query, please feel free to mail to the official email address of game development event",
+                        "This is an online event. So, every instruction and results will be given online on the website of the event. For any query, please feel free to mail to the official email address of game development event: <a href='mailto: gde.pravega@gmail.com'> gde.pravega@gmail.com </a>",
                         "The judgement of the judges are absolute, but you can ask to reconsider only if the game was submitted incomplete. "
                     ]
                 }
@@ -37,11 +37,11 @@
                 {
                     "header": "The event will be hosted on itch.io website:",
                     "points": [
-                        "All participant team have to apply online on the event page of Pravega providing the names of the individuals, email-id, and the itch.io account name. Online application portal is here, (Registration is free) ",
+                        "All participant team have to apply online on the event page of Pravega providing the names of the individuals, email-id, and the itch.io account name. Online application portal is <a href='https://forms.gle/W7HXbLC4jprRioYE8'> here </a>, (Registration is free) ",
                         "It is compulsory to give their email ID for their identification. After that, their entry passes will be provided. Registration on itch.io will start from 1st July, 12:00 PM.",
                         "At 9.00 AM on the day of the event i.e. on 30th July, the participants will be notified of the theme, and they can start building the game after that",
                         "Participants can use any game engine as of their choices. *Recommended: Godot (as it is free and open source). Although, the judgement will not be based upon the engine used.",
-                        "After the time is over, additional 30 minutes will be provided to submit the game to proper space in proper format (WebGL). For reference, see this video",
+                        "After the time is over, additional 30 minutes will be provided to submit the game to proper space in proper format (WebGL). For reference, see <a href='https://www.youtube.com/watch?v=cQ8KcwOIXVE&feature=youtu.be'> this video </a>",
                         "The judge will evaluate each game and give credit for each portion. Then the winners will be announced.",
                         "The winners will be announced on the official Pravega website (here) as well as on itch.io website."
                     ]
@@ -80,7 +80,7 @@
         },
         {
             "heading": "Contacts",
-            "content": "Always stay updated through the official website of Pravega (this). You can always reach us by the email gde.pravega@gmail.com. So, if you have any questions about the event, mail us at the earliest. Peace! "
+            "content": "Always stay updated through the official website of Pravega (this). You can always reach us by the email <a href='mailto: gde.pravega@gmail.com'> gde.pravega@gmail.com </a>. So, if you have any questions about the event, mail us at the earliest. Peace! "
         }
     ],
     "events": [

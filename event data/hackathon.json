@@ -3,21 +3,12 @@
     "tagline": "{tagline: event.get(tag)}",
     "description": [
         "Pravega Hackathon is back with new challenges for the coding enthusiasts. Get ready to unleash your problem-solving skills and critical thinking and come up with unique and innovative solutions to some of the current problems. The battle has started, just delve into the nation-wide contest and showcase your skills.",
-        "You need to work on any of these two themes:<ul> <li>Dealing with breakdown of healthcare system and economy of a country affected by a pandemic, such as COVID 19. <li> Dealing with natural disasters (for example cyclones like Yaas, Amphan, Tauktae, etc) and its aftermath.</ul>",
+        "You need to work on any of these two themes:<ul> <li> 1) Dealing with breakdown of healthcare system and economy of a country affected by a pandemic, such as COVID 19. </li> <li> 2) Dealing with natural disasters (for example cyclones like Yaas, Amphan, Tauktae, etc) and its aftermath. </li> </ul>",
         "For the prelims, you need to present computational problems and the respective solutions on the basis of which government or other authorities will make their policies for better management. For example, it can be based on creation of an efficient algorithm to know ambulances available financial aid to people based on calculation of their credit scores, most strategically efficient way to implement lockdown, etc.",
         "<b>Are you ready for the challenge?</b>"
     ],
     "subevents": [],
     "modules": [
-        {
-            "heading" : "Dates",
-            "lists" : [
-                {
-                    "points" : ["Prelims deadline on 30<sup>th</sup> June '21 23:59 IST.",
-                        "Mains will be conducted during Pravega '21 (July 29 - August 1, 2021)"]
-                }
-            ]
-        },
         {
             "heading": "Eligibility",
             "content": "High school students and the undergraduates. Maximum 4 members can constitute a team."
@@ -34,6 +25,16 @@
         {
             "heading" : "Awards",
             "content" : "Cash prize of 20k for the winners, 10k for the runners up and 5k for the second runners up. All the finalists and award winners will receive certificates from Pravega, IISc Bangalore."
+        }
+    ],
+    "events": [
+        {
+            "name": "Prelims",
+            "date": "Deadline on 23:59 IST, 30<sup>th</sup> June"
+        },
+        {
+            "name": "Mains",
+            "date": "During Pravega 2021 (29<sup>th</sup> July to 1<sup>st</sup> August)"
         }
     ],
     "coords": [

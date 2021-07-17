@@ -16,12 +16,8 @@
             "content": "Open to all"
         },
         {
-            "heading": "Date and Time",
-            "content": "12 AM of 29<sup>th</sup> to 11:59 PM of 31<sup>st</sup> July <br> <b> 72 hours will be available. We will mail the photos on the evening of 28th. So kindly be tune at that time. No complains regarding this will be entertained..  </b>"
-        },
-        {
             "heading": "General Rules",
-            "content": "Photographs/ pictures of artwork will be assigned to individuals. These will be chosen from pictures by eminent photographers. The photographs would be <b> randomly distributed </b> among participants. ",
+            "content": "Photographs/ pictures of artwork will be assigned to individuals. These will be chosen from pictures by eminent photographers. The photographs would be <b> randomly distributed </b> among participants. <br> <br> <b> 72 hours will be available. We will mail the photos on the evening of 28th. So kindly be tune at that time. No complains regarding this will be entertained..  </b> ",
             "lists": [
                 {
                     "header": "Submissions must include",
@@ -73,7 +69,7 @@
     "events": [
         {
             "name": "Main Event",
-            "date": "12 AM of 29th to 11:59 PM of 31st July"
+            "date": "12 AM of 29<sup>th</sup> to 11:59 PM of 31<sup>st</sup> July"
         }
     ],
     "coords": [

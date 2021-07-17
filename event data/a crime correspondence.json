@@ -1,6 +1,6 @@
 {
     "name": "A Crime Correspondence",
-    "tagline": "A biological mystery",
+    "tagline": "Get Sherlocked",
     "description": [
         "Gruesome murders, foolproof schemes, perplexing clues, multiple suspects and more awaits you and your team at the Farleigh House in Cheltenham. A crime correspondence is much more than a murder mystery event. To all the fans of crime, mystery books and genius detective stories, ACC provides you the unique opportunity to solve a crime by interrogating all the various suspects in real time. Asking the right questions, avoiding the clever lies and deceit, and keeping your wits' about you as you delve deeper into the devious crime will help you in figuring out the chronology and concreteness of what actually happened on the fateful day."    
     ],
@@ -34,13 +34,13 @@
     "events": [
         {
             "name": "Main Event",
-            "date": "July 30 & 31"
+            "date": "30<sup>th</sup> and 31<sup>st</sup> July"
         }
     ],
     "coords": [
         "Daksh Sisodia",
         "Aranya Chakraborty"
     ],
-    "email": "",
+    "email": "crimecorrespondence.pravega@gmail.com",
     "phone": "9993545458"
 }
