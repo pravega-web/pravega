@@ -10,20 +10,6 @@
     "subevents": [],
     "modules": [
         {
-            "heading" : "Dates",
-            "lists" : [
-                {
-                    "points" : ["Prelims between 2:30 PM to 11:59 PM IST on 30<sup>th</sup> June, 2021",
-                        "Finals: TBD. During Pravega '21 (July 29 - August 1, 2021)"]
-                }
-            ],
-            "links" : [
-                {
-
-                }
-            ]
-        },
-        {
             "heading": "Eligibility",
             "lists" : [
                 {
@@ -36,15 +22,19 @@
         },
         {
             "heading": "Rules and Regulations",
+            "content" : "Violation of any of the rules mentioned herein or communicated to you later shall lead to penalty, not excluding disqualification.",
             "links" : [
                 {
                     "text" : "Click here to download the detailed rules and regulations",
                     "file" : "rules.pdf"
                 }
             ]
-        },
+        }
+    ],
+    "events": [
         {
-            "content" : "Violation of any of the rules mentioned herein or communicated to you later shall lead to penalty, not excluding disqualification."
+            "name": "Prelims",
+            "date": "2:30 PM to 11:59 PM IST on 30<sup>th</sup> June, 2021"
         }
     ],
     "coords": [

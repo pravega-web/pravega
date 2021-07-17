@@ -1,6 +1,6 @@
 {
     "name": "What Would Darwin Do",
-    "tagline": "DEFINATELY SOMETHING USEFUL(CHANGE THIS PEOPLE)",
+    "tagline": "All Aboard the HMS Beagle!",
     "description": [
         "Charles Darwin was only 22 years old when he grabbed the golden opportunity to aboard the HMS Beagle as a naturalist. Fast forward to 2021, the numerous species unearthed by Darwin are now being taken care of by the famous naturalist himself. Unlike any other place, this is the real-world realm: an island created by Darwin, nurturing every life form from the finches to the sloths - all far away from the busy world.",
         "Now growing old, Darwin has to select his successor, someone, equally interested in these beautiful creatures, to take care of his biggest achievement- The Darwin Realm. Who better than you, the young minds! Do you have the skill set to be the next Darwin? Can you spot new findings in the surroundings? Can you live up to his expectations?",
@@ -56,6 +56,10 @@
         {
             "heading": "Eligibility",
             "content": "Students in class 9<sup>th</sup> to 12<sup>th</sup>"
+        },
+        {
+            "heading": "Awards",
+            "content": "Prizes upto Rs. 6000"
         }
     ],
     "events": [

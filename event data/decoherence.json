@@ -1,6 +1,6 @@
 {
     "name": "Decoherence",
-    "tagline": "A physics excitation",
+    "tagline": "A Physics Excitation",
     "description": [
         "Come forward and show your prowess in Physics by competing with students across the country to solve problems through deliberation and critical thinking. Prepare for a battle to the end. ",
         "This is gonna be intense. This. Is. Decoherence. ",
@@ -20,6 +20,7 @@
         },
         {
             "heading": "Rules and Regulations",
+            "content": "Note: 'Team' here refers to both, a team of 2 participants and a single participant.",
             "lists": [
                 {
                     "header": "Objective Prelims",
@@ -58,15 +59,6 @@
             ]
         },
         {
-            "heading": "Subjective Prelims",
-            "links": [
-                {
-                    "text": "Download subjective prelims question paper",
-                    "file": "subjective_prelims.pdf"
-                }
-            ]
-        },
-        {
             "heading": "Objective Prelims",
             "lists": [
                 {
@@ -93,20 +85,47 @@
                     "file": "prelims_results.pdf"
                 }
             ]
+        },
+        {
+            "heading": "Subjective Prelims",
+            "links": [
+                {
+                    "text": "Download subjective prelims question paper",
+                    "file": "subjective_prelims.pdf"
+                },
+                {
+                    "text": "View results of subjective prelims",
+                    "file": "subjective_prelims_result.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Finals",
+            "lists": [
+                {
+                    "header": "The tentative schedule for the Decoherence Finals is as follows: ",
+                    "points": [
+                        "<b>29<sup>th</sup> July 2021</b>: A Subjective question paper will be given to all the finalists which contains questions involving theoretical, computational, experimental design related analysis of one or few questions. Duration of this round is 24 hours. ",
+                        "<b>1<sup>st</sup> August 2021</b>: Top 5 teams will be selected for this round. Selected teams are expected to present their solutions to a panel of judges. ",
+                        "Please note that the older plan of 2 day event for finals is replaced by the above plan. ",
+                        "Exact timings and details of the presentation round on 1st August, Panel of judges shall be informed to all the finalists in due time. "
+                    ]
+                }
+            ]
         }
     ],
     "events": [
         {
             "name": "Objective Prelims",
-            "date": "10:00 to 11:30 AM IST on 13th June"
+            "date": "10:00 to 11:30 AM IST on 13<sup>th</sup> June"
         },
         {
             "name": "Subjective Prelims",
-            "date": "9 AM to 9 AM IST the next day (26th to 27th June)"
+            "date": "9 AM to 9 AM IST the next day (26<sup>th</sup> to 27<sup>th</sup> June)"
         },
         {
             "name": "Finals",
-            "date": "TBD. During Pravega '21 (July 29 to August 1)"
+            "date": "29<sup>th</sup> July to 1<sup>st</sup> August"
         }
     ],
     "coords": [

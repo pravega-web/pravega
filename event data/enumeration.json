@@ -1,6 +1,6 @@
 {
     "name": "Enumeration",
-    "tagline": "",
+    "tagline": "MathWizs Assemble!",
     "description": [
         "An event for all the math-heads out there! Enumeration is a competition to test a set of abilities including but not limited to mathematical and logical reasoning, deduction and analysis etc. In addition to problem solving, this event requires you to constitute claims and support them with convincing arguments. As an overall test of your skills as a reliable mathematician, Enumeration is a platform to put your abilities under examination. Don't miss this unique event that is sure to kindle an excitement towards math while simultaneously allowing you to develop a different approach towards the field!"
     ],
@@ -8,6 +8,7 @@
     ],
     "modules": [
         {
+            "heading": "Some useful links",
             "links":[
                 {
                     "text": "View the solutions to the enumeration prelims contest",
@@ -18,7 +19,6 @@
                     "file": "EnumerationRules.pdf"
                 }
             ]
-            
         },
         {
             "heading":"Eligibility",
@@ -32,11 +32,11 @@
     "events": [
         {
             "name": "Prelims",
-            "date": "June 19"
+            "date": "19<sup>th</sup> June"
         },
         {
             "name": "Finals",
-            "date": "TBD. During Pravega 2021(July 29 - August 1)"
+            "date": "TBD. During Pravega 2021 (29<sup>th</sup> July to 1<sup>st</sup> August)"
         }
     ],
     "coords": [

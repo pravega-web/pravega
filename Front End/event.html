@@ -105,6 +105,20 @@
                         <div style="text-align: justify" ng-bind-html="htmlize(module.content)"></div>
                     </div>
 
+                    <!-- Table -->
+                    <div ng-show="{{module.table !== undefined}}">
+                        <br>
+                        <table>
+                            <tr>
+                                <th ng-repeat="header in module.table.headers">{{header}}</th>
+                            </tr>
+                            <tr ng-repeat="row in module.table.rows">
+                                <td ng-repeat="element in row">{{element}}</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+
                     <!-- Lists -->
                     <div ng-show="{{module.lists !== undefined}}">
                         <div ng-repeat="list in module.lists">
@@ -275,7 +289,7 @@
                 return $sce.trustAsHtml(htmlstring);
             }
 
-            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1).replace("%20", " ") + " | Pravega 2021, IISc Bangalore";
+            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
         });
 
     </script>

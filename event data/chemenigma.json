@@ -9,17 +9,75 @@
     "subevents": [],
     "modules": [
         {
-            "heading" : "Dates",
-            "lists" : [
+            "heading": "Prelims Results",
+            "table": {
+                "headers": [
+                    "Participant 1",
+                    "Participant 2",
+                    "Score",
+                    "Institute",
+                    "Year of Study"
+                ],
+                "rows": [
+                    [
+                        "Ankan Nath",
+                        "Hritwik Haldar",
+                        "107.5",
+                        "IISER Pune",
+                        "UG 2nd year concluded"
+                    ],
+                    [
+                        "Pravar Kataria",
+                        "Dev Gupta",
+                        "63",
+                        "Pragati Public School, Delhi",
+                        "Class 12"
+                    ],
+                    [
+                        "Kumar Satyam",
+                        "Hardik Rajpal",
+                        "56.5",
+                        "IIT Bombay",
+                        "UG 1st year"
+                    ],
+                    [
+                        "Arpon Basu",
+                        "Aaditya Sakrikar",
+                        "53",
+                        "IIT Bombay",
+                        "UG 1st year"
+                    ],
+                    [
+                        "Sayantan Khan",
+                        "Subhajit Chakraborty",
+                        "49.5",
+                        "IISER Kolkata",
+                        "UG 1st year"
+                    ],
+                    [
+                        "Soumyadipta Biswas",
+                        "Swagato Saha",
+                        "36.5",
+                        "IACS",
+                        "UG 2nd year concluded"
+                    ]
+                ]
+            },
+            "lists": [
                 {
-                    "points" : ["Prelims: 2:00 PM - 10:00 PM IST, 29<sup>th</sup> June, 2021",
-                        "Finals: TBD. During Pravega '21 (July 29 - August 1, 2021)"]
+                    "header": "Please note the following:",
+                    "points": [
+                        "The names and scores of the top six (6) teams have been released as part of the results. If your name is in the list, you have qualified for the Finals of Chemenigma. Please send us a single email acknowledging your participation in the Finals along with scanned copies of the institutional ID cards of both team members. The date, time, and other details will be communicated to you personally via email.",
+                        "In the event of a tie, the person with higher marks in the Subjective portion was given a higher rank.",
+                        "In case your name is not in the above list and you wish to know your marks, please mail us at chemenigma.pravega@gmail.com",
+                        "The model answers will be released potentially by the end of this week for reference."
+                    ]
                 }
             ],
-            "links" : [
+            "links": [
                 {
-                    "text" : "Download the Prelims Question paper",
-                    "file" : "Chemenigma_Prelims_2021.pdf"
+                    "text": "Download the prelims question paper",
+                    "file": "chemenigma_prelims_qp.pdf"
                 }
             ]
         },
@@ -28,30 +86,44 @@
             "content": "Students in class 11 or above (till 2<sup>nd</sup> year UG) and have not started their 3<sup>rd</sup> year of UG are eligible. Teams may have at most two participants. Individual participation is allowed."
         },
         {
-            "heading" : "Prizes",
-            "content" : "Cash Prizes over 30K for winners and certificates for all finalists."
+            "heading": "Prizes",
+            "content": "Cash Prizes over 30K for winners and certificates for all finalists."
         },
         {
             "heading": "Rules and Regulations",
             "lists": [
                 {
                     "header": "Prelims:",
-                    "points" : ["8 - 10 Objective questions and 5 - 6 subjective questions",
-                                "Duration: 4 hours including submission time",
-                                "No late submission will be entertained",
-                                "6 best teams will be selected for the Finals."]
+                    "points": [
+                        "8 - 10 Objective questions and 5 - 6 subjective questions",
+                        "Duration: 4 hours including submission time",
+                        "No late submission will be entertained",
+                        "6 best teams will be selected for the Finals."
+                    ]
                 },
                 {
-                    "header" : "Finals:",
-                    "points" : ["Details will be updated soon."]
+                    "header": "Finals:",
+                    "points": [
+                        "Details will be updated soon."
+                    ]
                 }
             ],
-            "links" : [
+            "links": [
                 {
-                    "text" : "Click here to download the detailed rules and regulations",
-                    "file" : "rules.pdf"
+                    "text": "Click here to download the detailed rules and regulations",
+                    "file": "rules.pdf"
                 }
             ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Prelims",
+            "date": "2:00 PM - 10:00 PM IST, 29<sup>th</sup> June, 2021"
+        },
+        {
+            "name": "Finals",
+            "date": "TBD. During Pravega 2021 (29<sup>th</sup> July to 1<sup>st</sup> August)"
         }
     ],
     "coords": [
