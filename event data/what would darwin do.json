@@ -1,0 +1,77 @@
+{
+    "name": "What Would Darwin Do",
+    "tagline": "DEFINATELY SOMETHING USEFUL(CHANGE THIS PEOPLE)",
+    "description": [
+        "Charles Darwin was only 22 years old when he grabbed the golden opportunity to aboard the HMS Beagle as a naturalist. Fast forward to 2021, the numerous species unearthed by Darwin are now being taken care of by the famous naturalist himself. Unlike any other place, this is the real-world realm: an island created by Darwin, nurturing every life form from the finches to the sloths - all far away from the busy world.",
+        "Now growing old, Darwin has to select his successor, someone, equally interested in these beautiful creatures, to take care of his biggest achievement- The Darwin Realm. Who better than you, the young minds! Do you have the skill set to be the next Darwin? Can you spot new findings in the surroundings? Can you live up to his expectations?",
+        "Come join us in this two-staged enthralling quest, follow Darwin’s footsteps in a new voyage that tests your skills. Nothing to lose, and all you gain is the chance of being, next ship ‘naturalist’!",
+        "This is not going to be that easy though! Conceptual quiz, reasoning abilities, problem-solving skills, many such challenges, and games that Darwin has set on the map. Cross all obstacles, become Darwin’s assistant, and join him in this new voyage, awaiting many more discoveries!",
+	"<b>Round 1:</b> Answer a set of questions, join Darwin in his voyage, and showcase your skills and abilities in the challenges that lie ahead and impress him.",
+	"<b>Round 2: </b>You have the opportunity to take care of Darwin's world! Assist Darwin in his field experiments, look after the creatures and prove that you are an able assistant and successor!",
+	"<b>The registration for WWDD closes tomorrow (13 June 2021, Sunday) at 10:00 IST.</b>"
+    ],
+    
+    "modules": [
+        {
+            "heading": "Details about the Prelims",
+            "content": "The Prelims will be divided into 2 sections- Part A and Part B. In part A, Darwin will be giving a test to the participants. In part B, Darwin will take the participants along on a voyage and test their skills along the way. <br> <br> The top 20% of the participants will be selected to take care of Darwin's Realm in the main event. (The date of the main event has not yet been decided.) In case of a tie, both teams/participants will qualify.",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "The mode of the Prelims is through Google Forms. The links will be shared on the website. Both the links will be accessible on 2021 June 15 (Tuesday) from 00:00 to 23:59 (Indian Standard Time - IST).",
+                        "The time provided for answering the sections will be as follows: <ul><li>Part A: 1 hour</li><li>Part B: 2 hours and 10 minutes</li></ul>",
+                        "The participants can access the form at any time. Once the form is opened, the countdown timer will start, and the participants will have to finish within the stipulated time.<b> The form will auto-submit once the time is over.</b>",
+                        "Both the sections will contain a mix of both objective and subjective questions.",
+                        "The prelims will be open-resource, i.e, participants are allowed to use any resource at their disposal.",
+                        "Only 1 response will be allowed from each participant/team.",
+                        "There is a slight change in the rule we previously mentioned to deal with multiple responses from the same team/participant. If there are more than one response from any participant/team, <b>then the one submitted earliest will be considered.</b>",
+                        "<b>Note: - For teams, the person who will fill the form and submit it will have to open the form first.</b>",
+                        "All participants/teams need to fill in their Email address that they filled during their registration.",
+                        "Ignore the \"ExtendedFormsID\" in the form. That is for technical purposes and should NOT be filled."
+                    ]
+                }
+                
+            ],
+            "links": [
+                {
+                    "text": "Download rules and regulations",
+                    "file": "WWDD_Rules.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Prelims Results",
+            "links": [
+                {
+                    "text": "Download finalists",
+                    "file": "finalists.pdf"
+                },
+                {
+                    "text": "View marks list",
+                    "file": "mark_list.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Eligibility",
+            "content": "Students in class 9<sup>th</sup> to 12<sup>th</sup>"
+        }
+    ],
+    "events": [
+        {
+            "name": "Prelims",
+            "date": "15th June"
+        },
+        {
+            "name": "Mains",
+            "date": "To be Decided"
+        }
+    ],
+    "awards":"Prizes upto Rs.6000",
+    "coords": [
+        "Tanishq Tejaswi",
+        "Karthik V"
+    ],
+    "email": "wwdd.pravega@gmail.com"
+}

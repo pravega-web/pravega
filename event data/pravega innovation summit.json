@@ -1,0 +1,58 @@
+{
+    "name": "Pravega Innovation Summit (PIS)",
+    "tagline": "SOMETHING COOL IS SUPPOSED TO BE PUT HERE",
+    "description": [
+        "Pravega Innovation Summit (PIS) is a platform to present your innovative entrepreneurial ideas in front of professionals, market experts, and possible investors and compete with others nationwide. Not only will the teams get exposure and suggestions from our professionals, but they will also stand a chance to win prizes up to INR 75k and leave a profound impact on society!        ",
+        "An excellent innovative idea will be the one that will be sustainable; that is, it will stand the test of time, along with preserving novelty and making it financially plausible so that it can change society for the better. Innovation can be anywhere; it might be in a problem that we are currently facing, or it can be something new that the world has never imagined before.",
+        "If this is something you would like to get your hands on, here is a chance to prove what you are capable of!"
+    ],
+    "subevents": [
+        
+    ],
+    "modules": [
+        {
+            "heading": "Eligibility",
+            "content": "The participant should not have participated more than two times previously in the event and should be between 15 and 28 years old as of 15<sup>th</sup> June, 2021. Maximum of 3 members in a team."
+        },
+        {
+            "heading": "Registration",
+            
+            "links": [
+                {
+                    "text": "Click here to register",
+                    "url": "https://bit.ly/3gB3u9q"
+                }
+            ]
+        },
+        {
+            "heading": "Rules and Regulations",
+            
+            "links": [
+                {
+                    "text": "Rules and regulations",
+                    "file": "PIS_RulesAndRegulations.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Awards",
+            "content": "Selected students from prelims would be given a chance to compete in the main event and win cash prizes upto <b>75k INR.</b>"
+            
+        }
+    ],
+    "events": [
+        {
+            "name": "Prelims",
+            "date": "From 15 June 2021 to <b> 20<sup>th</sup> July (Extended)</b>"
+        },
+        {
+            "name": "Main Event",
+            "date": "Will be announced soon!"
+        }
+    ],
+    "coords": [
+        "Himanshu Madhukar Tongale",
+        "Sreyas Sateesh"
+    ],
+    "email": "pis.pravega@gmail.com"
+}
