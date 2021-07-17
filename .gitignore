@@ -4,3 +4,4 @@ rzp.csv
 ses.csv
 .env
 package-lock.json
+.DS_Store
