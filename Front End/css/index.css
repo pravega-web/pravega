@@ -189,6 +189,7 @@ a:hover {
   /* Bioblitz image enlarges too much without this */
   height: 100%;
   width: 100%;
+  transition: 0.6s;
 }
 
 .event-image:hover {
@@ -211,6 +212,46 @@ a:hover {
 .category-card:hover {
   background-color: #44d580;
   opacity: 0.7;
+}
+
+.footer {
+  background: #000000;
+}
+
+.sm-button {
+  border-radius: 100%;
+  margin: 5px;
+  padding: 15px;
+  transition: 0.5s;
+}
+
+.sm-button:hover {
+  background: #ffffff;
+  color: black;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: rgb(18, 86, 136);
+  color: white;
+}
+
+.fa-youtube {
+  background: rgb(187, 0, 0);
+  color: white;
+}
+
+.contact {
+  padding: 50px;
 }
 
 /* ol.timeline {
