@@ -6,16 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pravega is the country's largest college fest hosted by Undergraduates at IISc">
-    <title>Home | Pravega 2021, IISc Bangalore</title>
+    <title>Pravega 2021, IISc Bangalore</title>
 
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/index.css">
 
     <!--Fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Treemap -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK64ZS7V62"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HK64ZS7V62');
+    </script>
 
     <style>
         /* Overriding default link color (orange) */
@@ -30,8 +41,12 @@
     <div class="navbar-fixed">
         <nav class="row">
             <div class="nav-wrapper col s12 pri">
-                <a href="#" class="brand-logo">
+                <a href="#" class="brand-logo hide-on-large-only">
                     <img style="height: 50px;" class="responsive-img" src="/img/pravega/pravega21_logo_trans.png"
+                        alt="Logo Image">
+                </a>
+                <a href="#" class="brand-logo hide-on-med-and-down">
+                    <img style="height: 40px;" class="responsive-img" src="/img/pravega/pravega21_fullname.svg"
                         alt="Logo Image">
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -44,46 +59,52 @@
     </div>
 
     <!-- Main Image -->
-    <div class="landing full-height center_parent snappers">
-        <!-- <div class="center hide-on-small-only">
-            <h1 style="text-transform:uppercase;" class="white-text">Pravega'21</h1>
-            <h3 class="grey subheading">Indian Institute of Science</h3>
-        </div> -->
-        <div class="center" style="width: 40vw;">
-            <img src="/img/pravega/pravega21_logo_trans.png" alt="Pravega Logo" class="responsive-img">
-        </div>
-        <div class="center hide-on-med-and-up">
-            <h3 style="text-transform:uppercase;" class="white-text">Pravega'21</h3>
+    <div class="landing full-height center_parent snappers black">
+        <img src="/img/IISc/IISc Linesketch.svg" alt="IISc Linesketch"
+            style="position: absolute; max-height: 90vh; max-width: 100vw;">
+        <!-- <div class="center" style="z-index: 0;">
+            <h3 style="text-transform:uppercase; padding: 20px;" class="white-text teal">Pravega'21</h3>
             <h5 class="grey subheading">Indian Institute of Science</h5>
-        </div>
+        </div> -->
+        <a class="btn-floating btn-large black hide-on-med-and-up"
+            style="position: absolute; bottom: 30px; border: white solid 1px;" href="#welcome">
+            <i class="large material-icons">keyboard_arrow_down
+            </i>
+        </a>
     </div>
 
     <!-- Section 1 -->
-    <div class="snappers container full-height">
-        <div class="row" style="display: flex; height: 60vh">
-            <div class="col s12 m12 l12 valign-wrapper">
-                <div>
-                    <!-- Title -->
-                    <h2 style="text-transform: uppercase;" class="hide-on-med-and-down center">Welcome to Pravega</h2>
+    <div class="snappers full-height welcome_screen" id="welcome">
+        <div class="container">
+            <div class="row" style="display: flex; height: 60vh">
+                <div class="col s12 m12 l12 valign-wrapper">
+                    <div>
+                        <!-- Title -->
+                        <h2 style="text-transform: uppercase;" class="hide-on-med-and-down center">Welcome to Pravega
+                        </h2>
 
 
-                    <h3 class="center hide-on-large-only" style="text-transform: uppercase;">Welcome to Pravega</h3>
-                    <br>
-                    <!-- Description -->
-                    <p style="text-align: justify;" class="flow-text">
-                        We need a short and sweet decription of Pravega which excites readers. We cannot put up what is
-                        there on the abous us page as it doesn't suite the homepage. It's too big. People will not read
-                        all that.
-                    </p>
+                        <h3 class="center hide-on-large-only" style="text-transform: uppercase;">Welcome to Pravega</h3>
+                        <br>
+                        <!-- Description -->
+                        <p style="text-align: justify;" class="flow-text">
+                            We need a short and sweet decription of Pravega which excites readers. We cannot put up what
+                            is
+                            there on the abous us page as it doesn't suite the homepage. It's too big. People will not
+                            read
+                            all that.
+                        </p>
+                    </div>
                 </div>
+                <!-- <div class="hide-on-med-and-down push-l1 col m6 l6 valign-wrapper" style="height: 70vh">
+                    <img class="responsive-img" src="/img/pravega/pravega21_logo_trans.png" alt="Pravega's Logo">
+                </div> -->
             </div>
-            <!-- <div class="hide-on-med-and-down push-l1 col m6 l6 valign-wrapper" style="height: 70vh">
-                <img class="responsive-img" src="/img/pravega/pravega21_logo_trans.png" alt="Pravega's Logo">
-            </div> -->
+             <div class="center accelerate_btn">
+                <a href="#launchpad" class="black-text poppins" style="font-size: 8vw; ">accelerate!</a>
+            </div>
         </div>
-         <div class="center accelerate_btn">
-            <a href="#launchpad" class="black-text poppins" style="font-size: 8vw; ">accelerate!</a>
-        </div>
+
     </div>
 
     <div class="parallax-container">
@@ -91,7 +112,8 @@
     </div>
 
     <!-- Menu -->
-    <div class="snappers full-height" style="background-image: linear-gradient(180deg, var(--a), var(--b));" id="launchpad">
+    <div class="snappers full-height" style="background-image: linear-gradient(180deg, var(--a), var(--b));"
+        id="launchpad">
         <div class="container" style="height: 100%;">
             <div class="row center">
                 <div class="col s12 m12 l12">
@@ -274,7 +296,8 @@
     </div>
 
     <!-- Workshops -->
-    <div id="workshops" class="snappers full-height" style="background-image: linear-gradient(180deg, var(--b), var(--c));">
+    <div id="workshops" class="snappers full-height" ng-hide="true"
+        style="background-image: linear-gradient(180deg, var(--b), var(--c));">
         <div class="container">
             <div class="row center">
                 <div class="col s12 m12 l12">
@@ -294,7 +317,7 @@
     </div>
 
     <!-- Section n - Sponsors-->
-    <div class="snappers full-height">
+    <div class="snappers full-height" style="background-image: linear-gradient(180deg, var(--b), var(--c));">
         <div class="container">
             <div class="row center">
                 <div class="col s12 m12 l12">
@@ -308,9 +331,58 @@
                     <img class="responsive-img" ng-src="{{sponsor}}" alt="Sponsor Image">
                 </div>
 
+                <div class="col s12 hide-on-med-and-down">
+                    <br>
+                    <h3>Want to sponsor Pravega?</h3>
+                    <p class="flow-text">
+                        Get an opportunity to be associated with one of the largest college fests in India
+                    </p>
+                    <a href="/legal/association_brochure.pdf" class="btn-flat blue">
+                        <i class="material-icons left">
+                            attachment
+                        </i>
+                        Association Brochure
+                    </a>
+                </div>
+
+                <div class="col s12 center">
+                    <a class="btn-floating btn-large black hide-on-large-only" style="border: white solid 1px;"
+                        href="#sponsor-us">
+                        <i class="large material-icons">
+                            keyboard_arrow_down
+                        </i>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
+
+    <div class="snappers full-height hide-on-large-only" id="sponsor-us"
+        style="background-image: linear-gradient(180deg, var(--c), var(--a));">
+        <div class="container">
+            <div class="row center">
+                <div class="col s12 m12 l12">
+                    <!-- Title -->
+                    <h2 style="text-transform: uppercase;">Sponsor Us!</h2>
+                    <br>
+                </div>
+
+                <div class="col s12 ">
+                    <p class="flow-text">
+                        Get an opportunity to be associated with one of the largest college fests in India
+                    </p>
+                    <a href="/legal/association_brochure.pdf" class="btn-flat blue">
+                        <i class="material-icons left">
+                            attachment
+                        </i>
+                        Association Brochure
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Materialize JavaScript -->

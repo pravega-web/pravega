@@ -26,10 +26,6 @@ html {
   border-radius: 25px;
 }
 
-.landing {
-  background-image: url("/img/memphis-mini-dark.png");
-}
-
 .full-height {
   height: calc(100vh - 65px);
   background-size: cover;
@@ -94,7 +90,7 @@ body {
   border: 1px;
   border-color: white;
   border-width: 1px;
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 .daySchedule {
@@ -247,4 +243,9 @@ li.timeline:after {
 .cult_menu_body {
   background: linear-gradient(to top right, #ffc371 0%, #ff5f6d 100%);
   min-height: 100vh;
+}
+
+.welcome_screen{
+  background-image:linear-gradient(180deg, black, #121212);
+  color: white;
 }
