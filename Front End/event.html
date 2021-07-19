@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pravega is the country's largest college fest hosted by Undergraduates at IISc">
     <title>Event Site - Pravega'21</title>
 
     <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -28,6 +29,14 @@
 <style>
     p {
         text-align: justify;
+    }
+
+    a {
+        color: #2662a2;
+    }
+
+    a:hover {
+        color: #04add6;
     }
 </style>
 
@@ -134,9 +143,12 @@
                         <div ng-repeat="list in module.lists">
                             <br>
                             <b>{{list.header}}</b>
-                            <li ng-repeat="point in list.points">
-                                <div style="text-align: justify; display: inline" ng-bind-html="htmlize(point)"></div>
-                            </li>
+                            <ul>
+                                <li ng-repeat="point in list.points">
+                                    <div style="text-align: justify; display: inline" ng-bind-html="htmlize(point)">
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -194,9 +206,9 @@
                     </h6>
                 </div>
                 <div class="col l3 left s6">
-                    <h6>
+                    <ul>
                         <li ng-repeat="coord in event.coords">{{coord}} <br><br></li>
-                    </h6>
+                    </ul>
                 </div>
                 <div class="col l6 s12">
                     <h6>
@@ -237,7 +249,8 @@
         <div class="container">
             <div class="row" style="margin: 0px; padding: 20px">
                 <div class="col s12 l12 center">
-                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" width="250px" height="120px"></a>
+                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" width="250px" height="120px"
+                            alt="Pravega Footer"></a>
                 </div>
                 <br>
                 <div class="col s12 l6 center">
@@ -253,23 +266,24 @@
                     <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
                     <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
                     <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
-                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ" class="fa fa-youtube sm-button"></a>
+                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
+                        class="fa fa-youtube sm-button"></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Materialize JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script rel="preconnect" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script rel="preconnect" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 
     <!-- Animate on scroll -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script rel="preconnect" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         var app = angular.module("pravega", []);
@@ -301,7 +315,7 @@
             $scope.eventName = '';
             var url_params = window.location.pathname.split('/');
 
-            
+
 
             while ($scope.eventName == '' && url_params.length > 0) {
                 $scope.eventName = url_params.pop();
