@@ -41,7 +41,8 @@
                         alt="Logo Image" />
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a ng-href="/../../{{category}}/menu.html">{{category.charAt(0).toUpperCase() + category.slice(1)}} Events</a></li>
+                    <li><a ng-href="/../../{{category}}/menu.html">{{category.charAt(0).toUpperCase() +
+                            category.slice(1)}} Events</a></li>
                     <li><a href="/../../#launchpad">Launchpad</a></li>
                 </ul>
             </div>
@@ -232,8 +233,37 @@
         </div>
     </div>
 
+    <div class="footer">
+        <div class="container">
+            <div class="row" style="margin: 0px; padding: 20px">
+                <div class="col s12 l12 center">
+                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" width="250px" height="120px"></a>
+                </div>
+                <br>
+                <div class="col s12 l6 center">
+                    <div class="container white-text">
+                        <br>
+                        © Pravega 2021
+                        <br>
+                        The Biggest Science Fest is back!
+                    </div>
+                </div>
+                <div class="col s12 l6 center">
+                    <br>
+                    <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
+                    <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
+                    <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
+                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ" class="fa fa-youtube sm-button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
@@ -268,22 +298,28 @@
             // Production level event flow
 
             // Get URL parameters to decide page
-            var eventName = '';
+            $scope.eventName = '';
             var url_params = window.location.pathname.split('/');
 
-            $scope.category = url_params[2];
+            
 
-            while (eventName == '' && url_params.length > 0) {
-                eventName = url_params.pop();
+            while ($scope.eventName == '' && url_params.length > 0) {
+                $scope.eventName = url_params.pop();
             }
-            $scope.path = `/${$scope.category}/${eventName}/`;
+
+            // Making old links work
+            $scope.eventName = $scope.eventName.replace(".html", "");
+            $scope.eventName = $scope.eventName.replace("_", " ");
+            $scope.category = url_params[2].replace("_eve", "");
+
+            $scope.path = `/${$scope.category}/${$scope.eventName}/`;
 
             // Call server and get page object
             $http({
                 method: 'GET',
                 url: '/api/event/data',
                 params: {
-                    "name": eventName
+                    "name": $scope.eventName
                 }
             }).then((res) => {
                 $scope.event = res.data;
@@ -295,7 +331,7 @@
                 return $sce.trustAsHtml(htmlstring);
             }
 
-            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
+            document.title = $scope.eventName.charAt(0).toUpperCase() + $scope.eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
         });
 
     </script>

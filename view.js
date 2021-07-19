@@ -34,8 +34,8 @@ module.exports = (app) => {
   })
 
   // About Us and Contact (Plus Legal)
-  app.get('/about', (req,res)=>{
-    res.sendFile(__dirname+'/Front End/about.html');
+  app.get('/contact', (req,res)=>{
+    res.sendFile(__dirname+'/Front End/contact.html');
   })
     
 };
