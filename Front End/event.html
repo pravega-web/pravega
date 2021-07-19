@@ -288,22 +288,28 @@
             // Production level event flow
 
             // Get URL parameters to decide page
-            var eventName = '';
+            $scope.eventName = '';
             var url_params = window.location.pathname.split('/');
 
-            $scope.category = url_params[2];
+            
 
-            while (eventName == '' && url_params.length > 0) {
-                eventName = url_params.pop();
+            while ($scope.eventName == '' && url_params.length > 0) {
+                $scope.eventName = url_params.pop();
             }
-            $scope.path = `/${$scope.category}/${eventName}/`;
+
+            // Making old links work
+            $scope.eventName = $scope.eventName.replace(".html", "");
+            $scope.eventName = $scope.eventName.replace("_", " ");
+            $scope.category = url_params[2].replace("_eve", "");
+
+            $scope.path = `/${$scope.category}/${$scope.eventName}/`;
 
             // Call server and get page object
             $http({
                 method: 'GET',
                 url: '/api/event/data',
                 params: {
-                    "name": eventName
+                    "name": $scope.eventName
                 }
             }).then((res) => {
                 $scope.event = res.data;
@@ -315,7 +321,7 @@
                 return $sce.trustAsHtml(htmlstring);
             }
 
-            document.title = eventName.charAt(0).toUpperCase() + eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
+            document.title = $scope.eventName.charAt(0).toUpperCase() + $scope.eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
         });
 
     </script>
