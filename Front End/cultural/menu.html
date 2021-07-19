@@ -14,19 +14,35 @@
 
 <body class="cult_menu_body" ng-controller="menuController">
     <div class="container">
-        <div class="row" style="margin: 10%;">
+        <div class="row" style="margin:5%;">
             <div class="col l12 center">
                 <h1 class="center">{{category}} Events</h1>
             </div>
 
-            <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
-                <a ng-href="/events/cultural/{{evt}}" class="center" style="padding: 10px;">
-                    <img class="responsive-img" src='/img/cultural/{{evt}}.svg' alt="Event Icon Logo" style="padding: 10px;">
-                    <h4 class="black-text">
-                        {{evt}}
-                    </h4>
-                </a>
+            <div class="hide-on-med-and-down">
+                <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
+                    <a ng-href="/events/cultural/{{evt}}" class="center" style="padding: 10px;">
+                        <img class="responsive-image" src='/img/cultural/{{evt}}.png' alt="Event Icon Logo"
+                            style="padding: 10px;" height="256px">
+                        <h4 class="black-text">
+                            {{evt}}
+                        </h4>
+                    </a>
+                </div>
             </div>
+
+            <div class="hide-on-large-only">
+                <div class="col s12 m12 center menu-box-hlt" ng-repeat="evt in events">
+                    <a ng-href="/events/cultural/{{evt}}" class="center" style="padding: 10px;">
+                        <img class="responsive-image" src='/img/cultural/{{evt}}.png' alt="Event Icon Logo"
+                            style="padding: 10px;" width="100%">
+                        <h4 class="black-text">
+                            {{evt}}
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -50,7 +66,8 @@
                     <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
                     <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
                     <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
-                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ" class="fa fa-youtube sm-button"></a>
+                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
+                        class="fa fa-youtube sm-button"></a>
                 </div>
             </div>
         </div>
@@ -65,7 +82,7 @@
     <script>
         var app = angular.module('pravega', []);
 
-        app.controller('menuController', function($scope, $http, $location) {
+        app.controller('menuController', function ($scope, $http, $location) {
             console.log('Menu Controller loaded...');
 
             $scope.category = 'Cultural'
