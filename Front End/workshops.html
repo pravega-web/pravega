@@ -28,6 +28,30 @@
     p {
         text-align: justify;
     }
+
+    a {
+        color: #2662a2;
+    }
+
+    a:hover {
+        color: #04add6;
+    }
+
+    body {
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/interlaced.png");
+    }
+
+    .workshop-icon {
+        border-radius: 10%;
+    }
+
+    .workshop-button {
+        padding-top: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: none;
+        background-image: linear-gradient(45deg, var(--a), var(--b), var(--c));
+    }
 </style>
 
 <body ng-controller="eventPage">
@@ -83,7 +107,7 @@
                     <div class="center">
                         <div class="col s12 l4">
                             <h4>Digital Marketing</h4>
-                            <img src="/img/workshops/digital_marketing.jpg" height="250px">
+                            <img class="workshop-icon" src="/img/workshops/digital_marketing.jpg" height="250px">
                             <p>
                                 We bring to you a segue into digital marketing, followed by practical sessions on
                                 marketing
@@ -92,46 +116,57 @@
                                 in
                                 you.
                             </p>
+                            <a href="#" class="btn black-text sl-round thin-border workshop-button">Registrations will
+                                open soon</a>
                         </div>
 
                         <div class="col s12 l4">
                             <h4>Electric Vehicles</h4>
-                            <img src="/img/workshops/electric_vehicles.jpg" height="250px">
+                            <img class="workshop-icon" src="/img/workshops/electric_vehicles.jpg" height="250px">
                             <p>
                                 Go Green! Electric Vehicles will soon dominate the streets. Learn about the Li-ion
                                 battery,
                                 its management systems, electrochemistry, thermodynamics as well as the vehicle's
                                 development process, hybrid components and architecture. Jump in, take a ride!
                             </p>
+                            <a target="_blank"
+                                href="https://www.instamojo.com/edu2502/edufabrica-three-series-program-in-associati/?discount=july"
+                                class="btn black-text sl-round thin-border workshop-button">Click here to register!</a>
                         </div>
 
                         <div class="col s12 l4">
                             <h4>Web Development</h4>
-                            <img src="/img/workshops/webdev.jpg" height="250px">
+                            <img class="workshop-icon" src="/img/workshops/webdev.jpg" height="250px">
                             <p>
-                                Have a few good ideas up your sleeve for a new venture? Worry not, this workshop covers
+                                Have a few good ideas up your sleeve for a new venture? Fret not, this workshop covers
                                 it
-                                all: HTML, to structure your webpage; CSS, to style your webpage; and Bootstrap, to make
+                                all: HTML, to structure your webpage; CSS, to style it; and Bootstrap, to make
                                 it
-                                responsive. It ends with a project that deals with making a complete website using
+                                responsive. It ends with a project involving making a complete website using
                                 HTML5,
                                 CSS3 and JS.
                             </p>
+                            <a href="#" class="btn black-text sl-round thin-border workshop-button">Registrations will
+                                open soon</a>
                         </div>
 
                         <div class="col s12 l4">
                             <h4>Machine Learning and Data Science</h4>
-                            <img src="/img/workshops/data_science.jpg" height="250px">
+                            <img class="workshop-icon" src="/img/workshops/data_science.jpg" height="250px">
                             <p>
                                 These two topics are an absolute necessity to survive in the new world of technological
                                 proficiency. This course teaches you Python for Data Science and AI, data visualization
                                 using Matplotlib and Plotly, image processing with OpenCV and Face & Eye detection.
                             </p>
+                            <a target="_blank"
+                                href="https://www.instamojo.com/edu2502/edufabrica-online-summer-training-internship/?discount=discnt"
+                                class="btn black-text sl-round thin-border workshop-button">Click here to register!</a>
                         </div>
 
                         <div class="col s12 l4">
                             <h4>Internet of Things</h4>
-                            <img style="margin-top: 40px" src="/img/workshops/iot.png" height="250px">
+                            <img class="workshop-icon" style="margin-top: 37px" src="/img/workshops/iot.png"
+                                height="250px">
                             <p>
                                 Learn the ways to interconnect the electronic devices around you! This workshop connects
                                 you
@@ -139,6 +174,9 @@
                                 ends
                                 with a brief outlook on Thingspeak cloud.
                             </p>
+                            <a target="_blank"
+                                href="https://www.instamojo.com/edu2502/edufabrica-online-summer-training-internship/?discount=discnt"
+                                class="btn black-text sl-round thin-border workshop-button">Click here to register!</a>
                         </div>
                     </div>
 
@@ -165,7 +203,8 @@
                                 Contact
                             </h6>
                             <h6>
-                                <a ng-href="mailto:pravworkshop21@gmail.com" class="" type="mail">pravworkshop21@gmail.com</a>
+                                <a ng-href="mailto:pravworkshop21@gmail.com" class=""
+                                    type="mail">pravworkshop21@gmail.com</a>
                             </h6>
                         </div>
                     </div>
