@@ -341,7 +341,7 @@
 
 
             while ($scope.eventName == '' && url_params.length > 0) {
-                $scope.eventName = url_params.pop();
+                $scope.eventName = decodeURI( url_params.pop());
             }
 
             // Making old links work
