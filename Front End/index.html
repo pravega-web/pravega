@@ -72,8 +72,8 @@
             <h5 class="grey subheading">Indian Institute of Science</h5>
         </div> -->
 
-        <a class="black hide-on-med-and-up" style="position: absolute; bottom: 70px; width: 70vw;" href="#welcome">
-            <img src="/img/IISc/white-trans.png" alt="" class="responsive-img">
+        <a class="black hide-on-med-and-up" style="position: absolute; bottom: 15vh; width: 70vw;" href="#welcome">
+            <img src="/img/IISc/white-trans.png" alt="IISc logo" class="responsive-img">
         </a>
 
         <a class="btn-floating btn-large black hide-on-med-and-up"
@@ -196,9 +196,8 @@
 
                     <div class="hide-on-med-only hide-on-large-only">
                         <!-- TODO: AOS -->
-                        <div class="row" style="width: 100%;">
+                        <div class="" style="width: 100%; display: flex; flex-direction: column;">
                             <div class="col l4 s12 m4 center">
-                                <br>
                                 <a href="/science/menu.html">
                                     <h3 class="black white-text">
                                         Science
@@ -206,7 +205,6 @@
                                 </a>
                             </div>
                             <div class="col l4 s12 m4 center">
-                                <br>
                                 <a href="/cultural/menu.html">
                                     <h3 style="background-color: var(--a);">
                                         Cultural
@@ -214,7 +212,6 @@
                                 </a>
                             </div>
                             <div class="col l4 s12 m4 center">
-                                <br>
                                 <a href="/technical/menu.html">
                                     <h3 style="background-color: var(--b);">
                                         Technical
@@ -222,7 +219,6 @@
                                 </a>
                             </div>
                             <div class="col l4 s12 m4 center">
-                                <br>
                                 <a href="/recreational/menu.html">
                                     <h3 style="background-color: var(--c);">
                                         Recreational
@@ -230,7 +226,6 @@
                                 </a>
                             </div>
                             <div class="col l4 s12 m4 center">
-                                <br>
                                 <a href="/workshops">
                                     <h3 class="white">
                                         Workshops
@@ -281,15 +276,6 @@
                             Come forward and show your prowess in Physics by competing with students across the country
                             to solve problems through deliberation and critical thinking. Prepare for a battle to the
                             end.
-                            <br>
-                            The preliminary round is divided into two rounds - one objective and one subjective. The
-                            objective round will serve as a screening round to select teams for the subjective round. We
-                            promise that these two rounds themselves will put your abilities to test!
-                            <br>
-                            Unleash your skills in the Prelims to secure your way into the main event! The event will be
-                            full of fun for those who love teasing their minds with new Physics problems, with
-                            participants getting the opportunity to present their solutions to leading Physicists in the
-                            panel of judges!
                         </p>
                     </div>
                 </div>
@@ -337,7 +323,7 @@
                     <img class="responsive-img" ng-src="{{sponsor}}" alt="Sponsor Image">
                 </div>
 
-                <div class="col s12 hide-on-med-and-down">
+                <!-- <div class="col s12">
                     <br>
                     <h3>Want to sponsor Pravega?</h3>
                     <p class="flow-text">
@@ -349,11 +335,10 @@
                         </i>
                         Association Brochure
                     </a>
-                </div>
+                </div> -->
 
                 <div class="col s12 center">
-                    <a class="btn-floating btn-large black hide-on-large-only" style="border: white solid 1px;"
-                        href="#sponsor-us">
+                    <a class="btn-floating btn-large black" style="border: white solid 1px;" href="#sponsor-us">
                         <i class="large material-icons">
                             keyboard_arrow_down
                         </i>
@@ -365,8 +350,8 @@
     </div>
 
     <!-- Sponsors - 2 -->
-    <div class="snappers full-height hide-on-large-only" id="sponsor-us"
-        style="background-image: linear-gradient(180deg, var(--c), var(--a));">
+    <div class="snappers full-height" id="sponsor-us"
+        style="background-image: linear-gradient(180deg, var(--c), var(--a)); height: calc(70vh - 65px);">
         <div class="container">
             <div class="row center">
                 <div class="col s12 m12 l12">
@@ -391,36 +376,63 @@
     </div>
 
     <!-- Footer -->
-    <div class="snappers">
-        <div class="footer">
-            <div class="container">
-                <div class="row" style="margin: 0px; padding: 20px">
-                    <div class="col s4 l2 push-s4 push-l5 center">
-                        <a href="/"><img src="/img/pravega/pravega21_fullname.svg" class="responsive-img"
-                                alt="Pravega Footer"></a>
-                    </div>
-                    <div class="col s12">
-                        <br>
-                    </div>
 
-                    <div class="col s12 l6 center">
-                        <div class="container white-text">
-                            © Pravega 2021
-                            <br>
-                            The Biggest Science Fest is back!
-                        </div>
+    <div class="footer snappers">
+        <div class="container">
+            <div class="row" style="margin: 0px; padding: 20px">
+                <div class="col s4 l2 push-s4 push-l5 center">
+                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" class="responsive-img"
+                            alt="Pravega Footer"></a>
+                </div>
+                <div class="col s12">
+                    <br>
+                </div>
+
+                <div class="col s12 l6 center">
+                    <div class="container white-text">
+                        © Pravega 2021
+                        <br>
+                        The Biggest Science Fest is back!
                     </div>
-                    <div class="col s12 l6 center">
-                        <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
-                        <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
-                        <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
-                        <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
-                            class="fa fa-youtube sm-button"></a>
-                    </div>
+                </div>
+                <div class="col s12 l6 center">
+                    <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
+                    <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
+                    <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
+                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
+                        class="fa fa-youtube sm-button"></a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- <div class="container">
+            <div class="row" style="margin: 0px; padding: 20px">
+                <div class="col s12 l12 center">
+                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" width="250px" height="120px"
+                            alt="pravega-footer"></a>
+                </div>
+                <br>
+                <div class="col s12 l6 center">
+                    <div class="container white-text">
+                        <br>
+                        © Pravega 2021
+                        <br>
+                        The Biggest Science Fest is back!
+                    </div>
+                </div>
+                <div class="col s12 l6 center">
+                    <br>
+                    <a name="Facebook" href="https://www.facebook.com/PravegaIISc/"
+                        class="fa fa-facebook sm-button"></a>
+                    <a name="Twitter" href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
+                    <a name="Instagram" href="https://www.instagram.com/pravega.iisc/"
+                        class="fa fa-instagram sm-button"></a>
+                    <a name="YouTube" href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
+                        class="fa fa-youtube sm-button"></a>
+                </div>
+            </div>
+        </div> -->
 
     <!-- Materialize JavaScript -->
     <script rel="preconnect"
