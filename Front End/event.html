@@ -9,7 +9,8 @@
     <title>Event Site - Pravega'21</title>
 
     <!-- Materialize CSS -->
-    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet preconnect"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -37,6 +38,10 @@
 
     a:hover {
         color: #04add6;
+    }
+
+    body {
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/interlaced.png");
     }
 </style>
 
@@ -131,7 +136,8 @@
 
                     <!-- Content -->
                     <div ng-show="{{module.content !== undefined}}">
-                        <div style="text-align: justify" ng-bind-html="htmlize(module.content)"></div>
+                        <div style="text-align: justify; font-weight: 400;" ng-bind-html="htmlize(module.content)">
+                        </div>
                     </div>
 
                     <!-- Table -->
@@ -167,11 +173,17 @@
                         <br>
                         <div ng-repeat="link in module.links">
                             <div ng-show="{{link.file !== undefined}}">
-                                <a ng-href="{{path}}{{link.file}}">{{link.text}}</a>
+                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border" style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;     background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c));" >
+                                <i class="material-icons left">
+                                        attachment
+                                    </i>
+                                    {{link.text}}
+                                </a>
                             </div>
                             <div ng-show="{{link.url !== undefined}}">
-                                <a ng-href=" {{link.url}}" target="_blank">{{link.text}}</a>
+                                <a ng-href=" {{link.url}}" target="_blank" class="btn-flat shiny">{{link.text}}</a>
                             </div>
+                            <br>
                         </div>
                     </div>
                     <br>
@@ -283,10 +295,12 @@
     </div>
 
     <!-- Materialize JavaScript -->
-    <script rel="preconnect" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script rel="preconnect"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Icon Library -->
-    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet preconnect"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- AngularJS -->
     <script rel="preconnect" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>

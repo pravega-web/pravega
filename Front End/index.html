@@ -9,7 +9,8 @@
     <title>Pravega 2021, IISc Bangalore</title>
 
     <!-- Materialize CSS -->
-    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet preconnect"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/index.css">
 
     <!--Fonts-->
@@ -38,6 +39,7 @@
 
 <body ng-controller="homepage">
 
+    <!-- Navbar -->
     <div class="navbar-fixed">
         <nav class="row">
             <div class="nav-wrapper col s12 pri">
@@ -60,12 +62,21 @@
 
     <!-- Main Image -->
     <div class="landing full-height center_parent snappers black">
+
         <img src="/img/IISc/IISc Linesketch.svg" alt="IISc Linesketch"
             style="position: absolute; max-height: 90vh; max-width: 100vw;">
+        
+
         <!-- <div class="center" style="z-index: 0;">
             <h3 style="text-transform:uppercase; padding: 20px;" class="white-text teal">Pravega'21</h3>
             <h5 class="grey subheading">Indian Institute of Science</h5>
         </div> -->
+
+        <a class="black hide-on-med-and-up"
+            style="position: absolute; bottom: 70px; width: 70vw;" href="#welcome">
+            <img src="/img/IISc/white-trans.png" alt="" class="responsive-img">
+        </a>
+
         <a class="btn-floating btn-large black hide-on-med-and-up"
             style="position: absolute; bottom: 30px; border: white solid 1px;" href="#welcome">
             <i class="large material-icons">keyboard_arrow_down
@@ -104,11 +115,12 @@
 
     </div>
 
+    <!-- Parallax 1 -->
     <div class="parallax-container">
-        <div class="parallax"><img src="https://picsum.photos/900" alt="parallax-image"></div>
+        <div class="parallax"><img src="/img/IISc/cpdm.jpg" alt="parallax-image"></div>
     </div>
 
-    <!-- Menu -->
+    <!-- Launchpad -->
     <div class="snappers full-height" style="background-image: linear-gradient(180deg, var(--a), var(--b));"
         id="launchpad">
         <div class="container" style="height: 100%;">
@@ -162,8 +174,8 @@
                         <div class="row" style="width: 100%;">
                             <a href="/recreational/menu.html">
                                 <div class="col l4 push-l2 m6 col s12 center category-card">
-                                    <img src="/img/categories/recreational.svg" class="category-image" alt="Category Image"
-                                        class="resposnive-img hide-on-small-only">
+                                    <img src="/img/categories/recreational.svg" class="category-image"
+                                        alt="Category Image" class="resposnive-img hide-on-small-only">
                                     <br>
                                     <h6>
                                         Recreational
@@ -237,9 +249,11 @@
         </div>
     </div>
 
+    <!-- Parallax 2 -->
     <div class="parallax-container">
-        <div class="parallax"><img src="https://picsum.photos/900" alt="parallax-image"></div>
+        <div class="parallax"><img src="/img/IISc/fireflies.jpg" alt="parallax-image"></div>
     </div>
+
     <!-- Showcase -->
     <div class="snappers full-height" id="showcase"
         style="background-image: linear-gradient(180deg, var(--b), var(--b));">
@@ -251,7 +265,8 @@
                 </div>
                 <div class="col s12 row" style="height: 100%;">
                     <div class="col l6 m6 s12 valign-wrapper hide-on-med-and-down" style="height: 100%;">
-                        <img src="/img/science/decoherence.svg" alt="showcase-image" class="responsive-img hide-on-small-only">
+                        <img src="/img/science/decoherence.svg" alt="showcase-image"
+                            class="responsive-img hide-on-small-only">
                     </div>
                     <div class="col l6 m6 hide-on-small-only">
                         <br>
@@ -283,8 +298,9 @@
         </div>
     </div>
 
-    <div class="parallax-container">
-        <div class="parallax"><img src="https://picsum.photos/900" alt="parallax-image"></div>
+    <!-- Parallax 3 -->
+    <div class="parallax-container" style="left:0px; width: 100vw;">
+        <div class="parallax"><img src="/img/IISc/road.jpg" alt="parallax-image"></div>
     </div>
 
     <!-- Workshops -->
@@ -318,8 +334,7 @@
                     <br>
                 </div>
 
-                <div class="col s6 m4 l3 sponsorbox ht" ng-repeat="sponsor in sponsors track by $index"
-                    style="height: 150px">
+                <div class="col s6 m4 l3 sponsorbox ht" ng-repeat="sponsor in sponsors track by $index">
                     <img class="responsive-img" ng-src="{{sponsor}}" alt="Sponsor Image">
                 </div>
 
@@ -350,6 +365,7 @@
         </div>
     </div>
 
+    <!-- Sponsors - 2 -->
     <div class="snappers full-height hide-on-large-only" id="sponsor-us"
         style="background-image: linear-gradient(180deg, var(--c), var(--a));">
         <div class="container">
@@ -375,11 +391,13 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="snappers footer">
         <div class="container">
             <div class="row" style="margin: 0px; padding: 20px">
                 <div class="col s12 l12 center">
-                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" width="250px" height="120px" alt="pravega-footer"></a>
+                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" width="250px" height="120px"
+                            alt="pravega-footer"></a>
                 </div>
                 <br>
                 <div class="col s12 l6 center">
@@ -392,9 +410,11 @@
                 </div>
                 <div class="col s12 l6 center">
                     <br>
-                    <a name="Facebook" href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
+                    <a name="Facebook" href="https://www.facebook.com/PravegaIISc/"
+                        class="fa fa-facebook sm-button"></a>
                     <a name="Twitter" href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
-                    <a name="Instagram" href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
+                    <a name="Instagram" href="https://www.instagram.com/pravega.iisc/"
+                        class="fa fa-instagram sm-button"></a>
                     <a name="YouTube" href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
                         class="fa fa-youtube sm-button"></a>
                 </div>
@@ -403,10 +423,12 @@
     </div>
 
     <!-- Materialize JavaScript -->
-    <script rel="preconnect" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script rel="preconnect"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Icon Library -->
-    <link rel="stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet preconnect"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- AngularJS -->
     <script rel="preconnect" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>

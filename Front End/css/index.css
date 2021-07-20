@@ -111,7 +111,7 @@ body {
     var(--a),
     var(--b),
     var(--c),
-    transparent
+    white
   );
 }
 
@@ -289,4 +289,8 @@ li.timeline:after {
 .welcome_screen{
   background-image:linear-gradient(180deg, black, #121212);
   color: white;
+}
+
+.thin-border{
+  border:1px solid black;
 }
