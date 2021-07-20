@@ -21,6 +21,22 @@
             ]
         },
         {
+            "heading": "Qualifiers",
+            "lists": [
+                {
+                    "header": "The following teams have qualified for the finals of Enumeration:",
+                    "points": [
+                        "<b>Plumpy chungus:</b> Aaghaz Mahajan and Soumil Aggarwal",
+                        "<b>Abstract nonsense:</b> Shantanu Nene and Madhur Agrawal",
+                        "<b>EulerOP:</b> Tirthankar Adhikari and Amit Kumar Mallick",
+                        "<b>Zephyr goes in random directions:</b> Arunsoumya Basu and Bimit Mandal",
+                        "<b>complexroots:</b> Svatejas Shivakumar",
+                        "<b>Gapa gap:</b> Ahir Ghosh and Diptaksho Palit"
+                    ]
+                }
+            ]
+        },
+        {
             "heading":"Eligibility",
             "content":"High school students to 4th year UG. Contestants can participate in teams of upto 2 members."
         },

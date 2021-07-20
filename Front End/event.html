@@ -159,12 +159,12 @@
                         <div ng-repeat="list in module.lists">
                             <br>
                             <b>{{list.header}}</b>
-                            <ul>
+                            <ol>
                                 <li ng-repeat="point in list.points">
                                     <div style="text-align: justify; display: inline" ng-bind-html="htmlize(point)">
                                     </div>
                                 </li>
-                            </ul>
+                            </ol>
                         </div>
                     </div>
 
