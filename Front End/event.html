@@ -121,7 +121,7 @@
                     <li class="timeline" ng-repeat="event in event.events track by $index" data-aos="flip-left"
                         data-aos-anchor-placement="bottom-bottom" data-aos-delay="{{$index + 5}}00">
                         <h6>{{event.name}}</h6>
-                        {{event.date}}
+                        <span ng-bind-html="htmlize(event.date)"></span>
                         <br>
                         <br>
                     </li>
@@ -173,8 +173,9 @@
                         <br>
                         <div ng-repeat="link in module.links">
                             <div ng-show="{{link.file !== undefined}}">
-                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border" style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;     background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c));" >
-                                <i class="material-icons left">
+                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border"
+                                    style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;     background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c));">
+                                    <i class="material-icons left">
                                         attachment
                                     </i>
                                     {{link.text}}
@@ -229,7 +230,9 @@
                 </div>
                 <div class="col l3 left s6">
                     <ul style="list-style-type: circle;">
-                        <li ng-repeat="coord in event.coords"><h6>{{coord}}</h6></li>
+                        <li ng-repeat="coord in event.coords">
+                            <h6>{{coord}}</h6>
+                        </li>
                     </ul>
                 </div>
                 <div class="col l6 s12">
@@ -341,7 +344,7 @@
 
 
             while ($scope.eventName == '' && url_params.length > 0) {
-                $scope.eventName = decodeURI( url_params.pop());
+                $scope.eventName = decodeURI(url_params.pop());
             }
 
             // Making old links work
