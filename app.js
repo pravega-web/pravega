@@ -74,7 +74,6 @@ function server() {
   var regs = require(__dirname + "/models/regs.js");
 
   // Front End
-  app.use("/older", express.static(__dirname + "/public/old_front_end/"));
   app.use("/", express.static(__dirname + "/Front End"));
 
   // Testing new Website
