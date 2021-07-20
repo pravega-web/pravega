@@ -1,0 +1,140 @@
+{
+    "name": "Quadspark",
+    "tagline": "Ideas all around!",
+    "description": [
+        "Pravega ‘21 invites the young geniuses of India to its school quiz competition, Quadspark, to compete with students from other cities. Do you have a firm grasp on science? Pull your socks, put on your hats and get ready to face the heat!"
+    ],
+    "subevents": [],
+    "modules": [
+        {
+            "links": [
+                {
+                    "text": "Click here to download the detailed rules and regulations",
+                    "file": "Quadspark_RulesAndRegulations.pdff"
+                },
+                {
+                    "text": "Download instructions for Quadspark prelims",
+                    "file": "Instructions for Quadspark_2021 Prelims.pdf"
+                },
+                {
+                    "text": "Download sample questions",
+                    "file": "SampleQuestions_Quadspark2021.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "About Quadspark",
+            "content": "Quadspark is the science quiz competition held for high school students as a part of Pravega, the undergraduate Science Fest at the Indian Institute of Science, Bangalore. It is a three-stage event – The prelims, which involves a timed online quiz, with four sections in Science (Physics, Chemistry and Biology), Mathematics, Reasoning and Mental ability, and a special section which deals with Out of the box thinking. The top teams in the prelims shall be called for an interview. The top teams from the interview move on to the finals. The finals will be held online, under the guidance of renowned quiz master, Vinay Mudaliar. Rather than focusing on the rote learning of facts, Quadsparks focuses on your critical thinking and reasoning skills to arrive at the answer.<br><br>The Quiz is conducted In 3 stages:",
+            "lists": [
+                {
+                    "header": "Prelims",
+                    "points": [
+                        "All teams registered give the prelims examination. Examination is Online, Objective & Short answered with Non Routine Type Questions of Class 9-10 Standard.",
+                        "Questions would be asked in 4 Papers – Science, Mathematics, Reasoning & Out-Of-The-Box. Each Papers ideally requires 1 hr to solve.We encourage inter-discussion among participants of a team.",
+                        "All 4 papers are given simultaneously & are to be submitted within a period of 1hr 15mins. (Extra 15min compensatory time is provided only for internet issues inclusive of 1hr 15mins).",
+                        "Detailed Prelims instruction will be available on the rules and regulations document."
+                    ]
+                },
+                {
+                    "header": "Interview",
+                    "points": [
+                        "Top Performers of the Prelims (Min 10% of Prelims) get called for interview. Details of team-interview will be updated in due course of time."
+                    ]
+                },
+                {
+                    "header": "Finals",
+                    "points": [
+                        "Based on combined scores of Prelims & Interview, Teams are selected for Finals. Details of finals will be updated in due course of time."
+                    ]
+                },
+                {
+                    "points": [
+                        "More details on the mode of conduction for the three levels is given in the rules and regulations document."
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Eligibility",
+            "lists": [
+                {
+                    "points": [
+                        "Students upto** Class 11th. (Question standard will be Non-Routine type question solvable by Class 9th - 10th grade students)",
+                        "Students passionate about Science"
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "**Class is considered as on 1 Feb 2021<br>Detailed team formation rules are given in the rules and regulations document.<br><br>The conditions for the team are:",
+            "lists": [
+                {
+                    "points": [
+                        "The participants are required to participate in teams of four, with at least three among the four studying in classes 7, 8, 9 or 10 (including those giving their exams this year. There is a provision to include one team member who is studying at class XI, provided the rest are in the classes 7 ,8 ,9 and 10.)",
+                        "Students can enter the competitions after they have paid a registration fess of ₹200 per team.",
+                        "The links for the questions will be given in the website on the dates for the quiz, in case of prelims. For the finals, and the finalists will be notified about exam procedure of the dates in due time.",
+                        "The students are requested to make sure that they have a proper internet connection during the prelims. Any excuses pertaining to connectivity will not be entertained."
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "View statistics of Quadspark Prelims and list of selected teams for interview",
+                    "file": "stats.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Prizes",
+            "content": "Total prizes worth Rs. 50,000 to be won!",
+            "lists": [
+                {
+                    "header": "Some of the prizes are:",
+                    "points": [
+                        "Winning Team: Rs. 15,000",
+                        "1st Runner Up: Rs. 8,000",
+                        "2nd Runner Up: Rs. 4,000",
+                        "Certificate of Participation to all Candidates",
+                        "Certificate of Merit to all Candidates who qualify prelims",
+                        "Certificate of Excellence (Gold/Silver/Bronze) to all candidate who qualify for finals.",
+                        "Trophies for Winner & Runner Ups.",
+                        "IISc Merchandise",
+                        "Gift Prizes & Coupons"
+                    ]
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Last date to Register",
+            "date": "19<sup>th</sup> June"
+        },
+        {
+            "name": "Prelims",
+            "date": "20<sup>th</sup> June"
+        },
+        {
+            "name": "Results of Prelims",
+            "date": "Released on 27<sup>th</sup> June"
+        },
+        {
+            "name": "Interview",
+            "date": "17<sup>th</sup> July"
+        },
+        {
+            "name": "Results of Interview",
+            "date": "3rd Week of July"
+        },
+        {
+            "name": "Finals",
+            "date": "31<sup>st</sup> July"
+        }
+    ],
+    "coords": [
+        "Anand Santhosh",
+        "Debojjal Bagchi"
+    ],
+    "phone": "9845519837",
+    "email": "quadspark@iisc.ac.in"
+}

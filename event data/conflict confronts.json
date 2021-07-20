@@ -1,0 +1,79 @@
+{
+    "name": "Conflict Confronts",
+    "tagline": "SOMETHING HERE",
+    "description": [
+        "From Heliocentrism to disproving the aether hypothesis; from the Shapley-Curtis argument to Darwinism; from wave-particle debate to Maxwell’s unification and from Galilean Relativity to Einstein’s Theory of Relativity – the conclusions reached were never without conflicting ideas and arguments, in other words, never without debate between the intellectually elite, igniting the discovery of some of the most fundamental foundations as of today.",
+        "Honoring those whose imagination runs along with a dogged perseverance has paved the way to build the world that we know today. Pravega presents to you ‘Conflict Confronts’, a stage for you to take a stand on topics that are set to change the course of human civilization and to showcase your critical thinking; a stage for scientific debate like never before in the largest science fest in India.",
+        "Are you ready to hold your ground, put into use your scientific aptitude to tackle problems and race against the ticking clock?"
+    ],
+    "subevents": [],
+    "modules": [
+        {
+            "heading": "Eligibility Criteria",
+            "content": "Apart from the Pravega 2021 Core Team and their immediate relatives, students in class 11 and above till final year PhD can participate. Each participant can make no more than a single submission. They will participate in all rounds as individuals and not in teams."
+        },
+        {
+            "heading": "Prelims",
+            "content": "The participants are free to choose a topic of their choice as long as it abides by requirements( mentioned in the next para ), record a video of themselves speaking about the side they choose to stand for at most 2 minutes and 15 seconds, and upload it in the registration form. <br> The topics chosen must be science-based and can be arguable. Some examples are:",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "We should be allowed to cybernetically enhance ourselves",
+                        "We should strive for indefinite longevity",
+                        "Genetic engineering of humans must be promoted",
+                        "Space exploration is worth the space debris."
+                    ]
+                }
+            ],
+            "text": "PowerPoint presentation or any such visuals isn’t expected."
+        },
+        {
+            "heading": "Finals",
+            "links": [
+                {
+                    "text": "Click here to download final event details",
+                    "file": "Final_event_details.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Rules and Regulations",
+            "content": "The rules mentioned here, and any that will be communicated later on, are to be followed strictly, violation of which shall lead to a penalty, that may result in disqualification.",
+            "links": [
+                {
+                    "text": "Click here to download the rules and regulations",
+                    "file": "CC_RulesAndRegulations.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Registration",
+            "content": "Interested individuals must register on the Conflict Confronts website only. There is NO registration fee. Forging identity will lead to disqualification. Registration for Conflict Confronts’21 will close on July 16th ,2021.",
+            "links": [
+                {
+                    "text": "Register here!",
+                    "url": "https://docs.google.com/forms/d/e/1FAIpQLSfqySv6vgnwywVeX8veeXatqXq7Q6GvHNzc0JELaTH3OS4UrA/closedform"
+                }
+            ]
+        },
+        {
+            "heading": "Prizes",
+            "content": "Cash prize upto 6k and certificates for all finalists."
+        }
+    ],
+    "events": [
+        {
+            "name": "Prelims",
+            "date": "1<sup>st</sup> July to 16<sup>th</sup> July, 2021"
+        },
+        {
+            "name": "Finals",
+            "date": "End of July (tentatively)"
+        }
+    ],
+    "coords": [
+        "Lakshmi MS"
+    ],
+    "email": "conflictconfronts.pravega@gmail.com"
+}
