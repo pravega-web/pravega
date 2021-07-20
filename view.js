@@ -24,22 +24,22 @@ module.exports = (app) => {
 
   // Gameface Front End Serving System
   app.get("/events/*/:event", (req, res) => {
-    res.sendFile(__dirname+'/Front End/event.html')
+    res.sendFile(__dirname + "/Front End/event.html");
   });
 
   // Data for gameface
-  app.get('/api/event/data', (req, res)=>{
-    console.log(req.query);
-    res.sendFile(__dirname + '/event data/' + decodeURI(req.query.name) + '.json');
-  })
+  app.get("/api/event/data", (req, res) => {
+    res.sendFile(
+      __dirname + "/event data/" + (decodeURI(req.query.name).toLowerCase())  + ".json"
+    );
+  });
 
   // About Us and Contact (Plus Legal)
-  app.get('/contact', (req,res)=>{
-    res.sendFile(__dirname+'/Front End/contact.html');
-  })
+  app.get("/contact", (req, res) => {
+    res.sendFile(__dirname + "/Front End/contact.html");
+  });
 
-  app.get('/workshops', (req, res) => {
-    res.sendFile(__dirname + '/Front End/workshops.html');
-  })
-    
+  app.get("/workshops", (req, res) => {
+    res.sendFile(__dirname + "/Front End/workshops.html");
+  });
 };
