@@ -37,5 +37,9 @@ module.exports = (app) => {
   app.get('/contact', (req,res)=>{
     res.sendFile(__dirname+'/Front End/contact.html');
   })
+
+  app.get('/workshops', (req, res) => {
+    res.sendFile(__dirname + '/Front End/workshops.html');
+  })
     
 };
