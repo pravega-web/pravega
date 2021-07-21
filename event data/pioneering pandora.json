@@ -1,0 +1,34 @@
+{
+    "name": "Pioneering Pandora",
+    "tagline": "May the Force be with you",
+    "description": [
+        "An Inter-Planetary war sent the planet Pandora into a radioactive nuclear winter.  The survival of your crew is in now fallen into your hands as they face an adverse shortage of ore and fuel. Strategize the action plan for your miner bots and prepare your deadly fighter droids for a one-on-one battle with the enemy. You must gather resources for your crew and defend what is yours. The future of Pandora lies in your hands, Commander."
+    ],
+    "subevents": [
+
+    ],
+    "modules": [
+        {
+            "heading": "Limit on number of teams",
+            "content": "There is an upper limit of 30 groups that will be participating in the game. The groups will be allowed to register and will be allocated a unique group number on a first come , first serve basis. "
+        },
+        {
+            "heading": "Eligibility",
+            "content": "Any student from any university/school is welcome to participate."
+        },
+        {
+            "heading": "Awards",
+            "content": "Cash prizes worth over 20k to be won"
+        }
+    ],
+    "events": [
+        {
+            "name": "Submissions",
+            "date": "Accepted from 21<sup>st</sup> July"
+        }
+    ],
+    "coords": [
+        "Pratik Diwakar"
+    ],
+    "email": "pioneeringpandora@gmail.com"
+}
