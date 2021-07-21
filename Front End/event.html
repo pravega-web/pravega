@@ -345,11 +345,22 @@
                 $scope.eventName = decodeURI(url_params.pop());
             }
 
-            // Making old links work
+            //----- Making old links work ----- //
+            // this is self-explanatory
             $scope.eventName = $scope.eventName.replace(".html", "");
+            // this is for gaming_events
             $scope.eventName = $scope.eventName.replace("_events", "");
+            // this is for mutliword events
             $scope.eventName = $scope.eventName.replace("_", " ");
+            // this is for all categories
             $scope.category = url_params[2].replace("_eve", "");
+            // old website used shorthand forms for these categories
+            if($scope.category == "rec") {
+                $scope.category = "recreational";
+            } 
+            else if($scope.category == "tech") {
+                $scope.category = "technical";
+            }
 
             $scope.path = `/${$scope.category}/${$scope.eventName}/`;
 
