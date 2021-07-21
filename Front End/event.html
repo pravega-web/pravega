@@ -54,7 +54,7 @@
                         alt="Logo Image" />
                 </a>
                 <div class="hide-on-large-only">
-                    <a href="#!" class="breadcrumb">
+                    <a href="/" class="breadcrumb">
                         <img style="height:2em" class="responsive-img" src="/img/pravega/pravega21_logo_circular.png"
                             alt="Logo Image" />
                     </a>
@@ -172,8 +172,8 @@
                         <br>
                         <div ng-repeat="link in module.links">
                             <div ng-show="{{link.file !== undefined}}">
-                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border"
-                                    style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;     background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c));">
+                                <a ng-href="{{path}}{{link.file}}"
+                                    class="btn black-text sl-round thin-border button-link">
                                     <i class="material-icons left">
                                         attachment
                                     </i>
@@ -181,7 +181,8 @@
                                 </a>
                             </div>
                             <div ng-show="{{link.url !== undefined}}">
-                                <a ng-href=" {{link.url}}" target="_blank" class="btn-flat shiny">{{link.text}}</a>
+                                <a ng-href=" {{link.url}}" target="_blank"
+                                    class="btn-flat shiny button-link">{{link.text}}</a>
                             </div>
                             <br>
                         </div>
