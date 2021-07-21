@@ -17,6 +17,15 @@
             "content": "Any student from any university/school below the age of 27 is welcome to participate."
         },
         {
+            "heading": "Registration",
+            "links": [
+                {
+                    "text": "Click here to register",
+                    "url": "https://rzp.io/l/cHmIftf"
+                }
+            ]
+        },
+        {
             "heading": "Rules and Regulations",
             "content": "General rules, and rules concerning formation of teams are given in the following document:",
             "links": [
