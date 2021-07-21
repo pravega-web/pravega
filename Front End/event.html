@@ -341,14 +341,13 @@
             $scope.eventName = '';
             var url_params = window.location.pathname.split('/');
 
-
-
             while ($scope.eventName == '' && url_params.length > 0) {
                 $scope.eventName = decodeURI(url_params.pop());
             }
 
             // Making old links work
             $scope.eventName = $scope.eventName.replace(".html", "");
+            $scope.eventName = $scope.eventName.replace("_events", "");
             $scope.eventName = $scope.eventName.replace("_", " ");
             $scope.category = url_params[2].replace("_eve", "");
 
