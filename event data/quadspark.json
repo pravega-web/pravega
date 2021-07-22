@@ -85,6 +85,15 @@
             ]
         },
         {
+            "heading": "Interview Results",
+            "links": [
+                {
+                    "text": "Click here to download",
+                    "file": "quadspark_interview_results.pdf"
+                }
+            ]
+        },
+        {
             "heading": "Prizes",
             "content": "Total prizes worth Rs. 50,000 to be won!",
             "lists": [
