@@ -318,12 +318,6 @@
         app.controller("eventPage", function ($scope, $http, $location, $sce) {
             console.log("Hompage controlled started....");
 
-            // Event Details
-            $scope.event = {
-            };
-
-            $scope.$sce = $sce;
-
             // Materialize
             var scrollspyelems = document.querySelectorAll(".scrollspy");
             var scrollspy_instances = M.ScrollSpy.init(scrollspyelems, {});
@@ -334,6 +328,12 @@
 
             // AOS
             AOS.init();
+
+            // Event Details
+            $scope.event = {
+            };
+
+            $scope.$sce = $sce;
 
             // Production level event flow
 
@@ -355,33 +355,65 @@
             // this is for all categories
             $scope.category = url_params[2].replace("_eve", "");
             // old website used shorthand forms for these categories
-            if($scope.category == "rec") {
+            if ($scope.category == "rec") {
                 $scope.category = "recreational";
-            } 
-            else if($scope.category == "tech") {
+            }
+            else if ($scope.category == "tech") {
                 $scope.category = "technical";
             }
 
-            $scope.path = `/${$scope.category}/${$scope.eventName}/`;
+            //----- Checking for event-category mismatch -----//
+            $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit"];
+            $scope.cultural_events = ["A Crime Correspondence", "Alekhya", "Conflict Confronts", "Lasya", "Shutters", "Relay Reels"];
+            $scope.technical_events = ["honor code", "hackathon", "pioneering pandora", "gamen'gain"];
+            $scope.recreational_events = ["gaming"];
 
-            // Call server and get page object
-            $http({
-                method: 'GET',
-                url: '/api/event/data',
-                params: {
-                    "name": $scope.eventName
+            var matches = false;
+
+            if ($scope.category == "science" && $scope.science_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            else if ($scope.category == "cultural" && $scope.cultural_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            else if ($scope.category == "technical" && $scope.technical_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            else if ($scope.category == "recreational" && $scope.recreational_events.includes($scope.eventName)) {
+                matches = true;
+            }
+
+            if (matches) {
+                // Call server and get page object
+                $http({
+                    method: 'GET',
+                    url: '/api/event/data',
+                    params: {
+                        "name": $scope.eventName
+                    }
+                }).then((res) => {
+                    $scope.event = res.data;
+                }, (res) => {
+                    $scope.event = {
+                    "name": "Error: 404",
+                    "tagline": "Not Found"
                 }
-            }).then((res) => {
-                $scope.event = res.data;
-            }, (res) => {
-                alert(res.data)
-            })
+                });
+            }
+            else {
+                // Event-category mismatch taken place
+                $scope.event = {
+                    "name": "Error: 404",
+                    "tagline": "Not Found"
+                }
+            }
 
             $scope.htmlize = (htmlstring) => {
                 return $sce.trustAsHtml(htmlstring);
             }
 
             document.title = $scope.eventName.charAt(0).toUpperCase() + $scope.eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
+            $scope.path = `/${$scope.category}/${$scope.eventName}/`;
         });
 
     </script>
