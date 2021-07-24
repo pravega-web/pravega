@@ -363,7 +363,7 @@
             }
 
             //----- Checking for event-category mismatch -----//
-            $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit"];
+            $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit", "simulacrum"];
             $scope.cultural_events = ["A Crime Correspondence", "Alekhya", "Conflict Confronts", "Lasya", "Shutters", "Relay Reels"];
             $scope.technical_events = ["honor code", "hackathon", "pioneering pandora", "gamen'gain"];
             $scope.recreational_events = ["gaming"];
@@ -395,9 +395,10 @@
                     $scope.event = res.data;
                 }, (res) => {
                     $scope.event = {
-                    "name": "Error: 404",
-                    "tagline": "Not Found"
-                }
+                        "name": "Error: 404",
+                        "tagline": "Not Found"
+                    }
+                    console.log("Either the event does not exist or its json file has an error");
                 });
             }
             else {
@@ -406,6 +407,7 @@
                     "name": "Error: 404",
                     "tagline": "Not Found"
                 }
+                console.log("Event category mismatch");
             }
 
             $scope.htmlize = (htmlstring) => {
