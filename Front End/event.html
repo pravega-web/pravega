@@ -157,7 +157,9 @@
                     <div ng-show="{{module.lists !== undefined}}">
                         <div ng-repeat="list in module.lists">
                             <br>
-                            <b>{{list.header}}</b>
+                            <div ng-show="{{list.header !== undefined}}">
+                                <b>{{list.header}}</b>
+                            </div>
                             <ol>
                                 <li ng-repeat="point in list.points">
                                     <div style="text-align: justify; display: inline" ng-bind-html="htmlize(point)">
@@ -364,11 +366,13 @@
 
             //----- Checking for event-category mismatch -----//
             $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit", "simulacrum", "Bad Ad-hoc Hypotheses"];
-            $scope.cultural_events = ["A Crime Correspondence", "Alekhya", "Conflict Confronts", "Lasya", "Shutters", "Relay Reels"];
+            $scope.cultural_events = ["A Crime Correspondence", "Alekhya", "Conflict Confronts", "Lasya", "Shutterbugs", "Relay Reels"];
             $scope.technical_events = ["honor code", "hackathon", "pioneering pandora", "gamen'gain"];
             $scope.recreational_events = ["gaming"];
+            $scope.events = $scope.science_events.concat($scope.cultural_events, $scope.recreational_events, $scope.technical_events);
 
             var matches = false;
+            var exists = false;
 
             if ($scope.category == "science" && $scope.science_events.includes($scope.eventName)) {
                 matches = true;
@@ -382,9 +386,11 @@
             else if ($scope.category == "recreational" && $scope.recreational_events.includes($scope.eventName)) {
                 matches = true;
             }
+            if ($scope.events.includes($scope.eventName)) {
+                exists = true;
+            }
 
             if (matches) {
-                // Call server and get page object
                 $http({
                     method: 'GET',
                     url: '/api/event/data',
@@ -398,16 +404,21 @@
                         "name": "Error: 404",
                         "tagline": "Not Found"
                     }
-                    console.log("Either the event does not exist or its json file has an error");
+                    console.log("DEBUG: Either the event json file does not exist or it has error(s)");
                 });
             }
             else {
-                // Event-category mismatch taken place
                 $scope.event = {
                     "name": "Error: 404",
                     "tagline": "Not Found"
                 }
-                console.log("Event category mismatch");
+
+                if (!exists) {
+                    console.log("DEBUG: Event doesn't exist in list of events");
+                }
+                else if (!matches) {
+                    console.log("DEBUG: Event category mismatch");
+                }
             }
 
             $scope.htmlize = (htmlstring) => {
