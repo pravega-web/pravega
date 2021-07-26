@@ -10,7 +10,17 @@
     "modules": [
         {
             "heading": "Eligibility",
-            "content": "Anyone can participate but only Indian students UG or below are eligible for cash prize."
+            "content": "Anyone can participate but only Indian students UG or below are eligible for cash prize.",
+            "links": [
+                {
+                    "text": "Fill up this form to be eligible for prizes",
+                    "url": "https://forms.gle/JJsAiNzxzudt79jJA"
+                },
+                {
+                    "text": "Contest link",
+                    "url": "https://codedrills.io/contests/honorcode-2021"
+                }
+            ]
         },
         {
             "heading": "Rules",
