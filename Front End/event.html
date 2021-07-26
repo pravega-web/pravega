@@ -131,7 +131,9 @@
             <div class="col l12 s12 body">
                 <div ng-repeat="module in event.modules">
                     <!-- Heading -->
-                    <h5>{{module.heading}}</h5>
+                    <div ng-show="{{module.heading !== undefined}}">
+                        <h5>{{module.heading}}</h5>
+                    </div>
 
                     <!-- Content -->
                     <div ng-show="{{module.content !== undefined}}">

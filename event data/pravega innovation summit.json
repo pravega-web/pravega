@@ -35,9 +35,57 @@
             ]
         },
         {
+            "heading": "Results",
+            "content": "Words aren’t enough to express how overwhelmed we feel with the immense response PIS has received. We had a tough time choosing the best blueprints from all the fantastic projects, but here we are with our 6 finalists (The order in which the entries are mentioned is random and does not imply/signify anything) :",
+            "table": {
+                "headers": [
+                    "Team name",
+                    "Member 1",
+                    "Member 2",
+                    "Member 3"
+                ],
+                "rows": [
+                    [
+                        "Bioplastics",
+                        "Nitish K R"
+                    ],
+                    [
+                        "LifeBoat",
+                        "Muhammed Razeen V",
+                        "Gokul P Dinesh",
+                        "Roshnia A R"
+                    ],
+                    [
+                        "Team GroundBlu",
+                        "Aban Mandal",
+                        "Samriddho Ghosh",
+                        "Abhishek Gupta"
+                    ],
+                    [
+                        "RexSys",
+                        "Abhishek Samlodia",
+                        "Vishal Dafada",
+                        "Sayar Mandal"
+                    ],
+                    [
+                        "Avatar Adventures",
+                        "Aranyo Ray",
+                        "Shreya Jain",
+                        "Pratham Sarwate"
+                    ],
+                    [
+                        "SegriSave",
+                        "Abhishek Jeason"
+                    ]
+                ]
+            }
+        },
+        {
+            "content": "The finals would be held on 31st July 2021, 10:00 AM - 1:00 PM. Finalists would be required to deliver an interactive presentation of about 10 minutes before the judges, followed by a brief QnA session. Additional details and the meeting link will be mailed soon. <br> <br> Congratulations to all the finalists for the great ideas you are brewing. We look forward to your performance in the finals. <br> <br> To all the other participants, be proud even if your entry didn't make the cut. The ideas were excellent and packed with potential! We wish you all the best for your future endeavors; keep innovating!"
+        },
+        {
             "heading": "Awards",
             "content": "Selected students from prelims would be given a chance to compete in the main event and win cash prizes upto <b>75k INR.</b>"
-            
         }
     ],
     "events": [
@@ -46,8 +94,8 @@
             "date": "From 15<sup>th</sup> June 2021 to <b> 20<sup>th</sup> July (Extended)</b>"
         },
         {
-            "name": "Main Event",
-            "date": "Will be announced soon!"
+            "name": "Finals",
+            "date": "31<sup>st</sup> July 2021, 10:00 AM - 1:00 PM"
         }
     ],
     "coords": [
