@@ -3,7 +3,8 @@
     "tagline": "Interactive Simulations!",
     "description": [
         "This event aims to showcase some interesting phenomena which are not well explored in the everyday courses taken by a student through various simulations.",
-        "You will be able to view the simulations from the links which will be provided in our website. "
+        "You will be able to view the simulations from the links which will be provided in our website. ",
+        "<b>This event is open to all. No registration is required</b>"
     ],
     "modules": [
         {
@@ -16,7 +17,13 @@
         },
         {
             "heading": "Mandelbrot Set",
-            "content": "The Mandelbrot Set, is a set of complex numbers c such that the function f(z) = z<sup>2</sup> +c does not diverge as it is recursively iterated from z = 0 + 0i and c = coordinate of that pixel in complex plane. The different regions of the set have different properties with some of them being very intriguing fractal groups and the boundary of the Mandelbrot set reveals the same image of the set recursively occurring making the boundary itself a fractal. This scale of self-similarity occurring on successive iterations from the simple ruleset made this set to be well known for it’s mathematical beauty."
+            "content": "The Mandelbrot Set, is a set of complex numbers c such that the function f(z) = z<sup>2</sup> +c does not diverge as it is recursively iterated from z = 0 + 0i and c = coordinate of that pixel in complex plane. The different regions of the set have different properties with some of them being very intriguing fractal groups and the boundary of the Mandelbrot set reveals the same image of the set recursively occurring making the boundary itself a fractal. This scale of self-similarity occurring on successive iterations from the simple ruleset made this set to be well known for it’s mathematical beauty.",
+            "links": [
+                {
+                    "text": "Exciting information about the Mandelbrot set",
+                    "file": "mandelbrot_set.pdf"
+                }
+            ]
         },
         {
             "heading": "Flocking Behaviour",
