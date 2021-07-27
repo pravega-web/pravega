@@ -1,6 +1,6 @@
 {
     "name": "Conflict Confronts",
-    "tagline": "SOMETHING HERE",
+    "tagline": "Take a stand and a seat",
     "description": [
         "From Heliocentrism to disproving the aether hypothesis; from the Shapley-Curtis argument to Darwinism; from wave-particle debate to Maxwell’s unification and from Galilean Relativity to Einstein’s Theory of Relativity – the conclusions reached were never without conflicting ideas and arguments, in other words, never without debate between the intellectually elite, igniting the discovery of some of the most fundamental foundations as of today.",
         "Honoring those whose imagination runs along with a dogged perseverance has paved the way to build the world that we know today. Pravega presents to you ‘Conflict Confronts’, a stage for you to take a stand on topics that are set to change the course of human civilization and to showcase your critical thinking; a stage for scientific debate like never before in the largest science fest in India.",
@@ -49,7 +49,7 @@
         },
         {
             "heading": "Registration",
-            "content": "Interested individuals must register on the Conflict Confronts website only. There is NO registration fee. Forging identity will lead to disqualification. Registration for Conflict Confronts’21 will close on July 16th ,2021.",
+            "content": "Interested individuals must register on the Conflict Confronts website only. There is NO registration fee. Forging identity will lead to disqualification.",
             "links": [
                 {
                     "text": "Register here!",
@@ -65,11 +65,11 @@
     "events": [
         {
             "name": "Prelims",
-            "date": "1<sup>st</sup> July to 16<sup>th</sup> July, 2021"
+            "date": "Cancelled"
         },
         {
             "name": "Finals",
-            "date": "End of July (tentatively)"
+            "date": "31<sup>st</sup> July and 1<sup>st</sup> August"
         }
     ],
     "coords": [
