@@ -171,6 +171,19 @@
                         </div>
                     </div>
 
+                    <div ng-show="{{module.talks !== undefined}}">
+                        <div ng-repeat="talk in module.talks">
+                            <div class="card blue darken-2">
+                                <div class="card-content white-text">
+                                  <span class="card-title">{{talk.topic}}</span>
+                                  <b>By Prof. {{talk.speaker}}</b>
+                                  <p>Date and Time: {{talk.date}}</p>
+                                </div>
+                              </div>
+                        </div>
+                        <br>
+                    </div>
+
                     <!-- Links -->
                     <div ng-show="{{module.links !== undefined}}">
                         <br>
