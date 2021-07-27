@@ -44,7 +44,7 @@
     }
 </style>
 
-<body ng-controller="eventPage">
+<body ng-controller="eventPage" style="max-width: 100vw;">
     <!-- Navbar -->
     <div class="navbar-fixed">
         <nav class="row">
@@ -172,8 +172,8 @@
                         <br>
                         <div ng-repeat="link in module.links">
                             <div ng-show="{{link.file !== undefined}}">
-                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border"
-                                    style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;     background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c));">
+                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border truncate"
+                                    style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;  background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c)); max-width: 100%;">
                                     <i class="material-icons left">
                                         attachment
                                     </i>
