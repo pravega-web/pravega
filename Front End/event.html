@@ -171,6 +171,7 @@
                         </div>
                     </div>
 
+                    <!-- Talks -->
                     <div ng-show="{{module.talks !== undefined}}">
                         <div ng-repeat="talk in module.talks">
                             <div class="card blue darken-2">
@@ -381,6 +382,10 @@
             // Enumeration
             if ($scope.eventName == "Enumeration") {
                 $scope.eventName = "enumeration";
+            }
+            // Conflicts Confronts
+            if ($scope.eventName == "conflict confronts") {
+                $scope.eventName = "Conflict Confronts"
             }
 
             //----- Checking for event-category mismatch -----//
