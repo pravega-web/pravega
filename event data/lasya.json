@@ -2,6 +2,54 @@
     "name": "Lasya",
     "tagline": "A Trendy Dance",
     "description": [
-        "Website under construction"
-    ]
+        "It's Time to Dance o' clock! Forget the boredom of quarantine and show off your cool moves and grab your chance to be judged by Shekhar Master himself. Pravega '21 presents to you Lasya, your very own stage to show off your aesthetic. Don’t keep these cool rewards waiting for too long, will ya'?"
+    ],
+    "modules": [
+        {
+            "heading": "Eligibility",
+            "content": "Open to all. <br> <b> First 50 registrations will get free TIAAN products worth 50k! Hurry! </b>"
+        },
+        {
+            "heading": "Terms and Conditions",
+            "links": [
+                {
+                    "text": "Click here to download T&C",
+                    "file": "Lasya_T&C.docx"
+                }
+            ]
+        },
+        {
+            "heading": "Submissions",
+            "content": "The process is simple enough: just pick a song of your choice (or from the list provided) and make a fiery dance-music video of minimum 90 seconds and send them to us at <a href='mailto:pravega.lasya@gmail.com'>pravega.lasya@gmail.com</a>. ",
+            "links": [
+                {
+                    "text": "Register here before submitting your entries",
+                    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdjcSYx6jXsr73tUJDMOxhI_uEiD1YtPp5Laf9vsjlJyVV1AA/viewform?vc=0&c=0&w=1&flr=0"
+                }
+            ]
+        },
+        {
+            "heading": "Judges",
+            "content": "Shekhar master and Baba master"
+        },
+        {
+            "heading": "Prizes",
+            "content": "Cash prizes worth 26k + Social media shoutouts!"
+        }
+    ],
+    "events": [
+        {
+            "name": "Last date for submission",
+            "date": "1<sup>st</sup> August"
+        },
+        {
+            "name": "Announcement of results",
+            "date": "First week of August"
+        }
+    ],
+    "coords": [
+        "Harsha Vardhanudh",
+        "Boda Srinivas"
+    ],
+    "email": "lasya.pravega@gmail.com"
 }
