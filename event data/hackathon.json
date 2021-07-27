@@ -15,16 +15,18 @@
         },
         {
             "heading": "Rules and Regulations",
-            "lists" : [
+            "lists": [
                 {
-                    "points" : ["<b>Prelims:</b> For the prelims you need to choose a problem compatible with any of the two themes. Then you should prepare a presentation depicting how you shall work on the problem and proceed to design a suitable solution with an optional video of maximum 10 minutes. Our judging panel is going to sort out best 5 for the mains. You are open to design your presentations, there are no restrictions! You should cite the source if you are referring to any website/journal, etc., else you will be disqualified. You need to send the presentation in the official mail id <a href = \"mailto: hackathon.pravega@gmail.com\">hackathon.pravega@gmail.com</a> on or before 30 June’ 21 23:59 IST. Multiple submissions are strongly discouraged.",
-                                "<b>Mains:</b> The 5 selected teams will be assigned related problems on the D-day, they designed in the prelims. Each team will have to code out the solution within given time. This will be followed by a presentation of 20 mins in front of the judging panel. The participants might have to share their working screen and might be monitored for keeping it fair. (This is the tentative plan and might be updated shortly)"]
+                    "points": [
+                        "<b>Prelims:</b> For the prelims you need to choose a problem compatible with any of the two themes. Then you should prepare a presentation depicting how you shall work on the problem and proceed to design a suitable solution with an optional video of maximum 10 minutes. Our judging panel is going to sort out best 5 for the mains. You are open to design your presentations, there are no restrictions! You should cite the source if you are referring to any website/journal, etc., else you will be disqualified. You need to send the presentation in the official mail id <a href = \"mailto: hackathon.pravega@gmail.com\">hackathon.pravega@gmail.com</a> on or before 30 June’ 21 23:59 IST. Multiple submissions are strongly discouraged.",
+                        "<b>Mains:</b> The 5 selected teams will be assigned related problems on the D-day, they designed in the prelims. Each team will have to code out the solution within given time. This will be followed by a presentation of 20 mins in front of the judging panel. The participants might have to share their working screen and might be monitored for keeping it fair. (This is the tentative plan and might be updated shortly)"
+                    ]
                 }
             ]
         },
         {
-            "heading" : "Awards",
-            "content" : "Cash prize of 20k for the winners, 10k for the runners up and 5k for the second runners up. All the finalists and award winners will receive certificates from Pravega, IISc Bangalore."
+            "heading": "Awards",
+            "content": "Cash prize of 20k for the winners, 10k for the runners up and 5k for the second runners up. All the finalists and award winners will receive certificates from Pravega, IISc Bangalore."
         }
     ],
     "events": [

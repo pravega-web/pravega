@@ -29,6 +29,49 @@
                     "file" : "rules.pdf"
                 }
             ]
+        },
+        {
+            "heading": "Prelims results",
+            "table": {
+                "headers": [
+                    "Rank",
+                    "Participant 1",
+                    "Participant 2",
+                    "Participant 3",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "Suhaas Sehgal",
+                        "Mahima Samraik",
+                        "Ananya Natarajan",
+                        "IISER Mohali"
+                    ],
+                    [
+                        "2",
+                        "Ashmita Das",
+                        "Srijani Mitra",
+                        "Anwesha Banerjee", 
+                        "Presidency University, Kolkata"
+                    ],
+                    [
+                        "3",
+                        "Priyanshu Jaseja",
+                        "Dhiren Bhardwaj",
+                        "Anshul Siwach",
+                        "Pragati Public School"
+                    ],
+                    [
+                        "4",
+                        "Shraman Jana",
+                        "Adrija Adhikary",
+                        "Tisha Dash",
+                        "IISER Kolkata"
+                    ]
+                ]
+            },
+            "content": "Along with the following teams, Swapnamoy Ganguly (IACS), Parth Chandak (IISER Kolkata) and Anurag Chittawar (Yogiraj Public School) are being offered lateral entry to the finals due to their ranks in the pre-Pravega segment of BioBlitz."
         }
     ],
     "events": [

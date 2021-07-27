@@ -15,7 +15,7 @@
             "links": [
                 {
                     "text": "Download rules and regulations",
-                    "file": "rules BBK.pdf"
+                    "file": "rules_BBK.pdf"
                 }
             ]
         },
@@ -25,7 +25,7 @@
             "links": [
                 {
                     "text": "Download rules and regulations",
-                    "file": "rules BGMI.pdf"
+                    "file": "rules_BGMI.pdf"
                 }
             ]
         },
@@ -37,7 +37,7 @@
     "events": [
         {
             "name": "Bishops before Knights",
-            "date": "Round 1: 26<sup>th</sup> July at 4 PM IST <br> Round 2: 28<sup>th</sup> and 29<sup>th</sup> July <br> Finals: 31<sup>st</sup> July "
+            "date": "<b>Last date to register: Extended till 8 PM on 25<sup>th</sup> July</b> <br> Round 1: 26<sup>th</sup> July at 4 PM IST <br> Round 2: 28<sup>th</sup> and 29<sup>th</sup> July <br> Finals: 31<sup>st</sup> July "
         },
         {
             "name": "Battlegrounds Mobile India",
@@ -46,7 +46,7 @@
     ],
     "coords": [
         "Pabitra Sharma (BBK)",
-        "Karthik Sharma (BBK)",
+        "Kartik Sharma (BBK)",
         "Vimlesh Chouhan (BGMI)",
         "Harsh Thakur (BGMI)"
     ],

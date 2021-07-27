@@ -8,6 +8,22 @@
     ],
     "modules": [
         {
+            "heading": "Talks",
+            "content": "Details about the platform for the talks will be posted soon.",
+            "talks": [
+                {
+                    "topic": "Shapes, Differential Equations, and Physics",
+                    "speaker": "Vamsi Pritham Pingali",
+                    "date": "2 PM on July 30th"
+                },
+                {
+                    "topic": "Can computers prove theorems?",
+                    "speaker": "Kevin Buzzard",
+                    "date": "3:15 PM on July 30th"
+                }
+            ]
+        },
+        {
             "heading": "Some useful links",
             "links":[
                 {
@@ -52,7 +68,7 @@
         },
         {
             "name": "Finals",
-            "date": "TBD. During Pravega 2021 (29<sup>th</sup> July to 1<sup>st</sup> August)"
+            "date": "2-5 PM on 29<sup>th</sup> July <br>10 AM-1 PM on 30<sup>th</sup> July"
         }
     ],
     "coords": [

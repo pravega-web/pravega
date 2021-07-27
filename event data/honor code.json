@@ -1,0 +1,45 @@
+{
+    "name": "Honor Code",
+    "tagline": "<honor>code</honor>",
+    "description": [
+        "In Pravega: HonourCode, participants follow the honour code of programmers to make carefully optimised elegant algorithms to navigate an array of mind-bending programming problems. If you are into programming, participate in the HonourCode to show off your dedication to the Code today."
+    ],
+    "subevents": [
+
+    ],
+    "modules": [
+        {
+            "heading": "Eligibility",
+            "content": "Anyone can participate but only Indian students UG or below are eligible for cash prize.",
+            "links": [
+                {
+                    "text": "Fill up this form to be eligible for prizes",
+                    "url": "https://forms.gle/JJsAiNzxzudt79jJA"
+                },
+                {
+                    "text": "Contest link",
+                    "url": "https://codedrills.io/contests/honorcode-2021"
+                }
+            ]
+        },
+        {
+            "heading": "Rules",
+            "content": "This contest is full-feedback (solutions are judged during the contest). Each question is worth one point. Competitors are ranked first by total scores, then by penalties. The penalties are computed as (the time per queston) + (10 minutes) * (the number of incorrect attempts). <br> <br> Do not share logic or code with other participants. Plagiarism could lead to disqualification from contest."
+        },
+        {
+            "heading": "Prizes",
+            "content": "Win from a cash pool of 15k! The prize distribution is as follows: <br> 1st prize - 5k <br> 2nd prize - 4k <br> 3rd prize - 3k <br> 4th prize - 2k <br> 5th prize - 1k"
+        }
+    ],
+    "events": [
+        {
+            "name": "Main Event",
+            "date": "5:00 PM IST on 30<sup>th</sup> July. <br> Duration: 3 hours"
+        }
+    ],
+    "coords": [
+        "Shravan Singh Mehra",
+        "Dhruv Meduri"
+    ],
+    "email": "honorcode.pravega2021@gmail.com"
+}

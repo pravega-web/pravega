@@ -78,6 +78,10 @@
                 {
                     "text": "Download the prelims question paper",
                     "file": "chemenigma_prelims_qp.pdf"
+                },
+                {
+                    "text": "Download solutions",
+                    "file": "chemenigma_prelims_solutions.pdf"
                 }
             ]
         },
@@ -123,7 +127,7 @@
         },
         {
             "name": "Finals",
-            "date": "TBD. During Pravega 2021 (29<sup>th</sup> July to 1<sup>st</sup> August)"
+            "date": "31<sup>st</sup> July"
         }
     ],
     "coords": [

@@ -31,7 +31,8 @@
 
             <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
                 <a ng-href="/events/technical/{{evt}}" class="center" style="padding: 10px;">
-                    <img class="responsive-img" src='/img/technical/{{evt}}.svg' alt="Event Icon Logo" style="padding: 10px;">
+                    <img class="responsive-img" src='/img/technical/{{evt}}.svg' alt="Event Icon Logo"
+                        style="padding: 10px;">
                     <h4 class="black-text">
                         {{evt}}
                     </h4>
@@ -44,12 +45,13 @@
         <div class="container">
             <div class="row" style="margin: 0px; padding: 20px">
                 <div class="col s4 l2 push-s4 push-l5 center">
-                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg"class="responsive-img" alt="Pravega Footer"></a>
+                    <a href="/"><img src="/img/pravega/pravega21_fullname.svg" class="responsive-img"
+                            alt="Pravega Footer"></a>
                 </div>
                 <div class="col s12">
                     <br>
                 </div>
-                
+
                 <div class="col s12 l6 center">
                     <div class="container white-text">
                         © Pravega 2021
@@ -63,7 +65,8 @@
                     <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
                     <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
                     <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
-                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ" class="fa fa-youtube sm-button"></a>
+                    <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
+                        class="fa fa-youtube sm-button"></a>
                 </div>
             </div>
         </div>
@@ -78,7 +81,7 @@
     <script>
         var app = angular.module('pravega', []);
 
-        app.controller('menuController', function($scope, $http, $location) {
+        app.controller('menuController', function ($scope, $http, $location) {
             console.log('Menu Controller loaded...');
 
             $scope.category = 'Technical'
@@ -86,7 +89,9 @@
             document.title = $scope.category + ' Events | Pravega 2021'
 
             $scope.events = [
+                'honor code',
                 'hackathon',
+                'pioneering pandora',
                 "gamen'gain",
             ]
         })

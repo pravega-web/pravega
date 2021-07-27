@@ -54,7 +54,7 @@
                         alt="Logo Image" />
                 </a>
                 <div class="hide-on-large-only">
-                    <a href="#!" class="breadcrumb">
+                    <a href="/" class="breadcrumb">
                         <img style="height:2em" class="responsive-img" src="/img/pravega/pravega21_logo_circular.png"
                             alt="Logo Image" />
                     </a>
@@ -131,7 +131,9 @@
             <div class="col l12 s12 body">
                 <div ng-repeat="module in event.modules">
                     <!-- Heading -->
-                    <h5>{{module.heading}}</h5>
+                    <div ng-show="{{module.heading !== undefined}}">
+                        <h5>{{module.heading}}</h5>
+                    </div>
 
                     <!-- Content -->
                     <div ng-show="{{module.content !== undefined}}">
@@ -157,7 +159,9 @@
                     <div ng-show="{{module.lists !== undefined}}">
                         <div ng-repeat="list in module.lists">
                             <br>
-                            <b>{{list.header}}</b>
+                            <div ng-show="{{list.header !== undefined}}">
+                                <b>{{list.header}}</b>
+                            </div>
                             <ol>
                                 <li ng-repeat="point in list.points">
                                     <div style="text-align: justify; display: inline" ng-bind-html="htmlize(point)">
@@ -167,13 +171,27 @@
                         </div>
                     </div>
 
+                    <!-- Talks -->
+                    <div ng-show="{{module.talks !== undefined}}">
+                        <div ng-repeat="talk in module.talks">
+                            <div class="card blue darken-2">
+                                <div class="card-content white-text">
+                                  <span class="card-title">{{talk.topic}}</span>
+                                  <b>By Prof. {{talk.speaker}}</b>
+                                  <p>Date and Time: {{talk.date}}</p>
+                                </div>
+                              </div>
+                        </div>
+                        <br>
+                    </div>
+
                     <!-- Links -->
                     <div ng-show="{{module.links !== undefined}}">
                         <br>
                         <div ng-repeat="link in module.links">
                             <div ng-show="{{link.file !== undefined}}">
-                                <a ng-href="{{path}}{{link.file}}" class="btn black-text sl-round thin-border truncate"
-                                    style="padding-top:0px; padding-left: 5px; padding-right: 5px; border: none;  background-image: linear-gradient( 45deg, var(--a), var(--b), var(--c)); max-width: 100%;">
+                                <a ng-href="{{path}}{{link.file}}"
+                                    class="btn black-text sl-round thin-border button-link">
                                     <i class="material-icons left">
                                         attachment
                                     </i>
@@ -181,7 +199,8 @@
                                 </a>
                             </div>
                             <div ng-show="{{link.url !== undefined}}">
-                                <a ng-href=" {{link.url}}" target="_blank" class="btn-flat shiny">{{link.text}}</a>
+                                <a ng-href=" {{link.url}}" target="_blank"
+                                    class="btn-flat shiny button-link">{{link.text}}</a>
                             </div>
                             <br>
                         </div>
@@ -317,12 +336,6 @@
         app.controller("eventPage", function ($scope, $http, $location, $sce) {
             console.log("Hompage controlled started....");
 
-            // Event Details
-            $scope.event = {
-            };
-
-            $scope.$sce = $sce;
-
             // Materialize
             var scrollspyelems = document.querySelectorAll(".scrollspy");
             var scrollspy_instances = M.ScrollSpy.init(scrollspyelems, {});
@@ -334,43 +347,110 @@
             // AOS
             AOS.init();
 
+            // Event Details
+            $scope.event = {
+            };
+
+            $scope.$sce = $sce;
+
             // Production level event flow
 
             // Get URL parameters to decide page
             $scope.eventName = '';
             var url_params = window.location.pathname.split('/');
 
-
-
             while ($scope.eventName == '' && url_params.length > 0) {
                 $scope.eventName = decodeURI(url_params.pop());
             }
 
-            // Making old links work
+            //----- Making old links work ----- //
+            // this is self-explanatory
             $scope.eventName = $scope.eventName.replace(".html", "");
-            $scope.eventName = $scope.eventName.replace("_", " ");
+            // this is for gaming_events
+            $scope.eventName = $scope.eventName.replace("_events", "");
+            // this is for mutliword events
+            $scope.eventName = $scope.eventName.replaceAll("_", " ");
+            // this is for all categories
             $scope.category = url_params[2].replace("_eve", "");
+            // old website used shorthand forms for these categories
+            if ($scope.category == "rec") {
+                $scope.category = "recreational";
+            }
+            else if ($scope.category == "tech") {
+                $scope.category = "technical";
+            }
+            // Enumeration
+            if ($scope.eventName == "Enumeration") {
+                $scope.eventName = "enumeration";
+            }
+            // Conflicts Confronts
+            if ($scope.eventName == "conflict confronts") {
+                $scope.eventName = "Conflict Confronts"
+            }
 
-            $scope.path = `/${$scope.category}/${$scope.eventName}/`;
+            //----- Checking for event-category mismatch -----//
+            $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit", "simulacrum", "Bad Ad-hoc Hypotheses"];
+            $scope.cultural_events = ["A Crime Correspondence", "Alekhya", "Conflict Confronts", "Lasya", "Shutterbugs", "Relay Reels"];
+            $scope.technical_events = ["honor code", "hackathon", "pioneering pandora", "gamen'gain"];
+            $scope.recreational_events = ["gaming"];
+            $scope.events = $scope.science_events.concat($scope.cultural_events, $scope.recreational_events, $scope.technical_events);
 
-            // Call server and get page object
-            $http({
-                method: 'GET',
-                url: '/api/event/data',
-                params: {
-                    "name": $scope.eventName
+            var matches = false;
+            var exists = false;
+
+            if ($scope.category == "science" && $scope.science_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            else if ($scope.category == "cultural" && $scope.cultural_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            else if ($scope.category == "technical" && $scope.technical_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            else if ($scope.category == "recreational" && $scope.recreational_events.includes($scope.eventName)) {
+                matches = true;
+            }
+            if ($scope.events.includes($scope.eventName)) {
+                exists = true;
+            }
+
+            if (matches) {
+                $http({
+                    method: 'GET',
+                    url: '/api/event/data',
+                    params: {
+                        "name": $scope.eventName
+                    }
+                }).then((res) => {
+                    $scope.event = res.data;
+                }, (res) => {
+                    $scope.event = {
+                        "name": "Error: 404",
+                        "tagline": "Not Found"
+                    }
+                    console.log("DEBUG: Either the event json file does not exist or it has error(s)");
+                });
+            }
+            else {
+                $scope.event = {
+                    "name": "Error: 404",
+                    "tagline": "Not Found"
                 }
-            }).then((res) => {
-                $scope.event = res.data;
-            }, (res) => {
-                alert(res.data)
-            })
+
+                if (!exists) {
+                    console.log("DEBUG: Event doesn't exist in list of events");
+                }
+                else if (!matches) {
+                    console.log("DEBUG: Event category mismatch");
+                }
+            }
 
             $scope.htmlize = (htmlstring) => {
                 return $sce.trustAsHtml(htmlstring);
             }
 
             document.title = $scope.eventName.charAt(0).toUpperCase() + $scope.eventName.slice(1).replaceAll("%20", " ") + " | Pravega 2021, IISc Bangalore";
+            $scope.path = `/${$scope.category}/${$scope.eventName}/`;
         });
 
     </script>

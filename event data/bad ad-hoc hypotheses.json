@@ -1,0 +1,35 @@
+{
+    "name": "Bad Ad-hoc Hypotheses",
+    "tagline": "Eternal Glory!",
+    "description": [
+        "Have you got tired of bullshitting your way through your online semesters?",
+        "Well, The efforts put in to generate utter crap weren't in vain after all! Here's an opportunity to apply those skills to discover and reason Ad hoc scientific hypotheses which wouldn't mean anything without your logical insightful arguments. Be ready to have lots of fun appreciating completely crazy theories presented with comprehensive research and arguments.",
+        "Don't forget to be scientifically inaccurate throughout !!"
+    ],
+    "modules": [
+        {
+            "heading": "Eligibility",
+            "content": "All high schoolers and undergrads are eligible"
+        },
+        {
+            "heading": "Rules and Regulations",
+            "links": [
+                {
+                    "text": "Download rules",
+                    "file": "rules.docx"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Main Event",
+            "date": "31<sup>st</sup> July, 2021"
+        }
+    ],
+    "coords": [
+        "Shreepranav Enugandla",
+        "Sanjay Suriyakumar"
+    ],
+    "email": "bah.pravega@gmail.com"
+}

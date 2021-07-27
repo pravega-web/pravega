@@ -10,11 +10,11 @@
             "links": [
                 {
                     "text": "Click here to download the detailed rules and regulations",
-                    "file": "Quadspark_RulesAndRegulations.pdff"
+                    "file": "Quadspark_RulesAndRegulations.pdf"
                 },
                 {
                     "text": "Download instructions for Quadspark prelims",
-                    "file": "Instructions for Quadspark_2021 Prelims.pdf"
+                    "file": "Instructions_for_Quadspark_2021_Prelims.pdf"
                 },
                 {
                     "text": "Download sample questions",
@@ -81,6 +81,15 @@
                 {
                     "text": "View statistics of Quadspark Prelims and list of selected teams for interview",
                     "file": "stats.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Interview Results",
+            "links": [
+                {
+                    "text": "Click here to download",
+                    "file": "quadspark_interview_results.pdf"
                 }
             ]
         },

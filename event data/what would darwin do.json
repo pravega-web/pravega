@@ -54,6 +54,16 @@
             ]
         },
         {
+            "heading": "Prelims paper",
+            "content": "As requested by many of the participants, here is the Prelims question paper. Please note that some questions in Part B do not have solutions.",
+            "links": [
+                {
+                    "text": "Click here to download",
+                    "file": "wwdd_prelims_paper.pdf"
+                }
+            ]
+        },
+        {
             "heading": "Eligibility",
             "content": "Students in class 9<sup>th</sup> to 12<sup>th</sup>"
         },
@@ -65,11 +75,11 @@
     "events": [
         {
             "name": "Prelims",
-            "date": "15th June"
+            "date": "15<sup>th</sup> June"
         },
         {
             "name": "Mains",
-            "date": "To be Decided"
+            "date": "1<sup>st</sup> August"
         }
     ],
     "awards":"Prizes upto Rs.6000",
