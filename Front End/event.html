@@ -176,12 +176,22 @@
                         <div ng-repeat="talk in module.talks">
                             <div class="card blue darken-2">
                                 <div class="card-content white-text">
-                                  <span class="card-title">{{talk.topic}}</span>
-                                  <b>By Prof. {{talk.speaker}}</b>
-                                  <p>Date and Time: {{talk.date}}</p>
-                                  <p>Meeting link: <a style="color: yellow" href="{{talk.meeting_link}}" target="_blank">Click here to join</a></p>
+                                    <span class="card-title">{{talk.topic}}</span>
+                                    <b>By Prof. {{talk.speaker}}</b>
+                                    <br> <br>
+                                    <p>Date and Time: {{talk.date}}</p>
+                                    <p>Meeting link: <a style="color: yellow" href="{{talk.meeting_link}}"
+                                            target="_blank">Click here to join</a></p>
+                                    <br>
+                                    <p>
+                                        <b>Abstract:</b> {{talk.abstract}}
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <b>About the speaker:</b> {{talk.about}}
+                                    </p>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                         <br>
                     </div>
