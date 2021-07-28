@@ -12,7 +12,12 @@
     "modules": [
         {
             "heading": "Symposium",
-            "content": "Pravega Innovation Summit is proud to announce its symposium featuring prominent members in the startup field. You also get a chance to interact with them in an exclusive Q&A session. Tune in at 2:30 PM on 30th July 2021 to be a part of it. ",
+            "content": "Pravega Innovation Summit is proud to announce its symposium featuring prominent members in the startup field. You also get a chance to interact with them in an exclusive Q&A session. Tune in at 2:30 PM on 30th July 2021 to be a part of it.",
+            "images": [
+                {
+                    "file": "speakers.jpg"
+                }
+            ],
             "talks": [
                 {
                     "topic": "Building Tech Capabilities: Role of Indian Start-ups",

@@ -141,6 +141,19 @@
                         </div>
                     </div>
 
+                    <div ng-show="{{module.images !== undefined}}">
+                        <div ng-repeat="image in module.images" class="center">
+                            <div class="hide-on-med-and-down">
+                                <img class="responsive-img" style="width: 50%; margin: 5vh" src="{{path}}{{image.file}}">
+                            </div>
+                            <div class="hide-on-large-only">
+                                <br>
+                                <img class="responsive-img" src="{{path}}{{image.file}}">
+                                <br>
+                            </div>
+                        </div>         
+                    </div>
+
                     <!-- Table -->
                     <div ng-show="{{module.table !== undefined}}">
                         <br>
