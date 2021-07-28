@@ -9,6 +9,14 @@
     ],
     "modules": [
         {
+            "links": [
+                {
+                    "text": "Visit the Pandora website!",
+                    "url": "https://pandora.pravega.org/"
+                }
+            ]
+        },
+        {
             "heading": "Limit on number of teams",
             "content": "There is an upper limit of 30 groups that will be participating in the game. The groups will be allowed to register and will be allocated a unique group number on a first come , first serve basis. "
         },
@@ -22,6 +30,10 @@
         }
     ],
     "events": [
+        {
+            "name": "Registrations",
+            "date": "Open"
+        },
         {
             "name": "Submissions",
             "date": "Accepted from 21<sup>st</sup> July"

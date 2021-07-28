@@ -143,6 +143,19 @@
                         </div>
                     </div>
 
+                    <div ng-show="{{module.images !== undefined}}">
+                        <div ng-repeat="image in module.images" class="center">
+                            <div class="hide-on-med-and-down">
+                                <img class="responsive-img" style="width: 50%; margin: 5vh" src="{{path}}{{image.file}}">
+                            </div>
+                            <div class="hide-on-large-only">
+                                <br>
+                                <img class="responsive-img" src="{{path}}{{image.file}}">
+                                <br>
+                            </div>
+                        </div>         
+                    </div>
+
                     <!-- Table -->
                     <div ng-show="{{module.table !== undefined}}">
                         <br>
@@ -179,8 +192,19 @@
                             <div class="card blue darken-2">
                                 <div class="card-content white-text">
                                     <span class="card-title">{{talk.topic}}</span>
-                                    <b>By Prof. {{talk.speaker}}</b>
+                                    <b ng-bind-html="htmlize(talk.speaker)">By {{talk.speaker}}</b>
+                                    <br> <br>
                                     <p>Date and Time: {{talk.date}}</p>
+                                    <p>Meeting link: <a style="color: yellow" href="{{talk.meeting_link}}"
+                                            target="_blank">Click here to join</a></p>
+                                    <br>
+                                    <p ng-show="{{talks.abstract !== undefined}}">
+                                        <b>Abstract:</b> {{talk.abstract}}
+                                    </p>
+                                    <br>
+                                    <p ng-show="{{talks.about !== undefined}}">
+                                        <b>About the speaker:</b> {{talk.about}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -393,7 +417,7 @@
             }
 
             //----- Checking for event-category mismatch -----//
-            $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit", "simulacrum", "Bad Ad-hoc Hypotheses"];
+            $scope.science_events = ["decoherence", "chemenigma", "bioblitz", "enumeration", "quadspark", "What Would Darwin Do", "Pravega Innovation Summit", "whodunnit", "simulacrum", "Bad Ad-hoc Hypotheses", "quizzes"];
             $scope.cultural_events = ["A Crime Correspondence", "Alekhya", "Conflict Confronts", "Lasya", "Shutterbugs", "Relay Reels"];
             $scope.technical_events = ["honor code", "hackathon", "pioneering pandora", "gamen'gain"];
             $scope.recreational_events = ["gaming"];

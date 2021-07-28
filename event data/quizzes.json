@@ -1,0 +1,66 @@
+{
+    "name": "Quizzes",
+    "tagline": "Tagline coming soon",
+    "description": [
+        "Description coming soon"
+    ],
+    "subevents": [
+
+    ],
+    "modules": [
+        {
+            "heading": "Eligibility and Rules",
+            "content": "School and college students (with valid institute ID Card) are allowed to participate. Teams can have upto 3 members. Cross-institutional teams are allowed. <br> The registration fee is Rs. 50 per team per quiz. However, if the same team is participating in all three quizzes, they can register for all three for a total of Rs. 100. <br> Registration for each quiz closes 3 hours before the quiz starts.",
+            "links": [
+                {
+                    "text": "Download detailed rules and regulations",
+                    "file": "quizzes_rules.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Quiz lineup",
+            "lists": [
+                {
+                    "points": [
+                        "<b>MELAS Quiz:</b> by Sabyasachi Basu, on 21 August, 9:30 am",
+                        "<b>Sci-Biz-Tech Quiz:</b> by Adit Vishnu, on 21 August, 3 pm",
+                        "<b>General Quiz:</b> by Major Chandrakant Nair, on 22 August, 3 pm"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Registration links",
+            "lists": [
+                {
+                    "points": [
+                        "<b>General Quiz:</b> <a href='https://forms.gle/MSJnM7HypD2it1Q37'>https://forms.gle/MSJnM7HypD2it1Q37</a>",
+                        "<b>MELAS Quiz:</b> <a href='https://forms.gle/btEhakVmBwQ6dcVv8'>https://forms.gle/btEhakVmBwQ6dcVv8</a>",
+                        "<b>Sci-Biz-Tech Quiz:</b> <a href='https://forms.gle/sANC4fdTU7q44Ld88' target='_blank'>https://forms.gle/sANC4fdTU7q44Ld88</a>",
+                        "<b>Combined registration for all three quizzes:</b> <a href='https://forms.gle/E7yhxBb76yqQ3Qf39' target='_blank'>https://forms.gle/E7yhxBb76yqQ3Qf39</a>"
+                    ]
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "MELAS Quiz",
+            "date": "9:30 AM on 21<sup>st</sup> August"
+        },
+        {
+            "name": "Sci-Biz-Tech Quiz",
+            "date": "3 PM on 21<sup>st</sup> August"
+        },
+        {
+            "name": "General Quiz",
+            "date": "3PM on 22<sup>nd</sup> August"
+        }
+    ],
+    "coords": [
+        "Jitendriya Praharaj",
+        "Upamanyu Yaddanapudi"
+    ],
+    "email": "quiz.pravega@gmail.com"
+}
