@@ -11,6 +11,24 @@
     ],
     "modules": [
         {
+            "heading": "Symposium",
+            "content": "Pravega Innovation Summit is proud to announce its symposium featuring prominent members in the startup field. You also get a chance to interact with them in an exclusive Q&A session. Tune in at 2:30 PM on 30th July 2021 to be a part of it. ",
+            "talks": [
+                {
+                    "topic": "Building Tech Capabilities: Role of Indian Start-ups",
+                    "speaker": "Prof. Rishikesha T. Krishnan <br> Director and Professor of Strategy, IIM Bangalore",
+                    "date": "3:00 PM - 3:30 PM on 30th July, 2021",
+                    "meeting_link": "https://zoom.us/j/91870280558"
+                },
+                {
+                    "topic": "New space 2.0",
+                    "speaker": "Mr. Rohan M Ganapathy <br> CEO & CTO, Bellatrix Aerospace",
+                    "date": "3:30 PM - 4:30 PM on 30th July, 2021",
+                    "meeting_link": "https://zoom.us/j/91870280558"
+                }
+            ]
+        },
+        {
             "heading": "Eligibility",
             "content": "The participant should not have participated more than two times previously in the event and should be between 15 and 28 years old as of 15<sup>th</sup> June, 2021. Maximum of 3 members in a team."
         },
