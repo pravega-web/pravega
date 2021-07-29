@@ -111,7 +111,8 @@
             <!-- Timeline on mobile -->
             <div class="col s12 center hide-on-large-only scrollspy">
                 <h5 ng-show="event.sponsor" class="left">Sponsored by</h5>
-                <img src="/img/sponsors/tiaan.png" class="responsive-img" alt="Sponsor's Image" ng-show="event.sponsor" style="max-width: 80vw; max-height: 30vh; ">
+                <img src="/img/sponsors/tiaan.png" class="responsive-img" alt="Sponsor's Image" ng-show="event.sponsor"
+                    style="max-width: 80vw; max-height: 30vh; ">
                 <h4 class="valign-wrapper" data-aos="fade-left" data-aos-delay="300">
                     Timeline <span class="new badge pulse"></span>
                 </h4>
@@ -146,14 +147,15 @@
                     <div ng-show="{{module.images !== undefined}}">
                         <div ng-repeat="image in module.images" class="center">
                             <div class="hide-on-med-and-down">
-                                <img class="responsive-img" style="width: 50%; margin: 5vh" src="{{path}}{{image.file}}">
+                                <img class="responsive-img" style="width: 50%; margin: 5vh"
+                                    src="{{path}}{{image.file}}">
                             </div>
                             <div class="hide-on-large-only">
                                 <br>
                                 <img class="responsive-img" src="{{path}}{{image.file}}">
                                 <br>
                             </div>
-                        </div>         
+                        </div>
                     </div>
 
                     <!-- Table -->

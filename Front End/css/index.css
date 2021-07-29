@@ -305,3 +305,7 @@ li.timeline:after {
 .thin-border{
   border:1px solid black;
 }
+
+.parallax-container{
+  height: 50vh;
+}
