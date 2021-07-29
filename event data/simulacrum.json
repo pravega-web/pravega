@@ -13,6 +13,10 @@
             "content": "This simulation is a cellular automaton, a discrete model of computation which is a zero-player game. The player has to only give the input state and the evolution is dictated solely by the simple ruleset of the game. This automaton is fascinating for many reasons. It is Turing complete and thus a universal constructor, and all Turing machines can be simulated by it [such as electronic elements like logic gates ]. A Turing machine is a mathematical model of computation that defines an abstract machine that manipulates symbols on a strip of tape according to a table of rules. This simple model allows it to be capable of simulating any computer algorithm! The game of life is also undecidable, meaning there is no general algorithm that can verify whether a given pattern occurs in the evolution of another given initial pattern and lastly many interesting self-replicating patterns have been studied in Conway’s game of life.",
             "links": [
                 {
+                    "text": "View the simulation",
+                    "url": "https://visualize-it.github.io/conway_game/simulation.html"
+                },
+                {
                     "text": "Further information about the Game of Life",
                     "file": "conways_game_of_life.pdf"
                 }
@@ -22,6 +26,10 @@
             "heading": "Lorenz Attractor",
             "content": "The Lorenz system is a system of ordinary differential equations first studied by Edward Lorenz. It is used as a simplified model of atmospheric convection. The intriguing part about these set of equations is the chaotic solutions which are seemingly disordered, random states in dynamical systems arising from deterministic laws of nature. we obtain for certain parameter values. Of such chaotic solutions, one notable set is known as the Lorenz attractor. The term 'butterfly effect' as used in media emerged from the resemblance of the Lorenz attractor to butterfly wings. While in Chaos theory it refers to the drastic change in the later state of a deterministic nonlinear system such as the Lorenz system due to slight changes in the initial state.",
             "links": [
+                {
+                    "text": "View the simulation",
+                    "url": "https://visualize-it.github.io/lorenz_system/simulation.html"
+                },
                 {
                     "text": "Further information about Lorenz Attractor",
                     "file": "lorenz_attractor.pdf"
@@ -33,6 +41,10 @@
             "content": "The Mandelbrot Set, is a set of complex numbers c such that the function f(z) = z<sup>2</sup> +c does not diverge as it is recursively iterated from z = 0 + 0i and c = coordinate of that pixel in complex plane. The different regions of the set have different properties with some of them being very intriguing fractal groups and the boundary of the Mandelbrot set reveals the same image of the set recursively occurring making the boundary itself a fractal. This scale of self-similarity occurring on successive iterations from the simple ruleset made this set to be well known for it’s mathematical beauty.",
             "links": [
                 {
+                    "text": "View the simulation",
+                    "url": "https://visualize-it.github.io/mandelbrot_fractal/simulation.html"
+                },
+                {
                     "text": "Further information about the Mandelbrot set",
                     "file": "mandelbrot_set.pdf"
                 }
@@ -42,6 +54,10 @@
             "heading": "Flocking Behaviour",
             "content": "In nature, flocking is the grouping of birds when in flight or while foraging. The collective motion of individual entities arising as an emergent behavior is called flocking from a modelling perspective. Collective animal behavior is a common sight in nature from birds to insects. This simulation is to mimic such behavior and show the emergence of the collective motion from the simple rules an individual entity follows.",
             "links": [
+                {
+                    "text": "View the simulation",
+                    "url": "https://visualize-it.github.io/flocking_behaviour/simulation.html"
+                },
                 {
                     "text": "Further information about Flocking behaviour",
                     "file": "flocking_behaviour.pdf"
