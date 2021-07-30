@@ -7,7 +7,7 @@
         "After building the game, submit it through the appropriate portal, and they will be played, evaluated, and the winners will be decided by the judges. ",
         "You are required to create your own itch.io account and join the game jam through the link provided below. This is where the jam is being hosted and joining it is mandatory for participation.",
         "<b>Registrations have closed</b> <br> <br> <a target='_blank' href='https://itch.io/jam/gamengain'><b>Link to join Game Jam</b></a>",
-        "<b>Announcement:</b> The theme of the game jam is <b>interstellar</b>"
+        "<div class='black center white-text flow-text'> <b>Announcement:</b> The theme of the game jam is <b>interstellar</b> </div>"
     ],
     "subevents": [
 
