@@ -23,7 +23,7 @@
                     "topic": "Can computers prove theorems?",
                     "speaker": "Prof. Kevin Buzzard",
                     "date": "3:15 PM on July 30th",
-                    "meeting_link": "https://bit.ly/3rIecjB",
+                    "meeting_link": "https://bit.ly/3zSuiKz",
                     "abstract": "Computers can of course do calculations, and usually much faster and more accurately than humans. But what if you are working on a question which involves proving a theorem? If you want to use a computer to help you, maybe a computer theorem prover like Lean would be more helpful to you than a computer algebra package like Mathematica or Matlab. I will give an overview of computer theorem provers and speculate on how they might in future change the way mathematics is taught and done.",
                     "about": "Prof Kevin Buzzard is a professor at Imperial College, London. His background lies in Algebraic number theory, but he has of late been working in the area of formal proof verification. "
                 }
