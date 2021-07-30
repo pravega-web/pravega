@@ -9,7 +9,13 @@
     "modules": [
         {
             "heading": "Eligibility",
-            "content": "All high schoolers and undergrads are eligible"
+            "content": "All high schoolers and undergrads are eligible",
+            "links": [
+                {
+                    "text": "Click here to register",
+                    "url": "https://forms.gle/zFDTZ6SGfH6KJGEg9"
+                }
+            ]
         },
         {
             "heading": "Rules and Regulations",
