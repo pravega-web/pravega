@@ -6,7 +6,8 @@
         "Like in every game-jam, there will be a particular theme (which will be announced at the time of the event) and a specific span of time. You have to make a game based upon that theme. Simple, right? ",
         "After building the game, submit it through the appropriate portal, and they will be played, evaluated, and the winners will be decided by the judges. ",
         "You are required to create your own itch.io account and join the game jam through the link provided below. This is where the jam is being hosted and joining it is mandatory for participation.",
-        "<a target='_blank' href='https://forms.gle/W7HXbLC4jprRioYE8'><b>Click here to register!</b></a> <br> <br> <a target='_blank' href='https://itch.io/jam/gamengain'><b>Link to join Game Jam</b></a>"
+        "<b>Registrations have closed</b> <br> <br> <a target='_blank' href='https://itch.io/jam/gamengain'><b>Link to join Game Jam</b></a>",
+        "<b>Announcement:</b> The theme of the game jam is <b>interstellar</b>"
     ],
     "subevents": [
 
@@ -87,6 +88,10 @@
         {
             "name": "Main Event",
             "date": "30<sup>th</sup> July at 10:00 AM IST to 1<sup>st</sup> August at 10:00 AM"
+        },
+        {
+            "name": "Announcement of Theme",
+            "date": "10:00 AM on 30<sup>th</sup> July. <br> The theme is <b> interstellar </b>"
         }
     ],
     "coords": [
