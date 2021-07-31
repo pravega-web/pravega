@@ -13,6 +13,33 @@
     
     "modules": [
         {
+            "heading": "Details about Finals",
+            "lists": [
+                {
+                    "points": [
+                        "The finals will be a 24-hour exam conducted on 1st August. Teams can download the question paper which will be sent via E-mail to the teams and will also be uploaded on the website. You will be required to type and write the answers & send the PDF file via mail before IST 23:59:59 August 1st. That means you will be getting 24 hours.",
+                        "Late submissions will not be entertained. The portal for submission will close at the time mentioned above.",
+                        "In case there is delay in uploading the question paper from our end, the participants will be given extra time as needed.",
+                        "In case 2 teams score the same marks, the team with higher prelims marks will be given preference.",
+                        "The winners list will be uploaded on the website. However, there is no definite date, so we request you to be patient."
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Finals",
+            "links": [
+                {
+                    "text": "Download question paper",
+                    "file": "wwdd_final_qp.pdf"
+                },
+                {
+                    "text": "Form to submit responses",
+                    "url": "https://forms.gle/giiB862HkWDLseTy6"
+                }
+            ]
+        },
+        {
             "heading": "Details about the Prelims",
             "content": "The Prelims will be divided into 2 sections- Part A and Part B. In part A, Darwin will be giving a test to the participants. In part B, Darwin will take the participants along on a voyage and test their skills along the way. <br> <br> The top 20% of the participants will be selected to take care of Darwin's Realm in the main event. (The date of the main event has not yet been decided.) In case of a tie, both teams/participants will qualify.",
             "lists": [
@@ -69,7 +96,7 @@
         },
         {
             "heading": "Awards",
-            "content": "Prizes upto Rs. 6000"
+            "content": "3000 for winner, 2000 for runner up, 1000 for 3rd runner up if among the top 3, there is atleast one Class 9-10 team; otherwise, 3000, 1500, 1000 and also another 500 for the top team from Class 9-10"
         }
     ],
     "events": [
@@ -78,7 +105,7 @@
             "date": "15<sup>th</sup> June"
         },
         {
-            "name": "Mains",
+            "name": "Finals",
             "date": "1<sup>st</sup> August"
         }
     ],
