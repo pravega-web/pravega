@@ -8,6 +8,19 @@
     ],
     "modules": [
         {
+            "heading": "Finale Results",
+            "lists": [
+                {
+                    "header": "The top 3 teams are:",
+                    "points": [
+                        "<b>Abstract Nonsense:</b> Shantanu Nene and Madhur Agrawal",
+                        "<b>EulerOP:</b> Tirthankar Adhikari and Amit Kumar Mallick",
+                        "<b>Plumpus Chungus:</b> Aaghaz Mahajan and Soumil Aggarwal"
+                    ]
+                }
+            ]
+        },
+        {
             "heading": "Talks",
             "content": "Details about the platform for the talks will be posted soon.",
             "talks": [
