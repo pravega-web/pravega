@@ -15,6 +15,66 @@
     ],
     "modules": [
         {
+            "heading": "Results",
+            "table": {
+                "headers": [
+                    "Position",
+                    "ID",
+                    "Participant 1",
+                    "Participant 2",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "Winner",
+                        "DECO449",
+                        "Sanskar Agrawal",
+                        "Prarthana Agarwal",
+                        "IISER Tirupathi"
+                    ],
+                    [
+                        "First Runner-up",
+                        "DECO99",
+                        "Chirag Falor",
+                        "Tung Tran",
+                        "Massachusetts Institute of Technology"
+                    ],
+                    [
+                        "Second Runner-up",
+                        "DECO671",
+                        "Yuelong Li",
+                        "Ruihao Li",
+                        "New York University"
+                    ]
+                ]
+            }
+        },
+        {
+            "content": "Other Round-two finalists",
+            "table": {
+                "headers": [
+                    "ID",
+                    "Participant 1",
+                    "Participant 2",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "DECO30",
+                        "Suphal Athlur",
+                        "Vatsal Gupta",
+                        "IIT Guwahati"
+                    ],
+                    [
+                        "DECO77",
+                        "Sukeerth Ramkumar",
+                        "Srinivas S",
+                        "IIT Madras"
+                    ]
+                ]
+            }
+        },
+        {
             "heading": "Eligibility",
             "content": "High school students to 3rd year UG. Contestants can participate in teams of upto 2 members. <br> Prizes worth 40k, including prizes to winners and few best solution awards. All finalists and award winners will also recieve certificates."
         },
