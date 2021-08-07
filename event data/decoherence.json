@@ -75,6 +75,49 @@
             }
         },
         {
+            "content": "Other Round-one finalists",
+            "table": {
+                "headers": [
+                    "ID",
+                    "Participant 1",
+                    "Participant 2",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "DECO199",
+                        "Harshda Saxena",
+                        "Vaishnav V Rao",
+                        "IIT Bombat"
+                    ],
+                    [
+                        "DECO348",
+                        "Mihir Bani",
+                        "Kushagra Garg",
+                        "IIIT Hyderabad"
+                    ],
+                    [
+                        "DECO407",
+                        "Satyapragnya Kar",
+                        "Subhachandan Kanti Mohakud",
+                        "IIT Delhi"
+                    ],
+                    [
+                        "DECO418",
+                        "Prakhar Agrawal",
+                        "Jahnavi Pande",
+                        "IIT Madras"
+                    ],
+                    [
+                        "DECO428",
+                        "Devesh verma",
+                        "Kunal Kumar",
+                        "IISER BHOPAL and Banaras Hindu University"
+                    ]
+                ]
+            }
+        },
+        {
             "heading": "Eligibility",
             "content": "High school students to 3rd year UG. Contestants can participate in teams of upto 2 members. <br> Prizes worth 40k, including prizes to winners and few best solution awards. All finalists and award winners will also recieve certificates."
         },
@@ -137,11 +180,11 @@
                     "file": "objective_prelims.pdf"
                 },
                 {
-                    "text": "(Updated) Objective prelims answer key",
+                    "text": "Objective prelims answer key",
                     "file": "objective_prelims_key.pdf"
                 },
                 {
-                    "text": "(Updated) List of teams qualified for next level",
+                    "text": "List of teams qualified for next level",
                     "file": "prelims_results.pdf"
                 }
             ]
@@ -154,7 +197,7 @@
                     "file": "subjective_prelims.pdf"
                 },
                 {
-                    "text": "(Updated) View results of subjective prelims",
+                    "text": "View results of subjective prelims",
                     "file": "subjective_prelims_result.pdf"
                 }
             ]
@@ -170,6 +213,20 @@
                         "Please note that the older plan of 2 day event for finals is replaced by the above plan. ",
                         "Exact timings and details of the presentation round on 1st August, Panel of judges shall be informed to all the finalists in due time. "
                     ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Download question 1",
+                    "file": "Q1.pdf"
+                },
+                {
+                    "text": "Download question 2",
+                    "file": "Q2.pdf"
+                },
+                {
+                    "text": "Watch Decoherence Round 2 stream",
+                    "url": "https://www.youtube.com/watch?v=ESSVQF4Rsks"
                 }
             ]
         }
