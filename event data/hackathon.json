@@ -10,6 +10,55 @@
     "subevents": [],
     "modules": [
         {
+            "heading": "Results",
+            "links": [
+                {
+                    "text": "View YouTube Stream",
+                    "url": "https://youtu.be/rS403JgDTmI"
+                }
+            ],
+            "table": {
+                "headers": [
+                    "Team name",
+                    "Members",
+                    "Institute",
+                    "Position"
+                ],
+                "rows": [
+                    [
+                        "Bakery Bois",
+                        "Ritam Das, Kaustav Sen",
+                        "IISER Mohali",
+                        "Winner"
+                    ],
+                    [
+                        "Bhopalan",
+                        "Agamdeep Singh, Shashwat Sourav, Mohit Mohandas, Priyanshu Rai",
+                        "IISER Bhopal",
+                        "First runner-up"
+                    ],
+                    [
+                        "Team Stephens",
+                        "Varun Upreti",
+                        "St. Stephen's College, Delhi",
+                        "Second runner-up"
+                    ],
+                    [
+                        "Codebrewers",
+                        "Nalajala Jayadithya, Lopinti Abhijeeth Baba, Javvaji Hemanth Kumar, Vijaya Kumar Reddy",
+                        "Rajiv Gandhi University of Knowledge Technologies, Nuzvid",
+                        "Finalist"
+                    ],
+                    [
+                        "Team Hackers",
+                        "Sudip Mondal, Kartik Ruikar, Archish S",
+                        "IIT Madras",
+                        "Finalist"
+                    ]
+                ]
+            }
+        },
+        {
             "heading": "Eligibility",
             "content": "High school students and the undergraduates. Maximum 4 members can constitute a team."
         },
