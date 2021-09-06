@@ -96,7 +96,67 @@
         },
         {
             "heading": "Awards",
-            "content": "3000 for winner, 2000 for runner up, 1000 for 3rd runner up if among the top 3, there is atleast one Class 9-10 team; otherwise, 3000, 1500, 1000 and also another 500 for the top team from Class 9-10"
+            "lists": [
+                {
+                    "header": "If there is at least one Class 9-10 team among the top 3:",
+                    "points": [
+                        "Winner: Rs. 3000",
+                        "1<sup>st</sup> Runner up: Rs. 2000",
+                        "2<sup>nd</sup> Runner up: Rs. 1000"
+                    ]
+                },
+                {
+                    "header": "If there is no Class 9-10 team among the top 3:",
+                    "points": [
+                        "Winner: Rs. 3000",
+                        "1<sup>st</sup> Runner up: Rs. 1500",
+                        "2<sup>nd</sup> Runner up: Rs. 1000",
+                        "Top Class 9-10 only team: Rs. 500"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Winners",
+            "table": {
+                "headers": [
+                    "Rank",
+                    "Team Name",
+                    "Class",
+                    "Participants",
+                    "School"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "The Three Darwiteers",
+                        "12",
+                        "Nandana Hegde, Vishwa Karthik and Vrithav V Chittan",
+                        "BASE PU College"
+                    ],
+                    [
+                        "2",
+                        "Team 1",
+                        "11",
+                        "Muralidhar Rao M, Ankith Kini and R Ricky Roger",
+                        "The Learning Centre PUC"
+                    ],
+                    [
+                        "3",
+                        "Darwin's Finches",
+                        "12",
+                        "Vaishnavi Matti, Amrutha K R, and Grisha Shetty",
+                        "BASE PU College"
+                    ],
+                    [
+                        "Top from class 9-10",
+                        "Aadhavan",
+                        "9",
+                        "Aadhavan Gobinath",
+                        "PSBB LLA Bengaluru"
+                    ]
+                ]
+            }
         }
     ],
     "events": [
