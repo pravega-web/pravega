@@ -1,0 +1,26 @@
+{
+    "name": "temp Electronics",
+    "tagline": "tagline",
+    "description": [
+        "Para 1",
+        "Para 2"
+    ],
+    "subevents": [],
+    "modules": [
+        {
+            "heading": "module 1",
+            "content": "content 1"
+        }
+    ],
+    "events": [
+        {
+            "name": "Event 1",
+            "date": "This is a fun event"
+        }
+    ],
+    "coords": [
+        "Satyarth",
+        "Mani Kumar"
+    ],
+    "email": ""
+}

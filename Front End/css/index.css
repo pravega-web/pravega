@@ -157,7 +157,7 @@ body {
 }
 
 .frosted {
-  /* backdrop-filter: blur(500px); */
+  backdrop-filter: blur(500px);
 }
 
 .uppercase {
