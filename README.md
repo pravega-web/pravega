@@ -6,7 +6,7 @@ Application factory is to be used even though this is a small app
 
 ## Running the application
 
-Install python>=3.7
+Install python>=3.7 [go to python.org](https://python.org)
 
 ### Make a virtual environment in python first
 
@@ -16,15 +16,19 @@ make sure that you are on the website2022 branch and type
 ```
 python -m venv venv
 ```
-To go to this virtual environment, type
+To go to this virtual environment, type(on windows, change the forwardslash to backwardslashes)
 ```
 . venv/bin/activate
 ```
-Then install flask by running:
+### Install flask by running:
 ```
-pip install flask`
+pip install flask
 ```
-
+### Install pymongo by running:
+```
+pip install pymongo
+```
+### Run
 Finally to run the app,
 on Windows(cmd), type
 
