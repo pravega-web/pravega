@@ -1,9 +1,47 @@
-# Pravega
+# branch for the 2022 pravega website made in flask
 
-Indian Institute of Science (IISc) presents to your our annual undergraduate fest. It's the largest fest in India
+The app is called pravega
+There are two blueprints (admin and events)
+Application factory is to be used even though this is a small app
 
-### Things to DO
-1. Add event images
-2. Deleting two contact us in recreational menu
-3. Change 2021 to 2022 in all event menus
-4. Adding a version to the current website, so that rolling back changes is easier.
+## Running the application
+
+Install python>=3.7
+
+### Make a virtual environment in python first
+
+To do this, for open `Windows terminal` or `cmd` or `teminal`,
+navigate to this git repository,
+make sure that you are on the website2022 branch and type
+```
+python -m venv venv
+```
+To go to this virtual environment, type
+```
+. venv/bin/activate
+```
+Then install flask by running:
+```
+pip install flask`
+```
+
+Finally to run the app,
+on Windows(cmd), type
+
+```
+set FLASK_APP=flaskr
+set FLASK_ENV=development
+flask run
+```
+an bash or other linux/unix terminal
+```
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+flask run
+```
+on powershell,
+```
+$env:FLASK_APP = "flaskr"
+$env:FLASK_ENV = "development"
+flask run
+```

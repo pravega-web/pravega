@@ -1,0 +1,257 @@
+{
+    "name": "Decoherence",
+    "tagline": "A Physics Excitation",
+    "description": [
+        "Come forward and show your prowess in Physics by competing with students across the country to solve problems through deliberation and critical thinking. Prepare for a battle to the end. ",
+        "This is gonna be intense. This. Is. Decoherence. ",
+        "This is an unique opportunity for any physics enthusiast to showcase their problem solving ability and insight in the subject. The prelims is knocking at the door and this will serve as a gateway to the main Decoherence event! ",
+        "The preliminary round is divided into two rounds - one objective and one subjective. The objective round will serve as a screening round to select teams for the subjective round. We promise that these two rounds themselves will put your abilities to test! ",
+        "Unleash your skills in the Prelims to secure your way into the main event! The event will be full of fun for those who love teasing their minds with new Physics problems, with participants getting the opportunity to present their solutions to leading Physicists in the panel of judges! ",
+        "Sounds interesting? Then don't miss the prelims. ",
+        "<b> Note: Registrations have closed. <br> All the registered participants were mailed with necessary details. Please make sure to check spam folder </b>"
+    ],
+    "subevents": [
+        
+    ],
+    "modules": [
+        {
+            "heading": "Results",
+            "table": {
+                "headers": [
+                    "Position",
+                    "ID",
+                    "Participant 1",
+                    "Participant 2",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "Winner",
+                        "DECO449",
+                        "Sanskar Agrawal",
+                        "Prarthana Agrawal",
+                        "IISER Tirupati"
+                    ],
+                    [
+                        "First Runner-up",
+                        "DECO99",
+                        "Chirag Falor",
+                        "Tung Tran",
+                        "Massachusetts Institute of Technology"
+                    ],
+                    [
+                        "Second Runner-up",
+                        "DECO671",
+                        "Yuelong Li",
+                        "Ruihao Li",
+                        "New York University"
+                    ]
+                ]
+            }
+        },
+        {
+            "content": "Other Round-two finalists",
+            "table": {
+                "headers": [
+                    "ID",
+                    "Participant 1",
+                    "Participant 2",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "DECO30",
+                        "Suphal Athlur",
+                        "Vatsal Gupta",
+                        "IIT Guwahati"
+                    ],
+                    [
+                        "DECO77",
+                        "Sukeerth Ramkumar",
+                        "Srivas S",
+                        "IIT Madras"
+                    ]
+                ]
+            }
+        },
+        {
+            "content": "Other Round-one finalists",
+            "table": {
+                "headers": [
+                    "ID",
+                    "Participant 1",
+                    "Participant 2",
+                    "Institute"
+                ],
+                "rows": [
+                    [
+                        "DECO199",
+                        "Harshda Saxena",
+                        "Vaishnav V Rao",
+                        "IIT Bombay"
+                    ],
+                    [
+                        "DECO348",
+                        "Mihir Bani",
+                        "Kushagra Garg",
+                        "IIIT Hyderabad"
+                    ],
+                    [
+                        "DECO407",
+                        "Satyapragnya Kar",
+                        "Subhachandan Kanti Mohakud",
+                        "IIT Delhi and IIT Roorkee"
+                    ],
+                    [
+                        "DECO418",
+                        "Prakhar Agrawal",
+                        "Jahnavi Pande",
+                        "IIT Madras"
+                    ],
+                    [
+                        "DECO428",
+                        "Devesh Kumar Verma",
+                        "Kunal Kumar",
+                        "IISER BHOPAL and Banaras Hindu University"
+                    ]
+                ]
+            }
+        },
+        {
+            "heading": "Eligibility",
+            "content": "High school students to 3rd year UG. Contestants can participate in teams of upto 2 members. <br> Prizes worth 40k, including prizes to winners and few best solution awards. All finalists and award winners will also recieve certificates."
+        },
+        {
+            "heading": "Rules and Regulations",
+            "content": "Note: 'Team' here refers to both, a team of 2 participants and a single participant.",
+            "lists": [
+                {
+                    "header": "Objective Prelims",
+                    "points": [
+                        "30 questions (20 single option correct type and 10 multiple option correct type)",
+                        "Duration: 90 minutes including submission time",
+                        "No late submission allowed. ",
+                        "25 teams will be selected for subjective prelims.",
+                        "For more details (regarding submission procedure, handling of ties, network and other issues etc), refer to rules and regulations document."
+                    ]
+                },
+                {
+                    "header": "Subjective Prelims",
+                    "points": [
+                        "8 questions - 6 theoretical and 2 data analysis type",
+                        "Duration: 18-24 hours. Will be informed well before the round.",
+                        "10 teams will be selected for finals.",
+                        "For more details (regarding submission procesure, rules regarding extension of time etc) refer to rules and regulations document."
+                    ]
+                },
+                {
+                    "header": "Finals",
+                    "points": [
+                        "2 day event. Final plan will be uploaded later. Tentative plan has been presented here",
+                        "Day 1 - Question followed by presentation by the teams in front of judges.",
+                        "Day 2 - Theoretical, computational, experimental design related analysis of one or few questions.",
+                        "For more details, refer to the rules and regulations document."
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Download rules and regulations",
+                    "file": "rules.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Objective Prelims",
+            "lists": [
+                {
+                    "header": "",
+                    "points": [
+                        "The final list of teams qualifying for the finals is uploaded now. Considering all the issues raised by some of the teams, we have decided to increase number of selections to 30 teams.",
+                        "Based on the poll results, date of the subjective prelims has been fixed on 26th of June (9AM) to 27th of June (9AM). Timings are in IST.",
+                        "There has been several disqualification of grounds of violation of submission protocol. No requests in this regard will be considered. ","10 teams will be selected for finals.",
+                        "No more requests/challenges/queries regarding the objective prelims and the results will be entertained. "
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Objective prelims question paper",
+                    "file": "objective_prelims.pdf"
+                },
+                {
+                    "text": "Objective prelims answer key",
+                    "file": "objective_prelims_key.pdf"
+                },
+                {
+                    "text": "List of teams qualified for next level",
+                    "file": "prelims_results.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Subjective Prelims",
+            "links": [
+                {
+                    "text": "Download subjective prelims question paper",
+                    "file": "subjective_prelims.pdf"
+                },
+                {
+                    "text": "Subjective Prelims Hints and Solutions",
+                    "file": "subjective_prelims_soln.pdf"
+                },
+                {
+                    "text": "View results of subjective prelims",
+                    "file": "subjective_prelims_result.pdf"
+                }
+            ]
+        },
+        {
+            "heading": "Finals",
+            "lists": [
+                {
+                    "header": "The tentative schedule for the Decoherence Finals is as follows: ",
+                    "points": [
+                        "<b>29<sup>th</sup> July 2021</b>: A Subjective question paper will be given to all the finalists which contains questions involving theoretical, computational, experimental design related analysis of one or few questions. Duration of this round is 24 hours. ",
+                        "<b>1<sup>st</sup> August 2021</b>: Top 5 teams will be selected for this round. Selected teams are expected to present their solutions to a panel of judges. ",
+                        "Please note that the older plan of 2 day event for finals is replaced by the above plan. ",
+                        "Exact timings and details of the presentation round on 1st August, Panel of judges shall be informed to all the finalists in due time. "
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "text": "Download question 1",
+                    "file": "Q1.pdf"
+                },
+                {
+                    "text": "Download question 2",
+                    "file": "Q2.pdf"
+                },
+                {
+                    "text": "Watch Decoherence Round 2 stream",
+                    "url": "https://www.youtube.com/watch?v=ESSVQF4Rsks"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "name": "Objective Prelims",
+            "date": "10:00 to 11:30 AM IST on 13<sup>th</sup> June"
+        },
+        {
+            "name": "Subjective Prelims",
+            "date": "9 AM to 9 AM IST the next day (26<sup>th</sup> to 27<sup>th</sup> June)"
+        },
+        {
+            "name": "Finals",
+            "date": "29<sup>th</sup> July to 1<sup>st</sup> August"
+        }
+    ],
+    "coords": [
+        "Rishik Perugu",
+        "Soumyadeep Bhattacharjee"
+    ],
+    "email": "decoherence.pravega@gmail.com"
+}
