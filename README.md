@@ -29,19 +29,19 @@ Finally to run the app,
 on Windows(cmd), type
 
 ```
-set FLASK_APP=flaskr
+set FLASK_APP=pravega
 set FLASK_ENV=development
 flask run
 ```
 an bash or other linux/unix terminal
 ```
-export FLASK_APP=flaskr
+export FLASK_APP=pravega
 export FLASK_ENV=development
 flask run
 ```
 on powershell,
 ```
-$env:FLASK_APP = "flaskr"
+$env:FLASK_APP = "pravega"
 $env:FLASK_ENV = "development"
 flask run
 ```
