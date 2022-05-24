@@ -5,6 +5,9 @@ def create_app(test_config=None):
 
 # Change the localhost part to parvega.org
     app.config['SERVER_NAME']='localhost:5000'
+    app.config.from_mapping(
+        SECRET_KEY='dev',
+    )
 #
 #
 #   Some thing happens here
