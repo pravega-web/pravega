@@ -284,9 +284,16 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col l3 left s6">
+                    <ul style="list-style-type: circle;">
+                        <li ng-repeat="tel in event.tel">
+				<h6><a ng-href="tel:{{tel}}">{{tel}}</a></h6>
+                        </li>
+                    </ul>
+                </div>
                 <div class="col l6 s12">
                     <h6>
-                        Contact
+                        E-mail
                     </h6>
                     <h6>
                         <a ng-href="mailto:{{event.email}}" class="" type="mail">{{event.email}}</a>

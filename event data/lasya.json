@@ -34,7 +34,7 @@
         },
         {
             "heading": "Prizes",
-            "content": "Rs. 1600/- for the best team performance<br> Rs. 400/- for best single participant"
+            "content": "Rs. 1600/- for the best team performance<br> Rs. 400/- for best singular performance"
         }
     ],
     "events": [
@@ -50,6 +50,10 @@
     "coords": [
         "Souvik",
         "Sharwary"
+    ],
+    "tel": [
+	    "+919382302911",
+	    "+919741212612"
     ],
     "email": "pravega.lasya@gmail.com",
     "poster": "insync_5.png"
