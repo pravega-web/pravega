@@ -30,11 +30,11 @@
         },
         {
             "heading": "Judges",
-            "content": "Lasya team"
+            "content": "Pravega team - Lasya"
         },
         {
             "heading": "Prizes",
-            "content": "1600 for the best team and 400 for best individual"
+            "content": "Rs. 1600/- for the best team performance<br> Rs. 400/- for best single participant"
         }
     ],
     "events": [
@@ -51,5 +51,6 @@
         "Souvik",
         "Sharwary"
     ],
-    "email": "pravega.lasya@gmail.com"
+    "email": "pravega.lasya@gmail.com",
+    "poster": "insync_5.png"
 }
