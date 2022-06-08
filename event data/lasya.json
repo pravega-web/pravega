@@ -1,8 +1,8 @@
 {
-    "name": "Lasya",
-    "tagline": "A Trendy Dance",
+    "name": "Insync ",
+    "tagline": "By Lasya",
     "description": [
-        "It's Time to Dance o' clock! Forget the boredom of quarantine and show off your cool moves and grab your chance to be judged by Shekhar Master himself. Pravega '21 presents to you Lasya, your very own stage to show off your aesthetic. Don’t keep these cool rewards waiting for too long, will ya'?"
+        "Put on your tapping shoes and get ready to shake a leg, for the next iteration of the much-awaited dance event of Pravega is back! Lasya 2022 presents InSync to mesmerise, energise and rejuvenate your soul. IIScians! We bring you the biggest platform to showcase your hidden dancing talent. Be ready to display your crazy moves to the world"
     ],
     "modules": [
         {
@@ -14,43 +14,42 @@
             "links": [
                 {
                     "text": "Click here to download T&C",
-                    "file": "Lasya_T&C.docx"
+                    "file": "InSync_T&C.docx"
                 }
             ]
         },
         {
             "heading": "Submissions",
-            "content": "The process is simple enough: just pick a song of your choice (or from the list provided) and make a fiery dance-music video of minimum 90 seconds and send them to us at <a href='mailto:pravega.lasya@gmail.com'>pravega.lasya@gmail.com</a>. ",
+            "content": "The process is simple enough: just pick a song of your choice and make a fiery dance-music video of minimum 90 seconds and send them to us at <a href='emailto: pravega.lasya@gmail.com'>pravega.lasya@gmail.com</a>. Post it in your insta account while collaborating with <a href='https://www.instagram.com/lasya_iisc.22'>lasya_iisc.22</a> for judging. If you don't know how to collaborate in instagram posts, see <a href='https://youtube.com/shorts/zq7sRuBQoNs?feature=share'>this video</a>. If you don't have an insta account, contact us at our mail ID and we'll post it for you",
             "links": [
                 {
-                    "text": "Register here before submitting your entries",
-                    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdjcSYx6jXsr73tUJDMOxhI_uEiD1YtPp5Laf9vsjlJyVV1AA/viewform?vc=0&c=0&w=1&flr=0"
+                    "text": "Register here",
+                    "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAACAwE2ZURFZFQjkwNUI0QVNPN05VOUw0ODlRNEg0Ry4u"
                 }
             ]
         },
         {
             "heading": "Judges",
-            "content": "Shekhar master and Baba master"
+            "content": "Lasya team"
         },
         {
             "heading": "Prizes",
-            "content": "Cash prizes worth 26k + Social media shoutouts!"
+            "content": "1600 for the best team and 400 for best individual"
         }
     ],
     "events": [
         {
             "name": "Last date for submission",
-            "date": "1<sup>st</sup> August"
+            "date": "8<sup>th</sup> to 22<sup>nd</sup> June 2022"
         },
         {
             "name": "Announcement of results",
-            "date": "First week of August"
+            "date": "30<sup>th</sup> June 2022"
         }
     ],
     "coords": [
-        "Harsha Vardhanudh",
-        "Boda Srinivas"
+        "Souvik",
+        "Sharwary"
     ],
-    "email": "lasya.pravega@gmail.com",
-    "sponsor":"tiaan.png"
+    "email": "pravega.lasya@gmail.com"
 }
