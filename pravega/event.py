@@ -12,12 +12,14 @@ registration pages."""
 from json import load as load_json
 from flask import Blueprint, render_template
 
-blueprint = Blueprint("events", __name__, url_prefix="/events")
+blueprint = Blueprint("events", __name__,
+                      template_folder="templates/events")
 
 @blueprint.route("/<event_name>/")
 def display_event (event_name):
     # We might need to do more, but that can wait until specifics are known
-    return render_template(f"events/{event_name}.html",
+    return render_template(f"{event_name}.html",
+              # TODO this relative path might not work correctly
                event=load_json(f"data/events/{event_name}.json"))
 
 @blueprint.route("/<event_name>/register")

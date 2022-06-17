@@ -19,6 +19,6 @@ def create_app(test_config=None):
 
     from . import admin, event
     app.register_blueprint(admin.bp, subdomain='admin')
-    app.register_blueprint(event.blueprint)
+    app.register_blueprint(event.blueprint, url_prefix="/events")
 
     return app
