@@ -1,0 +1,25 @@
+"""Implements event webpages including registration.
+
+Variable `blueprint`: a `flask.Blueprint` for the event pages and event
+registration pages."""
+
+# Assumptions about how to find external data (can be changed as needed):
+# + For each event accessible at URL "/events/<event_name>":
+#   + file templates/events/<event_name>.html: Jinja template for that page
+#   + file data/events/<event_name>.json: JSON file, available in the Jinja
+#     template as variable `event`
+
+from json import load as load_json
+from flask import Blueprint, render_template
+
+blueprint = Blueprint("events", __name__, url_prefix="/events")
+
+@blueprint.route("/<event_name>/")
+def display_event (event_name):
+    # We might need to do more, but that can wait until specifics are known
+    return render_template(f"events/{event_name}.html",
+               event=load_json(f"data/events/{event_name}.json"))
+
+@blueprint.route("/<event_name>/register")
+def register_for_event (event_name):
+    return "Registration for events not yet implemented :("

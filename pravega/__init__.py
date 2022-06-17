@@ -17,7 +17,8 @@ def create_app(test_config=None):
     def testing():
         return "Testing"
 
-    from . import admin
+    from . import admin, event
     app.register_blueprint(admin.bp, subdomain='admin')
+    app.register_blueprint(event.blueprint)
 
     return app
