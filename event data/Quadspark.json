@@ -13,18 +13,14 @@
                     "url": "https://quadsparks.pravega.org/"
                 },
                 {
-                    "text": "Download instructions for Quadspark prelims",
-                    "file": "Quadsparks_rules_22.pdf"
-                },
-                {
-                    "text": "Download sample questions (2021 version)",
-                    "file": "SampleQuestions_Quadspark2021.pdf"
+                    "text": "Download instructions for Quadsparks prelims",
+                    "url": "https://drive.google.com/file/d/1N7cLuAqpanZ0jTpmtk9BHo4TPpaZlhlv/view"
                 }
             ]
         },
         {
             "heading": "About Quadsparks",
-            "content": "Quadsparks is the science quiz competition held for high school students as a part of Pravega, the undergraduate Science Fest at the Indian Institute of Science, Bangalore. It is a three-stage event – The prelims, which involves a timed online quiz, with four sections in Science (Physics, Chemistry and Biology), Mathematics, Reasoning and Mental ability, and a special section which deals with Out of the box thinking. The top teams in the prelims shall be called for an interview. The top teams from the interview move on to the finals. The finals will be held online, under the guidance of renowned quiz master, Vinay Mudaliar. Rather than focusing on the rote learning of facts, Quadsparks focuses on your critical thinking and reasoning skills to arrive at the answer.<br><br>The Quiz is conducted In 3 stages:",
+            "content": "Quadsparks is the science quiz competition held for high school students as a part of Pravega, the undergraduate Science Fest at the Indian Institute of Science, Bangalore. It is a three-stage event – The prelims, which involves a timed online quiz, with four sections in Science (Physics, Chemistry and Biology), Mathematics, Reasoning and Mental ability, and a special section which deals with Out of the box thinking. The top 15 teams in the prelims shall be called for an interview. The top teams from the interview move on to the finals. The finals will be held on 4th September 2022. Rather than focusing on the rote learning of facts, Quadsparks focuses on your critical thinking and reasoning skills to arrive at the answer.<br><br>The Quiz is conducted In 4 stages:",
             "lists": [
                 {
                     "header": "Prelims 1",
@@ -73,57 +69,40 @@
             "lists": [
                 {
                     "points": [
-                        "Students upto** Class 11th. (Question standard will be Non-Routine type question solvable by Class 8th - 10th grade students)",
+                        "Students upto Class 11th. (Including students of class 12 in new academic year)",
+                        "Students from less than class 8th can select class 8 during registration.",
                         "Students passionate about Science"
                     ]
                 }
             ]
         },
         {
-            "content": "**Class is considered as on 1 Feb 2022<br>Detailed team formation rules are given in the rules and regulations document.<br><br>The conditions for the team are:",
+            "content": "**Class is considered as on 31 March 2022<br>Detailed team formation rules are given in the rules and regulations document.<br><br>The conditions for the team are:",
             "lists": [
                 {
                     "points": [
                         "The participants are required to participate in teams of two, with both of them studying in upto class 11th.",
-                        "Students can enter the competitions after they have paid a registration fess of ₹200 per team.",
+                        "Students can enter the competitions after they have paid a registration fees of ₹200 per team.",
                         "Details about referral codes and related discounts are provided in the rules and regulations document.",
                         "The links for the questions will be given in the website on the dates for the quiz, in case of prelims. For the finals, and the finalists will be notified about exam procedure of the dates in due time.",
                         "The students are requested to make sure that they have a proper internet connection during the prelims. Any excuses pertaining to connectivity will not be entertained."
                     ]
                 }
-            ],
-            "links": [
-                {
-                    "text": "View statistics of Quadspark Prelims and list of selected teams for interview (2021 version)",
-                    "file": "stats.pdf"
-                }
-            ]
-        },
-        {
-            "heading": "Interview Results (Quadspark 2021)",
-            "links": [
-                {
-                    "text": "Click here to download",
-                    "file": "quadspark_interview_results.pdf"
-                }
             ]
         },
         {
             "heading": "Prizes",
-            "content": "Total prizes worth Rs. 50,000 to be won!",
+            "content": "Total prizes worth Rs. 50,000+ to be won!",
             "lists": [
                 {
                     "header": "Some of the prizes are:",
                     "points": [
-                        "Winning Team: Rs. 20,000",
-                        "1st Runner Up: Rs. 10,000",
-                        "2nd Runner Up: Rs. 5,000",
+                        "Winning Team: Rs. 20,000 + Winners trophy and Merit certificates",
+                        "1st Runner Up: Rs. 10,000 + Runners' up trophy, Merit Certificates",
+                        "2nd Runner Up: Rs. 5,000 + Second Runners' up trophy, Merit Certificates",
                         "Certificate of Participation to all Candidates",
-                        "Certificate of Merit to all Candidates who qualify prelims",
-                        "Certificate of Excellence (Gold/Silver/Bronze) to all candidate who qualify for finals.",
-                        "Trophies for Winner & Runner Ups.",
-                        "IISc Merchandise",
-                        "Gift Prizes & Coupons"
+                        "Trophies and Certificate of Merit to all Candidates who qualify for finals",
+                        "All finalists will receive a gift hanper with Pravega T-shits, School bags, and Books"
                     ]
                 }
             ]
