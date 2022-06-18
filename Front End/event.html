@@ -230,8 +230,13 @@
                                 </a>
                             </div>
                             <div ng-show="{{link.url !== undefined}}">
-                                <a ng-href=" {{link.url}}" target="_blank"
-                                    class="btn-flat shiny button-link">{{link.text}}</a>
+                                <a ng-href="{{link.url}}"
+                                    class="btn black-text sl-round thin-border button-link">
+                                    <i class="material-icons left">
+                                        insert_link
+                                    </i>
+                                    {{link.text}}
+                                </a>
                             </div>
                             <br>
                         </div>
