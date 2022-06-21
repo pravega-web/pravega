@@ -1,0 +1,24 @@
+#heading {font-variant: small-caps;
+    font-style: italic;
+font-size: x-large;
+text-align: center;}
+
+body {background-color: bisque;
+    font:bold;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;}
+
+body
+#form {width: 25%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-left: 37.5%;
+}
+
+body
+#table {
+    width: 80%;
+}

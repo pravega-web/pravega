@@ -8,6 +8,12 @@ import pymongo
 
 bp = Blueprint('admin',__name__)
 
+headings = ("a", "b", "c")
+data = (
+    (1,2,3),
+    (4,5,6)
+)
+
 @bp.route('/', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
@@ -54,4 +60,4 @@ def login_required(view):
 @login_required
 def panel():
     if request.method == 'GET':
-        return "skajfalks"
+        return render_template("admin/panel.html", headings=headings, data=data)
