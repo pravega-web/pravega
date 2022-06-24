@@ -26,11 +26,11 @@
     <div class="container">
         <div class="row" style="margin:5%;">
             <div class="col l12 center">
-                <h1 class="center">{{category}} Events (2021)</h1>
+                <h1 class="center">{{category}} Events</h1>
             </div>
 
             <div class="hide-on-med-and-down">
-                <div class="col l6 s12 center menu-box-hlt" ng-repeat="evt in events">
+                <div class="col s12 center menu-box-hlt" ng-repeat="evt in events">
                     <a ng-href="/events/cultural/{{evt}}" class="center" style="padding: 10px;">
                         <img class="responsive-image" src='/img/cultural/{{evt}}.png' alt="Event Icon Logo"
                             style="padding: 10px;" height="256px">
@@ -68,7 +68,7 @@
 
                 <div class="col s12 l6 center">
                     <div class="container white-text">
-                        © Pravega 2021
+                        © Pravega 2022
                         <br>
                         The Biggest Science Fest is back!
                         <br>
@@ -103,12 +103,12 @@
             document.title = $scope.category + ' Events | Pravega 2021'
 
             $scope.events = [
-                'A Crime Correspondence',
-                'Alekhya',
-                'Conflict Confronts',
+//                'A Crime Correspondence',
+//                'Alekhya',
+//                'Conflict Confronts',
                 'Lasya',
-                'Shutterbugs',
-                'Relay Reels',
+//                'Shutterbugs',
+//                'Relay Reels',
             ]
         })
     </script>
