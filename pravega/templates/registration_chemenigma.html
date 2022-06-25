@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chemenigma Registration</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up for Quadsparks 2022</h2>
+                        <form method=POST action="{{ url_for('register') }}">
+                            <div class="form-group">
+                                <label for="teamname"><i class="zmdi zmdi-accounts material-icons-name"></i></label>
+                                <input type="text" name="teamname" id="name" placeholder="Team Name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" placeholder="Your Email" required />
+                            </div>
+                            Password must contain atleast 8 characters (1 letter and 1 number)
+                            <br>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" name="pass" id="pass" placeholder="Password" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Name of Participant 1"><i class="zmdi zmdi-account"></i></label>
+                                <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Class">Class &nbsp;&nbsp; <i class="zmdi zmdi-book"></i></label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select name="class1" placeholder="Class" required>
+                                    <option value="8">VIII</option>
+                                    <option value="9">IX</option>
+                                    <option value="10">X</option>
+                                    <option value="11">XI</option>
+                                    <option value="12">XII</option>
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Name of Participant 2 (Optional)"><i class="zmdi zmdi-account"></i></label>
+                                <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2 (Optional)"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Class">Class &nbsp;&nbsp; <i class="zmdi zmdi-book"></i></label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select name="class2" placeholder="Class">
+                                    <option value="8">VIII</option>
+                                    <option value="9">IX</option>
+                                    <option value="10">X</option>
+                                    <option value="11">XI</option>
+                                    <option value="12">XII</option>
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Name of School"><i class="zmdi zmdi-city"></i></label>
+                                <input type="text" name="school" id="school" placeholder="Name of School" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Address of School"><i class="zmdi zmdi-city"></i></label>
+                                <input type="text" name="schooladdress" id="schooladd" placeholder="Address of School" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Mobile Number"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="text" pattern="^[0-9]{10}$" name="mobile" id="mobile" placeholder="Mobile Number" required />
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="static/img/quadspark.svg" width = 200px height = 200px alt="sign up image"></figure>
+                        <a href="/" class="signup-image-link">Already registered for Quadspark?</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</body>
+<footer>
+    <p>Website Developer: Snehasish Ghosh</p>
+    <p><a href="mailto:quadsparks@iisc.ac.in">quadsparks@iisc.ac.in</a></p>
+  </footer>
+</html>
