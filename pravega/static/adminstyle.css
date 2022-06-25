@@ -22,3 +22,7 @@ body
 #table {
     width: 80%;
 }
+
+h1 {
+	color: green;
+}

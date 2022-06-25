@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="../../static/adminstyle.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='adminstyle.css') }}">
   <title>
     Pravega Admin Portal
   </title>
-  <div id="heading">Welcome, Coordinator.</div><br>
 </head>
 <body>
+	<h1>kdshfkjlasfdlkjashd</h1>
+  <div id="heading">Welcome, Coordinator.</div><br>
   <div id="table">
+
     <table>
         <tr>
             {% for header in headings %}
