@@ -10,7 +10,7 @@ registration pages."""
 #     template as variable `event`
 
 from json import load as load_json
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template,request
 
 blueprint = Blueprint("events", __name__,
                       template_folder="templates/events")
@@ -22,6 +22,10 @@ def display_event (event_name):
               # TODO this relative path might not work correctly
                event=load_json(f"data/events/{event_name}.json"))
 
-@blueprint.route("/<event_name>/register")
+@blueprint.route("/<event_name>/register", methods=("GET", "POST"))
 def register_for_event (event_name):
-    return "Registration for events not yet implemented :("
+    if request.method == "GET":
+        return render_template(f"registration_{event_name}.html")
+    if request.method == "POST":
+        # insert to db
+        return "yomama"

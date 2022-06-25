@@ -7,9 +7,9 @@
     <title>Chemenigma Registration</title>
 
     <!-- Main css -->
-    <link rel="stylesheet" href="static/formstyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='formstyle.css') }}">
 </head>
-<body background="static/guyabg.png">
+<body background="{{ url_for('static', filename='guyabg.png') }}">
     <div id="form">
         <form method="POST">
             <h1>Chemenigma Team Registration</h1><br>
