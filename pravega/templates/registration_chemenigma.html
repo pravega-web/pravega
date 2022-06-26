@@ -7,48 +7,61 @@
     <title>Chemenigma Registration</title>
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='formstyle.css') }}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>   <link rel="stylesheet" href="{{ url_for('static', filename='formstyle.css') }}">
+
 </head>
-<body background="{{ url_for('static', filename='guyabg.png') }}">
+
+<body>
     <div id="form">
         <form method="POST">
-            <h1>Chemenigma Team Registration</h1><br>
-            Register your team for the flagship Chemistry event of Pravega 2022- Chemenigma!! <br>
-Each team can consist of a maximum of two participants from Class 11 to 2nd Year UG. <br>
-The prelims will be held online on 10th July, 2022. More details to be updated soon on the <a href="https://www.pravega.org/events/science/chemenigma">website</a>. :p <br>
-Contact us at: <a href="mailto:chemenigma.pravega@gmail.com">chemenigma.pravega@gmail.com</a> <br><br>
-Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
-Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br><br>
-Team Name: <input type="text" name="team" id="t1" placeholder="Chem Chums"> <br><br>
-Class/ Year of Participant 1:
-<select id="clsp1" name="clsp1">
-  <option value="11th">11th</option>
-  <option value="12th">12th</option>
-  <option value="1st">1st Year</option>
-  <option value="2nd">2nd Year</option>
-</select> <br>
-Class/ Year of Participant 2:
-<select id="clsp2" name="clsp2">
-  <option value="11th">11th</option>
-  <option value="12th">12th</option>
-  <option value="1st">1st Year</option>
-  <option value="2nd">2nd Year</option>
-</select> <br><br>
-School/ College of Participant 1: <input type="text" name="school1" id="sch1" placeholder="School/ College of Participant 1" required> <br>
-School/ College of Participant 2: <input type="text" name="school2" id="sch2" placeholder="School/ College of Participant 2"> <br><br>
-Email ID of Participant 1: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="emailp1" id="email1" placeholder="Your Email" required> <br>
-Email ID of Participant 2: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="emailp2" id="email2" placeholder="Your Email"> <br><br>
-Phone Number of Participant 1: <input type="text" pattern="^[0-9]{10}$" name="mobile1" id="mobile1" placeholder="Mobile Number" required> <br>
-Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile2" placeholder="Mobile Number"> <br><br>
-                        {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                        <ul class=flashes>
-                        {% for message in messages %}
-                        <li>{{ message }}</li>
-                        {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% endwith %}
-	<input type="submit" name="signup" id="signup" class="form-submit" value="Register">
-        </form> <br>
+		<div id="box">
+			<h1>Chemenigma Team Registration</h1>
+		 	Register your team for the flagship Chemistry event of Pravega 2022- Chemenigma!! <br>
+			Each team can consist of a maximum of two participants from Class 11 to 2nd Year UG. <br>
+			The prelims will be held online on 10th July, 2022. More details to be updated soon on the
+			<a href="https://www.pravega.org/events/science/chemenigma">website</a>. :p <br>
+			Contact us at: <a href="mailto:chemenigma.pravega@gmail.com">chemenigma.pravega@gmail.com</a> <br><br>
+			</div>
+			<div id="box" class="input-field">
+			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
+			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br><br>
+			Team Name: <input type="text" name="team" id="t1" placeholder="Chem Chums"> <br><br>
+			Class/ Year of Participant 1:
+			<select id="clsp1" name="clsp1" class="browser-default">
+				<option value="11th" selected>11th</option>
+				<option value="12th">12th</option>
+				<option value="1st">1st Year</option>
+				<option value="2nd">2nd Year</option>
+			</select> <br>
+			Class/ Year of Participant 2:
+			<select id="clsp2" name="clsp2" class="browser-default">
+				<option value="11th">11th</option>
+				<option value="12th">12th</option>
+				<option value="1st">1st Year</option>
+				<option value="2nd">2nd Year</option>
+			</select> <br><br>
+			School/ College of Participant 1: <input type="text" name="school1" id="sch1" placeholder="School/ College of Participant 1" required> <br>
+			School/ College of Participant 2: <input type="text" name="school2" id="sch2" placeholder="School/ College of Participant 2"> <br><br>
+			Email ID of Participant 1: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="emailp1" id="email1" placeholder="Your Email" required> <br>
+			Email ID of Participant 2: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="emailp2" id="email2" placeholder="Your Email"> <br><br>
+			Phone Number of Participant 1: <input type="text" pattern="^[0-9]{10}$" name="mobile1" id="mobile1" placeholder="Mobile Number" required> <br>
+			Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile2" placeholder="Mobile Number"> <br><br>
+                	        {% with messages = get_flashed_messages() %}
+                	        {% if messages %}
+                	        <ul class=flashes>
+                	        {% for message in messages %}
+                	        <li>{{ message }}</li>
+                	        {% endfor %}
+                	        </ul>
+                	        {% endif %}
+                	        {% endwith %}
+				<input type="submit" name="signup" id="signup" class="submit" value="Register">
+		</div>
+        </form>
     </div>
+
+</body>
+</html>
