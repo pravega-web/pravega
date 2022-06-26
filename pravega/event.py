@@ -56,4 +56,5 @@ def register_for_event (event_name):
             return render_template(f"registration_{event_name}.html")
         myclient.close()
 
-        return redirect("https://www.pravega.org")
+        flash("Email of participant 1 already registered")
+        return render_template(f"registration_{event_name}.html")
