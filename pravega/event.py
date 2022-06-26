@@ -10,7 +10,8 @@ registration pages."""
 #     template as variable `event`
 
 from json import load as load_json
-from flask import Blueprint, render_template,request
+from flask import Blueprint, render_template,request, flash, redirect, url_for
+import pymongo
 
 blueprint = Blueprint("events", __name__,
                       template_folder="templates/events")
@@ -27,5 +28,32 @@ def register_for_event (event_name):
     if request.method == "GET":
         return render_template(f"registration_{event_name}.html")
     if request.method == "POST":
-        # insert to db
-        return "yomama"
+        details = { "participant1_name" : request.form['participant1'],
+                    "praticipant2_name" : request.form['participant2'],
+                    "team_name" : request.form['team'],
+                    "participant1_class" : request.form['clsp1'],
+                    "participant2_class" : request.form['clsp2'],
+                    "participant1_school" : request.form['school1'],
+                    "participant2_school" : request.form['school2'],
+                    "praticipant1_email" : request.form['emailp1'],
+                    "praticipant2_email" : request.form['emailp2'],
+                    "praticipant1_phone" : request.form['mobile1'],
+                    "praticipant2_phone" : request.form['mobile2']
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://pravega.org:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb['chemenigma']
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "praticipant1_email" : request.form['emailp1'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Email of participant 1 already registered")
+            myclient.close()
+            return render_template(f"registration_{event_name}.html")
+        myclient.close()
+
+        return redirect("https://www.pravega.org")
