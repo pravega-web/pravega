@@ -19,7 +19,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 </head>
-<body background="{{ url_for('static', filename='guyabg.png') }}">
+<body>
+	<div id="navbar">
+		<a href="/">
+		<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
+		</a>
+		<div class="notimg">
+			<a href="/" class="navbaritem">Events</a>
+			<a href="/" class="navbaritem">Contact Us</a>
+			<a href="/scitech" class="navbaritem">Sci Tech</a>
+		</div>
+	</div>
     <div id="form">
 		<div id="box">
         <form method="POST">

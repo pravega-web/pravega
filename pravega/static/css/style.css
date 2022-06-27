@@ -1,0 +1,17 @@
+#navbar{
+	width: 100%;
+	float:left;background:transparent;
+}
+
+.notimg{
+	font-family: 'Goldman', cursive;
+	float: right;
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+
+.navbaritem{
+	padding-left: 20px	;
+}

@@ -20,29 +20,40 @@
 </head>
 
 <body>
-    <div id="form">
+<div id="navbar">
+	<a href="/">
+	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
+	</a>
+	<div class="notimg">
+		<a href="/" class="navbaritem">Events</a>
+		<a href="/" class="navbaritem">Contact Us</a>
+		<a href="/scitech" class="navbaritem">Sci Tech</a>
+	</div>
+</div>
+	<div class="row" >
+    <div id="form" class="col s12">
         <form method="POST">
-		<div id="box">
-			<h1 style="font-family: 'Goldman', cursive;">Chemenigma Team Registration</h1>
+		<div id="box"> 
+			<h2 style="font-family: 'Goldman', cursive;">Chemenigma Team Registration</h2>
 		 	Register your team for the flagship Chemistry event of Pravega 2022- Chemenigma!! <br>
 			Each team can consist of a maximum of two participants from Class 11 to 2nd Year UG. <br>
 			The prelims will be held online on 10th July, 2022. More details to be updated soon on the
-			<a href="https://www.pravega.org/events/science/chemenigma">website</a>. :p <br>
-			Contact us at: <a href="mailto:chemenigma.pravega@gmail.com">chemenigma.pravega@gmail.com</a> <br><br>
+			<a href="https://www.pravega.org/events/science/chemenigma" class="link">website</a>. :p <br>
+			Contact us at: <a href="mailto:chemenigma.pravega@gmail.com" class="link">chemenigma.pravega@gmail.com</a> <br><br>
 			</div>
 			<div id="box" class="input-field">
 			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
 			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br><br>
 			Team Name: <input type="text" name="team" id="t1" placeholder="Chem Chums"> <br><br>
 			Class/ Year of Participant 1:
-			<select id="clsp1" name="clsp1" class="browser-default">
-				<option value="11th" selected>11th</option>
-				<option value="12th">12th</option>
-				<option value="1st">1st Year</option>
-				<option value="2nd">2nd Year</option>
+			<select id="clsp1" name="clsp1" class="browser-default poc">
+				<option value="11th" class="poc" selected>11th</option>
+				<option value="12th" class="poc">12th</option>
+				<option value="1st" class="poc">1st Year</option>
+				<option value="2nd" class="poc">2nd Year</option>
 			</select> <br>
 			Class/ Year of Participant 2:
-			<select id="clsp2" name="clsp2" class="browser-default">
+			<select id="clsp2" name="clsp2" class="browser-default poc">
 				<option value="11th">11th</option>
 				<option value="12th">12th</option>
 				<option value="1st">1st Year</option>
@@ -67,6 +78,7 @@
 		</div>
         </form>
     </div>
+	</div>
 
 </body>
 </html>
