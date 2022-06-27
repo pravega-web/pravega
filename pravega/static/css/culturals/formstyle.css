@@ -43,3 +43,12 @@ select {
 	border:2px;
     	background: rgba(217, 217, 217, 0.2);
 }
+
+.razorpay-payment-button {
+
+	padding: 2% 5% 2% 5%;
+	font-size: 25px;
+	border-radius: 3px;
+	border:2px;
+    	background: rgba(217, 217, 217, 0.2);
+}

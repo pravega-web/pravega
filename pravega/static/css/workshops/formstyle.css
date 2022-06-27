@@ -1,5 +1,5 @@
 body {
-	background: url(/static/img/scitech/generic_background.png) no-repeat center center fixed;
+	background: url(/static/img/workshops/generic_background.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -36,6 +36,14 @@ select {
 }
 
 .submit {
+
+	padding: 2% 5% 2% 5%;
+	font-size: 25px;
+	border-radius: 3px;
+	border:2px;
+    	background: rgba(217, 217, 217, 0.2);
+}
+.razorpay-payment-button {
 
 	padding: 2% 5% 2% 5%;
 	font-size: 25px;

@@ -2,14 +2,11 @@ from flask import (
         Blueprint, flash, g, redirect, render_template, request, url_for
         )
 
-import pymongo
-import razorpay
-blueprint = Blueprint('scitech',__name__, template_folder="templates/scitech", url_prefix='/scitech')
+blueprint = Blueprint('workshops', __name__, template_folder="templates/workshops", url_prefix="/workshops")
 
-
-@blueprint.route("/chemenigma/register", methods=("GET", "POST"))
-def register_for_chemenigma ():
-    event_name = "chemenigma"
+@blueprint.route("generic/register", methods=("GET", "POST"))
+def generic_unpaid_workshops_register():
+    event_name = "generic"
     if request.method == "GET":
         return render_template(f"registration/registration_{event_name}.html")
     if request.method == "POST":
@@ -28,7 +25,7 @@ def register_for_chemenigma ():
         # Inserting things into the database
         myclient = pymongo.MongoClient("mongodb://localhost:27017/")
         mydb = myclient['registrations']
-        mycol = mydb['chemenigma']
+        mycol = mydb[event_name]
         #Checking for duplicate mobile numbers
         existing = mycol.find_one({ "praticipant1_email" : request.form['emailp1'] })
 
@@ -44,11 +41,11 @@ def register_for_chemenigma ():
         flash("Email of participant 1 already registered")
         return render_template(f"registration_{event_name}.html")
 
-@blueprint.route("/enumeration/register", methods=("GET", "POST"))
-def register_for_enumeration ():
-    event_name = "enumeration"
+@blueprint.route("generic/paid-register", methods=("GET","POST"))
+def generic_paid_workshops_register():
+    event_name = "paid_generic"
     if request.method == "GET":
-        return render_template(f"scitech/registration/registration_{event_name}.html")
+        return render_template(f"registration/registration_{event_name}.html")
 
     if request.method == "POST":
         details = { "participant1_name" : request.form['participant1'],
@@ -67,23 +64,18 @@ def register_for_enumeration ():
         razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f","lmao"))
         amount = 20000
         payment_id = request.form['razorpay_payment_id']
-
-
-
-
-
         # Inserting things into the database
         myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
         mydb = myclient['registrations']
-        mycol = mydb['enumeration']
+        mycol = mydb[event_name]
 
 
         #Checking for duplicate email numbers
         existing = mycol.find_one({ "praticipant1_email" : request.form['emailp1'] })
 
         paydb = myclient['payments']
-        paycol = paydb['enumeration']
+        paycol = paydb[event_name]
 
 
         if existing is None:

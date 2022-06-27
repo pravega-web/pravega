@@ -13,22 +13,23 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 
 </head>
-<body background="{{ url_for('static', filename='guyabg.png') }}">
+<body>
     <div id="form">
+    <div id="box">
         <form method="POST">
-		<div id="box">
-            		<h1>Enumeration Team Registration</h1><br>
+            		<h1 style="font-family: 'Goldman', cursive;">Enumeration Team Registration</h1><br>
 			Enumeration <br>
 			Enumeration <br>
 			Enumeration <br>
 			Fees = Rs.200<br>
+			Fees = Rs.200<br>
 			<a href="https://www.pravega.org/events/science/enumeration">website</a>. :p <br>
-			Contact us at: <a href="mailto:chemenigma.pravega@gmail.com">enumeration.pravega@gmail.com</a> <br><br>
-		</div>
-		<div id="box">
+			Contact us at: <a href="mailto:enumeration.pravega@gmail.com">enumeration.pravega@gmail.com</a> <br><br>
 			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
 			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br><br>
 			Team Name: <input type="text" name="team" id="t1" placeholder="Chem Chums"> <br><br>
@@ -47,17 +48,16 @@
                         </ul>
                         {% endif %}
                         {% endwith %}
-    			    <script
+			    <script
     			        src="https://checkout.razorpay.com/v1/checkout.js"
     			        data-amount="20000"
-    			        data-key="rzp_test_H1jF86OrQIF0J2"
+    			        data-key="rzp_live_jEr5MWFDFyEN8f"
     			        data-name="Enumeration Fees"
-    			        data-description="Purchase Description"
     			        data-netbanking="true"
     			        data-description="Fees for enumeration, by pravega IISc"
     			        data-notes.shopping_order_id="21">
     			    </script>
-    			    <input type="hidden" name="shopping_order_id" value="21" class="submit">
-		</div>
+    			    <input type="hidden" name="shopping_order_id" value="21" class='submit'>
         </form> <br>
+    </div>
     </div>
