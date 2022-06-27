@@ -7,18 +7,28 @@
     <title>Enumeration Registration</title>
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='formstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/formstyle.css') }}">
+
+    <!-- Main css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
 </head>
 <body background="{{ url_for('static', filename='guyabg.png') }}">
     <div id="form">
         <form method="POST">
-            <h1>Enumeration Team Registration</h1><br>
+		<div id="box">
+            		<h1>Enumeration Team Registration</h1><br>
 			Enumeration <br>
 			Enumeration <br>
 			Enumeration <br>
 			Fees = Rs.200<br>
 			<a href="https://www.pravega.org/events/science/enumeration">website</a>. :p <br>
 			Contact us at: <a href="mailto:chemenigma.pravega@gmail.com">enumeration.pravega@gmail.com</a> <br><br>
+		</div>
+		<div id="box">
 			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
 			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br><br>
 			Team Name: <input type="text" name="team" id="t1" placeholder="Chem Chums"> <br><br>
@@ -47,6 +57,7 @@
     			        data-description="Fees for enumeration, by pravega IISc"
     			        data-notes.shopping_order_id="21">
     			    </script>
-    			    <input type="hidden" name="shopping_order_id" value="21">
+    			    <input type="hidden" name="shopping_order_id" value="21" class="submit">
+		</div>
         </form> <br>
     </div>

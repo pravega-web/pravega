@@ -1,0 +1,45 @@
+body {
+	background: url(/static/img/culturals/generic_background.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: black;
+}
+
+ div
+#box{
+	font-family: "Luca", sans-serif;
+	margin-top: 2%;
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+	padding-left: 5%;
+	padding-right:5%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border: 5px solid rgba(217, 217, 217, 0.1));
+	border-radius: 10px;
+	background: #D9D9D9;
+	color: white;
+    	background: rgba(217, 217, 217, 0.2);
+	font-size: 17px;
+}
+
+a {
+	color: yellow;
+}
+select {
+    	background: rgba(217, 217, 217, 0.2);
+}
+
+.submit {
+
+	padding: 2% 5% 2% 5%;
+	font-size: 25px;
+	border-radius: 3px;
+	border:2px;
+    	background: rgba(217, 217, 217, 0.2);
+}

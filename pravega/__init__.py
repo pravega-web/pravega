@@ -17,8 +17,10 @@ def create_app(test_config=None):
     def testing():
         return "Testing"
 
-    from . import admin, event
+    from . import admin, event, scitech, culturals
     app.register_blueprint(admin.bp, subdomain='admin')
     app.register_blueprint(event.blueprint, url_prefix="/events")
+    app.register_blueprint(scitech.blueprint, url_prefix="/scitech")
+    app.register_blueprint(culturals.blueprint, url_prefix="/culturals")
 
     return app
