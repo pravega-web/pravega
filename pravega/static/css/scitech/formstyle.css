@@ -52,7 +52,7 @@ select {
 }
 
 @media not screen and (max-width:1300px) {
-	form{
+	.row{
 		width: 50%;
 		margin-left: 25%;
 	}
@@ -65,7 +65,9 @@ select {
 
 #navbar{
 	width: 100%;
-	float:left;background:transparent;
+	float:left;
+	background:transparent;
+	position: absolute;
 }
 
 .notimg{

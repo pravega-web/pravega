@@ -1,13 +1,21 @@
-body{
+body, html {
 	background-color: black;
+  height: 100%;
 }
 
 #navbar{
-	width: 100%;
-	float:left;background:transparent;
-	position: fixed;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+	float:left;
 }
 
+
+.top-left {
+	width: 100%;
+	background:transparent;
+	position: fixed;
+}
 .notimg{
 	font-family: 'Goldman', cursive;
 	float: right;
@@ -19,4 +27,128 @@ body{
 
 .navbaritem{
 	padding-left: 20px	;
+}
+#navbar{
+	width: 100%;
+	float:left;background:transparent;
+	position: fixed;
+}
+.indexitem1 {
+  background-image: url("/static/img/Background.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.indexitem2 {
+  background-image: url("/static/img/events.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.indexitem3::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+}
+.indexitem3 {
+  background-image: url("/static/img/contact.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.indexitem4 {
+  background-image: url("/static/img/sponsor.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.row {
+	padding-top: 10%;
+	align:center;
+
+}
+
+.gridimg{
+	height:200px;
+}
+
+a
+.row{
+	color:white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+.centered2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.footerleft{
+	float:left;
+	align: left;
+	color:white;
+	padding-left:20px;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+.footeritem {
+	float: right;
+	color: white;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-left: 60%;
+}
+
+.submit {
+	padding: 2% 2% 2% 2%;
+	border: 2% 2% 2% 2%;
+	border-color: rgba(255,255,255,1);
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 40%;
+	font-size: 25px;
+	border-radius: 3px;
+	border:2px;
+    	background: rgba(217, 217, 217, 0.2);
+	text-align: center;
+	color:white;
+
+}
+.contacts {
+	padding: 2% 2% 2% 2%;
+	font-size: 25px;
+	border-radius: 3px;
+	border:2px;
+    	background: rgba(217, 217, 217, 0.2);
+	text-align: center;
+	color:white;
+	margin-top: 2%;
+}
+.btn{
+    	background: rgba(217, 217, 217, 0.2);
 }
