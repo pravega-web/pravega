@@ -47,17 +47,17 @@ def register_for_chemenigma ():
         if existing is not None :
             flash("Email of participant 1 already registered")
             myclient.close()
-            return render_template(f"registration_{event_name}.html")
+            return render_template(f"registration/registration_{event_name}.html")
         myclient.close()
 
         flash("Email of participant 1 already registered")
-        return render_template(f"registration_{event_name}.html")
+        return render_template(f"registration/registration_{event_name}.html")
 
 @blueprint.route("/enumeration/register", methods=("GET", "POST"))
 def register_for_enumeration ():
     event_name = "enumeration"
     if request.method == "GET":
-        return render_template(f"scitech/registration/registration_{event_name}.html")
+        return render_template(f"registration/registration_{event_name}.html")
 
     if request.method == "POST":
         details = { "participant1_name" : request.form['participant1'],
@@ -114,7 +114,7 @@ def register_for_enumeration ():
             flash("Payment not confirmed")
             flash("Email of participant 1 already registered ask for refund on email if paid twice")
             myclient.close()
-            return render_template(f"scitech/registration/registration_{event_name}.html")
+            return render_template(f"registration/registration_{event_name}.html")
 
         myclient.close()
-        return render_template(f"scitech/registration/registration_{event_name}.html")
+        return render_template(f"registration/registration_{event_name}.html")
