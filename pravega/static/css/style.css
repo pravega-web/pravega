@@ -1,6 +1,11 @@
+body{
+	background-color: black;
+}
+
 #navbar{
 	width: 100%;
 	float:left;background:transparent;
+	position: fixed;
 }
 
 .notimg{

@@ -6,7 +6,7 @@ from flask import (
 from werkzeug.security import check_password_hash, generate_password_hash
 import pymongo
 
-bp = Blueprint('admin',__name__)
+bp = Blueprint('admin',__name__,template_folder='/admin')
 
 headings = ("a", "b", "c")
 data = (

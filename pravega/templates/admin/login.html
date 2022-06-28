@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/adminstyle.css') }}">
   <title>
     Admin Login
-  </title>
-  <div id="heading">Enter your credentials and Log In.</div><br>
+  </title>  <link rel="stylesheet" href="{{ url_for('static', filename='css/adminstyle.css') }}">
+
 </head>
-<body>
+<body>  
+  
+  <div id="heading">Enter your credentials and Log In.</div><br>
+
   <div id="form">
   <form method="post">
     <label for="username">Username</label>
