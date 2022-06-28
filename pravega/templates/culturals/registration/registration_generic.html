@@ -18,19 +18,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+	<script src="/static/scripts/navbar.js"></script>
 
 </head>
 
 <body>
 	<div id="navbar">
-		<a href="/">
-		<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-		</a>
-		<div class="notimg">
-			<a href="/" class="navbaritem">Events</a>
-			<a href="/" class="navbaritem">Contact Us</a>
-			<a href="/scitech" class="navbaritem">Sci Tech</a>
-		</div>
+		<a href="/"><img src="/static/img/logo.png" id="logo"></a>
+		<a href="/scitech" class="link">Scitech</a>
+		<a href="/#contactus" class="link">Contact Us</a>
+		<a href="/#events" class="link">Events</a>
 	</div>
     <div id="form">
         <form method="POST">

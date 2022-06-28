@@ -16,18 +16,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+	<script src="/static/scripts/navbar.js"></script>
 
 </head>
 <body>
 	<div id="navbar">
-		<a href="/">
-		<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-		</a>
-		<div class="notimg">
-			<a href="/" class="navbaritem">Events</a>
-			<a href="/" class="navbaritem">Contact Us</a>
-			<a href="/scitech" class="navbaritem">Sci Tech</a>
-		</div>
+		<a href="/"><img src="/static/img/logo.png" id="logo"></a>
+		<a href="/scitech" class="link">Scitech</a>
+		<a href="/#contactus" class="link">Contact Us</a>
+		<a href="/#events" class="link">Events</a>
 	</div>
 	<div class="row">
     <div id="form" class="col s12">
@@ -39,7 +37,7 @@
 			Enumeration <br>
 			Fees = Rs.200<br>
 			Fees = Rs.200<br>
-			<a href="https://www.pravega.org/events/science/enumeration">website</a>. :p <br>
+			<a href="https://www.pravega.org/scitech/enumeration">website</a>. :p <br>
 			Contact us at: <a href="mailto:enumeration.pravega@gmail.com">enumeration.pravega@gmail.com</a> <br><br>
 			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
 			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br><br>

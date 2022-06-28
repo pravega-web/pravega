@@ -18,51 +18,53 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+	<script src="/static/scripts/navbar.js"></script>
 
 </head>
 
 <body>
-<div id="navbar">
-	<a href="/">
-	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-	</a>
-	<div class="notimg">
-		<a href="/" class="navbaritem">Events</a>
-		<a href="/" class="navbaritem">Contact Us</a>
-		<a href="/scitech" class="navbaritem">Sci Tech</a>
+	<div id="navbar">
+		<a href="/"><img src="/static/img/logo.png" id="logo"></a>
+		<a href="/scitech" class="link">Scitech</a>
+		<a href="/#contactus" class="link">Contact Us</a>
+		<a href="/#events" class="link">Events</a>
 	</div>
-</div>
 <div id="event_body">
 
 <div class="row">
 	<div class="col l2">
-	<img src='/static/img/scitech/enumeration.svg' alt='LOGO'>
+	<img src='/static/img/scitech/chemenigma.svg' alt='LOGO'>
 	</div>
-	<h1>Chemeingma</h1>
-	<h4>A chemistry frothing</h4>
+	<h1 id="heading">Enumeration</h1>
+	<h4 id="subheading">MathWizx Assemble</h4>
 </div>
 <div class="row">
-<div class="col l2 push-l0">
+<div class="col l2 push-l0 s12 m6">
 	<div class="box">
-	<h2> Timeline </h2>
-	<hr>
-	Prelims- 10th July
-	<br>
-	Finals- 2nd or 3rd September
+		<h2> Timeline </h2>
+		<hr>
+		Prelims- 10th July<br>
+		Finals- 2nd or 3rd September
 	</div>
-	<div class="box">
-	<h2> Quick Links </h2>
-	<hr>
-	<a href='/scitech/chemenigma/register'>
-		<div class="clickme submit">
-			<h4 style="text-align:center; color:blue;"> Register here </h4>
-		</div>
-	</a>
+<!-- </div>
+
+<div class="col l5 push-l0 s12 m6">
+-->
+
+	<div class="box" id="registrationbox">
+		<h2> Quick Links </h2><hr>
+		<a href='/scitech/chemenigma/register'>
+			<div class="clickme submit">
+				<h4 style="text-align:center; color:blue;"> Register here </h4>
+			</div>
+		</a>
 
 	</div>
 </div>
-<div class="col l9 push-l0">
-	<div class="box">
+<div class="col l9
+ push-l0">
+	<div class="box" id="main">
 	<h2>Desciption</h2>
 	<p>
 	Chemenigma, an event designed to test your calibre in chemistry through
