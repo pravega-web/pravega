@@ -114,7 +114,7 @@ def register_for_enumeration ():
             flash("Payment not confirmed")
             flash("Email of participant 1 already registered ask for refund on email if paid twice")
             myclient.close()
-            return render_template(f"registration_{event_name}.html")
+            return render_template(f"scitech/registration/registration_{event_name}.html")
 
         myclient.close()
-        return render_template(f"registration_{event_name}.html")
+        return render_template(f"scitech/registration/registration_{event_name}.html")
