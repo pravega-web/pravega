@@ -50,7 +50,6 @@ def register_for_chemenigma ():
             return render_template(f"registration/registration_{event_name}.html")
         myclient.close()
 
-        flash("Email of participant 1 already registered")
         return render_template(f"registration/registration_{event_name}.html")
 
 @blueprint.route("/enumeration/register", methods=("GET", "POST"))
