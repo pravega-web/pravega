@@ -3,36 +3,6 @@ body, html {
   height: 100%;
 }
 
-#navbar{
-  position: absolute;
-  top: 8px;
-  left: 16px;
-	float:left;
-}
-
-
-.top-left {
-	width: 100%;
-	background:transparent;
-	position: fixed;
-}
-.notimg{
-	font-family: 'Goldman', cursive;
-	float: right;
-	color: white;
-	font-size: 20px;
-	margin-top: 20px;
-	margin-right: 40px;
-}
-
-.navbaritem{
-	padding-left: 20px	;
-}
-#navbar{
-	width: 100%;
-	float:left;background:transparent;
-	position: fixed;
-}
 .indexitem1 {
   background-image: url("/static/img/Background.png");
   height: 100%;

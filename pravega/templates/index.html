@@ -19,46 +19,23 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<script src="/static/scripts/navbar.js"></script>
 </head>
 <body>
 
-<div id="navbar">
-	<a href="/">
-	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-	</a>
-	<div class="notimg">
-		<a href="#events" class="navbaritem">Events</a>
-		<a href="#contactus" class="navbaritem">Contact Us</a>
-		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
+	<div id="navbar">
+		<a href="/"><img src="/static/img/logo.png" id="logo"></a>
+		<a href="/#events" class="link">Events</a>
+		<a href="/#contactus" class="link">Contact Us</a>
+		<a href="/#sponsor" class="link">Sponsor Us</a>
 	</div>
-</div>
 
 <div class="indexitem1">
-<div id="navbar">
-	<a href="/">
-	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-	</a>
-	<div class="notimg">
-		<a href="#events" class="navbaritem">Events</a>
-		<a href="#contactus" class="navbaritem">Contact Us</a>
-		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
-	</div>
-</div>
 </div>
 
 <div class="indexitem2" id="events">
-<div id="navbar">
-	<a href="/">
-	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-	</a>
-	<div class="notimg">
-		<a href="#events" class="navbaritem">Events</a>
-		<a href="#contactus" class="navbaritem">Contact Us</a>
-		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
-	</div>
-</div>
-<div class="container">
+	<div class="container">
 
 	    <div class="row">
 		    <div class="col l4">
@@ -110,22 +87,11 @@
 		    </div>
 		    </div>
 	    </div>
-</div>
-</div>
-
-<div class="indexitem3" id="contactus">
-<div id="navbar">
-	<a href="/">
-	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-	</a>
-	<div class="notimg">
-		<a href="#events" class="navbaritem">Events</a>
-		<a href="#contactus" class="navbaritem">Contact Us</a>
-		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
 	</div>
 </div>
 
-      <div class="centered">
+<div class="indexitem3" id="contactus">
+    <div class="centered">
 	<h3 align="center">Do you have any queries? Feel free to reach out!</h3>
 	<a align="center" href='mailto:pravega@pravega.org' >
 		<button align="center" class="submit">
@@ -212,16 +178,6 @@
 </div>
 
 <div class="indexitem4" id="sponsor">
-<div id="navbar">
-	<a href="/">
-	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
-	</a>
-	<div class="notimg">
-		<a href="#events" class="navbaritem">Events</a>
-		<a href="#contactus" class="navbaritem">Contact Us</a>
-		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
-	</div>
-</div>
       <div class="centered2">
 	      <a href="/files/PravegaBrochure.pdf">
 	      <h1 style="font-family: 'Goldman', cursive; color: white"> Sponsor Us !! </h1>
