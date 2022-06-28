@@ -19,6 +19,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
 <script src="/static/scripts/navbar.js"></script>
 </head>
@@ -26,9 +27,9 @@
 
 	<div id="navbar">
 		<a href="/"><img src="/static/img/logo.png" id="logo"></a>
-		<a href="/#events" class="link">Events</a>
-		<a href="/#contactus" class="link">Contact Us</a>
 		<a href="/#sponsor" class="link">Sponsor Us</a>
+		<a href="/#contactus" class="link">Contact Us</a>	
+		<a href="/#events" class="link">Events</a>
 	</div>
 
 <div class="indexitem1">
@@ -38,7 +39,7 @@
 	<div class="container">
 
 	    <div class="row">
-		    <div class="col l4">
+		    <div class="col l4 m4 s6 eventitems">
 			<div class="contacts">
 		    <a>
 			    <img class="gridimg" src='static/img/pronites.png'>
@@ -46,7 +47,7 @@
 		    </a>
 		    </div>
 		    </div>
-		    <div class="col l4">
+		    <div class="col l4 m4 s6 eventitems">
 			<div class="contacts">
 		    <a>
 			    <img class="gridimg" src='static/img/cultural.png'>
@@ -54,7 +55,7 @@
 		    </a>
 		    </div>
 		    </div>
-		    <div class="col l4">
+		    <div class="col l4 m4 s6 eventitems">
 			<div class="contacts">
 		    <a>
 			    <img  class="gridimg" src='static/img/recreational.png'>
@@ -62,7 +63,7 @@
 		    </a>
 		    </div>
 		    </div>
-		    <div class="col l4">
+		    <div class="col l4 m4 s6 eventitems">
 			<div class="contacts">
 		    <a>
 			    <img  class="gridimg" src='static/img/merch.png'>
@@ -70,7 +71,7 @@
 		    </a>
 		    </div>
 		    </div>
-		    <div class="col l4" >
+		    <div class="col l4 m4 s6 eventitems" >
 		    <a href='/scitech'>
 			<div class="contacts">
 			    <img  class="gridimg" src='static/img/scitech.png'>
@@ -78,7 +79,7 @@
 		    </div>
 		    </a>
 		    </div>
-		    <div class="col l4">
+		    <div class="col l4 m4 s6 eventitems">
 			<div class="contacts">
 		    <a>
 			    <img  class="gridimg" src='static/img/workshops.png'>
@@ -92,9 +93,9 @@
 
 <div class="indexitem3" id="contactus">
     <div class="centered">
-	<h3 align="center">Do you have any queries? Feel free to reach out!</h3>
-	<a align="center" href='mailto:pravega@pravega.org' >
-		<button align="center" class="submit">
+	<h3 align="center" id="queries">Do you have any queries? Feel free to reach out!</h3>
+	<a align="center" href='mailto:pravega@pravega.org'>
+		<button align="center" class="submit" id="mailus">
 		Drop us an email
 		</button>
 	</a>
@@ -178,9 +179,9 @@
 </div>
 
 <div class="indexitem4" id="sponsor">
-      <div class="centered2">
+      <div class="centered2 box">
 	      <a href="/files/PravegaBrochure.pdf">
-	      <h1 style="font-family: 'Goldman', cursive; color: white"> Sponsor Us !! </h1>
+	      <h1 style="font-family: 'Goldman', cursive; color: white" id="sponsorslubb"> Sponsor Us !! </h1>
 	      </a>
       </div>
 </div>

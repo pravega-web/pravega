@@ -52,7 +52,33 @@ body, html {
 }
 
 .gridimg{
-	height:200px;
+	height:120px;
+}
+
+@media not screen and (max-width:1300px) {
+	.gridimg{
+		height: 200px;
+	}
+
+	.eventitems{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width:1300px) {
+	#queries{
+		font-size: 30px;
+	}
+
+	#mailus{
+		display: none;
+	}
+
+	#sponsorslubb{
+		font-size: 30px;
+	}
+
 }
 
 a
@@ -134,4 +160,20 @@ a
 
 .s6{
 	height: 250px;
+}
+
+.box{
+	font-family: "poppins", sans-serif;
+	margin-top: 2%;
+	text-align: center;
+	padding-left: 5%;
+	padding-right:5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 1px solid rgba(217, 217, 217, 0.1);
+	border-radius: 5px;
+	background: #D9D9D9;
+	color: white;
+    	background: rgba(217, 217, 217, 0.2);
+	font-size: 17px;
 }
