@@ -76,7 +76,7 @@ body, html {
 }
 
 .row {
-	padding-top: 10%;
+	padding-top: 5%;
 	align:center;
 
 }
@@ -115,14 +115,6 @@ a
 	padding-top:10px;
 }
 
-.footeritem {
-	float: right;
-	color: white;
-	font-size: 20px;
-	margin-bottom: 20px;
-	margin-top: 10px;
-	margin-left: 60%;
-}
 
 .submit {
 	padding: 2% 2% 2% 2%;
@@ -151,4 +143,15 @@ a
 }
 .btn{
     	background: rgba(217, 217, 217, 0.2);
+}
+
+.footerbutton{
+	size: 50px 50px;
+}
+
+#footer a{
+	font-size: 50px;
+}
+#footer h6{
+	font-size: 20px;
 }

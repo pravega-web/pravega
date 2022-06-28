@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pravega 2022 | IISc UG fest</title>
+    <title>Pravega 2022 | IISc Bangalore UG fest</title>
 
     <!-- Main css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
@@ -28,9 +28,9 @@
 	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
 	</a>
 	<div class="notimg">
-		<a href="/" class="navbaritem">Events</a>
-		<a href="/" class="navbaritem">Contact Us</a>
-		<a href="/scitech" class="navbaritem">Sponsor Us</a>
+		<a href="#events" class="navbaritem">Events</a>
+		<a href="#contactus" class="navbaritem">Contact Us</a>
+		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
 	</div>
 </div>
 
@@ -40,22 +40,22 @@
 	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
 	</a>
 	<div class="notimg">
-		<a href="/" class="navbaritem">Events</a>
-		<a href="/" class="navbaritem">Contact Us</a>
-		<a href="/scitech" class="navbaritem">Sponsor Us</a>
+		<a href="#events" class="navbaritem">Events</a>
+		<a href="#contactus" class="navbaritem">Contact Us</a>
+		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
 	</div>
 </div>
 </div>
 
-<div class="indexitem2">
+<div class="indexitem2" id="events">
 <div id="navbar">
 	<a href="/">
 	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
 	</a>
 	<div class="notimg">
-		<a href="/" class="navbaritem">Events</a>
-		<a href="/" class="navbaritem">Contact Us</a>
-		<a href="/scitech" class="navbaritem">Sponsor Us</a>
+		<a href="#events" class="navbaritem">Events</a>
+		<a href="#contactus" class="navbaritem">Contact Us</a>
+		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
 	</div>
 </div>
 <div class="container">
@@ -113,15 +113,15 @@
 </div>
 </div>
 
-<div class="indexitem3">
+<div class="indexitem3" id="contactus">
 <div id="navbar">
 	<a href="/">
 	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
 	</a>
 	<div class="notimg">
-		<a href="/" class="navbaritem">Events</a>
-		<a href="/" class="navbaritem">Contact Us</a>
-		<a href="/scitech" class="navbaritem">Sponsor Us</a>
+		<a href="#events" class="navbaritem">Events</a>
+		<a href="#contactus" class="navbaritem">Contact Us</a>
+		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
 	</div>
 </div>
 
@@ -196,9 +196,9 @@
 	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
 	</a>
 	<div class="notimg">
-		<a href="/" class="navbaritem">Events</a>
-		<a href="/" class="navbaritem">Contact Us</a>
-		<a href="/scitech" class="navbaritem">Sponsor Us</a>
+		<a href="#events" class="navbaritem">Events</a>
+		<a href="#contactus" class="navbaritem">Contact Us</a>
+		<a href="#sponsor" class="navbaritem">Sponsor Us</a>
 	</div>
 </div>
       <div class="centered2">
@@ -207,17 +207,39 @@
 	      </a>
       </div>
 </div>
-<div id="footer">
-	<div class="footerleft">
+
+
+
+
+<div id="footer" class="row">
+	<div class="col l6">
+		<div class="footerleft">
 		<h6>Pravega 2022</h6>
-		<h6>The Biggest Science Fest is Back</h6>
+		<h6>The Biggest Science fest is Back</h6>
+		</div>
 	</div>
-	<div class="footeritem">
+	<div class="col l6 ">
+		<div class="col l3">
+			<div class="footerbutton">
                     <a href="https://www.facebook.com/PravegaIISc/" class="fa fa-facebook sm-button"></a>
+			</div>
+		</div>
+		<div class="col l3">
+			<div class="footerbutton">
                     <a href="https://twitter.com/PravegaIISc" class="fa fa-twitter sm-button"></a>
+			</div>
+		</div>
+		<div class="col l3">
+			<div class="footerbutton">
                     <a href="https://www.instagram.com/pravega.iisc/" class="fa fa-instagram sm-button"></a>
+			</div>
+		</div>
+		<div class="col l3">
+			<div class="footerbutton">
                     <a href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
                         class="fa fa-youtube sm-button"></a>
+			</div>
+		</div>
 	</div>
 </div>
 </body>
