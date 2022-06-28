@@ -120,6 +120,7 @@ select {
     	background: rgba(52, 110, 235, 0.2);
 	border-radius: 5px;
 	border: 2px solid black;
+	padding-top: 2px;
 }
 
 .clickme:hover {
@@ -158,4 +159,34 @@ u {
 }
 .btn{
     	background: rgba(52, 110, 235, 0.2);
+}
+
+.m6 h4{
+	margin-top: 6px;
+	margin-bottom: 6px;
+	font-size: 30px;
+}
+
+@media not screen and (max-width:1300px){
+	#registrationbox{
+	padding-bottom: 25px;
+}
+}
+
+@media screen and (max-width:1300px){
+	h1{
+	font-size: 60px;
+}
+}
+
+#heading{
+	margin-top: 100px;
+}
+
+#subheading{
+	margin-left: 20px
+}
+
+#main{
+	margin-top: 5px;
 }

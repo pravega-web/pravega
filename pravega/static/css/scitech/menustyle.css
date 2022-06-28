@@ -99,3 +99,14 @@ select {
     	background: rgba(52, 110, 235, 0.2);
 	border-radius: 5px;
 }
+
+
+@media screen and (max-width:1300px) {
+	.hideonsmall{
+		display: none;
+	}
+}
+
+#heading{
+	margin-top: 100px;
+}
