@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scitech Menu | Pravega 2022 | IISc Bangalore UG fest</title>
+
+    <!-- Main css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/menustyle.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="navbar">
+	<a href="/">
+	<img src="{{ url_for('static', filename='img/logo.png') }}" height="100px" >
+	</a>
+	<div class="notimg">
+		<a href="/" class="navbaritem">Events</a>
+		<a href="/" class="navbaritem">Contact Us</a>
+		<a href="/scitech" class="navbaritem">Sci Tech</a>
+	</div>
+</div>
+<div id="scitech_menu">
+
+<div class="row">
+	<div class="title_wrapper">
+		<div class="col l2">
+			<img src="/static/img/scitech.png" height="120px">
+		</div>
+		<h1>SCI-TECH EVENTS</h1>
+	</div>
+</div>
+<div class="row">
+	<div>
+		<div class="col l3">
+			<a href="/scitech/chemenigma" class="clickme">
+				<div class="clickme">
+			<div class="box">
+				<img src="/static/img/scitech/chemenigma.svg" alt="Chemenigma Image" width="193px">
+			</div>
+			<h5>Chemenigma</h5>
+			</div>
+			</a>
+		</div>
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div >
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+		<div class="col l3">
+			<div class="box">
+				<img src="/static/img/question-mark.svg" alt="Question Mark" width="193px">
+			</div>
+			<h5>Coming Soon</h5>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -6,6 +6,15 @@ import pymongo
 import razorpay
 blueprint = Blueprint('scitech',__name__, template_folder="templates/scitech", url_prefix='/scitech')
 
+razorpay_secret_key='lmao'
+
+@blueprint.route('/')
+def show_scitech_menu():
+    return render_template('scitech_menu.html')
+
+@blueprint.route('/<event_name>')
+def show_scitech(event_name):
+    return render_template(f'{event_name}.html')
 
 @blueprint.route("/chemenigma/register", methods=("GET", "POST"))
 def register_for_chemenigma ():
@@ -64,26 +73,23 @@ def register_for_enumeration ():
                     "payment_status" : "Unknown"
                     }
         # Authenticating payments
-        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f","lmao"))
+        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
         amount = 20000
         payment_id = request.form['razorpay_payment_id']
-
-
-
 
 
         # Inserting things into the database
         myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
         mydb = myclient['registrations']
-        mycol = mydb['enumeration']
+        mycol = mydb[event_name]
 
 
         #Checking for duplicate email numbers
         existing = mycol.find_one({ "praticipant1_email" : request.form['emailp1'] })
 
         paydb = myclient['payments']
-        paycol = paydb['enumeration']
+        paycol = paydb[event_name]
 
 
         if existing is None:

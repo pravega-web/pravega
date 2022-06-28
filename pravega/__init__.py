@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True, subdomain_matching=True)
@@ -13,6 +13,14 @@ def create_app(test_config=None):
 #   Some thing happens here
 #
 #
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+
+    @app.route('/files/PravegaBrochure.pdf')
+    def downloadFile():
+        return send_file('files/PravegaBrochure.pdf')
+
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
@@ -22,7 +30,7 @@ def create_app(test_config=None):
     app.register_blueprint(culturals.blueprint)
     from . import workshops
     app.register_blueprint(workshops.blueprint)
-    @app.route('/')
-    def index():
-        return render_template('index.html')
+
+
+
     return app

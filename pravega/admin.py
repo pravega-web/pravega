@@ -8,6 +8,8 @@ import pymongo
 
 bp = Blueprint('admin',__name__,template_folder='/admin')
 
+admin_username = 'lmao'
+admin_password = 'lmao'
 headings = ("a", "b", "c")
 data = (
     (1,2,3),
@@ -17,8 +19,8 @@ data = (
 @bp.route('/', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
-        if request.form['username'] == "FAKE PUBLIC USERNAME":
-            if request.form['password'] == "the real password":
+        if request.form['username'] == admin_username:
+            if request.form['password'] == admin_password:
                 session.clear()
                 session['user_id'] = "42069"
                 return redirect(url_for('admin.panel'))
