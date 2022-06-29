@@ -19,6 +19,7 @@ python -m venv venv
 To go to this virtual environment, type(on windows, change the forwardslash to backwardslashes)
 ```
 . venv/bin/activate
+venv\Scripts\activate for windows
 ```
 ### Install flask by running:
 ```
@@ -27,6 +28,10 @@ pip install flask
 ### Install pymongo by running:
 ```
 pip install pymongo
+```
+### Install razorpay by running:
+```
+pip install razorpay
 ```
 ### Run
 Finally to run the app,
