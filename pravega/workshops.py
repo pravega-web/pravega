@@ -4,6 +4,15 @@ from flask import (
 
 blueprint = Blueprint('workshops', __name__, template_folder="templates/workshops", url_prefix="/workshops")
 
+@blueprint.route('/')
+def show_scitech_menu():
+    return render_template('workshops_menu.html')
+
+
+@blueprint.route('/<event_name>')
+def show_scitech(event_name):
+    return render_template(f'{event_name}.html')
+
 # @blueprint.route("generic/register", methods=("GET", "POST"))
 # def generic_unpaid_workshops_register():
 #     event_name = "generic"
