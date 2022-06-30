@@ -26,7 +26,7 @@ body, html {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.8);
 }
 .indexitem3 {
   background-image: url("/static/img/contact.png");
@@ -36,19 +36,12 @@ body, html {
   background-size: cover;
   position: relative;
 }
-.indexitem4 {
-  background-image: url("/static/img/sponsor.png");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
+
 
 .row {
-	padding-top: 5%;
 	align:center;
-
+	height: 100%;
+	max-width: 1200px;
 }
 
 .gridimg{
@@ -61,7 +54,7 @@ body, html {
 	}
 
 	.eventitems{
-		margin-top: 20px;
+		margin-top: 35px;
 		margin-bottom: 20px;
 	}
 }
@@ -137,6 +130,26 @@ a
 	color:white;
 	margin-top: 2%;
 }
+
+.events{
+	padding: 2% 2% 2% 2%;
+	font-size: 25px;
+	border-radius: 3px;
+	border:2px;
+    	background: transparent;
+	text-align: center;
+	color:white;
+	margin-top: 2%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.events:hover{
+	background: rgba(217, 217, 217, 0.2);
+	color: yellow;
+}
+
+
+
 .btn{
     	background: rgba(217, 217, 217, 0.2);
 }
@@ -163,7 +176,7 @@ a
 }
 
 .box{
-	font-family: "poppins", sans-serif;
+	font-family: "Montserra", sans-serif;
 	margin-top: 2%;
 	text-align: center;
 	padding-left: 5%;
@@ -178,3 +191,25 @@ a
 	font-size: 17px;
 }
 
+.outer{
+	display: table;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+
+}
+
+.middle{
+		/* display: table-cell;
+		vertical-align: center; */
+	display: flex;
+	align-items:center;	
+	justify-content: center;
+	padding-top: 7%;
+}
+
+/* #eventspage{
+
+} */

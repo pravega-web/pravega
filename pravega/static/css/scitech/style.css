@@ -1,17 +1,17 @@
 body {
-	background: url(/static/img/scitech/generic_background.png) no-repeat center center fixed;
+/*	background: url(/static/img/scitech/generic_background.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-color: black;
+	background-size: 100% 100%;  */
+	background-color: #2F3237;
 }
 
 #event_body{
 	padding-top: 5%;
-	background-color: rgba(217,217,217,0.2);
+	background-color: rgba(217,217,217,0);
 }
 
 h1 {
@@ -71,8 +71,8 @@ div
 	border: 1px solid rgba(217, 217, 217, 0.1);
 	border-radius: 5px;
 	background: #D9D9D9;
-	color: black;
-    	background: rgba(217, 217, 217, 0.8);
+	color: white;
+    	background: rgba(217, 217, 217, 0);
 	font-size: 17px;
 }
 
@@ -181,10 +181,11 @@ u {
 
 #heading{
 	margin-top: 100px;
+	margin-left: 20px;
 }
 
 #subheading{
-	margin-left: 20px
+	margin-left: 40px;
 }
 
 #main{

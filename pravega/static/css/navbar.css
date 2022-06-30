@@ -1,11 +1,11 @@
 #navbar {
-    background-color: rgba(27,27,27,0.8); /* Black background color */
+    background-color: rgba(3,3,3,0.2); /* Black background color */
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
     z-index: 5;
-    height: 50px;
+    height: 72px;
   }
   
   /* Style the navbar links */
@@ -16,6 +16,7 @@
     text-align: center;
     padding: 15px;
     text-decoration: none;
+    font-size: 24px;
   }
   
   #navbar .link:hover {
@@ -25,7 +26,7 @@
 
   #logo{
     float: left;
-    height: 50px;
+    height: 72px;
     background: transparent;
 
   }
