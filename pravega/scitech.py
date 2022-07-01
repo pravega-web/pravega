@@ -8,7 +8,7 @@ blueprint = Blueprint('scitech',__name__, template_folder="templates/", url_pref
 
 razorpay_secret_key='lmao'
 
-@blueprint.route("/chemenigma/register/post", method="POST")
+@blueprint.route("/chemenigma/register/post", method=("GET","POST"))
 def register_for_chemenigma ():
     event_name = "chemenigma"
     if request.method == "POST":
