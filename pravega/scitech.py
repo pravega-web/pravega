@@ -4,23 +4,13 @@ from flask import (
 
 import pymongo
 import razorpay
-blueprint = Blueprint('scitech',__name__, template_folder="templates/scitech", url_prefix='/scitech')
+blueprint = Blueprint('scitech',__name__, template_folder="templates/", url_prefix='/scitech')
 
 razorpay_secret_key='lmao'
 
-@blueprint.route('/')
-def show_scitech_menu():
-    return render_template('scitech_menu.html')
-
-@blueprint.route('/<event_name>')
-def show_scitech(event_name):
-    return render_template(f'{event_name}.html')
-
-@blueprint.route("/chemenigma/register", methods=("GET", "POST"))
+@blueprint.route("/chemenigma/register/post", method="POST")
 def register_for_chemenigma ():
     event_name = "chemenigma"
-    if request.method == "GET":
-        return render_template(f"registration/registration_{event_name}.html")
     if request.method == "POST":
         details = { "participant1_name" : request.form['participant1'],
                     "praticipant2_name" : request.form['participant2'],
@@ -47,10 +37,10 @@ def register_for_chemenigma ():
         if existing is not None :
             flash("Email of participant 1 already registered")
             myclient.close()
-            return render_template(f"registration/registration_{event_name}.html")
+            return render_template("registration_message.html")
         myclient.close()
 
-        return render_template(f"registration/registration_{event_name}.html")
+        return render_template("registration_message.html")
 
 @blueprint.route("/enumeration/register", methods=("GET", "POST"))
 def register_for_enumeration ():
