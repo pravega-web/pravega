@@ -21,6 +21,9 @@ def create_app(test_config=None):
     def downloadFile():
         return send_file('files/PravegaBrochure.pdf')
 
+    @app.route('/tester')
+    def test():
+        return render_template("registration_message.html");
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
