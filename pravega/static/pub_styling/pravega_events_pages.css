@@ -1,0 +1,20 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.invalid-feedback{
+    color: #e76565;
+}
+
+input {
+    font-family: "ITC Avant Garde Gothic Std Book",Verdana,sans-serif!important;
+    font-size: 18px!important;
+}

@@ -1,0 +1,13 @@
+.index1{
+	background-image: url('../pub_assets/background1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	height: 100vh;
+	display: flex;
+	color: yellow;
+}
+
+#pingus{
+	width: 20%;
+}

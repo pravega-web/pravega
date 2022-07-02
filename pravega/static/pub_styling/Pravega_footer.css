@@ -1,0 +1,46 @@
+footer {
+	padding-top: 20px;
+}
+.footer-pravega-bg {
+	padding-top: 2%;
+    background-color: #000000;
+}
+
+.footer-pravega-font {
+    font-family: "ITC Avant Garde Gothic Std Book",Verdana,sans-serif;
+    color: #ececec;
+    font-size: 14px;
+}
+.footer-pravega-font-special {
+    font-family: "ITC Avant Garde Gothic Std Bold","Verdana-Bold",sans-serif;
+    color: #ececec;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+a.footer-pravega-font:link {
+    text-decoration: none;
+}
+a.footer-pravega-font:visited {
+    text-decoration: none;
+}
+a.footer-pravega-font:hover {
+    color: #ececec;
+    text-decoration: underline;
+}
+
+.footer-pravega-margin {
+    margin-right: 50px;
+    margin-left: 10%;
+}
+
+.footer-pravega-col {
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-pravega-col-special {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

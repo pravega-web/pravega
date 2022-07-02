@@ -33,7 +33,7 @@
         <form method="POST">
             		<h2 style="font-family: 'Goldman', cursive;">Enumeration Team Registration</h2><br>
 			<h5 style="font-family: 'Goldman', cursive;">
-			Fees = Rs.200
+				Fees = Rs.{{ g.user }}
 			</h5>
 			Contact us at: <a href="mailto:enumeration.pravega@gmail.com">enumeration.pravega@gmail.com</a> <br><br>
 			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
@@ -56,8 +56,8 @@
                         {% endwith %}
 			    <script
     			        src="https://checkout.razorpay.com/v1/checkout.js"
-    			        data-amount="20000"
-    			        data-key="rzp_live_jEr5MWFDFyEN8f"
+				data-amount="{{ g.user }}"
+    			        data-key="rzp_test_H1jF86OrQIF0J2"
     			        data-name="Enumeration Fees"
     			        data-netbanking="true"
     			        data-description="Fees for enumeration, by pravega IISc"

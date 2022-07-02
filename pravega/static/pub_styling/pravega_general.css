@@ -1,0 +1,52 @@
+body {
+    font-family: "ITC Avant Garde Gothic Std Book",Verdana,sans-serif;
+    color: white;
+    background-color: #0b0b0b;
+}
+
+p {
+    font-size: 18px;
+}
+.career-bullets {
+    font-size: 18px;
+}
+
+.text-margin-left {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.text-margin-right {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h4.top-phrase {
+    font-family: "ITC Avant Garde Gothic Std Bold","Verdana-Bold",sans-serif;
+    color: #ffffff;
+    font-size: 21px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+
+h2.middle-phrase {
+    font-family: "ITC Avant Garde Gothic Std Bold","Verdana-Bold",sans-serif;
+    font-size: 26px;
+    color: #222222;
+    padding-bottom: 10px;
+}
+
+.top-phrase.badge.bg-warning {
+    background-color: #db9a0e!important;
+}
+
+.top-phrase.badge.bg-info {
+    background-color: #17a18f!important;
+}
+
+.top-phrase.badge.bg-danger {
+    background-color: #ff444e!important;
+}
+
+.bold1 {
+    font-family: "ITC Avant Garde Gothic Std Bold","Verdana-Bold",sans-serif;
+}
