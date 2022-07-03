@@ -17,6 +17,19 @@ def create_app(test_config=None):
     def index():
         return render_template('index.html')
 
+    @app.route('/aboutus')
+    def aboutus():
+        return render_template('aboutus.html')
+
+    @app.route('/refund')
+    def sendrefund():
+        return send_file('files/refund.pdf')
+    @app.route('/privacy')
+    def sendprivacy():
+        return send_file('files/privacy.pdf')
+    @app.route('/terms')
+    def sendterms():
+        return send_file('files/terms of service.pdf')
     @app.route('/files/PravegaBrochure.pdf')
     def downloadFile():
         return send_file('files/PravegaBrochure.pdf')
