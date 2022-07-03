@@ -1,0 +1,44 @@
+body{
+	background-image: linear-gradient(to bottom right, #ca69ff, #65009c);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.career-image {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.career-card-custom-round {
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+a.eventcard {
+    background: transparent;
+    border: none;
+}
+
+a.eventcard:hover{
+    border-radius: 10%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+body {
+    font-family: "ITC Avant Garde Gothic Std Book",Verdana,sans-serif;
+    color: white;
+    background-color: #0b0b0b;
+}
+
+.larger-text{
+    font-size: 20px;
+}
+
+#comingsoon{
+    width: 80%;
+    margin-left: 10px;
+}
