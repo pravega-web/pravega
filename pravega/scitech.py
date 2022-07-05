@@ -13,9 +13,6 @@ def show_scitech():
 @blueprint.route('/<event_name>')
 def show_scitechpage(event_name):
     return render_template(f"scitech/{event_name}.html")
-@blueprint.route('/<event_name>/register')
-def show_scitechpag(event_name):
-    return render_template(f"scitech/registration/registration_{event_name}.html")
 @blueprint.route("/chemenigma/register", methods=("GET","POST"))
 def register_for_chemenigma2 ():
     event_name = "chemenigma"
@@ -183,4 +180,64 @@ def register_astrowiz():
             myclient.close()
             return render_template("registration_message.html")
         myclient.close()
+        return render_template("registration_message.html")
+@blueprint.route("/decoherence/register", methods=("GET","POST"))
+def register_for_decoherence ():
+    event_name = "decoherence"
+    if request.method == "GET":
+        return render_template(f"scitech/registration/registration_{event_name}.html");
+    if request.method == "POST":
+        details = { "participant1_name" : request.form['participant'],
+                    "participant1_class" : request.form['clsp'],
+                    "participant1_school" : request.form['school'],
+                    "participant1_email" : request.form['email'],
+                    "participant1_phone" : request.form['mobile']
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "participant1_email" : request.form['email'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Email of participant already registered")
+            myclient.close()
+            return render_template("registration_message.html")
+        myclient.close()
+
+        return render_template("registration_message.html")
+@blueprint.route("/bioblitz/register", methods=("GET","POST"))
+def register_for_bioblitz ():
+    event_name = "bioblitz"
+    if request.method == "GET":
+        return render_template(f"scitech/registration/registration_{event_name}.html");
+    if request.method == "POST":
+        details = { "participant1_name" : request.form['participant'],
+                    "participant1_email" : request.form['email'],
+                    "participant1_phone" : request.form['mobile'],
+                    "participant1_school" : request.form['school'],
+                    "participant1_class" : request.form['clsp'],
+                    "participant1_city" : request.form['city'],
+                    "participant1_team_status" : request.form['tip'],
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "participant1_email" : request.form['email'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Email of participant already registered")
+            myclient.close()
+            return render_template("registration_message.html")
+        myclient.close()
+
         return render_template("registration_message.html")
