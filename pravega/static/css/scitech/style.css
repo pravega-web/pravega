@@ -24,11 +24,12 @@ h2 {
 	font-size: 30px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+    	color: rgb(242, 111, 229);
 }
 
 h3 {
 	font-family: 'Goldman', cursive;
-	color: blue;
+    	color: rgb(242, 111, 229);
 }
 h4 {
 	font-family: 'Goldman', cursive;
@@ -38,6 +39,7 @@ h4 {
 h5{
 	color: black;
 	font-family: 'Goldman', cursive;
+    	color: rgb(242, 111, 229);
 }
 
 
@@ -98,7 +100,7 @@ select {
 .clickme {
 	font-size: 30px;
 	font-family: 'Goldman', cursive;
-    	background: rgba(52, 110, 235, 0.2);
+    	background: rgba(242, 111, 229, 0.2);
 	border-radius: 5px;
 	border: 2px solid black;
 	padding-top: 2px;
@@ -116,14 +118,14 @@ u {
 	font-size: 25px;
 	border-radius: 3px;
 	border:2px;
-    	background: rgba(52, 110, 235, 0.2);
+    	background: rgba(242, 111, 229, 0.2);
 	text-align: center;
 	color:white;
 	margin-top: 2%;
 	width:500px;
 }
 .btn{
-    	background: rgba(52, 110, 235, 0.2);
+    	background: rgba(242, 111, 229, 0.2);
 }
 
 
@@ -135,10 +137,14 @@ u {
 }
 
 #subheading{
-	margin-left: 40px;
+	margin-left: 20px;
 	width:80%;
 }
 
 #main{
 	margin-top: 5px;
+}
+
+a{
+	color: white;
 }
