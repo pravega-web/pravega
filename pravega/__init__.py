@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_file
 
+
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True, subdomain_matching=True)
 
@@ -8,6 +9,8 @@ def create_app(test_config=None):
     app.config.from_mapping(
         SECRET_KEY='dev',
     )
+
+    # Set the captcha height and width
 #
 #
 #   Some thing happens here

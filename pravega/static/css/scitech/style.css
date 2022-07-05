@@ -43,7 +43,7 @@ h5{
 
 div
 #box{
-	font-family: "poppins", sans-serif;
+	font-family: "Poppins", sans-serif;
 	margin-top: 2%;
 	text-align: center;
 	padding-left: 5%;
@@ -54,6 +54,7 @@ div
 	border-radius: 10px;
 	background: #D9D9D9;
 	color: white;
+	border-color: white;
     	background: rgba(217, 217, 217, 0.2);
 	font-size: 17px;
 }
@@ -68,7 +69,7 @@ div
 	padding-right:5%;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	border: 1px solid rgba(217, 217, 217, 0.1);
+	border: 1px solid rgba(217, 217, 217, 0.8);
 	border-radius: 5px;
 	background: #D9D9D9;
 	color: white;
@@ -79,24 +80,11 @@ div
 
 select {
     	background: rgba(217, 217, 217, 0.2);
-		color: #000000;
+	color: #000000;
 }
 
 
-@media not screen and (max-width:1300px) {
-	.row{
-		width: 90%;
-		align:center;
-	}
-}
 
-#navbar{
-	width: 100%;
-	float:left;
-
-	background:transparent;
-	position: absolute;
-}
 
 .notimg{
 	font-family: 'Goldman', cursive;
@@ -107,13 +95,6 @@ select {
 	margin-right: 40px;
 }
 
-.navbaritem{
-	padding-left: 20px	;
-}
-
-.col {
-	text-align:center;
-}
 .clickme {
 	font-size: 30px;
 	font-family: 'Goldman', cursive;
@@ -131,24 +112,7 @@ u {
 	color: rgb(235,221,35);
 }
 
-#footer {
-	color: white;
-    	background: rgba(52, 110, 235, 0.9);
-	position: relative;
-	float: bottom;
-	width:100%;
-	margin-bottom:0px;
-}
-.footerbutton{
-	padding-top: 2%;
-	color: white;
-	font-size: 30px;
-}
-.footerbutton a{
-	color: white;
-}
 .contacts {
-	padding: 2% 2% 2% 2%;
 	font-size: 25px;
 	border-radius: 3px;
 	border:2px;
@@ -156,36 +120,23 @@ u {
 	text-align: center;
 	color:white;
 	margin-top: 2%;
+	width:500px;
 }
 .btn{
     	background: rgba(52, 110, 235, 0.2);
 }
 
-.m6 h4{
-	margin-top: 6px;
-	margin-bottom: 6px;
-	font-size: 30px;
-}
 
-@media not screen and (max-width:1300px){
-	#registrationbox{
-	padding-bottom: 25px;
-}
-}
-
-@media screen and (max-width:1300px){
-	h1{
-	font-size: 60px;
-}
-}
 
 #heading{
 	margin-top: 100px;
 	margin-left: 20px;
+	width:80%;
 }
 
 #subheading{
 	margin-left: 40px;
+	width:80%;
 }
 
 #main{

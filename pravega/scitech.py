@@ -1,7 +1,6 @@
 from flask import (
         Blueprint, flash, g, redirect, render_template, request, url_for
         )
-
 import pymongo
 import razorpay
 blueprint = Blueprint('scitech',__name__, template_folder="templates/", url_prefix='/scitech')
@@ -151,3 +150,35 @@ def register_for_enumeration ():
 
         myclient.close()
         return render_template("/registration_message.html")
+
+
+
+@blueprint.route('/astrowiz/register', methods=("GET", "POST"))
+def register_astrowiz():
+    event_name = "astrowiz"
+    if request.method == "GET":
+        return render_template('scitech/registration/registration_astrowiz.html')
+    if request.method == "POST":
+        details = { "participant_name" : request.form['participant'],
+                    "participant_school" : request.form['school'],
+                    "participant_class" : request.form['clsp'],
+                    "participant_email" : request.form['email'],
+                    "participant_phone" : request.form['mobile']
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "participant_email" : request.form['email'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Could not register!!")
+            flash("Email of participant already registered")
+            myclient.close()
+            return render_template("registration_message.html")
+        myclient.close()
+        return render_template("registration_message.html")
