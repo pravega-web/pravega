@@ -17,7 +17,7 @@ def show_culturals_event(event_name):
     return render_template(f"culturals/{event_name}.html");
 @blueprint.route("/lasya/rules")
 def show_lasya_tc():
-    return render_template(f"culturals/lasya_tc.html");
+    return send_file('files/Lasya_T&C.docx')
 @blueprint.route("/lasya/register")
 def lasya_redirect():
     return render_template("/culturals/lasya.html");
