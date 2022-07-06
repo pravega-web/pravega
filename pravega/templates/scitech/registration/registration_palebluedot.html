@@ -114,23 +114,7 @@
 			Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile 2" placeholder="Mobile Number 2" required> <br>
 				
 		</div>
-        <script>
-            (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-                })
-            })()
-        </script>
+        
                 <script
                 src="https://checkout.razorpay.com/v1/checkout.js"
             data-amount="10000"
