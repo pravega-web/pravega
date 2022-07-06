@@ -41,6 +41,10 @@ def create_app(test_config=None):
     def test():
         return render_template("registration_message.html");
 
+    @app.route('/files/QuadsparksSeason3Rules.pdf')
+    def quadsparkskimaki():
+        return send_file('files/QuadsparksSeason3Rules.pdf')
+
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
     from . import scitech
