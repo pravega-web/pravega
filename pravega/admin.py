@@ -10,12 +10,24 @@ bp = Blueprint('admin',__name__,template_folder='/admin')
 
 admin_username = 'lmao'
 admin_password = 'lmao'
-headings = ("a", "b", "c")
+
+my_mng = pymongo.MongoClient("mongodb://localhost:27017")
+my_db = my_mng["registrations"]
+my_col = my_db["event"]
+
+loli=my_col.find_one()
+headings=tuple(loli.keys())
+data=[]
+for lol in my_col.find():
+    data.append(tuple([lol[head] for head in headings]))
+data=tuple(data)
+
+"""headings = ("a", "b", "c")
 data = (
     (1,2,3),
     (4,5,6)
 )
-
+"""
 @bp.route('/', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
@@ -40,7 +52,7 @@ def load_logged_in_admin():
 @bp.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('testing'))
+    return redirect(url_for('admin.login'))
 
 def login_required(view):
     @functools.wraps(view)
