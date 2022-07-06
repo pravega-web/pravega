@@ -152,6 +152,35 @@ def lasya_team_culturals_register():
         myclient.close()
         return render_template(f"registration_message.html")
 
+@blueprint.route("alekhya/register", methods=("GET", "POST"))
+def alekhya_culturals_register():
+    event_name = "alekhya"
+    if request.method == "GET":
+        return render_template(f"culturals/registration/registration_{event_name}.html")
+    if request.method == "POST":
+        details = { "participant1_name" : request.form['participant'],
+                    "participant1_class" : request.form['clsp'],
+                    "participant1_school" : request.form['school'],
+                    "participant1_email" : request.form['email'],
+                    "participant1_phone" : request.form['mobile'],
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "participant1_email" : request.form['email'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Email of participant 1 already registered")
+            myclient.close()
+            return render_template(f"registration_message.html")
+        myclient.close()
+        return render_template(f"registration_message.html")
+
 @blueprint.route("generic/register", methods=("GET", "POST"))
 def generic_unpaid_culturals_register():
     event_name = "generic"
