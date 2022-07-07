@@ -44,6 +44,10 @@ def create_app(test_config=None):
     @app.route('/files/QuadsparksSeason3Rules.pdf')
     def quadsparkskimaki():
         return send_file('files/QuadsparksSeason3Rules.pdf')
+    
+    @app.route('/files/chemenigmarules.pdf')
+    def chemenigmakimaki():
+        return send_file('files/chemenigmarules.pdf')
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
