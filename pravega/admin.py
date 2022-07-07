@@ -6,21 +6,11 @@ from flask import (
 from werkzeug.security import check_password_hash, generate_password_hash
 import pymongo
 
-bp = Blueprint('admin',__name__,template_folder='/admin')
+bp = Blueprint('admin',__name__,template_folder='/admin',url_prefix='/admininstration')
 
 admin_username = 'lmao'
 admin_password = 'lmao'
 
-my_mng = pymongo.MongoClient("mongodb://localhost:27017")
-my_db = my_mng["registrations"]
-my_col = my_db["event"]
-
-loli=my_col.find_one()
-headings=tuple(loli.keys())
-data=[]
-for lol in my_col.find():
-    data.append(tuple([lol[head] for head in headings]))
-data=tuple(data)
 
 """headings = ("a", "b", "c")
 data = (
@@ -73,5 +63,15 @@ def login_required(view):
 @bp.route('/panel', methods=('GET','POST'))
 @login_required
 def panel():
+    my_mng = pymongo.MongoClient("mongodb://localhost:27017")
+    my_db = my_mng["registrations"]
+    my_col = my_db["chemenigma"]
+
+    loli=my_col.find_one()
+    headings=tuple(loli.keys())
+    data=[]
+    for lol in my_col.find():
+        data.append(tuple(lol.values()))
+    data=tuple(data)
     if request.method == 'GET':
         return render_template("admin/panel.html", headings=headings, data=data)
