@@ -254,3 +254,68 @@ def register_for_bioblitz ():
         myclient.close()
 
         return render_template("registration_message.html")
+
+@blueprint.route("/palebluedot/register", methods=("GET","POST"))
+def register_for_palebluedot():
+    event_name = "palebluedot"
+    amount = 10000
+    if request.method == "GET":
+        return render_template(f"scitech/registration/registration_{event_name}.html");
+    if request.method == "POST":
+        details = { "team_name" : request.form['team'],
+                    "team_location" : request.form['location'],
+                    "come" : request.form['come'],
+                    "team_size" : request.form['teamsize'],
+                    "school" : request.form['school'],
+                    "class" : request.form["clsp"],
+                    "p1" : request.form["participant1"],
+                    "email1" : request.form["email1"],
+                    "participant1_phone" : request.form['mobile1'],
+                    "p2" : request.form["participant2"],
+                    "email2" : request.form["email2"],
+                    "participant2_phone" : request.form['mobile2'],
+                    }
+                # Authenticating payments
+        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
+        payment_id = request.form['razorpay_payment_id']
+
+
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+
+
+        #Checking for duplicate email numbers
+        existing = mycol.find_one({ "participant1_email" : request.form['emailp1'] })
+
+        paydb = myclient['payments']
+        paycol = paydb[event_name]
+
+
+        if existing is None:
+            razorpay_client.payment.capture(payment_id, amount)
+            details['payment_id'] = payment_id
+            pay_details = razorpay_client.payment.fetch(payment_id)
+            paycol.insert_one(pay_details)
+            details['payment_status'] = pay_details['status']
+            flash(f"Payment ID:{payment_id}")
+            x = mycol.insert_one(details)
+            if pay_details['status'] == 'captured':
+                flash("Payment Successful")
+            else:
+                flash("Payment not confirmed, Contact us")
+        else :
+            details['payment_id'] = payment_id
+            pay_details = razorpay_client.payment.fetch(payment_id)
+            paycol.insert_one(pay_details)
+            details['payment_status'] = pay_details['status']
+            flash(f"Payment ID:{payment_id}")
+            flash("Payment not confirmed")
+            flash("Email of participant 1 already registered ask for refund on email if paid twice")
+            myclient.close()
+            return render_template("/registration_message.html")
+
+        myclient.close()
+        return render_template("/registration_message.html")
