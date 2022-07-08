@@ -91,5 +91,6 @@ def senddata():
 def lmaolmao():
     var = request.form['eventname']
     system(f"mongoexport -d registrations -c {var} -o /root/pravega/pravega/files/{var}.json")
+    system(f"sed -i 's/praticipant/participant/g' '/root/pravega/pravega/files/{var}.json'")
     system(f"json2csv -i /root/pravega/pravega/files/{var}.json -o /root/pravega/pravega/files/{var}.csv")
     return send_file(f"files/{request.form['eventname']}.csv")
