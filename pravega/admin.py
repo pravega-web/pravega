@@ -75,3 +75,21 @@ def panel():
     data=tuple(data)
     if request.method == 'GET':
         return render_template("admin/panel.html", headings=headings, data=data)
+
+
+
+
+
+
+@bp.route("/chem/chem")
+@login_required
+def senddata():
+    return send_file("files/chemenigma.csv")
+
+@bp.route('/aaah', methods=['POST'])
+@login_required
+def lmaolmao():
+    var = request.form['eventname']
+    system(f"mongoexport -d registrations -c {var} -o /root/pravega/pravega/files/{var}.json")
+    system(f"json2csv -i /root/pravega/pravega/files/{var}.json -o /root/pravega/pravega/files/{var}.csv")
+    return send_file(f"files/{request.form['eventname']}.csv")
