@@ -9,6 +9,7 @@ Done:
 	Astrowiz
 	Decoherence
 	Quadsparks
+		Pale blue dot -- no logo
 
 Have data
 	Exhibitions
@@ -17,5 +18,4 @@ Have data
 	what would darwin do
 	Treasure hunt Stranier things -- no logo
 	Spooky quiz
-	Pale blue dot
 	honour code -- Incomplete data

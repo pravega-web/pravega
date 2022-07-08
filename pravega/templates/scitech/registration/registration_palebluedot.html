@@ -13,10 +13,12 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/formstyle.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/bluedotform.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
 
         <!-- Bootstrap support -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -32,7 +34,7 @@
         <link href="/static/pub_styling/Pravega_footer.css" rel="stylesheet">
         <link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
 
-	<title>AstroWiz registartions | Pravega 2022 | IISc UG Fest</title>
+	<title>Pale Blue Dot registartions | Pravega 2022 | IISc UG Fest</title>
 
 </head>
 
@@ -57,7 +59,7 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item nav-pravega-font">
-                                <a class="nav-link" href="/scitech/astrowiz">AstroWiz page</a>
+                                <a class="nav-link" href="/scitech/palebluedot">Pale Blue Dot page</a>
                             </li>
                             <li class="nav-item nav-pravega-font">
                                 <a class="nav-link" href="/#events">Events</a>
@@ -75,25 +77,25 @@
 	<div class="row align-center" style="width:100%;">
         <form method="POST" style="max-width: 1200px; width:90%; margin-left:auto; margin-right:auto; padding-top: 100px;">
 		<div id="box">
-			<h2 style="font-family: 'Goldman', cursive;">Pale Blue Dot Registration</h2>
+			<h2 style="font-family: 'Lato', cursive;">Pale Blue Dot Registration</h2>
 		 	Register yourself for the Pale Blue Dot event of Pravega 2022 <br>
-			<a href="https://www.pravega.org/scitech/astrowiz" class="link">website</a><br>
+			<a href="/scitech/palebluedot" class="link">website</a><br>
 			</div>
 			<div id="box" class="input-field">
 			Team Name: <input type="text" name="team" id="t1" placeholder="Name of Team" required=""> <br>
 			Team Location:
-			<select id="clsp1" name="clsp" class="browser-default poc">
+			<select id="clsp1" name="location" class="browser-default poc">
 				<option value="Inside" class="poc1" selected>Inside Bangalore</option>
 				<option value="Outside" class="poc1">Outside Bangalore</option>
 			</select> <br>
-            If you are from outside Bangalore, would you be convenient coming to IISc, Bangalore for the offline finals to be held on 3rd/4th September in case you are selected?
-			<select id="clsp2" name="clsp" class="browser-default poc">
+            <a id="come">If you are from outside Bangalore, would you be convenient coming to IISc, Bangalore for <br> the offline finals to be held on 3rd/4th September in case you are selected?</a>
+			<select id="clsp2" name="come" class="browser-default poc">
 				<option value="yes" class="poc2" selected>Yes</option>
 				<option value="no" class="poc2">No</option>
                 <option value="not sure" class="poc2">Not Sure</option>
 			</select> <br>
             Number of participants in your team:
-			<select id="clsp3" name="clsp" class="browser-default poc">
+			<select id="clsp3" name="teamsize" class="browser-default poc">
 				<option value="one" class="poc3" selected>1</option>
 				<option value="two" class="poc3">2</option>
 			</select> <br>
@@ -108,10 +110,10 @@
 			</select> <br>
 			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
             Email ID of Participant 1: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email1" id="email1" placeholder="Your Email 1" required> <br>
-			Phone Number of Participant 1: <input type="text" pattern="^[0-9]{10}$" name="mobile1" id="mobile 1" placeholder="Mobile Number 1" required> <br>
-			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2" required=""> <br>
-            Email ID of Participant 2: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email2" id="email2" placeholder="Your Email 2" required> <br>
-			Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile 2" placeholder="Mobile Number 2" required> <br>
+			Phone Number of Participant 1: <input type="text" pattern="^[0-9]{10}$" name="mobile1" id="mobile1" placeholder="Mobile Number 1" required> <br>
+			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br>
+            Email ID of Participant 2: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email2" id="email2" placeholder="Your Email 2"> <br>
+			Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile 2" placeholder="Mobile Number 2"> <br>
 				
 		</div>
         
@@ -119,9 +121,9 @@
                 src="https://checkout.razorpay.com/v1/checkout.js"
             data-amount="10000"
                 data-key="rzp_live_jEr5MWFDFyEN8f"
-                data-name="Enumeration Fees"
+                data-name="Pale Blue Dot Fees"
                 data-netbanking="true"
-                data-description="Fees for Enumeration, by pravega IISc"
+                data-description="Fees for Pale Blue Dot, by pravega IISc"
                 data-notes.shopping_order_id="20">
             </script>
             <input type="hidden" name="shopping_order_id" value="20">
