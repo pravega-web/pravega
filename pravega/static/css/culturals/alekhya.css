@@ -1,12 +1,5 @@
 body {
-	background: url(/static/img/scitech/generic_background.png) no-repeat center center fixed;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;  
-	background-color: #c30b9e;
+	background-color: #000;
 }
 
 #event_body{
@@ -39,7 +32,6 @@ h4 {
 h5{
 	color: black;
 	font-family: 'Goldman', cursive;
-    	color: rgb(8, 2, 7);
 }
 
 
@@ -74,7 +66,7 @@ div
 	border: 1px solid rgba(217, 217, 217, 0.8);
 	border-radius: 5px;
 	background: #D9D9D9;
-	color: rgb(173, 209, 13);
+	color: white;
     	background: rgba(217, 217, 217, 0);
 	font-size: 17px;
 }
@@ -111,7 +103,7 @@ select {
 	border-radius: 5px;
 }
 u {
-	color: rgb(235,221,35);
+	color: white;
 }
 
 .contacts {
@@ -120,12 +112,13 @@ u {
 	border:2px;
     	background: rgba(242, 111, 229, 0.2);
 	text-align: center;
-	color: rgb(173, 209, 13);
+	color: white;
 	margin-top: 2%;
 	width:500px;
 }
 .btn{
     	background: rgba(231, 9, 209, 0.2);
+	color: white;
 }
 
 
@@ -134,18 +127,18 @@ u {
 	margin-top: 100px;
 	margin-left: 20px;
 	width:80%;
-    color: rgb(173, 209, 13);
+	color: white;
 }
 
 #subheading{
 	margin-left: 20px;
 	width:80%;
-    color: rgb(173, 209, 13);
+	color: white;
 }
 
 #main{
 	margin-top: 5px;
-    color: rgb(173, 209, 13);
+	color: white;
 
 }
 
