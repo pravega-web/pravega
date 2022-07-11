@@ -86,8 +86,8 @@ def register_for_chemenigma ():
 @blueprint.route("/enumeration/register", methods=("GET", "POST"))
 def register_for_enumeration ():
     event_name = "enumeration"
-    amount = 20000
-    g.user = amount
+#    amount = 20000
+#    g.user = amount
     if request.method == "GET":
         return render_template(f"scitech/registration/registration_{event_name}.html")
 
@@ -105,8 +105,8 @@ def register_for_enumeration ():
                     "payment_status" : "Unknown"
                     }
         # Authenticating payments
-        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
-        payment_id = request.form['razorpay_payment_id']
+#        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
+#        payment_id = request.form['razorpay_payment_id']
 
 
         # Inserting things into the database
@@ -119,31 +119,31 @@ def register_for_enumeration ():
         #Checking for duplicate email numbers
         existing = mycol.find_one({ "participant1_email" : request.form['emailp1'] })
 
-        paydb = myclient['payments']
-        paycol = paydb[event_name]
+#        paydb = myclient['payments']
+#        paycol = paydb[event_name]
 
 
         if existing is None:
-            razorpay_client.payment.capture(payment_id, amount)
-            details['payment_id'] = payment_id
-            pay_details = razorpay_client.payment.fetch(payment_id)
-            paycol.insert_one(pay_details)
-            details['payment_status'] = pay_details['status']
-            flash(f"Payment ID:{payment_id}")
+#            razorpay_client.payment.capture(payment_id, amount)
+#            details['payment_id'] = payment_id
+#            pay_details = razorpay_client.payment.fetch(payment_id)
+#            paycol.insert_one(pay_details)
+#            details['payment_status'] = pay_details['status']
+#            flash(f"Payment ID:{payment_id}")
             x = mycol.insert_one(details)
-            if pay_details['status'] == 'captured':
-                flash("Payment Successful")
-            else:
-                flash("Payment not confirmed, Contact us")
+#            if pay_details['status'] == 'captured':
+#                flash("Payment Successful")
+#            else:
+#                flash("Payment not confirmed, Contact us")
             flash("Registered successfully!!")
         else :
-            details['payment_id'] = payment_id
-            pay_details = razorpay_client.payment.fetch(payment_id)
-            paycol.insert_one(pay_details)
-            details['payment_status'] = pay_details['status']
-            flash(f"Payment ID:{payment_id}")
-            flash("Payment not confirmed")
-            flash("Email of participant 1 already registered ask for refund on email if paid twice")
+#            details['payment_id'] = payment_id
+#            pay_details = razorpay_client.payment.fetch(payment_id)
+#            paycol.insert_one(pay_details)
+#            details['payment_status'] = pay_details['status']
+#            flash(f"Payment ID:{payment_id}")
+#            flash("Payment not confirmed")
+            flash("Email of participant 1 already registered")
             myclient.close()
             return render_template("/registration_message.html")
 
@@ -192,7 +192,9 @@ def register_for_decoherence ():
                     "participant1_class" : request.form['clsp'],
                     "participant1_school" : request.form['school'],
                     "participant1_email" : request.form['email'],
-                    "participant1_phone" : request.form['mobile']
+                    "participant1_phone" : request.form['mobile'],
+                    "participant2_name" : request.form['participant2'],
+                    "participant2_email" : request.form['email2']
                     }
         # Inserting things into the database
         myclient = pymongo.MongoClient("mongodb://localhost:27017/")
