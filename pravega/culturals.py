@@ -18,6 +18,12 @@ def show_culturals_event(event_name):
 @blueprint.route("/lasya/rules")
 def show_lasya_tc():
     return send_file('files/Lasya_T&C.docx')
+@blueprint.route("/crescendo/rules")
+def snedrules():
+    return send_file('files/Crescendo_Rules.pdf')
+@blueprint.route("/alekhya/rules")
+def snedrulesalekhya():
+    return send_file('files/ALEKHYA-Art.pdf')
 @blueprint.route("/lasya/register")
 def lasya_redirect():
     return render_template("/culturals/lasya.html");
