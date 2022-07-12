@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/adminstyle.css') }}">
+  <link rel="stylesheet" href="/static/css/adminstyle.css">
   <title>
     Pravega Admin Portal
   </title>
 </head>
 <body>
 	<h1>Welcome, Coordinator.</h1>
+        <a href="/chem/chem">Download me</a>
+        <form method="post" action="/aaah">
+                <input required type="text" name="eventname"></input>
+                <input type="submit"></input>
+        </form>
   <div id="table">
 
     <table>
