@@ -51,7 +51,7 @@ def create_app(test_config=None):
 
     @app.route('/files/QuadsparksModelQuestions.pdf')
     def quadsparkssamplepaper():
-        return send_file('QuadsparksModelQuestions.pdf')
+        return send_file('files/QuadsparksModelQuestions.pdf')
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
