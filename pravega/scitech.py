@@ -260,7 +260,7 @@ def register_for_bioblitz ():
 @blueprint.route("/palebluedot/register", methods=("GET","POST"))
 def register_for_palebluedot():
     event_name = "palebluedot"
-    amount = 10000
+    amount = 5000
     if request.method == "GET":
         return render_template(f"scitech/registration/registration_{event_name}.html");
     if request.method == "POST":
