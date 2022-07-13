@@ -61,6 +61,8 @@ def create_app(test_config=None):
     app.register_blueprint(culturals.blueprint)
     from . import workshops
     app.register_blueprint(workshops.blueprint)
+    from . import recreational
+    app.register_blueprint(recreational.blueprint)
 
 
 

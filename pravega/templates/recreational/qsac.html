@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/recreational/style.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap support -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+	</script>
+
+	<!-- itc avant garde font-->
+	<link href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book" rel="stylesheet" type="text/css">
+
+	<!-- Icon library -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="/static/pub_styling/recreational/menu.css" rel="stylesheet">
+	<link href="/static/pub_styling/Pravega_footer.css" rel="stylesheet">
+	<link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
+
+	<title>Q-Sac | Recreational | Pravega 2022 | IISc Bangalore UG fest</title>
+
+
+</head>
+
+<body>
+	<!-- Pravega. Navbar-->
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-top nav-pravega-bg">
+			<div class="container-fluid">
+				<a class="navbar-brand nav-pravega-logo" href="/">
+					<img src="/static/pub_assets/pravega_logo_bw.png" alt="Pravega Logo"
+						style="width: 200px; height: auto;">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav nav-pravega-position">
+						<li class="nav-item nav-pravega-font">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+						<li class="nav-item nav-pravega-font">
+							<a class="nav-link" href="/#events">Events</a>
+						</li>
+						<li class="nav-item nav-pravega-font">
+							<a class="nav-link" href="/#contactus">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+
+
+	<div class="container-fluid">
+		<div class="row" style="margin-top:100px;">
+			<div class="col-lg-3">
+				<img src='/static/img/recreational/qsac.svg' alt='LOGO' style="width:100%;">
+			</div>
+			<div class="col-lg-9">
+				<h1 id="heading">Q-Sac</h1>
+				<h4 id="subheading">Sac, sac, ... and mate!</h4>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-sm-6 order-sm-1">
+				<div class="box">
+					<h2> Timeline </h2>
+					<hr>
+					<b>Date: </b><br />31<sup>st</sup> July 2022
+					<br />
+					<b>Time: </b><br /> 6 PM to 7:30 PM
+				</div>
+				<div class="box" id="registrationbox">
+					<h2> Quick Links </h2>
+					<hr>
+					<a href='/recreational/qsac/register'>
+						<div class="clickme submit">
+							<h4 style="text-align:center; color:white;"> Register here </h4>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="box col-lg-9 col-sm-6 order-sm-2" id="main">
+				<h2>Description</h2>
+				<p>
+                    This will be a 1.5 hr arena played on lichess.org, with berserk and streaks enabled. <br>
+                    It will be played with a time control of 3 min for the entire game + 2 sec increment per move starting from move 1. <br>
+                    All the standard lichess arena rules will be applicable. <br>
+                    Tiebreak will be based on performance rating. <br>
+				</p>
+
+				<h2>Eligibility</h2>
+				<p>
+					<ul>
+						<li>Anyone with a valid(i.e unbanned) lichess.org account is eligible to participate in the event.</li>
+                        <li>All participants need to make sure they satisfy this criterion before registering for the event.</li>
+                        <li>Also, all players will have to join a lichess team before the event, as the event will only be open to those players in the team.</li>
+						<li>registration fees: Rs.100/-</li>
+					</ul>
+                </p>
+				<h2>Format</h2>
+                    <ul>
+                        <li>The tournament will be a lichess arena, with berserk and streaks enabled.</li>
+                        <li>The arena duration will be 1.5 hr.</li>
+                        <li>Time Control- 3+2(3 min for the entire game per player with a 2 sec increment per move starting move 1)</li>
+                        <li>Scoring pattern- It will be the regular arena scoring pattern on lichess.</li>
+                    </ul>
+                        Regular non streak win- 2 points <br>
+                        Berserk non streak win- 3 points <br>
+                        Regular streak win-4 points <br>
+                        Berserk streak win – 5 points <br>
+                        Regular non streak draw- 1 point <br>
+                        Regular streak draw- 2 points (streak breaks) <br>
+                        Berserk non streak draw- 1 point <br>
+                        Berserk streak draw- 2 points (streak breaks) <br>
+                        Loss-0 points(streak breaks, if any was ongoing) <br><br>
+                    <ul>
+                        <li>At the end of 1.5 hrs, any ongoing games will be completed but won’t count for the tournament points.</li>
+                        <li>Ranking will be based on number of points scored in the tournament.</li>
+                        <li>In case 2 or more players are tied on points after the 1.5 hr is over, tiebreak will be as per lichess arena rules, that is, based on tournament performance rating.</li>
+                    </ul>
+				</p>
+                <h2>Rules</h2>
+                <p>
+                    <ul>
+                        <li>Any form of cheating, which includes engine assistance, using online bots, assistance from others etc. is strictly prohibited. Players found using such means will not only be banned from this tournament, but will also be banned from lichess.org, and will be unable to play in many future online events.</li>
+                        <li>All allegations of unfair means must be made to the coordinators personally and not in lichess tournament chat or game chat.</li>
+                        <li>In case any allegations are made against any player, the coordinators will first manually analyze the games and send the games concerned to lichess moderators. If the lichess moderators find cheating in these games, the player will be banned from the event and future lichess events. In case the lichess moderators do not respond within a day, the coordinators reserve the right to ban the player from the tournament, if they feel that use of unfair means is highly likely. Although in this case, the player will be eligible for future events on lichess.</li>
+                        <li>As a result, the final results will be declared and the prizes will be confirmed only 24 hrs after the conclusion of the arena.</li>
+                        <li>In case any player is found to have provided wrong details, especially FIDE ID and rating, then they will be banned from the event.</li>
+                        <li>In case a player is eligible for 2 prizes, they will only be awarded the higher of the 2 prizes and the other prize will go to the next eligible player.</li>
+                        <li>The coordinators decision will be final and binding in case of any disputes that emerge before, during, or after the event.</li>
+                        <li>The coordinators have the right to remove a player from the event, without necessarily giving any reason for doing so.</li>
+                    </ul>
+                    You can find a document containing all the rules listed here in the quick links section above
+                </p>
+				<h3> Prizes</h3>
+				<p>
+					<ul>
+						<li>Prizes- Open: 
+                            1. 6k
+                            2. 3k
+                            3. 2k
+                            4. 1.5k
+                            5. 1k
+                            Under 1600 FIDE rating:
+                            1. 2k
+                            2. 1k
+                            3. 0.5k
+                            Under 2000 FIDE rating:
+                            1. 2.5k
+                            2. 1k
+                            3. 0.5k
+                            Female Prizes:
+                            1. 2k
+                            2. 1k
+                            Unrated prizes:
+                            1. 1.5k
+                            2. 1k
+                            3. 0.5k</li>
+						<li> All finalists and award winners will also receive certificates.</li>
+					</ul>
+				</p>
+				<br>
+
+				<h2> Coordinators </h2>
+				<div class="contacts col">
+					<h5 style="color:white;">
+						Shubh Prakash
+					</h5>
+                    <img src="/static/mail.png" alt="email">
+					<a href="mailto:shubhprakash@iisc.ac.in">shubhprakash@iisc.ac.in</a>
+					<h5 style="color:white;">
+						Sudharshan KV
+					</h5>
+					<img src="/static/mail.png" alt="email">
+					<a href="mailto:sudharshankv@iisc.ac.in">sudharshankv@iisc.ac.in</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<footer>
+		<!-- Pravega. bottom bar -->
+		<div class="container-fluid footer-pravega-bg">
+			<div class="row footer-pravega-margin">
+				<div class="col footer-pravega-col text-left">
+					<a href="/">
+						<img src="/static/pub_assets/pravega_logo_bw.png" alt="Pravega 2022 Logo"
+							style="width: 200px; height: auto; margin-bottom: 30px;">
+					</a>
+					<p class="footer-pravega-font" style="margin-left:7px;">&#169; copyright 2022 <br>All rights
+						reserved.</p>
+				</div>
+				<div class="col footer-pravega-col text-left">
+					<p class="footer-pravega-font-special">Navigate</p>
+					<a class="footer-pravega-font" href="/">Home</a>
+					<a class="footer-pravega-font" href="/#contactus"><br>Contact Us</a>
+					<a class="footer-pravega-font" href="/aboutus"><br>About Us</a>
+					<a class="footer-pravega-font" href="/refund"><br>Refund and Cancellation Policy</a>
+					<a class="footer-pravega-font" href="/privacy"><br>Privacy Policy</a>
+					<a class="footer-pravega-font" href="/terms"><br>Terms of service</a>
+				</div>
+				<div class="col footer-pravega-col-special text-left">
+					<p class="footer-pravega-font-special">Follow Us</p>
+					<a class="fa fa-facebook" href="https://www.facebook.com/PravegaIISc/"></a>
+					<a class="fa fa-instagram" href="https://www.instagram.com/pravega.iisc"
+						style="margin-left: 10px;"></a>
+					<a class="fa fa-twitter" href="https://www.twitter.com/Pravega_IISc" style="margin-left: 10px;"></a>
+					<a class="fa fa-youtube" href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ"
+						style="margin-left: 10px;"></a>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+</body>
+
+</html>
