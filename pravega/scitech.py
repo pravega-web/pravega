@@ -86,8 +86,8 @@ def register_for_chemenigma ():
 @blueprint.route("/enumeration/register", methods=("GET", "POST"))
 def register_for_enumeration ():
     event_name = "enumeration"
-#    amount = 20000
-#    g.user = amount
+    amount = 20000
+    g.user = amount
     if request.method == "GET":
         return render_template(f"scitech/registration/registration_{event_name}.html")
 
@@ -105,8 +105,8 @@ def register_for_enumeration ():
                     "payment_status" : "Unknown"
                     }
         # Authenticating payments
-#        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
-#        payment_id = request.form['razorpay_payment_id']
+        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
+        payment_id = request.form['razorpay_payment_id']
 
 
         # Inserting things into the database
@@ -119,30 +119,30 @@ def register_for_enumeration ():
         #Checking for duplicate email numbers
         existing = mycol.find_one({ "participant1_email" : request.form['emailp1'] })
 
-#        paydb = myclient['payments']
-#        paycol = paydb[event_name]
+        paydb = myclient['payments']
+        paycol = paydb[event_name]
 
 
         if existing is None:
-#            razorpay_client.payment.capture(payment_id, amount)
-#            details['payment_id'] = payment_id
-#            pay_details = razorpay_client.payment.fetch(payment_id)
-#            paycol.insert_one(pay_details)
-#            details['payment_status'] = pay_details['status']
-#            flash(f"Payment ID:{payment_id}")
+            razorpay_client.payment.capture(payment_id, amount)
+            details['payment_id'] = payment_id
+            pay_details = razorpay_client.payment.fetch(payment_id)
+            paycol.insert_one(pay_details)
+            details['payment_status'] = pay_details['status']
+            flash(f"Payment ID:{payment_id}")
             x = mycol.insert_one(details)
-#            if pay_details['status'] == 'captured':
-#                flash("Payment Successful")
-#            else:
-#                flash("Payment not confirmed, Contact us")
+            if pay_details['status'] == 'captured':
+                flash("Payment Successful")
+            else:
+                flash("Payment not confirmed, Contact us")
             flash("Registered successfully!!")
         else :
-#            details['payment_id'] = payment_id
-#            pay_details = razorpay_client.payment.fetch(payment_id)
-#            paycol.insert_one(pay_details)
-#            details['payment_status'] = pay_details['status']
-#            flash(f"Payment ID:{payment_id}")
-#            flash("Payment not confirmed")
+            details['payment_id'] = payment_id
+            pay_details = razorpay_client.payment.fetch(payment_id)
+            paycol.insert_one(pay_details)
+            details['payment_status'] = pay_details['status']
+            flash(f"Payment ID:{payment_id}")
+            flash("Payment not confirmed")
             flash("Email of participant 1 already registered")
             myclient.close()
             return render_template("/registration_message.html")
@@ -260,7 +260,7 @@ def register_for_bioblitz ():
 @blueprint.route("/palebluedot/register", methods=("GET","POST"))
 def register_for_palebluedot():
     event_name = "palebluedot"
-    amount = 10000
+    amount = 5000
     if request.method == "GET":
         return render_template(f"scitech/registration/registration_{event_name}.html");
     if request.method == "POST":
@@ -290,7 +290,7 @@ def register_for_palebluedot():
 
 
         #Checking for duplicate email numbers
-        existing = mycol.find_one({ "participant1_email" : request.form['emailp1'] })
+        existing = mycol.find_one({ "participant1_email" : request.form['email1'] })
 
         paydb = myclient['payments']
         paycol = paydb[event_name]

@@ -49,6 +49,10 @@ def create_app(test_config=None):
     def chemenigmakimaki():
         return send_file('files/chemenigmarules.pdf')
 
+    @app.route('/files/QuadsparksModelQuestions.pdf')
+    def quadsparkssamplepaper():
+        return send_file('files/QuadsparksModelQuestions.pdf')
+
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
     from . import scitech
