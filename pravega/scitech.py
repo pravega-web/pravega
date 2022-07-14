@@ -173,7 +173,42 @@ def register_astrowiz():
 
         if existing is None:
             x = mycol.insert_one(details)
+
+            import smtplib
+            from email.mime.multipart import MIMEMultipart
+            from email.mime.text import MIMEText
+            from email.mime.base import MIMEBase
+            from email import encoders
+
+            toaddr = request.form['email']
+            participantname = details['participant_name']
+            fromaddr = "core@pravega.org"
+            msg = MIMEMultipart()
+            msg['From'] = "Pravega IISc"
+            msg['To'] = toaddr
+            msg['Subject'] = "Registration for Astrowiz by Pravega IISc"
+            body = f"Congratulations, {participantname} you have successfully registered for Astrowiz by Pravega.\n Registered details are:\n Name: {details['participant_name']} \n School: {details['participant_school']} \n Class: {details['participant_class']} \n Email: {details['participant_email']} \n Phone: {details['participant_phone']} \n Best of luck for your quiz on 16July \n Thanks\n Team Pravega"
+            msg.attach(MIMEText(body, 'plain'))
+
+            # creates SMTP session
+            s = smtplib.SMTP('smtp.gmail.com', 587)
+
+            # start TLS for security
+            s.starttls()
+
+            # Authentication
+            s.login("core@pravega.org", "emailsecretpassword")
+
+            # message to be sent
+            message = msg.as_string()
+
+            # sending the mail
+            s.sendmail(fromaddr, toaddr, message)
+
+            # terminating the session
+            s.quit()
             flash("Registered successfully!!")
+            flash("Check you email for confirmation. PS: check your junk mail folder as well")
         if existing is not None :
             flash("Could not register!!")
             flash("Email of participant already registered")
