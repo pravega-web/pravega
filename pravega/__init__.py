@@ -53,6 +53,11 @@ def create_app(test_config=None):
     def quadsparkssamplepaper():
         return send_file('files/QuadsparksModelQuestions.pdf')
 
+    @app.route('/files/qsacRules.pdf')
+    def chesskimaki():
+        return send_file('files/qsacRules.pdf')
+        
+
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
     from . import scitech
@@ -61,6 +66,8 @@ def create_app(test_config=None):
     app.register_blueprint(culturals.blueprint)
     from . import workshops
     app.register_blueprint(workshops.blueprint)
+    from . import recreational
+    app.register_blueprint(recreational.blueprint)
 
 
 
