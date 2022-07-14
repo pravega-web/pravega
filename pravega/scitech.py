@@ -321,3 +321,32 @@ def register_for_palebluedot():
 
         myclient.close()
         return render_template("/registration_message.html")
+@blueprint.route("/straingerthings/register", methods=("GET","POST"))
+def register_for_straingerthings ():
+    event_name = "straingerthings"
+    if request.method == "GET":
+        return render_template(f"scitech/registration/registration_{event_name}.html");
+    if request.method == "POST":
+        details = { "participant1_name" : request.form['participant_name'],
+                    "participant1_class" : request.form['clsp'],
+                    "participant1_school" : request.form['school'],
+                    "participant1_email" : request.form['email'],
+                    "participant1_phone" : request.form['mobile']
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "participant1_email" : request.form['email'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Email of participant already registered")
+            myclient.close()
+            return render_template("registration_message.html")
+        myclient.close()
+
+        return render_template("registration_message.html")
