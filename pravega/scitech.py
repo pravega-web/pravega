@@ -1,5 +1,5 @@
 from flask import (
-        Blueprint, flash, g, redirect, render_template, request, url_for
+        Blueprint, flash, g, redirect, render_template, request, url_for, send_file
         )
 import pymongo
 import razorpay
@@ -446,24 +446,28 @@ def register_for_badhypotheses():
         myclient.close()
         return render_template("/registration_message.html")
 
+@blueprint.route("/pravegainnovationsummit/rules")
+def sendpisrules():
+    return send_file("files/PIS_Rules.docx")
 @blueprint.route("/pravegainnovationsummit/register", methods=("GET", "POST"))
 def register_for_pis ():
     event_name = "pravegainnovationsummit"
-    amount = 20000
+    amount = 100000
     g.user = amount
     if request.method == "GET":
         return render_template(f"scitech/registration/registration_{event_name}.html")
 
     if request.method == "POST":
-        details = { "participant1_name" : request.form['participant1'],
-                    "participant2_name" : request.form['participant2'],
+        details = {
                     "team_name" : request.form['team'],
-                    "participant1_school" : request.form['school1'],
-                    "participant2_school" : request.form['school2'],
-                    "participant1_email" : request.form['emailp1'],
-                    "participant2_email" : request.form['emailp2'],
-                    "participant1_phone" : request.form['mobile1'],
-                    "participant2_phone" : request.form['mobile2'],
+                    "participant1_name" : request.form['participant1'],
+                    "participant2_name" : request.form['participant2'],
+                    "participant3_name" : request.form['participant3'],
+                    "participant4_name" : request.form['participant4'],
+                    "participant5_name" : request.form['participant5'],
+                    "participant_address" : request.form['address'],
+                    "participant_email" : request.form['email'],
+                    "participant_phone" : request.form['mobile'],
                     "payment_id" : None,
                     "payment_status" : "Unknown"
                     }
@@ -480,7 +484,7 @@ def register_for_pis ():
 
 
         #Checking for duplicate email numbers
-        existing = mycol.find_one({ "participant1_email" : request.form['emailp1'] })
+        existing = mycol.find_one({ "participant_email" : request.form['email'] })
 
         paydb = myclient['payments']
         paycol = paydb[event_name]
