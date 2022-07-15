@@ -56,7 +56,7 @@ def create_app(test_config=None):
     @app.route('/files/qsacRules.pdf')
     def chesskimaki():
         return send_file('files/qsacRules.pdf')
-        
+
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
