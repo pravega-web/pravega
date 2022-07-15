@@ -151,7 +151,7 @@ def register_for_qsac ():
 
 
         #Checking for duplicate email numbers
-        existing = mycol.find_one({ "participant1_email" : request.form['email1'] })
+        existing = mycol.find_one({ "email_id" : request.form['email1'] })
 
         paydb = myclient['payments']
         paycol = paydb[event_name]
