@@ -1,14 +1,15 @@
 body {
-	background: url(/static/img/Website_Bg.jpg) no-repeat center center fixed;
+	background: url(/static/img/culturals/accbg2.avif) no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-    /*
+	/*
 	background-color: rgba(21,21,21,0.6);
-	background-color: rgba(150,21,21,0.85);*/
+	background-color: rgba(150,21,21,0.85);
+    */
 
 }
 .container-fluid {
@@ -33,23 +34,27 @@ h2 {
 	margin-bottom: 5px;
     	color: rgb(242, 111, 229);
 	color:#917d62 ;
+	color: #efa800;
 }
 
 h3 {
 	font-family: 'Goldman', cursive;
     	color: rgb(242, 111, 229);
 	color:#917d62 ;
+	color: #ffa800;
 }
 h4 {
 	font-family: 'Goldman', cursive;
 	color: #917d62 ;
 	font-size: 30px;
+	color: #ffa800;
 }
 h5{
 	color: black;
 	font-family: 'Goldman', cursive;
     	color: rgb(242, 111, 229);
 	color:#917d62 ;
+	color: #ffa800;
 }
 
 
@@ -146,6 +151,7 @@ u {
 	margin-left: 20px;
 	width:80%;
 	font-size: 60px;
+	color: #ffa800;
 }
 #supersubheading{
 	margin-left: 20px;
@@ -155,6 +161,7 @@ u {
 #subheading{
 	margin-left: 20px;
 	width:80%;
+	color: #cfa800;
 }
 
 #main{
