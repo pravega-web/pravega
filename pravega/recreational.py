@@ -137,7 +137,7 @@ def register_for_qsac ():
                     "nationality" : request.form['nation'],
                     "fideid" : request.form['fideid'],
                     "fiderating" : request.form['fiderating'],
-                    "school" : reques.form['school'],
+                    "school" : request.form['school'],
                     "payment_id" : None,
                     "payment_status" : "Unknown"
                     }
