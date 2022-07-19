@@ -44,6 +44,9 @@ def create_app(test_config=None):
     @app.route('/files/QuadsparksSeason3Rules.pdf')
     def quadsparkskimaki():
         return send_file('files/QuadsparksSeason3Rules.pdf')
+    @app.route('/files/ALEKHYA-Art.pdf')
+    def alekhyaaaaaaa():
+        return send_file('files/ALEKHYA-Art.pdf')
 
     @app.route('/files/Details_Decalcomania.pdf')
     def deeeeeeeeecalllllllcooooooo():
