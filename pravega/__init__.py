@@ -45,6 +45,10 @@ def create_app(test_config=None):
     def quadsparkskimaki():
         return send_file('files/QuadsparksSeason3Rules.pdf')
 
+    @app.route('/files/Details_Decalcomania.pdf')
+    def deeeeeeeeecalllllllcooooooo():
+        return send_file('files/Details_Decalcomania.pdf')
+
     @app.route('/files/chemenigmarules.pdf')
     def chemenigmakimaki():
         return send_file('files/chemenigmarules.pdf')
