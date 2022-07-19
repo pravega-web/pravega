@@ -24,6 +24,9 @@ def snedrules():
 @blueprint.route("/alekhya/rules")
 def snedrulesalekhya():
     return send_file('files/ALEKHYA-Art.pdf')
+@blueprint.route("/acrimecorrespondence/brochure")
+def snedrulesacc():
+    return send_file('files/acc.pdf')
 @blueprint.route("/lasya/register")
 def lasya_redirect():
     return render_template("/culturals/lasya.html");
@@ -288,3 +291,38 @@ def generic_paid_culturals_register():
 
         myclient.close()
         return render_template(f"registration_{event_name}.html")
+
+@blueprint.route("acrimecorrespondence/register", methods=("GET", "POST"))
+def acc_culturals_register():
+    event_name = "acrimecorrespondence"
+    if request.method == "GET":
+        return render_template(f"culturals/registration/registration_{event_name}.html")
+    if request.method == "POST":
+        details = {
+                    "team_name" : request.form['team'],
+                    "team_number" : request.form['num_team'],
+                    "participant1_name" : request.form['name1'],
+                    "participant1_email" : request.form['email1'],
+                    "participant1_phone" : request.form['mobile1'],
+                    "participant2_name" : request.form['name2'],
+                    "participant2_email" : request.form['email2'],
+                    "participant3_name" : request.form['name3'],
+                    "participant3_email" : request.form['email3'],
+                    "ifeelitcomming" : request.form['come'],
+                    }
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+        #Checking for duplicate mobile numbers
+        existing = mycol.find_one({ "participant1_email" : request.form['email1'] })
+
+        if existing is None:
+            x = mycol.insert_one(details)
+            flash("Registered successfully!!")
+        if existing is not None :
+            flash("Email of participant 1 already registered")
+            myclient.close()
+            return render_template(f"registration_message.html")
+        myclient.close()
+        return render_template(f"registration_message.html")

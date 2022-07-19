@@ -66,7 +66,7 @@ def login_required(view):
 def panel():
     my_mng = pymongo.MongoClient("mongodb://localhost:27017")
     my_db = my_mng["registrations"]
-    my_col = my_db["chemenigma"]
+    my_col = my_db["straingerthings"]
 
     loli=my_col.find_one()
     headings=tuple(loli.keys())

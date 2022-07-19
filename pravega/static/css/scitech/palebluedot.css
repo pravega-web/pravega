@@ -8,12 +8,12 @@ body {
         background-size: 100% 100%;
         background-color: #000000;
     }
-    
+
     #event_body{
         padding-top: 5%;
         background-color: rgba(217,217,217,0);
     }
-    
+
     h1 {
         color: white;
         font-family: 'Abril Fatface', cursive;
@@ -27,7 +27,7 @@ body {
         margin-bottom: 5px;
             color: rgb(256,256,256);
     }
-    
+
     h3 {
         font-family: 'Lato', cursive;
             color: rgb(256,256,256);
@@ -42,8 +42,8 @@ body {
         font-family: 'Lato', cursive;
         color: rgb(256,256,256);
     }
-    
-    
+
+
     div
     #box{
         font-family: "Lato", sans-serif;
@@ -61,9 +61,9 @@ body {
             background: rgba(217, 217, 217, 0.2);
         font-size: 17px;
     }
-    
-    
-    
+
+
+
     .box{
         font-family: "Lato", sans-serif;
         margin-top: 2%;
@@ -79,16 +79,16 @@ body {
             background: rgba(217, 217, 217, 0);
         font-size: 17px;
     }
-    
-    
+
+
     select {
             background: rgba(217, 217, 217, 0.2);
         color: #000000;
     }
-    
-    
-    
-    
+
+
+
+
     .notimg{
         font-family: 'Lato', sans-serif;
         float: right;
@@ -97,7 +97,7 @@ body {
         margin-top: 20px;
         margin-right: 40px;
     }
-    
+
     .clickme {
         font-size: 30px;
         font-family: 'Lato', sans-serif;
@@ -107,7 +107,7 @@ body {
         border: 2px solid black;
         padding-top: 2px;
     }
-    
+
     .clickme:hover {
             background: rgba(217, 217, 217, 0.2);
         border-radius: 5px;
@@ -115,7 +115,7 @@ body {
     u {
         color: rgb(235,221,35);
     }
-    
+
     .contacts {
         font-size: 25px;
         border-radius: 3px;
@@ -130,24 +130,24 @@ body {
     .btn{
             background: rgba(242, 111, 229, 0.2);
     }
-    
-    
-    
+
+
+
     #heading{
         margin-top: 100px;
         margin-left: 20px;
         width:80%;
     }
-    
+
     #subheading{
         margin-left: 20px;
         width:80%;
     }
-    
+
     #main{
         margin-top: 5px;
     }
-    
+
     @media not screen and (max-width:1300px) {
     #main {
     width: 50%;
@@ -157,4 +157,3 @@ body {
     a{
         color: white;
     }
-    
