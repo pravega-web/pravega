@@ -1,19 +1,19 @@
 body {
-	
-	background: url(pravega\static\img\Shutterbugs_bg.avif) no-repeat center center fixed;
+
+	background: url(/static/img/Shutterbugs_bg.avif) no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	
-	background-color: rgba(21,21,21,0.6);
+
+	background-color: rgba(21,21,21,0.3);
 
 }
 .container-fluid {
 
-	background-color: rgba(21,21,21,0.85);
+	background-color: rgba(21,21,21,0.4);
 }
 
 #event_body{
@@ -22,40 +22,43 @@ body {
 }
 
 h1 {
-	color: white;
+	color: black;
 	font-size: 70px;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Dancing Script', cursive;
 }
 h2 {
-	font-family: 'Lato', cursive;
+	font-family: 'Dancing Script', cursive;
 	font-size: 30px;
 	margin-top: 5px;
 	margin-bottom: 5px;
     	color: rgb(242, 111, 229);
-	color:yellow;
+	color:black;
 }
 
 h3 {
-	font-family: 'Lato', cursive;
+	font-family: 'Dancing Script', cursive;
     	color: rgb(242, 111, 229);
 	color:yellow;
+	color:black;
 }
 h4 {
-	font-family: 'Lato', cursive;
+	font-family: 'Dancing Script', cursive;
 	color: white;
 	font-size: 30px;
+	color:black;
 }
 h5{
 	color: black;
-	font-family: 'Lato', cursive;
+	font-family: 'Dancing Script', cursive;
     	color: rgb(242, 111, 229);
 	color:yellow;
+	color:black;
 }
 
 
 div
 #box{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Dancing Script', sans-serif;
 	margin-top: 2%;
 	text-align: center;
 	padding-left: 5%;
@@ -74,7 +77,7 @@ div
 
 
 .box{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	margin-top: 2%;
 	text-align: left;
 	padding-left: 5%;
@@ -99,7 +102,7 @@ select {
 
 
 .notimg{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Dancing Script', sans-serif;
 	float: right;
 	color: white;
 	font-size: 20px;
@@ -109,7 +112,7 @@ select {
 
 .clickme {
 	font-size: 30px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Dancing Script', sans-serif;
     	background: rgba(242, 111, 229, 0.2);
 	border-radius: 5px;
 	border: 2px solid black;
@@ -163,4 +166,9 @@ u {
 
 a{
 	color: white;
+}
+
+.prize {
+
+	font-size: 40px;
 }

@@ -41,6 +41,9 @@ def create_app(test_config=None):
     def test():
         return render_template("registration_message.html");
 
+    @app.route('/files/acc.pdf')
+    def acc():
+        return send_file('files/acc.pdf')
     @app.route('/files/QuadsparksSeason3Rules.pdf')
     def quadsparkskimaki():
         return send_file('files/QuadsparksSeason3Rules.pdf')
