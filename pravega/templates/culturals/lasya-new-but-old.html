@@ -7,12 +7,12 @@
 	<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
 
 
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/culturals/lasya.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ url_for('static', filename='/css/culturals/lasyanewer.css') }}">
 
         <!-- Bootstrap support -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -24,9 +24,6 @@
         <!-- Icon library -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <link href="/static/pub_styling/pravega_slider.css" rel="stylesheet">
-
         <link href="/static/pub_styling/scitech/menu.css" rel="stylesheet">
         <link href="/static/pub_styling/Pravega_footer.css" rel="stylesheet">
         <link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
@@ -37,7 +34,29 @@
 </head>
 
 <body>
+<ul class="slideshow" style="z-index:-1;">
+  <li><span>Image 01</span><div>
+  <li><span>Image 02</span></li>
+  <li><span>Image 03</span></li>
+  <li><span>Image 04</span></li>
+  <li><span>Image 05</span></li>
+  <li><span>Image 06</span></li>
+</ul>
+<script>
+//Array of images which you want to show: Use path you want.
+var images=new Array('/static/img/culturals/lasyaslider/1.jpg','/static/img/culturals/lasyaslider/2.jpg');
+var nextimage=0;
+function doSlideshow(){
+    if(nextimage>=images.length){nextimage=0;}
+    $('.global-header')
+    .css('background-image','url("'+images[nextimage++]+'")')
+    .fadeIn(500,function(){
+        setTimeout(doSlideshow,1000);
+    });
+}
+doSlideshow();
 
+</script>
     <!-- Pravega. Navbar-->
 <header>
     <nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-top nav-pravega-bg">
@@ -69,32 +88,16 @@
 <div class="bhagwan">
 </div>
 
-<!-- Begin here -->
-
-
+<header class="global-header">
 
 <div class="container-fluid">
 	<div class="row" style="margin-top:100px;">
 		<div class="col-lg-3">
 			<img src='/static/img//culturals/lasya2.png' alt='LOGO' style="width:100%;">
 		</div>
-		<div class="col-lg-6" valign="center" style="display: float;">
-			<div class="fluid-container">
-				<p>
-				<br>
-				<br>
-				</p>
-			</div>
-			<h1 id="heading">The Dance floor beckons</h1>
-			<div class="fluid-container">
-				<p>
-				<br>
-				<br>
-				</p>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<img src="/static/img/culturals/lasyaposter7.png" width="100%"  alt="Lasya Poster">
+		<div class="col-lg-9">
+		<h1 id="heading">Lasya</h1>
+		<h4 id="subheading">The Dance floor beckons</h4>
 		</div>
 
 	</div>
@@ -126,13 +129,19 @@
 			<a href ="/culturals/lasya/teamregister">
 				<div class="clickme submit">
 
-					<h4 style="text-align:center; color:white;font-family: 'Poppins', sans-serif;">Register Team</h4>
+					<h4 style="text-align:center; color:white;">Register Team</h4>
 				</div>
 			</a>
 			<a href ="/culturals/lasya/individualregister">
 				<div class="clickme submit">
 
-					<h4 style="text-align:center; color:white;font-family: 'Poppins', sans-serif;">Register Individual</h4>
+					<h4 style="text-align:center; color:white;">Register Individual</h4>
+				</div>
+			</a>
+			<a href ="/culturals/lasya/rules">
+				<div class="clickme submit">
+
+					<h4 style="text-align:center; color:white;">Terms and Conditions</h4>
 				</div>
 			</a>
 		</div>
@@ -162,106 +171,35 @@
 
         <h2>Rules and Regulations</h2>
         <p>
-	Please read terms and conditions <a href="/culturals/lasya/rules">terms and conditions</a>
-	carefully before registering.
+	Refer to the <a href="/culturals/lasya/rules">terms and conditions</a>.
         </p>
 
-	<h2>In Sync</h2>
-	<p>
-	As a prelude to the enthralling dance exposition that is Lasya, an
-	online, Instagram-based event, InSync, was organised. This was
-	conducted as part of pre-Pravega activities among the IISc students, an
-	opportunity for the dancers among us to flaunt their moves.
-	<br>
-	This year, it took place from 8th to 26nd June, with two categories - Team and
-	Solo. From around dazzling entries that we received; our judges decided the
-	winners as follows:
-	<br>
-	Best Solo Performance: Madhura Guha
-	<br>
-	Best Team Performance: Team Swing ~ Koyel Roy and Sumi
-	<br>
-	Our judges were a brilliant panel of two prolific dancers, popular in
-	Bangalore dance circles - Pritha Kundu, Priya Manohar and Dhruv Lal as
-	students representative.
-	</p>
 		<br>
 
 		<h2> For Queries, contact:</h2>
-	<div class="contacts">
-		<h5 style="color:white; font-family: 'Poppins', sans-serif;">
-			<p>
-			<ul>
-				<li>
-				Souvik Mandal: +91 9382302911
-				</li>
-				<li>
-				Sharwary M R: +91 9741212612
-				</li>
-			</ul>
-			</p>
-		</h5>
-	<img src="/static/mail.png" alt="email">
-	<a href="mailto:pravega.lasya@gmail.com" >pravega.lasya@gmail.com</a>
-	</div>
+			<div class="contacts">
+				<h5 style="color:white;">
+                <p>
+				<ul>
+                    <li>
+                        Souvik Mandal: +91 9382302911
+		    </li>
+                    <li>
+			Sharwary M R: +91 9741212612
+                    </li>
+                </ul>
+                </p>
+				</h5>
+                <img src="/static/mail.png" alt="email">
+				<a href="mailto:pravega.lasya@gmail.com" >pravega.lasya@gmail.com</a>
+			</div>
 			<br>
 			<br>
 
 			<h2>Follow us on Instagram <a href="https://www.instagram.com/lasya_iisc.22">@lasya_iisc.22</a></h2>
 	</div>
-<div class="container-fluid">
-	<p>
-	<br>
-	<br>
-	</p>
-</div>
-</div>
 
-<!-- Slider starts herre
-<div class="row">
-	<div class='col-lg-3'>
 </div>
-<div class="box col-lg-9">
-
-	<h2> Gallery</h2>
-
-	<div class="container-fluid" >
-		<div class="swiper mySwiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><img src="/static/img/culturals/lasyaslider/1.jpg" alt="Slide 1"></div>
-			<div class="swiper-slide"><img src="/static/img/culturals/lasyaslider/2.jpg" alt="Slide 2"></div>
-			<div class="swiper-slide"><img src="/static/img/culturals/lasyaslider/3.jpg" alt="Slide 3"></div>
-			<div class="swiper-slide"><img src="/static/img/culturals/lasyaslider/5.jpg" alt="Slide 5"></div>
-			<div class="swiper-slide"><img src="/static/img/culturals/lasyaslider/6.jpg" alt="Slide 6"></div>
-		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-pagination"></div>
-		</div>
-	</div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-</div>
-</div>
--->
 </div>
 <footer>
     <!-- Pravega. bottom bar -->
@@ -293,5 +231,6 @@
     </div>
 
 </footer>
+</header>
 </body>
 </html>
