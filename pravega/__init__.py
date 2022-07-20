@@ -44,6 +44,11 @@ def create_app(test_config=None):
     @app.route('/files/acc.pdf')
     def acc():
         return send_file('files/acc.pdf')
+
+    @app.route('/files/exhibitionrules')
+    def exhibitions():
+        return send_file('files/exhibitions-rules.pdf')
+
     @app.route('/files/QuadsparksSeason3Rules.pdf')
     def quadsparkskimaki():
         return send_file('files/QuadsparksSeason3Rules.pdf')
