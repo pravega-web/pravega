@@ -612,7 +612,7 @@ def register_for_exhibitions ():
             msg['To'] = toaddr
             msg['Subject'] = "Registration for Exhibitions by Pravega IISc"
             body = f"""Hello Enthusiast,
-Thank you for registering for Exhibithor, Please read the rules( https://www.pravega.org/files/exhibitionrules ) carefully.
+Thank you for registering for IISc Exhibitions, Please read the rules( https://www.pravega.org/files/exhibitionrules ) carefully.
 All further details will be relayed to you via email.
 Team Exhibition
 
