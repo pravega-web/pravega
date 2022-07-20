@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file. redirect_url
 
 
 def create_app(test_config=None):
@@ -47,7 +47,7 @@ def create_app(test_config=None):
 
    @app.route('/files/exhibitionrules')
    def exhibitions():
-        return send_file('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
+        return redirect_url('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
 
     @app.route('/files/QuadsparksSeason3Rules.pdf')
     def quadsparkskimaki():
