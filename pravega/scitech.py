@@ -569,6 +569,107 @@ def register_for_pis ():
         myclient.close()
         return render_template("/registration_message.html")
 
+@blueprint.route("/robowars/register", methods=("GET","POST"))
+def register_for_robowars ():
+    event_name = "robowars"
+    amount = 80000
+    g.user = amount
+    if request.method == "GET":
+        return render_template(f"scitech/registration/registration_{event_name}.html")
+
+    if request.method == "POST":
+        details = { "team_name" : request.form["team"],
+                    "participant_name" : request.form['leader'],  # change this
+                    "email_id" : request.form['email'],
+                    "phone" : request.form['mobile'],
+                    }
+        # Authenticating payments
+        razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
+        payment_id = request.form['razorpay_payment_id']
+
+
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+
+
+        #Checking for duplicate email numbers
+        existing = mycol.find_one({ "email_id" : request.form['email'] })
+
+        paydb = myclient['payments']
+        paycol = paydb[event_name]
+
+
+        if existing is None:
+            razorpay_client.payment.capture(payment_id, amount)
+            details['payment_id'] = payment_id
+            pay_details = razorpay_client.payment.fetch(payment_id)
+            paycol.insert_one(pay_details)
+            details['payment_status'] = pay_details['status']
+            flash(f"Payment ID:{payment_id}")
+            x = mycol.insert_one(details)
+            if pay_details['status'] == 'captured':
+                import smtplib
+                from email.mime.multipart import MIMEMultipart
+                from email.mime.text import MIMEText
+                from email.mime.base import MIMEBase
+                from email import encoders
+
+                toaddr = details['email_id']
+                participantname = details['participant_name']
+                fromaddr = "core@pravega.org"
+                msg = MIMEMultipart()
+                msg['From'] = "Pravega IISc"
+                msg['To'] = toaddr
+                msg['Subject'] = "Registration for Robowars - Pravega 2022"
+                body = """Hey there!
+Your registration has been accepted, welcome to Ragnarok Robowar. All further communication from our side shall be carried out on our discord server. If you do not already have a Discord account, you are requested to make one. Here’s the access link:
+https://discord.gg/7crvzUAeG8
+For any help in building the robot or inquiry about the rules, you should check out our help and tutorial channels.
+The server is exclusive to registered participants of the event and a place for participants to interact with each other and with the organizers.
+As such, please do not share this invite link with anyone else.
+
+THIS MAIL IS AUTO-GENERATED. DO NOT REPLY TO THIS MAIL.
+For unresolved queries, feel free to contact us @ ragnarokrobowar@gmail.com"""
+                msg.attach(MIMEText(body, 'plain'))
+
+                # creates SMTP session
+                s = smtplib.SMTP('smtp.gmail.com', 587)
+
+                # start TLS for security
+                s.starttls()
+
+                # Authentication
+                s.login("core@pravega.org", "emailsecretpassword")
+
+                # message to be sent
+                message = msg.as_string()
+
+                # sending the mail
+                s.sendmail(fromaddr, toaddr, message)
+
+                # terminating the session
+                s.quit()
+                flash("Payment Successful")
+            else:
+                flash("Payment not confirmed, Contact us")
+            flash("Registered successfully!!")
+        else :
+            details['payment_id'] = payment_id
+            pay_details = razorpay_client.payment.fetch(payment_id)
+            paycol.insert_one(pay_details)
+            details['payment_status'] = pay_details['status']
+            flash(f"Payment ID:{payment_id}")
+            flash("Payment not confirmed")
+            flash("Email of participant 1 already registered")
+            myclient.close()
+            return render_template("/registration_message.html")
+
+        myclient.close()
+        return render_template("/registration_message.html")
+
 @blueprint.route("/exhibitions/register", methods=("GET","POST"))
 def register_for_exhibitions ():
     event_name = "exhibitions"
