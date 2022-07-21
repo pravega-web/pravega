@@ -111,12 +111,8 @@
 			Name of the team:
 			<input type="text" name="team" id="p1" placeholder="Team name" required>
 			<br>
-			Number of Team Members:
-			<select id="number" name="num_team" class="browser-default" required onclick="myfunc()">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-			</select>
+
+			<input type="hidden" name="num_team" value='0' >
 			<div id="part1">
 				<br>
 				<br>
@@ -134,12 +130,12 @@
 				Phone Number of Participant:
 				<input  class="cpart1" type="text" pattern="^[0-9]{10}$" name="mobile1" id="p1mobile" placeholder="Mobile Number" required>
 			</div>
-			<div id="part2" style="display: none;">
+			<div id="part2">
 				<br>
 				<br>
 				<h4 >
 
-					Details of participant 2:
+					Details of participant 2:(if applicable)
 				</h4>
 				<br>
 				Participant Name:
@@ -149,12 +145,12 @@
 				<input  class="cpart2" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email2" id="p2email" placeholder="Your Email">
 				<br>
 			</div>
-			<div id="part3"style="display: none;">
+			<div id="part3">
 				<br>
 				<br>
 				<h4 >
 
-					Details of participant 3:
+					Details of participant 3:(if applicable)
 				</h4>
 				<br>
 				Participant Name:
@@ -169,7 +165,7 @@
 				<br>
 				Will your team be available for in person finals at
 				IISc, Bangalore on September 2nd if travel
-				reimbursement is provided?
+				reimbursement (partial) is provided?
 				<br>
 					<input type="radio" id="reimb1" name="come" value="Yes" >
 					<label for="reimb1">Yes</label><br>
@@ -216,57 +212,5 @@
             </div>
 
         </footer>
-<script>
-	function myfunc(){
-			if(document.getElementById("number").value == 1){
-					document.getElementById("part1").style.display = "block";
-					document.getElementById("part2").style.display = "none";
-					document.getElementById("part3").style.display = "none";
-
-					document.getElementById("p1").setAttribute('required','');
-					document.getElementById("p1email").setAttribute('required','');
-					document.getElementById("p1mobile").setAttribute('required','');
-
-					document.getElementById("p2").removeAttribute('required','');
-					document.getElementById("p2email").removeAttribute('required','');
-
-					document.getElementById("p3").removeAttribute('required','');
-					document.getElementById("p3email").removeAttribute('required','');
-
-				}
-			if(document.getElementById("number").value == 2){
-					document.getElementById("part1").style.display = "block";
-					document.getElementById("part2").style.display = "block";
-					document.getElementById("part3").style.display = "none";
-
-					document.getElementById("p1").setAttribute('required','');
-					document.getElementById("p1email").setAttribute('required','');
-					document.getElementById("p1mobile").setAttribute('required','');
-
-					document.getElementById("p2").setAttribute('required','');
-					document.getElementById("p2email").setAttribute('required','');
-
-					document.getElementById("p3").removeAttribute('required','');
-					document.getElementById("p3email").removeAttribute('required','');
-				}
-			if(document.getElementById("number").value == 3){
-					document.getElementById("part1").style.display = "block";
-					document.getElementById("part2").style.display = "block";
-					document.getElementById("part3").style.display = "block";
-
-					document.getElementById("p1").setAttribute('required','');
-					document.getElementById("p1email").setAttribute('required','');
-					document.getElementById("p1mobile").setAttribute('required','');
-
-					document.getElementById("p2").setAttribute('required','');
-					document.getElementById("p2email").setAttribute('required','');
-
-					document.getElementById("p3").setAttribute('required','');
-					document.getElementById("p3email").setAttribute('required','');
-				}
-
-		}
-	myfunc();
-</script>
 </body>
 </html>

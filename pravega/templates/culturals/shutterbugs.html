@@ -7,10 +7,12 @@
 	<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
 
 
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/culturals/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/culturals/shutterbugs.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
         <!-- Bootstrap support -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -65,7 +67,7 @@
 <div class="container-fluid">
 	<div class="row" style="margin-top:100px;">
 		<div class="col-lg-3">
-			<img src='/static/img/culturals/shutterbugs.png' alt='LOGO' style="width:100%;">
+			<img src='/static/img/shutterbugs_logo.png' alt='LOGO' style="width:100%;">
 		</div>
 		<div class="col-lg-9">
 		<h1 id="heading">Shutterbugs</h1>
@@ -76,60 +78,65 @@
 	<div class="row" >
 	<div class="col-lg-3 col-sm-6 order-sm-1">
 		<div class="box">
-			<h2> Timelines:</h2>
+			<h2> Registration and Submission:</h2>
+			<hr>
 			<p>
-                Open during July 18<sup>th</sup> – August 15<sup>th</sup> for submissions. End date extensible up to one week.
+                19<sup>th</sup>July – 15<sup>th</sup> August.
             </p>
 
 		</div>
 
 		<div class="box" id="registrationbox">
-			<h2> Quick Links </h2><hr>
-			<a>
+			<h2> Registration Link </h2><hr>
+			<a href ="https://docs.google.com/forms/d/1DOb64FWsx9hY8pP8ts_qC_isfSh3izKWaCvU07-upzQ/edit">
 				<div class="clickme submit">
-					<h4 style="text-align:center; color:white;"> Coming soon after event launch!</h4>
+
+					<h4 style="text-align:center; color:white;">Register here</h4>
 				</div>
 			</a>
 		</div>
 
 	</div>
 	<div class="box col-lg-9 col-sm-6 order-sm-2" id="main">
-		<h2>Description</h2>
+		<h2 class="prize">Description</h2>
 		<p>
-            Showcase your creativity and expertise of technique in Pravega’s most awaited photography competition. Craft and capture a photograph to best reflect your interpretation of one of the prompts provided. Winning photographs will be displayed in the Pravega Exhibitions.
+            Showcase your creativity and expertise of technique in Pravega’s most awaited photography competition. Craft and capture a photograph to best reflect your interpretation of one (or both if you're extremely creative) of the prompts provided.
+            Winning photographs will be displayed in the Pravega Exhibitions.
+            The prompts are 1) Brown and 2) Minutiae
+
 
 		</p>
 
-		<h2>Eligibility</h2>
-		<p>
-            Anyone at and below 30 years of age
-		</p>
-		<h3> Prizes</h3>
+        <br>
+
+        <h3 class="prize"> Prizes</h3>
 		<p>
             Winners will be awarded from a pool of 15k
 		</p>
+        <br>
+
+        <h2 class="prize">Rules and Regulations</h2>
+        <p>
+            <ol>
+                <li>To participate, you must be of age 30 years or below.</li>
+                <li>You must click the photograph yourself and perform all the post-processing on your own. Plagiarized entries will be remorselessly disqualified. You can, of course, take inspiration from any source. </li>
+                <li>You must submit both the post-processed image (which will be considered for judging) as well as the RAW photograph.</li>
+                <li>Name your photographs as follows: Final Entry - "YOUR NAME", RAW photograph - "YOUR NAME_raw", with the extension of your choice.</li>
+                <li>Ensure all the contact details provided here are functional. Failure to do so will make you ineligible for awards.</li>
+                <li>Please refrain from making multiple submissions. You can edit your responses till 15th August.</li>
+            </ol>
+        </p>
+
 		<br>
 
-		<h2> Coordinators: Call/WhatSapp/Mail at </h2>
+		<h2> For Queries, contact:</h2>
 			<div class="contacts">
 				<h5 style="color:white;">
                 <p>
-				<ul>
-                    <li>
-                        Siddharth Bortha
-                        <br>
-                        <img src="/static/mail.png" alt="email">
-				        <a href="mailto:siddharthb@iisc.ac.in" >siddharthb@iisc.ac.in</a>
-                    </li>
-                    <li>
-                        Sudhanva K V
-                        <br>
-                        <img src="/static/mail.png" alt="email">
-				        <a href="mailto:sudhanvakv@iisc.ac.in" >sudhanvakv@iisc.ac.in</a>
-                    </li>
-                </ul>
                 </p>
 				</h5>
+                <img src="/static/mail.png" alt="email">
+				<a href="mailto:shutterbugs.pravega@gmail.com" style="font-family: 'Dancing Script', sans-serif" >shutterbugs.pravega@gmail.com </a>
 			</div>
 	</div>
 

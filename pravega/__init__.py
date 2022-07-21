@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, redirect
 
 
 def create_app(test_config=None):
@@ -41,9 +41,24 @@ def create_app(test_config=None):
     def test():
         return render_template("registration_message.html");
 
+    @app.route('/files/acc.pdf')
+    def acc():
+        return send_file('files/acc.pdf')
+
+    @app.route('/files/exhibitionrules')
+    def exhibitions():
+        return redirect('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
+
     @app.route('/files/QuadsparksSeason3Rules.pdf')
     def quadsparkskimaki():
         return send_file('files/QuadsparksSeason3Rules.pdf')
+    @app.route('/files/ALEKHYA-Art.pdf')
+    def alekhyaaaaaaa():
+        return send_file('files/ALEKHYA-Art.pdf')
+
+    @app.route('/files/Details_Decalcomania.pdf')
+    def deeeeeeeeecalllllllcooooooo():
+        return send_file('files/Details_Decalcomania.pdf')
 
     @app.route('/files/chemenigmarules.pdf')
     def chemenigmakimaki():
