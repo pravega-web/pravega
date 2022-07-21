@@ -45,6 +45,10 @@ def create_app(test_config=None):
     def acc():
         return send_file('files/acc.pdf')
 
+    @app.route('/files/wwdd_brochure.pdf')
+    def wwddBrochure():
+        return send_file('files/wwdd_brochure.pdf')
+
     @app.route('/files/exhibitionrules')
     def exhibitions():
         return redirect('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
@@ -71,15 +75,15 @@ def create_app(test_config=None):
     @app.route('/files/qsacRules.pdf')
     def chesskimaki():
         return send_file('files/qsacRules.pdf')
-    
+
     @app.route('/files/BAH_Brochure.pdf')
     def bahkimaki():
         return send_file('files/BAH_Brochure.pdf')
-    
+
     @app.route("/files/Robowars_Rules.pdf")
     def ragnarokkimaki():
         return send_file('files/Robowars_Rules.pdf')
-    
+
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
     from . import scitech
