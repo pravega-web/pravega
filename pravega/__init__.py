@@ -56,11 +56,15 @@ def create_app(test_config=None):
     @app.route('/files/qsacRules.pdf')
     def chesskimaki():
         return send_file('files/qsacRules.pdf')
-
+    
     @app.route('/files/BAH_Brochure.pdf')
     def bahkimaki():
         return send_file('files/BAH_Brochure.pdf')
-
+    
+    @app.route("/files/Robowars_Rules.pdf")
+    def ragnarokkimaki():
+        return send_file('files/Robowars_Rules.pdf')
+    
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
     from . import scitech
