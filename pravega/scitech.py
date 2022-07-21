@@ -632,7 +632,7 @@ The server is exclusive to registered participants of the event and a place for 
 As such, please do not share this invite link with anyone else.
 
 THIS MAIL IS AUTO-GENERATED. DO NOT REPLY TO THIS MAIL.
-For unresolved queries, feel free to contact us @ ragnarokrobowar@gmail.com"""     # @Xavier change the email here to event email id
+For unresolved queries, feel free to contact us @ ragnarokrobowar@gmail.com"""
                 msg.attach(MIMEText(body, 'plain'))
 
                 # creates SMTP session
