@@ -6,7 +6,7 @@ body {
   	background-size: cover;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;  */
-	background-color: #eeeeee;
+	background-color: #284470;
 	color: black;
 }
 
@@ -25,12 +25,12 @@ h2 {
 	font-size: 30px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-    	color: rgb(242, 111, 229);
+    	color: #d9b06f;
 }
 
 h3 {
 	font-family: 'Goldman', cursive;
-    	color: rgb(242, 111, 229);
+    	color: #d9b06f;
 }
 h4 {
 	font-family: 'Goldman', cursive;
@@ -40,7 +40,7 @@ h4 {
 h5{
 	color: black;
 	font-family: 'Goldman', cursive;
-    	color: rgb(242, 111, 229);
+    	color: #d9b06f;
 }
 
 
@@ -149,4 +149,8 @@ u {
 
 a{
 	color: white;
+}
+
+.mailme:hover{
+	color: orange;
 }
