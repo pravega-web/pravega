@@ -83,6 +83,9 @@ def create_app(test_config=None):
     @app.route("/files/Robowars_Rules.pdf")
     def ragnarokkimaki():
         return send_file('files/Robowars_Rules.pdf')
+    @app.route('/files/<filename>')
+    def snedrandomunsafefile(filename):
+        return send_file(f'files/{filename}')
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
