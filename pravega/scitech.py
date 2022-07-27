@@ -12,7 +12,11 @@ def show_scitech():
     return render_template("scitech/scitech_menu.html")
 @blueprint.route('/<event_name>')
 def show_scitechpage(event_name):
-    return render_template(f"scitech/{event_name}.html")
+    try:
+        return render_template(f"scitech/{event_name}.html")
+    except:
+        return render_template("pagenotfound.html")
+
 @blueprint.route("/chemenigma/register", methods=("GET","POST"))
 def register_for_chemenigma2 ():
     event_name = "chemenigma"
