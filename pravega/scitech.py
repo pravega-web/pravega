@@ -508,7 +508,7 @@ def sendpisrules():
 @blueprint.route("/pravegainnovationsummit/register", methods=("GET", "POST"))
 def register_for_pis ():
     event_name = "pravegainnovationsummit"
-    amount = 100000
+    amount = 200000
     g.user = amount
     if request.method == "GET":
         return render_template(f"scitech/registration/registration_{event_name}.html")
