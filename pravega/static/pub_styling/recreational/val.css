@@ -1,0 +1,44 @@
+body{
+    background: url(/static/img/scitech/valorantbg.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
+
+.career-image {
+    padding-top: 30px;
+    padding-bottom: 30px;     
+}
+
+.career-card-custom-round {
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+a.eventcard {
+    background: transparent;
+    border: none;
+}
+
+a.eventcard:hover{
+    border-radius: 10%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+body {
+    font-family: "ITC Avant Garde Gothic Std Book",Verdana,sans-serif;
+    color: white;
+}
+
+.larger-text{
+    font-size: 20px;
+}
+
+#comingsoon{
+    width: 80%;
+    margin-left: 10px;
+}
