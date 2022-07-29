@@ -41,6 +41,10 @@ def create_app(test_config=None):
     def test():
         return render_template("registration_message.html");
 
+    @app.route('/files/astrowiz/<filename>')
+    def sendastrowizfile(filename):
+        return send_file(f'files/astrowiz/{filename}')
+
     @app.route('/files/exhibitionrules')
     def exhibitions():
         return redirect('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
