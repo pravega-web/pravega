@@ -1,0 +1,152 @@
+body {
+    	background: url(/static/img/scitech/valorantbg.gif) no-repeat center center fixed;
+        -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;  
+        /* background-color: #000000; */
+    }
+    
+    #event_body{
+        padding-top: 5%;
+        background-color: rgba(217,217,217,0);
+    }
+    
+    h1 {
+        color: white;
+        font-family: 'Goldman', cursive;
+        font-size: 70px;
+    }
+    h2 {
+        font-family: 'Goldman', cursive;
+        font-size: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+            color: rgb(242, 111, 229);
+    }
+    
+    h3 {
+        font-family: 'Goldman', cursive;
+            color: rgb(242, 111, 229);
+    }
+    h4 {
+        font-family: 'Goldman', cursive;
+        color: white;
+        font-size: 30px;
+    }
+    h5{
+        color: black;
+        font-family: 'Goldman', cursive;
+            color: rgb(242, 111, 229);
+    }
+    
+    
+    div
+    #box{
+        font-family: "Poppins", sans-serif;
+        margin-top: 2%;
+        text-align: center;
+        padding-left: 5%;
+        padding-right:5%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 5px solid rgba(217, 217, 217, 0.1);
+        border-radius: 10px;
+        background: #D9D9D9;
+        color: white;
+        border-color: white;
+            background: rgba(217, 217, 217, 0.2);
+        font-size: 17px;
+    }
+    
+    
+    
+    .box{
+        font-family: "poppins", sans-serif;
+        margin-top: 2%;
+        text-align: left;
+        padding-left: 5%;
+        padding-right:5%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 1px solid rgba(217, 217, 217, 0.8);
+        border-radius: 5px;
+        background: #D9D9D9;
+        color: white;
+            background: rgba(217, 217, 217, 0);
+        font-size: 17px;
+    }
+    
+    
+    select {
+            background: rgba(217, 217, 217, 0.2);
+        color: #000000;
+    }
+    
+    
+    
+    
+    .notimg{
+        font-family: 'Goldman', cursive;
+        float: right;
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+    
+    .clickme {
+        font-size: 30px;
+        font-family: 'Goldman', cursive;
+            background: rgba(242, 111, 229, 0.2);
+        border-radius: 5px;
+        border: 2px solid black;
+        padding-top: 2px;
+    }
+    
+    .clickme:hover {
+            background: rgba(217, 217, 217, 0.2);
+        border-radius: 5px;
+    }
+    u {
+        color: rgb(235,221,35);
+    }
+    
+    .contacts {
+        font-size: 25px;
+        border-radius: 3px;
+        border:2px;
+            background: rgba(242, 111, 229, 0.2);
+        text-align: center;
+        color:white;
+        margin-top: 2%;
+        max-width:500px;
+        width: 80%;
+    }
+    .btn{
+            background: rgba(242, 111, 229, 0.2);
+    }
+    
+    
+    
+    #heading{
+        margin-top: 100px;
+        margin-left: 20px;
+        width:80%;
+    }
+    
+    #subheading{
+        margin-left: 20px;
+        width:80%;
+    }
+    
+    #main{
+        margin-top: 5px;
+    }
+    
+    a{
+        color: white;
+    }
+    

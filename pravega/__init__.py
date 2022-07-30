@@ -41,48 +41,14 @@ def create_app(test_config=None):
     def test():
         return render_template("registration_message.html");
 
-    @app.route('/files/acc.pdf')
-    def acc():
-        return send_file('files/acc.pdf')
-
-    @app.route('/files/wwdd_brochure.pdf')
-    def wwddBrochure():
-        return send_file('files/wwdd_brochure.pdf')
+    @app.route('/files/astrowiz/<filename>')
+    def sendastrowizfile(filename):
+        return send_file(f'files/astrowiz/{filename}')
 
     @app.route('/files/exhibitionrules')
     def exhibitions():
         return redirect('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
 
-    @app.route('/files/QuadsparksSeason3Rules.pdf')
-    def quadsparkskimaki():
-        return send_file('files/QuadsparksSeason3Rules.pdf')
-    @app.route('/files/ALEKHYA-Art.pdf')
-    def alekhyaaaaaaa():
-        return send_file('files/ALEKHYA-Art.pdf')
-
-    @app.route('/files/Details_Decalcomania.pdf')
-    def deeeeeeeeecalllllllcooooooo():
-        return send_file('files/Details_Decalcomania.pdf')
-
-    @app.route('/files/chemenigmarules.pdf')
-    def chemenigmakimaki():
-        return send_file('files/chemenigmarules.pdf')
-
-    @app.route('/files/QuadsparksModelQuestions.pdf')
-    def quadsparkssamplepaper():
-        return send_file('files/QuadsparksModelQuestions.pdf')
-
-    @app.route('/files/qsacRules.pdf')
-    def chesskimaki():
-        return send_file('files/qsacRules.pdf')
-
-    @app.route('/files/BAH_Brochure.pdf')
-    def bahkimaki():
-        return send_file('files/BAH_Brochure.pdf')
-
-    @app.route("/files/Robowars_Rules.pdf")
-    def ragnarokkimaki():
-        return send_file('files/Robowars_Rules.pdf')
     @app.route('/files/<filename>')
     def snedrandomunsafefile(filename):
         return send_file(f'files/{filename}')

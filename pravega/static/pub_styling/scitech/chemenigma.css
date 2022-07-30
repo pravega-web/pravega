@@ -45,3 +45,22 @@ body {
     width: 80%;
     margin-left: 10px;
 }
+
+body
+.prelims-results {
+    width: 80%;
+}
+
+tr{
+    border: 1px solid white;
+    color: white;
+}
+
+td {
+    border: 1px solid white;
+}
+
+th{
+    border: 1px solid white;
+}
+
