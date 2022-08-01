@@ -45,6 +45,10 @@ def create_app(test_config=None):
     def sendastrowizfile(filename):
         return send_file(f'files/astrowiz/{filename}')
 
+    @app.route('/files/enumeration/<filename>')
+    def sendenumeratuinwizfile(filename):
+        return send_file(f'files/enumeration/{filename}')
+
     @app.route('/files/exhibitionrules')
     def exhibitions():
         return redirect('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
