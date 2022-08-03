@@ -10,6 +10,10 @@ def sendastrowizfile(filename):
 def sendenumeratuinwizfile(filename):
     return send_file(f'files/enumeration/{filename}')
 
+@blueprint.route('/workshops/<filename>')
+def sendeworkshopfile(filename):
+    return send_file(f'files/workshops/{filename}')
+
 @blueprint.route('/lasya/<filename>')
 def sendlasyafile(filename):
     return send_file(f'files/lasya/{filename}')

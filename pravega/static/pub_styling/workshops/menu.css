@@ -1,5 +1,6 @@
 body{
     background: "pub_assets/tempbackground.jpeg";
+    background-color: rgba(17 ,17 ,17 ,17 ,0.2 );
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
