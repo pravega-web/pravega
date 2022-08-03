@@ -1,5 +1,5 @@
 body{
-    background: "pub_assets/tempbackground.jpeg";
+    background-image: url("/static/img/workshops/1.jpg");
     background-color: rgba(17 ,17 ,17 ,17 ,0.2 );
     height: 100%;
     background-position: center;
