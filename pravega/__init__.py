@@ -33,29 +33,11 @@ def create_app(test_config=None):
     @app.route('/terms')
     def sendterms():
         return send_file('files/terms of service.pdf')
-    @app.route('/files/PravegaBrochure.pdf')
-    def downloadFile():
-        return send_file('files/PravegaBrochure.pdf')
 
     @app.route('/tester')
     def test():
         return render_template("registration_message.html");
 
-    @app.route('/files/astrowiz/<filename>')
-    def sendastrowizfile(filename):
-        return send_file(f'files/astrowiz/{filename}')
-
-    @app.route('/files/enumeration/<filename>')
-    def sendenumeratuinwizfile(filename):
-        return send_file(f'files/enumeration/{filename}')
-
-    @app.route('/files/exhibitionrules')
-    def exhibitions():
-        return redirect('https://drive.google.com/file/d/1WnQwrJ5zRxwsIKToOGP10GMpB3vSYESC/view?usp=drivesdk')
-
-    @app.route('/files/<filename>')
-    def snedrandomunsafefile(filename):
-        return send_file(f'files/{filename}')
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
@@ -67,6 +49,8 @@ def create_app(test_config=None):
     app.register_blueprint(workshops.blueprint)
     from . import recreational
     app.register_blueprint(recreational.blueprint)
+    from . import files
+    app.register_blueprint(files.blueprint)
 
 
 
