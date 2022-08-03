@@ -8,14 +8,16 @@ body{
 }
 
 .career-image {
-    padding-top: 30px;
-    padding-bottom: 30px;     
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .career-card-custom-round {
-    border-radius: 10%;
+    border-radius: 2%;
     overflow: hidden;
+    background: rgba(217,217,217, 0);
 }
+
 
 a.eventcard {
     background: transparent;
@@ -23,7 +25,7 @@ a.eventcard {
 }
 
 a.eventcard:hover{
-    border-radius: 10%;
+    border-radius: 2%;
     padding-top: 12px;
     padding-bottom: 12px;
 }
