@@ -6,6 +6,23 @@ body{
     background-color: rgba(17 ,17 ,17 ,17 ,0.2 );
 }
 
+.backgroundimager{
+    background-image: url("/static/img/workshops/1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    background-color: rgba(17 ,17 ,17 ,17 ,0.2 );
+    width:100vw;
+    height:100vh;
+    z-index:-1;
+}
+
+@media screen and (max-width:500px){
+	body{
+		background-size: fill;
+	}
+}
+
 .career-image {
     padding-top: 20px;
     padding-bottom: 30px;
