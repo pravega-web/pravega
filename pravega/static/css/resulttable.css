@@ -1,0 +1,18 @@
+
+body
+.prelims-results {
+    width: 80%;
+}
+
+tr{
+    border: 1px solid white;
+    color: white;
+}
+
+td {
+    border: 1px solid white;
+}
+
+th{
+    border: 1px solid white;
+}
