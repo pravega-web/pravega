@@ -1,24 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon -->
 	<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
-
-    <!-- Main css -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/bluedotform.css') }}">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
 
         <!-- Bootstrap support -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -34,11 +23,12 @@
         <link href="/static/pub_styling/Pravega_footer.css" rel="stylesheet">
         <link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
 
-	<title>Pale Blue Dot registrations | Pravega 2022 | IISc UG Fest</title>
+        <title>Pale Blue Dot registrations | Pravega 2022</title>
 
-</head>
+    </head>
 
-<body>
+    <body background="/static/pub_assets/tempbackground.jpeg">
+
         <header>
 
             <!-- Pravega. Navbar-->
@@ -59,9 +49,6 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item nav-pravega-font">
-                                <a class="nav-link" href="/scitech/palebluedot">Pale Blue Dot page</a>
-                            </li>
-                            <li class="nav-item nav-pravega-font">
                                 <a class="nav-link" href="/#events">Events</a>
                             </li>
                             <li class="nav-item nav-pravega-font">
@@ -73,64 +60,177 @@
             </nav>
 
         </header>
+        <div class="container p-5">
+		<p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		</p>
+            <h1 class="text-center">Pale Blue Dot Registration</h1>
+	    <h2 class="text-center">The registrations have closed, thankyou</h2>
+		<p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		</p>
+		<p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		</p>
 
-	<div class="row align-center" style="width:100%;">
-        <form method="POST" style="max-width: 1200px; width:90%; margin-left:auto; margin-right:auto; padding-top: 100px;">
-		<div id="box">
-			<h2 style="font-family: 'Lato', cursive;">Pale Blue Dot Registration</h2>
-		 	Register yourself for the Pale Blue Dot event of Pravega 2022 <br>
-			<a href="/scitech/palebluedot" class="link">website</a><br>
-			</div>
-			<div id="box" class="input-field">
-			Team Name: <input type="text" name="team" id="t1" placeholder="Name of Team" required=""> <br>
-			Team Location:
-			<select id="clsp1" name="location" class="browser-default poc">
-				<option value="Inside" class="poc1" selected>Inside Bangalore</option>
-				<option value="Outside" class="poc1">Outside Bangalore</option>
-			</select> <br>
-            <a id="come">If you are from outside Bangalore, would you be convenient coming to IISc, Bangalore for <br> the offline finals to be held on 3rd/4th September in case you are selected?</a>
-			<select id="clsp2" name="come" class="browser-default poc">
-				<option value="yes" class="poc2" selected>Yes</option>
-				<option value="no" class="poc2">No</option>
-                <option value="not sure" class="poc2">Not Sure</option>
-			</select> <br>
-            Number of participants in your team:
-			<select id="clsp3" name="teamsize" class="browser-default poc">
-				<option value="one" class="poc3" selected>1</option>
-				<option value="two" class="poc3">2</option>
-			</select> <br>
-			Name of school/institution of participant(s) with short address: <input type="text" name="school" id="sch1" placeholder="School/ College of Participant 1" required> <br>
-            Class/ Year of Participant:
-			<select id="clsp4" name="clsp" class="browser-default poc">
-				<option value="9th" class="poc4" selected>9th</option>
-                <option value="10th" class="poc4">10th</option>
-                <option value="11th" class="poc4">11th</option>
-				<option value="12th" class="poc4">12th</option>
-				<option value="1st" class="poc4">1st Year</option>
-			</select> <br>
-			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
-            Email ID of Participant 1: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email1" id="email1" placeholder="Your Email 1" required> <br>
-			Phone Number of Participant 1: <input type="text" pattern="^[0-9]{10}$" name="mobile1" id="mobile1" placeholder="Mobile Number 1" required> <br>
-			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br>
-            Email ID of Participant 2: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email2" id="email2" placeholder="Your Email 2"> <br>
-			Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile 2" placeholder="Mobile Number 2"> <br>
 
-		</div>
 
+        <!-- chemenigma registration page -->
+	<!-- ha a aha aha afksajffksafjafjsalfjaksfjalskfjl
+
+        <div class="container p-5">
+            <p><br><br></p>
+            <h1 class="text-center">Enumeration Team Registration</h1>
+	    <h2 class="text-center">Fees = Rs.200/-</h2>
+            <p><br><br></p>
+              <h3 class="text-left">Responsibilities</h3>
+            <p><br></p>
+             <h3 class="text-left">Requirements</h3>
+            <ul class="career-bullets">
+                <li>Contact us at: <a href="mailto:sudharshankv@iisc.ac.in" class="link">sudharshankv@iisc.ac.in</a> </li>
+            </ul>
+        </div>
+
+        <div class="container p-5">
+            <h2 class="text-center">Submit your application</h2>
+            <p></p>
+            <form class="needs-validation"  method="post" enctype="multipart/form-data">
+                <input type="hidden" id="app_id" name="app_id" maxlength="3" minlength="3" pattern="^\\d\\d\\d$" value="001" required>
+                <div class="row align-items-center">
+                    <div class="col-sm mb-3">
+                        <label for="name1" class="form-label">Participant 1 Name</label>
+                        <input type="text" class="form-control form-control-lg" id="p1" name="participant1" pattern="^[a-zA-Z\s]*$" maxlength="20" minlength="1" required>
+                        <div class="invalid-feedback">
+                            Numbers and Special characters not allowed. 20 alphabet limit.
+                        </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <label for="name2" class="form-label">Participant 2 Name</label>
+                        <input type="text" class="form-control form-control-lg" id="p2" name="participant2" pattern="^[a-zA-Z\s]*$" maxlength="20" minlength="1">
+                        <div class="invalid-feedback">
+                            Numbers and Special characters not allowed. 20 alphabet limit.
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-sm mb-3">
+                        <label for="team name" class="form-label">Team Name</label>
+                        <input type="text" class="form-control form-control-lg" id="team" name="team" pattern="^[a-zA-Z\s]*$" maxlength="20" minlength="1" >
+                        <div class="invalid-feedback">
+                            Numbers and Special characters not allowed. 20 alphabet limit.
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row align-items-center">
+                    <div class="col-sm mb-3">
+                        <label for="fname" class="form-label">Participant 1 School</label>
+                        <input type="text" class="form-control form-control-lg" id="school1" name="school1" pattern="^[a-zA-Z\s]*$" maxlength="40" minlength="1" required>
+                        <div class="invalid-feedback">
+                            Numbers and Special characters not allowed. 40 alphabet limit.
+                        </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <label for="lname" class="form-label">Participant 2 School</label>
+                        <input type="text" class="form-control form-control-lg" id="school2" name="school2" pattern="^[a-zA-Z\s]*$" maxlength="40" minlength="1">
+                        <div class="invalid-feedback">
+                            Numbers and Special characters not allowed. 40 alphabet limit.
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-sm mb-3">
+                        <label for="emailinput" class="form-label">Participant 1 Email</label>
+                        <input type="email" class="form-control form-control-lg" id="mail1" name="emailp1" pattern="^.*@.*$" maxlength="40" minlength="3" placeholder="example@email.com" required>
+                        <div class="invalid-feedback">
+                            Enter valid email. 40 character limit.
+                        </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <label for="emailinput" class="form-label">Participant 2 Email</label>
+                        <input type="email" class="form-control form-control-lg" id="mail2" name="emailp2" pattern="^.*@.*$" maxlength="40" minlength="3" placeholder="example@email.com">
+                        <div class="invalid-feedback">
+                            Enter valid email. 40 character limit.
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-sm mb-3">
+                        <label for="phone" class="form-label">Participant 1 Contact Number</label>
+                        <div class="input-group input-group-lg">
+                            <input type="number" class="form-control form-control-lg" id="phone1" name="mobile1" placeholder="Phone Number" required>
+                            <div class="invalid-feedback">
+                                Enter valid phone number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <label for="phone" class="form-label">Participant 2 Contact Number</label>
+                        <div class="input-group input-group-lg">
+                            <input type="number" class="form-control form-control-lg" id="phone2" name="mobile2" placeholder="Phone Number">
+                            <div class="invalid-feedback">
+                                Enter valid phone number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p><br></p>
+                </div>
+                        <script>
+            (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+        </script>
                 <script
                 src="https://checkout.razorpay.com/v1/checkout.js"
-            data-amount="10000"
+            data-amount="20000"
                 data-key="rzp_live_jEr5MWFDFyEN8f"
-                data-name="Pale Blue Dot Fees"
+                data-name="Enumeration Fees"
                 data-netbanking="true"
-                data-description="Fees for Pale Blue Dot, by pravega IISc"
-                data-notes.shopping_order_id="20">
+                data-description="Fees for Enumeration, by pravega IISc"
+                data-notes.shopping_order_id="21">
             </script>
-            <input type="hidden" name="shopping_order_id" value="20">
+            <input type="hidden" name="shopping_order_id" value="21">
+            </form>
+        </div>
+        <div class="container-fluid">
+          <p><br><br><br><br></p>
+        </div>
 
-        </form>
-		</div>
-
+	-->
+	</div>
         <footer>
 
             <!-- Pravega. bottom bar -->
@@ -163,5 +263,6 @@
             </div>
 
         </footer>
-</body>
+    </body>
+
 </html>

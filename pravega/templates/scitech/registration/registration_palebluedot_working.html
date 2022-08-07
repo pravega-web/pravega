@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+
+    <!-- Main css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/bluedotform.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap support -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- itc avant garde font-->
+        <link href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book" rel="stylesheet" type="text/css">
+
+        <!-- Icon library -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link href="/static/pub_styling/scitech/menu.css" rel="stylesheet">
+        <link href="/static/pub_styling/Pravega_footer.css" rel="stylesheet">
+        <link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
+
+	<title>Pale Blue Dot registrations | Pravega 2022 | IISc UG Fest</title>
+
+</head>
+
+<body>
+        <header>
+
+            <!-- Pravega. Navbar-->
+
+            <nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-top nav-pravega-bg">
+
+
+                <div class="container-fluid">
+                    <a class="navbar-brand nav-pravega-logo" href="/">
+                        <img src="/static/pub_assets/pravega_logo_bw.png" alt="Pravega Logo" style="width: 200px; height: auto;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav nav-pravega-position">
+                            <li class="nav-item nav-pravega-font">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item nav-pravega-font">
+                                <a class="nav-link" href="/scitech/palebluedot">Pale Blue Dot page</a>
+                            </li>
+                            <li class="nav-item nav-pravega-font">
+                                <a class="nav-link" href="/#events">Events</a>
+                            </li>
+                            <li class="nav-item nav-pravega-font">
+                                <a class="nav-link" href="/#contactus">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+	<div class="row align-center" style="width:100%;">
+        <form method="POST" style="max-width: 1200px; width:90%; margin-left:auto; margin-right:auto; padding-top: 100px;">
+		<div id="box">
+			<h2 style="font-family: 'Lato', cursive;">Pale Blue Dot Registration</h2>
+		 	Register yourself for the Pale Blue Dot event of Pravega 2022 <br>
+			<a href="/scitech/palebluedot" class="link">website</a><br>
+			</div>
+			<div id="box" class="input-field">
+			Team Name: <input type="text" name="team" id="t1" placeholder="Name of Team" required=""> <br>
+			Team Location:
+			<select id="clsp1" name="location" class="browser-default poc">
+				<option value="Inside" class="poc1" selected>Inside Bangalore</option>
+				<option value="Outside" class="poc1">Outside Bangalore</option>
+			</select> <br>
+            <a id="come">If you are from outside Bangalore, would you be convenient coming to IISc, Bangalore for <br> the offline finals to be held on 3rd/4th September in case you are selected?</a>
+			<select id="clsp2" name="come" class="browser-default poc">
+				<option value="yes" class="poc2" selected>Yes</option>
+				<option value="no" class="poc2">No</option>
+                <option value="not sure" class="poc2">Not Sure</option>
+			</select> <br>
+            Number of participants in your team:
+			<select id="clsp3" name="teamsize" class="browser-default poc">
+				<option value="one" class="poc3" selected>1</option>
+				<option value="two" class="poc3">2</option>
+			</select> <br>
+			Name of school/institution of participant(s) with short address: <input type="text" name="school" id="sch1" placeholder="School/ College of Participant 1" required> <br>
+            Class/ Year of Participant:
+			<select id="clsp4" name="clsp" class="browser-default poc">
+				<option value="9th" class="poc4" selected>9th</option>
+                <option value="10th" class="poc4">10th</option>
+                <option value="11th" class="poc4">11th</option>
+				<option value="12th" class="poc4">12th</option>
+				<option value="1st" class="poc4">1st Year</option>
+			</select> <br>
+			Participant 1 Name: <input type="text" name="participant1" id="p1" placeholder="Name of Participant 1" required=""> <br>
+            Email ID of Participant 1: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email1" id="email1" placeholder="Your Email 1" required> <br>
+			Phone Number of Participant 1: <input type="text" pattern="^[0-9]{10}$" name="mobile1" id="mobile1" placeholder="Mobile Number 1" required> <br>
+			Participant 2 Name: <input type="text" name="participant2" id="p2" placeholder="Name of Participant 2"> <br>
+            Email ID of Participant 2: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email2" id="email2" placeholder="Your Email 2"> <br>
+			Phone Number of Participant 2: <input type="text" pattern="^[0-9]{10}$" name="mobile2" id="mobile 2" placeholder="Mobile Number 2"> <br>
+
+		</div>
+
+                <script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+            data-amount="10000"
+                data-key="rzp_live_jEr5MWFDFyEN8f"
+                data-name="Pale Blue Dot Fees"
+                data-netbanking="true"
+                data-description="Fees for Pale Blue Dot, by pravega IISc"
+                data-notes.shopping_order_id="20">
+            </script>
+            <input type="hidden" name="shopping_order_id" value="20">
+
+        </form>
+		</div>
+
+        <footer>
+
+            <!-- Pravega. bottom bar -->
+
+            <div class="container-fluid footer-pravega-bg">
+                <div class="row footer-pravega-margin">
+                    <div class="col footer-pravega-col text-left">
+                        <a href="/">
+                            <img src="/static/pub_assets/pravega_logo_bw.png" alt="Pravega 2022 Logo" style="width: 200px; height: auto; margin-bottom: 30px;">
+                        </a>
+                        <p class="footer-pravega-font" style="margin-left:7px;">&#169; copyright 2022 <br>All rights reserved.</p>
+                    </div>
+                    <div class="col footer-pravega-col text-left">
+                        <p class="footer-pravega-font-special">Navigate</p>
+                        <a class="footer-pravega-font" href="/">Home</a>
+			<a class="footer-pravega-font" href="/#contactus"><br>Contact Us</a>
+			<a class="footer-pravega-font" href="/aboutus"><br>About Us</a>
+			<a class="footer-pravega-font" href="/refund"><br>Refund and Cancellation Policy</a>
+			<a class="footer-pravega-font" href="/privacy"><br>Privacy Policy</a>
+			<a class="footer-pravega-font" href="/terms"><br>Terms of service</a>
+                    </div>
+                    <div class="col footer-pravega-col-special text-left">
+                        <p class="footer-pravega-font-special">Follow Us</p>
+			<a class="fa fa-facebook" href="https://www.facebook.com/PravegaIISc/"></a>
+                        <a class="fa fa-instagram" href="https://www.instagram.com/pravega.iisc" style="margin-left: 10px;"></a>
+                        <a class="fa fa-twitter" href="https://www.twitter.com/Pravega_IISc" style="margin-left: 10px;"></a>
+                        <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCc-179ntmDu4l7i8LVbpYlQ" style="margin-left: 10px;"></a>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+</body>
+</html>
