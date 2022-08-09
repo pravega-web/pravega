@@ -879,3 +879,59 @@ For any queries, mail wwdd.pravega@gmail.com"""
 
         myclient.close()
         return render_template("/registration_message.html")
+
+@blueprint.route("/honourcode/register", methods=("GET","POST"))
+def register_for_honourcode():
+    event_name = "honourcode"
+    if request.method == "GET":
+        return render_template(f"scitech/registration/registration_{event_name}.html");
+    if request.method == "POST":
+        details = {
+                    "participant_name" : request.form["participant_name"],
+                    "participant_age" : request.form["age"],
+                    "participant_school" : request.form['school'],
+                    "participant_address" : request.form['address'],
+                    "participant_email" : request.form["email"],
+                    "participant_phone" : request.form['mobile'],
+                    "codechef" : request.form['handle']
+                    }
+                # Authenticating payments
+        # razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
+        # payment_id = request.form['razorpay_payment_id']
+
+
+        # Inserting things into the database
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+        mydb = myclient['registrations']
+        mycol = mydb[event_name]
+
+
+        #Checking for duplicate email numbers
+        existing = mycol.find_one({ "participant_email" : request.form['email'] })
+
+        # paydb = myclient['payments']
+        # paycol = paydb[event_name]
+
+
+        if existing is None:
+            # razorpay_client.payment.capture(payment_id, amount)
+            details['payment_id'] = "none"
+            # pay_details = razorpay_client.payment.fetch(payment_id)
+            # paycol.insert_one(pay_details)
+            # details['payment_status'] = pay_details['status']
+            details['payment_status'] = "none"
+            # flash(f"Payment ID:{payment_id}")
+            x = mycol.insert_one(details)
+
+            flash("Registered Successfully!!")
+        else :
+            details['payment_id'] = "Error"
+            details['payment_status'] = "None"
+            flash("Registration not Confirmed")
+            flash("Email of participant 1 already registered")
+            myclient.close()
+            return render_template("/registration_message.html")
+
+        myclient.close()
+        return render_template("/registration_message.html")
