@@ -884,13 +884,12 @@ For any queries, mail wwdd.pravega@gmail.com"""
 def register_for_honourcode():
     event_name = "honourcode"
     if request.method == "GET":
-        return render_template(f"scitech/registration/registration_{event_name}.html");
+        return render_template(f"scitech/registration/registration_{event_name}.html")
     if request.method == "POST":
         details = {
                     "participant_name" : request.form["participant_name"],
                     "participant_age" : request.form["age"],
                     "participant_school" : request.form['school'],
-                    "participant_address" : request.form['address'],
                     "participant_email" : request.form["email"],
                     "participant_phone" : request.form['mobile'],
                     "codechef" : request.form['handle']
