@@ -499,7 +499,7 @@ For any queries, mail bah.pravega@gmail.com"""
 
 @blueprint.route("/pravegainnovationsummit/rules")
 def sendpisrules():
-    return send_file("files/PIS_Rules.docx")
+    return send_file("files/PIS_RulesAndRegulations.pdf")
 @blueprint.route("/pravegainnovationsummit/register", methods=("GET", "POST"))
 def register_for_pis ():
     event_name = "pravegainnovationsummit"
