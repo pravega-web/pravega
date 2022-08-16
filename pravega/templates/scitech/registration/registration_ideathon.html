@@ -1,14 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-    <head>
-
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- favicon -->
 	<link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+
+    <!-- Main css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/scitech/formstyle.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
         <!-- Bootstrap support -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -20,26 +30,19 @@
         <!-- Icon library -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <!-- custom Pravega stylesheets-->
-        <link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
+        <link href="/static/pub_styling/scitech/menu.css" rel="stylesheet">
         <link href="/static/pub_styling/Pravega_footer.css" rel="stylesheet">
-        <link href="/static/pub_styling/pravega_general.css" rel="stylesheet">
-        <link href="/static/pub_styling/pravega_social.css" rel="stylesheet">
-        <link href="/static/pub_styling/pravega_slider.css" rel="stylesheet">
-        <link href="/static/pub_styling/pravega_events.css" rel="stylesheet">
-        <link href="/static/pub_styling/pravega_index.css" rel="stylesheet">
-        <link href="/static/css/teampravega.css" rel="stylesheet">
+        <link href="/static/pub_styling/pravega_navbar.css" rel="stylesheet">
 
-        <title>Pravega 2022 | IISc UG Fest </title>
+	<title>Ideathon Registrations | Pravega 2022 | IISc UG Fest</title>
 
+</head>
 
-    </head>
-
-    <body>
-
+<body>
         <header>
 
             <!-- Pravega. Navbar-->
+
             <nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-top nav-pravega-bg">
 
 
@@ -56,6 +59,9 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item nav-pravega-font">
+                                <a class="nav-link" href="/scitech/ideathon">Ideathon page</a>
+                            </li>
+                            <li class="nav-item nav-pravega-font">
                                 <a class="nav-link" href="/#events">Events</a>
                             </li>
                             <li class="nav-item nav-pravega-font">
@@ -67,33 +73,52 @@
             </nav>
 
         </header>
-        <!-- Home page -->
-        <div class="container-fluid">
-            <p><br><br></p>
-        </div>
-        <div class="container-fluid">
-            <p><br><br></p>
-        </div>
-        <div class="container-fluid">
-		<h1> Co ordinators</h1>
-		<h2> Dikshant afria</h2>
-		<h2> souptik dey</h2>
 
+	<div class="row align-center" style="width:100%;">
+        <form method="POST" style="max-width: 1200px; width:90%; margin-left:auto; margin-right:auto; padding-top: 100px;">
+		<div id="box">
+			<h2 style="font-family: 'Comic Neue', cursive;">Ideathon Registration</h2>
+		</div>
+		<div id="box" class="input-field">
+			Participant Name:
+			<input type="text" name="participant_name" id="p1" placeholder="Name of Participant" required="">
+			<br>
+			Institution Name:
+			<input type="text" name="school" id="sch1" placeholder="School/ College of Participant" required>
+			<br>
+            Email ID of Participant:
+			<input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" placeholder="Your Email" required>
+			<br>
+			Phone Number of Participant:
+			<input type="text" pattern="^[0-9]{10}$" name="mobile" id="mobile" placeholder="Mobile Number" required>
+			<br>
+            In what form do you want to attend the prelims?<br>
+            <input type="radio" id="online" name="mode" value="online">
+            <label for="online">Online (27th August)</label>
+            <input type="radio" id="offline" name="mode" value="offline">
+            <label for="offline">Offline (2nd September)</label>
+            <input type="radio" id="both" name="mode" value="both">
+            <label for="both">Both (Yes, you are allowed!)</label>
+		</div>
+			<br>
+			<br>
 
-		<h1>core coordonators</h1>
-		A lot of people
+                <div class="text-center">
+                    <p><br></p>
+                    <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+                </div>
 
-		<h1>Scitech</h1>
-        </div>
-
+        </form>
+		</div>
 
         <footer>
 
             <!-- Pravega. bottom bar -->
+
             <div class="container-fluid footer-pravega-bg">
                 <div class="row footer-pravega-margin">
                     <div class="col footer-pravega-col text-left">
-                        <a href="">
+                        <a href="/">
                             <img src="/static/pub_assets/pravega_logo_bw.png" alt="Pravega 2022 Logo" style="width: 200px; height: auto; margin-bottom: 30px;">
                         </a>
                         <p class="footer-pravega-font" style="margin-left:7px;">&#169; copyright 2022 <br>All rights reserved.</p>
@@ -118,6 +143,5 @@
             </div>
 
         </footer>
-    </body>
-
+</body>
 </html>
