@@ -948,7 +948,15 @@ def register_for_ideathon():
                     "participant_email" : request.form["email"],
                     "participant_phone" : request.form['mobile'],
                     "participant_online_reg" : True if (request.form['mode'] in ['online', 'both']) else False,
-                    "participant_offline_reg" : True if (request.form['mode'] in {'offline', 'both'}) else False
+                    "participant_offline_reg" : True if (request.form['mode'] in {'offline', 'both'}) else False,
+                    "linkedin": request.form['linked'],
+                    "accomplishments" : request.form['accomp'],
+                    "change" : request.form['change'],
+                    "familiar" : request.form['familiar'],
+                    "aware" : request.form['aware'],
+                    "help" : request.form['help'],
+                    "intern" : request.form['intern'],
+                    "feedback" : request.form['feedback']
                     }
                 # Authenticating payments
         # razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
