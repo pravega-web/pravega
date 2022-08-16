@@ -1033,7 +1033,7 @@ For any queries, mail ideathon.pravega@gmail.com"""
             details['payment_id'] = "Error"
             details['payment_status'] = "None"
             flash("Registration not Confirmed")
-            flash("Email of participant 1 already registered ask for refund on email if paid twice")
+            flash("Email of participant is already registered.")
             myclient.close()
             return render_template("/registration_message.html")
 
