@@ -956,7 +956,19 @@ def register_for_ideathon():
                     "aware" : request.form['aware'],
                     "help" : request.form['help'],
                     "intern" : request.form['intern'],
-                    "feedback" : request.form['feedback']
+                    "feedback" : request.form['feedback'],
+                    "participant2_name" : request.form["participant2_name"],
+                    "participant2_institution" : request.form['school2'],
+                    "participant2_email" : request.form["email2"],
+                    "participant2_phone" : request.form['mobile2'],
+                    "participant3_name" : request.form["participant3_name"],
+                    "participant3_institution" : request.form['school3'],
+                    "participant3_email" : request.form["email3"],
+                    "participant3_phone" : request.form['mobile3'],
+                    "participant4_name" : request.form["participant4_name"],
+                    "participant4_institution" : request.form['school4'],
+                    "participant4_email" : request.form["email4"],
+                    "participant4_phone" : request.form['mobile4']
                     }
                 # Authenticating payments
         # razorpay_client = razorpay.Client(auth=("rzp_live_jEr5MWFDFyEN8f",razorpay_secret_key))
