@@ -38,6 +38,10 @@ def create_app(test_config=None):
     def test():
         return render_template("registration_message.html");
 
+    @app.route('/validate')
+    def validate():
+        return render_template("validate.html")
+
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
