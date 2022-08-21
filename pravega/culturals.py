@@ -326,3 +326,9 @@ def acc_culturals_register():
             return render_template(f"registration_message.html")
         myclient.close()
         return render_template(f"registration_message.html")
+
+@blueprint.route("crescendo/register", methods=("GET", "POST"))
+def crescendo_register():
+    event_name = "crescendo"
+    if request.method == "GET":
+        return render_template(f"culturals/registration/registration_{event_name}.html")
