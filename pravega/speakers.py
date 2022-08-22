@@ -5,7 +5,7 @@ import pymongo
 import razorpay
 blueprint = Blueprint('speakers',__name__, template_folder="templates/speakers/", url_prefix='/speakers')
 
-@blueprint.route('/<speaker>')
+@blueprint.route('/<speaker>', methods=("GET","POST"))
 def register_speaker(speaker):
     event_name = speaker
     if request.method == "GET":
