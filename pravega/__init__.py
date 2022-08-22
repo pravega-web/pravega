@@ -53,6 +53,8 @@ def create_app(test_config=None):
     app.register_blueprint(workshops.blueprint)
     from . import recreational
     app.register_blueprint(recreational.blueprint)
+    from . import speakers
+    app.register_blueprint(speakers.blueprint)
     from . import files
     app.register_blueprint(files.blueprint)
 
