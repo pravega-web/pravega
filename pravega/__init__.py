@@ -42,6 +42,10 @@ def create_app(test_config=None):
     def validate():
         return render_template("validate.html")
 
+    @app.route('/merch')
+    def merchandise():
+        return render_template("merch.html")
+
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
