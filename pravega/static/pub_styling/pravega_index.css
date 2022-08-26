@@ -36,25 +36,3 @@
                 font-size:16px;
         }
 }
-
-@media screen and (min-width:600px){
-	.index6{
-		background-image: url('../pub_assets/background6.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position:center;
-		width: 100vw;
-	}
-}
-
-
-@media screen and (min-width:600px){
-	.index7{
-		background-image: url('../pub_assets/background7.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position:center;
-		width: 100vw;
-	}
-}
-
