@@ -43,8 +43,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position:center;
-		height:100%;
-		color:aliceblue;
+		width: 100vw;
 	}
 }
 
@@ -55,7 +54,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position:center;
-		height:100%;
-		color:aliceblue;
+		width: 100vw;
 	}
 }
+
