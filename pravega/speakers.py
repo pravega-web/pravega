@@ -9,9 +9,9 @@ blueprint = Blueprint('speakers',__name__, template_folder="templates/speakers/"
 def register_speaker(speaker):
     event_name = speaker
     if request.method == "GET":
-        return render_template(speaker+'.html')
+        return render_template(event_name+'.html')
     if request.method == "POST":
-        details = { "event" : speaker,
+        details = { "event" : event_name,
                     "name" : request.form['name'],
                     "organisation" : request.form['organisation'],
                     "email" : request.form['email'],
@@ -35,11 +35,13 @@ def register_speaker(speaker):
 
             toaddr = request.form['email']
             participantname = details['name']
+            topic = {"warikoo":"by Ankur Warikoo", "aimlhc":"on Artificial Intelligence and Machine Learning in Health-Care",
+            "predist":"5G: Digital Pre-Distortion for Power Amplifiers", "evrev":"Electric Vehicle Revolution the key pillar: Battery and Management Systems"}
             fromaddr = "core@pravega.org"
             msg = MIMEMultipart()
             msg['From'] = "Pravega IISc"
             msg['To'] = toaddr
-            msg['Subject'] = "Registration for talk by Ankur Warikoo during Pravega IISc"
+            msg['Subject'] = f"Registration for talk {topic[event_name]} during Pravega IISc"
             body = f"Hi {participantname},\nYou've successfully registered for the talk by Ankur Warikoo on 2nd September, 12:30pm.\nRegistered phone number: {details['mobile']} \n\n Thanks\n Team Pravega"
             msg.attach(MIMEText(body, 'plain'))
 
