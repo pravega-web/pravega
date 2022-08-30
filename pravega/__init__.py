@@ -45,7 +45,19 @@ def create_app(test_config=None):
     @app.route('/merch')
     def merchandise():
         return render_template("merch.html")
+    
+    @app.route('/cong')
+    def cong():
+        return render_template("cong.html")
+    
+    @app.route('/rats')
+    def rats():
+        return render_template("rats.html")
 
+    @app.route('/congrats')
+    def congrats():
+        return render_template("congrats.html")
+ 
 
     from . import admin
     app.register_blueprint(admin.bp, subdomain='admin')
