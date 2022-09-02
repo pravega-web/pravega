@@ -21,6 +21,9 @@ def show_lasya_tc():
 @blueprint.route("/crescendo/rules")
 def snedrules():
     return send_file('files/Crescendo_Rules.pdf')
+@blueprint.route("/lasya/judges")
+def snedrulasya():
+    return send_file('files/lasyajudges.pdf')
 @blueprint.route("/alekhya/rules")
 def snedrulesalekhya():
     return send_file('files/ALEKHYA-Art.pdf')
